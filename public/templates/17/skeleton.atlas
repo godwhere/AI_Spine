@@ -1,0 +1,103 @@
+skeleton.png
+size:852,852
+filter:Linear,Linear
+fx/red00
+bounds:493,175,140,51
+offsets:0,9,150,69
+fx/red01
+bounds:349,282,145,50
+offsets:0,9,150,69
+fx/red02
+bounds:76,37,140,52
+offsets:0,8,150,69
+fx/red03
+bounds:290,396,133,49
+offsets:6,9,150,69
+rotate:90
+fx/red04
+bounds:89,99,146,54
+offsets:3,7,150,69
+rotate:90
+fx/red05
+bounds:432,130,142,51
+offsets:0,9,150,69
+rotate:90
+fx/red06
+bounds:614,241,136,50
+offsets:4,10,150,69
+fx/red07
+bounds:290,254,132,49
+offsets:7,9,150,69
+rotate:90
+shadow
+bounds:10,148,238,69
+offsets:3,3,244,75
+rotate:90
+skin_2/Ban chan
+bounds:317,129,105,115
+offsets:0,0,105,123
+skin_2/Chan phai
+bounds:653,324,176,148
+skin_2/Drill
+bounds:689,482,360,144
+rotate:90
+skin_2/Giap phai
+bounds:580,101,64,50
+offsets:0,0,65,50
+rotate:90
+skin_2/Giap trai
+bounds:178,360,169,102
+rotate:90
+skin_2/Layer 1
+bounds:349,559,283,330
+rotate:90
+skin_2/Layer 2
+bounds:349,342,294,207
+skin_2/Layer 3
+bounds:175,227,103,123
+skin_2/Layer 7
+bounds:89,255,131,76
+offsets:0,0,131,78
+rotate:90
+skin_2/Layer 8
+bounds:226,17,81,113
+offsets:0,1,81,115
+rotate:90
+skin_2/Layer 9
+bounds:580,21,63,70
+offsets:2,0,65,70
+skin_2/Sparks00
+bounds:760,228,86,67
+offsets:8,0,97,100
+rotate:90
+skin_2/Sparks01
+bounds:653,26,58,68
+offsets:19,0,97,100
+skin_2/Sparks02
+bounds:432,23,85,97
+offsets:8,1,97,100
+skin_2/Sparks03
+bounds:643,160,71,80
+offsets:15,0,97,100
+rotate:90
+skin_2/Vai
+bounds:10,396,133,158
+rotate:90
+skin_2/chan trai
+bounds:153,108,154,109
+skin_2/eye
+bounds:640,104,56,46
+skin_2/eye 2
+bounds:614,301,28,31
+skin_2/head
+bounds:10,539,329,303
+skin_2/impact
+bounds:10,10,56,128
+offsets:2,10,58,150
+skin_2/splash
+bounds:527,47,118,43
+offsets:29,18,150,80
+rotate:90
+skin_2/tay
+bounds:504,236,96,100
+rotate:90

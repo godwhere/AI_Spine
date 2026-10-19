@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-19",
+  "provider": "codex-native",
+  "authentication": "chatgpt-managed",
+  "billingImplemented": false,
+  "automatedTests": 50,
+  "staticChecks": 4,
+  "nativeCompletedJobs": [
+    {
+      "id": "bd4e64bd-fc3e-4963-9fc7-7982a745eb02",
+      "kind": "appearance",
+      "prompt": "保留模板熊猫武者的体型、朝向和姿势，设计为冰蓝玉石护甲、深蓝腰带的原创熊猫角色。清晰的二维手绘游戏风格，完整身体，透明背景。",
+      "status": "completed",
+      "partIds": [],
+      "count": 1
+    },
+    {
+      "id": "d248e7ec-3dbb-4e29-af97-2ff710227fc1",
+      "kind": "parts",
+      "prompt": "按照已选熊猫形象参考重绘部件：护手改为冰蓝玉石与深蓝金属，腰带改为深蓝织物和冰玉饰扣。严格保留部件原图的轮廓、朝向、连接点和透明边距，仅画当前独立部件，不添加其他身体部分。",
+      "status": "completed",
+      "partIds": [
+        "skin_2/f_gauntlet",
+        "skin_2/belt"
+      ],
+      "count": 2
+    }
+  ],
+  "browser": {
+    "appearanceGenerated": true,
+    "appearanceAccepted": true,
+    "partsGenerated": 2,
+    "batchApplied": true,
+    "calibrated": true,
+    "refreshRecovered": true,
+    "editableZipReimported": true,
+    "appearanceRestored": true,
+    "synchronizedAttackPose": "1395250.489",
+    "production": {
+      "accountConnected": true,
+      "jobSubmitted": true,
+      "jobCancelled": true,
+      "aiProjectImported": true,
+      "runtimeExported": true,
+      "projectExported": true,
+      "consoleErrors": 0
+    },
+    "singleCandidateOpensCalibration": true,
+    "mobileCalibration": {
+      "width": 390,
+      "height": 844,
+      "completeButtonBottom": 823
+    }
+  },
+  "exports": {
+    "runtime": {
+      "file": "panda-ai-runtime.zip",
+      "bytes": 1388023,
+      "sha256": "48831c32d2d4df041b87878bf3d4a94fb965c2787b3a14c2f97ca38e15e790d4"
+    },
+    "project": {
+      "file": "panda-ai-project.zip",
+      "bytes": 5819060,
+      "sha256": "55a5a047e3c6e0094a1f9ef32e503f9962d8f6803049b10e95436c799553095b"
+    },
+    "skeletonAndAtlasUnchanged": true,
+    "changedTexturePixels": 54874,
+    "changedPixelsOutsideSelectedParts": 0,
+    "animations": 7,
+    "parts": 49,
+    "calibration": {
+      "x": 2,
+      "y": 4,
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0.5,
+      "flipX": false,
+      "flipY": false
+    },
+    "source": "browser download from local production build"
+  },
+  "generated": [
+    {
+      "file": "panda-appearance.png",
+      "width": 1635,
+      "height": 962,
+      "transparentPixels": 1094845,
+      "visiblePixels": 490542,
+      "sha256": "a26a45e1f5ba87ceacaf2aba254e4684fad2d75b9e6df5735a623f07b9cbe999"
+    },
+    {
+      "file": "panda-gauntlet.png",
+      "width": 983,
+      "height": 1600,
+      "transparentPixels": 794829,
+      "visiblePixels": 787938,
+      "sha256": "fd0b1551326775738f78f0902ae85fe1bb441a6c3014eff40b5d44a2296ad545"
+    },
+    {
+      "file": "panda-belt.png",
+      "width": 1310,
+      "height": 1201,
+      "transparentPixels": 932518,
+      "visiblePixels": 652446,
+      "sha256": "c487997a5022e69f48dea2a49a6480d3829c240f9b45c256e1eb5f3a35cf76e2"
+    }
+  ],
+  "catalogGenerationInputsVerified": 22,
+  "jobStates": [
+    {
+      "id": "8f26798e-0fbd-44b3-96bf-d97bb074df9f",
+      "status": "cancelled",
+      "images": 0
+    },
+    {
+      "id": "b8a38137-9bd6-486a-80e0-fd2dcf9d610c",
+      "status": "failed",
+      "images": 0
+    },
+    {
+      "id": "bd4e64bd-fc3e-4963-9fc7-7982a745eb02",
+      "status": "completed",
+      "images": 1
+    },
+    {
+      "id": "d248e7ec-3dbb-4e29-af97-2ff710227fc1",
+      "status": "completed",
+      "images": 2
+    }
+  ]
+}

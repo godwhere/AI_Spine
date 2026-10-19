@@ -1,0 +1,1249 @@
+{
+  "character": "星莓果冻精灵",
+  "templateId": 19,
+  "regions": 6,
+  "replaced": 6,
+  "bones": 14,
+  "animations": [
+    "atk",
+    "jifei",
+    "std",
+    "std2",
+    "walk"
+  ],
+  "allActionsCpuSamplesPerAnimation": 121,
+  "totalCpuPoseComparisons": 605,
+  "browserPoseChecks": 45,
+  "unchangedSkeletonAndAtlas": true,
+  "changedPixelsOutsideAtlasRegions": 0,
+  "parts": [
+    {
+      "id": "guaiD3b/geng",
+      "rotation": 0,
+      "transform": {
+        "x": -2.430675909878683,
+        "y": -5.966204506065858,
+        "scaleX": 1.2798613518197572,
+        "scaleY": 1.2798613518197572,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 1842,
+      "clippedPixels": 0,
+      "changedTexturePixels": 2131,
+      "opaqueIoU": 0.8859480269489894
+    },
+    {
+      "id": "guaiD3b/hua",
+      "rotation": 90,
+      "transform": {
+        "x": -1.0339138405132906,
+        "y": -11.312557286892758,
+        "scaleX": 1.0006808956396491,
+        "scaleY": 1.0006808956396491,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 8190,
+      "clippedPixels": 0,
+      "changedTexturePixels": 8745,
+      "opaqueIoU": 0.9482219390710066
+    },
+    {
+      "id": "guaiD3b/sehnti",
+      "rotation": 0,
+      "transform": {
+        "x": -1.7578358208955223,
+        "y": 7.683955223880597,
+        "scaleX": 0.990857576524159,
+        "scaleY": 0.990857576524159,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 198801,
+      "clippedPixels": 0,
+      "changedTexturePixels": 205274,
+      "opaqueIoU": 0.9613725913002568
+    },
+    {
+      "id": "guaiD3b/yan1",
+      "rotation": 0,
+      "transform": {
+        "x": -2.861635220125786,
+        "y": -1.540880503144654,
+        "scaleX": 1.2591194968553456,
+        "scaleY": 1.2591194968553456,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 4049,
+      "clippedPixels": 0,
+      "changedTexturePixels": 4481,
+      "opaqueIoU": 0.9320498301245753
+    },
+    {
+      "id": "guaiD3b/yan2",
+      "rotation": 0,
+      "transform": {
+        "x": -0.6486129458388374,
+        "y": 0.6439894319682958,
+        "scaleX": 1.1272567151034787,
+        "scaleY": 1.1272567151034787,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 7012,
+      "clippedPixels": 0,
+      "changedTexturePixels": 7238,
+      "opaqueIoU": 0.9748785565579459
+    },
+    {
+      "id": "guaiD3b/zui",
+      "rotation": 0,
+      "transform": {
+        "x": -10.664772727272727,
+        "y": 6.471590909090909,
+        "scaleX": 1.0620192307692307,
+        "scaleY": 1.0620192307692307,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "visiblePixels": 11554,
+      "clippedPixels": 0,
+      "changedTexturePixels": 14813,
+      "opaqueIoU": 0.9683718601351915
+    }
+  ],
+  "exports": [
+    {
+      "file": "starberry-runtime.zip",
+      "bytes": 452122,
+      "sha256": "4d00fb45f5b9360906e801b05cdc8b70d1dedee05f930bfe67c82a9cdffcd376"
+    },
+    {
+      "file": "starberry-project.zip",
+      "bytes": 5808498,
+      "sha256": "548fe2ffe49e6b276a8b5cf9702749e3fbca13393148fa03aacb130559b7fc6a"
+    },
+    {
+      "file": "starberry-reimport-runtime.zip",
+      "bytes": 452122,
+      "sha256": "4d00fb45f5b9360906e801b05cdc8b70d1dedee05f930bfe67c82a9cdffcd376"
+    },
+    {
+      "file": "starberry-reimport-project.zip",
+      "bytes": 5808504,
+      "sha256": "a0dac9bae131c7d287658b8d212a4f96db78d16f8c6fb8d5d52f6be7f37b389a"
+    }
+  ],
+  "browser": [
+    {
+      "stage": "before-export",
+      "action": "atk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-atk-start.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "atk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-atk-middle.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "atk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-atk-late.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "jifei",
+      "sample": "start",
+      "time": 0,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-jifei-start.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "jifei",
+      "sample": "middle",
+      "time": 0.15,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-jifei-middle.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "jifei",
+      "sample": "late",
+      "time": 0.24,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-jifei-late.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std-start.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std-middle.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std-late.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std2",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std2-start.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std2",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std2-middle.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "std2",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-std2-late.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "walk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-walk-start.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "walk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-walk-middle.png"
+    },
+    {
+      "stage": "before-export",
+      "action": "walk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "before-export-walk-late.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "atk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-atk-start.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "atk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-atk-middle.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "atk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-atk-late.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "jifei",
+      "sample": "start",
+      "time": 0,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-jifei-start.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "jifei",
+      "sample": "middle",
+      "time": 0.15,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-jifei-middle.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "jifei",
+      "sample": "late",
+      "time": 0.24,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-jifei-late.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std-start.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std-middle.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std-late.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std2",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std2-start.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std2",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std2-middle.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "std2",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-std2-late.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "walk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-walk-start.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "walk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-walk-middle.png"
+    },
+    {
+      "stage": "runtime-import",
+      "action": "walk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "runtime-import-walk-late.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "atk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-atk-start.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "atk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "-55259.258",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-atk-middle.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "atk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "atk",
+          "height": 438,
+          "pose": "34732.434",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-atk-late.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "jifei",
+      "sample": "start",
+      "time": 0,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-jifei-start.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "jifei",
+      "sample": "middle",
+      "time": 0.15,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "71871.723",
+          "time": "0.150",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-jifei-middle.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "jifei",
+      "sample": "late",
+      "time": 0.24,
+      "duration": 0.2666667103767395,
+      "poses": [
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        },
+        {
+          "action": "jifei",
+          "height": 438,
+          "pose": "-34876.085",
+          "time": "0.240",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-jifei-late.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "21387.513",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std-start.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "25616.813",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std-middle.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std",
+          "height": 438,
+          "pose": "19292.582",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std-late.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std2",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "13319.400",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std2-start.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std2",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "15993.096",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std2-middle.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "std2",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "std2",
+          "height": 438,
+          "pose": "11995.019",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-std2-late.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "walk",
+      "sample": "start",
+      "time": 0,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "42392.089",
+          "time": "0.000",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-walk-start.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "walk",
+      "sample": "middle",
+      "time": 0.5,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "36181.431",
+          "time": "0.500",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-walk-middle.png"
+    },
+    {
+      "stage": "project-reimport",
+      "action": "walk",
+      "sample": "late",
+      "time": 0.9,
+      "duration": 1,
+      "poses": [
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        },
+        {
+          "action": "walk",
+          "height": 438,
+          "pose": "41161.680",
+          "time": "0.900",
+          "width": 609
+        }
+      ],
+      "evidence": "project-reimport-walk-late.png"
+    }
+  ],
+  "preservation": "original skeleton and weights preserved",
+  "acceptanceTests": {
+    "command": "pnpm test:egg",
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browserRenderComparisons": {
+    "total": 30,
+    "pixelIdentical": 30,
+    "different": 0
+  },
+  "nativeGeneration": {
+    "provider": "codex-native",
+    "appearance": 1,
+    "generatedParts": 6,
+    "replacedParts": 6,
+    "atlasRegions": 6
+  },
+  "allCalibrationValuesRestored": true,
+  "sourceTemplateVersion": "4.3.23",
+  "consoleErrors": 0
+}

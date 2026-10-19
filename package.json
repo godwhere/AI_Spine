@@ -1,0 +1,31 @@
+{
+  "name": "ai-spine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-sites-build.mjs",
+    "preview": "vite preview",
+    "test": "node --test tests/core.test.mjs tests/pixels.test.mjs tests/runtime.test.mjs tests/generation.test.mjs",
+    "test:sites": "node --test tests/sites-worker.test.mjs",
+    "test:egg": "node --test tests/egg-character.test.mjs",
+    "desktop": "node scripts/start-desktop.mjs",
+    "build:desktop": "pnpm build && node scripts/build-desktop.mjs",
+    "test:desktop": "node --test tests/desktop.test.mjs"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-webgl": "4.3.13",
+    "@vitejs/plugin-react": "5.0.4",
+    "fflate": "0.8.2",
+    "lucide-react": "0.468.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "vite": "6.4.2"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@napi-rs/canvas": "0.1.80",
+    "electron": "44.9.0"
+  }
+}

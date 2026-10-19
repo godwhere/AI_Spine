@@ -1,0 +1,158 @@
+[
+  {
+    "partId": "guaiD3b/geng",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-2.43"
+      },
+      {
+        "label": "垂直位置",
+        "value": "-5.97"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "127.99"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "127.99"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-geng.png"
+  },
+  {
+    "partId": "guaiD3b/hua",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-1.03"
+      },
+      {
+        "label": "垂直位置",
+        "value": "-11.31"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "100.07"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "100.07"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-hua.png"
+  },
+  {
+    "partId": "guaiD3b/sehnti",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-1.76"
+      },
+      {
+        "label": "垂直位置",
+        "value": "7.68"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "99.09"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "99.09"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-sehnti.png"
+  },
+  {
+    "partId": "guaiD3b/yan1",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-2.86"
+      },
+      {
+        "label": "垂直位置",
+        "value": "-1.54"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "125.91"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "125.91"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-yan1.png"
+  },
+  {
+    "partId": "guaiD3b/yan2",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-0.65"
+      },
+      {
+        "label": "垂直位置",
+        "value": "0.64"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "112.73"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "112.73"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-yan2.png"
+  },
+  {
+    "partId": "guaiD3b/zui",
+    "fields": [
+      {
+        "label": "水平位置",
+        "value": "-10.66"
+      },
+      {
+        "label": "垂直位置",
+        "value": "6.47"
+      },
+      {
+        "label": "水平缩放 %",
+        "value": "106.2"
+      },
+      {
+        "label": "垂直缩放 %",
+        "value": "106.2"
+      },
+      {
+        "label": "旋转角度 °",
+        "value": "0"
+      }
+    ],
+    "evidence": "calibration-zui.png"
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "id": "22",
+    "name": "功夫熊猫",
+    "nameEn": "Kung Fu Panda",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 143,
+    "boneCount": 145,
+    "versionId": "24",
+    "folder": "/templates/22/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/22/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "21",
+    "name": "牛头",
+    "nameEn": "ox-head",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 11,
+    "boneCount": 27,
+    "versionId": "23",
+    "folder": "/templates/21/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/21/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "20",
+    "name": "蛋仔",
+    "nameEn": "egg",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 3,
+    "boneCount": 7,
+    "versionId": "21",
+    "folder": "/templates/20/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/20/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "19",
+    "name": "蛋仔",
+    "nameEn": "egg",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 6,
+    "boneCount": 14,
+    "versionId": "22",
+    "folder": "/templates/19/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/19/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "18",
+    "name": "女魔王",
+    "nameEn": "Innocentius",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 16,
+    "boneCount": 41,
+    "versionId": "20",
+    "folder": "/templates/18/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/18/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "17",
+    "name": "矮人展示",
+    "nameEn": "Dwarf warrior",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 67,
+    "boneCount": 41,
+    "versionId": "19",
+    "folder": "/templates/17/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/17/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "16",
+    "name": "法师",
+    "nameEn": "magician",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 11,
+    "partCount": 15,
+    "boneCount": 15,
+    "versionId": "18",
+    "folder": "/templates/16/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/16/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "15",
+    "name": "树精灵",
+    "nameEn": "Tree Spirit",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 28,
+    "boneCount": 45,
+    "versionId": "17",
+    "folder": "/templates/15/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/15/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "14",
+    "name": "三花妖女",
+    "nameEn": "Third Fairy Witch",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 114,
+    "boneCount": 377,
+    "versionId": "16",
+    "folder": "/templates/14/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/14/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "13",
+    "name": "女巫师",
+    "nameEn": "witch,sorceress",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 66,
+    "boneCount": 116,
+    "versionId": "13",
+    "folder": "/templates/13/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/13/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "12",
+    "name": "蛇枪",
+    "nameEn": "Snake Gun",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 58,
+    "boneCount": 65,
+    "versionId": "12",
+    "folder": "/templates/12/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/12/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "11",
+    "name": "长矛手",
+    "nameEn": "picador",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 11,
+    "partCount": 15,
+    "boneCount": 15,
+    "versionId": "11",
+    "folder": "/templates/11/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/11/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "10",
+    "name": "冰霜锤手",
+    "nameEn": "Frost Hammerer",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 40,
+    "boneCount": 53,
+    "versionId": "10",
+    "folder": "/templates/10/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/10/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "9",
+    "name": "路飞",
+    "nameEn": "Lu Fei",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 47,
+    "boneCount": 69,
+    "versionId": "9",
+    "folder": "/templates/9/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/9/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "8",
+    "name": "花仙子",
+    "nameEn": "Flower Child Lunlun",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 21,
+    "boneCount": 39,
+    "versionId": "8",
+    "folder": "/templates/8/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/8/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "7",
+    "name": "恶魔猎手",
+    "nameEn": "Demon Hunter",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 5,
+    "partCount": 22,
+    "boneCount": 59,
+    "versionId": "7",
+    "folder": "/templates/7/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/7/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "6",
+    "name": "持骨巨人",
+    "nameEn": "Holding Bone Giant",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 21,
+    "boneCount": 31,
+    "versionId": "6",
+    "folder": "/templates/6/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/6/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "5",
+    "name": "翡翠蛇弓手",
+    "nameEn": "Emerald Serpent Archer",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 60,
+    "boneCount": 73,
+    "versionId": "5",
+    "folder": "/templates/5/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/5/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "4",
+    "name": "术士",
+    "nameEn": "warlock",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 34,
+    "boneCount": 67,
+    "versionId": "4",
+    "folder": "/templates/4/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/4/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "3",
+    "name": "秘书",
+    "nameEn": "secretary",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 4,
+    "partCount": 20,
+    "boneCount": 31,
+    "versionId": "3",
+    "folder": "/templates/3/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/3/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "2",
+    "name": "机械将军",
+    "nameEn": "机械将军",
+    "type": "role",
+    "categories": [
+      "人物",
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 43,
+    "boneCount": 26,
+    "versionId": "2",
+    "folder": "/templates/2/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/2/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "1",
+    "name": "弓箭手",
+    "nameEn": "sagittary",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 11,
+    "partCount": 15,
+    "boneCount": 15,
+    "versionId": "1",
+    "folder": "/templates/1/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/1/role.png",
+    "roleFile": "role.png"
+  }
+]

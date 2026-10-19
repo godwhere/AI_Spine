@@ -1,0 +1,11 @@
+import { spawnSync, spawn } from "node:child_process";
+import { createRequire } from "node:module";
+import { copyDesktopExamples } from "./desktop-assets.mjs";
+const require = createRequire(import.meta.url);
+const build = spawnSync(process.execPath, ["node_modules/vite/bin/vite.js", "build"], { stdio: "inherit" });
+if (build.status !== 0) process.exit(build.status || 1);
+await copyDesktopExamples("dist/client");
+const env = { ...process.env };
+delete env.ELECTRON_RUN_AS_NODE;
+const child = spawn(require("electron"), ["desktop/bootstrap.cjs"], { stdio: "inherit", env });
+child.once("exit", (code) => process.exit(code || 0));

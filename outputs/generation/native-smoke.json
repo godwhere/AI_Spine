@@ -1,0 +1,8 @@
+{
+  "provider": "codex-native",
+  "authentication": "chatgpt",
+  "status": "completed",
+  "revisedPrompt": "Create one original game character concept as a production-quality 2D mobile RPG sprite: a charming chibi panda martial artist with a large expressive head and a compact, sturdy body. Full-body three-quarter standing pose facing RIGHT, head and torso oriented right, in a grounded, confident martial arts ready stance. Both feet must be completely visible with clear space around the entire silhouette; include the full ears, hands, gauntlets, and feet with no cropping. Distinctive black-and-white panda markings, round ears, focused yet endearing expression. Both forearms wear substantial icy blue JADE gauntlets, polished carved translucent stone with restrained frosty highlights and simple elegant facets; keep the gauntlets clearly readable and anatomically separate. A deep NAVY cloth sash tied at the waist with short flowing fabric tails, simple martial-arts trousers and practical cloth foot wraps. Polished painted illustration, clean readable shapes, appealing chibi proportions, refined soft cel-painted shading, subtle brushwork, crisp silhouette, restrained detail and coherent cool color accents. One character only, centered and isolated, no extra characters or duplicate limbs. Genuinely transparent background with alpha transparency: no background scenery, no opaque or checkerboard backdrop, no floor, no ground plane, no cast shadow beneath the character, no framing, no border, no text, no labels, no character sheet, no panels. Standalone full-body game sprite.",
+  "transparentBackground": true,
+  "image": "codex-panda-appearance.png"
+}

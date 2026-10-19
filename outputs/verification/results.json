@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "milestone": "local Spine 4.3 editing and export",
+  "core": {
+    "tests": 39,
+    "passed": 39,
+    "failed": 0,
+    "skipped": 0
+  },
+  "packaging": {
+    "tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "productionBuild": "passed",
+  "productionBrowserImportExport": "passed",
+  "referenceTemplates": 22,
+  "poseSamples": 2277,
+  "browserConsoleErrors": 0,
+  "browserConsoleWarnings": 0,
+  "aiConnected": false,
+  "billingImplemented": false,
+  "artifacts": {
+    "panda-runtime.zip": {
+      "bytes": 1359675,
+      "sha256": "de50b737d31cf18f29b2d9f005a4ce0107b2d7ebe7e1c2fce05078aa1c9f8098",
+      "skeletonBytesPreserved": true,
+      "atlasBytesPreserved": true,
+      "animations": 7,
+      "bones": 145,
+      "skins": 2,
+      "textureRegions": 49
+    },
+    "panda-project.zip": {
+      "bytes": 1925930,
+      "sha256": "e0795b29fb963b7fd27cdede779fe009878fe1042d8c69beb03008cd30439edd",
+      "skeletonBytesPreserved": true,
+      "atlasBytesPreserved": true,
+      "animations": 7,
+      "bones": 145,
+      "skins": 2,
+      "textureRegions": 49,
+      "edits": {
+        "x": 6,
+        "y": -3,
+        "scaleX": 0.98,
+        "scaleY": 0.98,
+        "rotation": 2,
+        "flipX": false,
+        "flipY": false
+      }
+    }
+  }
+}

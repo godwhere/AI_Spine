@@ -1,0 +1,42 @@
+{
+  "source": "EsotericSoftware/spine-runtimes official examples, branch 4.3",
+  "skeletonVersion": "4.3.75-beta",
+  "runtimeVersion": "4.3.13",
+  "verifiedWith": [
+    "src/core/archive.js parseBundle",
+    "src/spine/runtime.js parseSkeleton",
+    "src/core/archive.js exportPackage + unpackZip + parseBundle + parseSkeleton"
+  ],
+  "verification": {
+    "bones": 67,
+    "skins": 1,
+    "animations": 11,
+    "atlasPages": 1,
+    "atlasRegions": 40,
+    "finiteBoundsPoseSamples": 187,
+    "exportReimportPassed": true
+  },
+  "files": [
+    {
+      "name": "spineboy-pro.skel",
+      "url": "https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.3/examples/spineboy/export/spineboy-pro.skel",
+      "githubBlobSha": "cfcbd39497d367d25ba82b6e535a61933b3cba98",
+      "sha256": "e10de3f2473a37139c3ad1fda14e84b29ef401475ec9fa2129e7d2a311088845",
+      "bytes": 65335
+    },
+    {
+      "name": "spineboy.atlas",
+      "url": "https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.3/examples/spineboy/export/spineboy.atlas",
+      "githubBlobSha": "33f0db102bfd643ed3f3c021b6821ac2a775ad03",
+      "sha256": "fbd452640df513d637e0a34d21c1d3ea4edb27f57bd1856ffd5530b16ee83d00",
+      "bytes": 1552
+    },
+    {
+      "name": "spineboy.png",
+      "url": "https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/4.3/examples/spineboy/export/spineboy.png",
+      "githubBlobSha": "6f76c57988f1b0575d5b12ed7b2d4f44170cb5bd",
+      "sha256": "ab874448a224f8a92188e133735062c86e5f93eb7286b0fc37c5d39864e6569f",
+      "bytes": 242791
+    }
+  ]
+}

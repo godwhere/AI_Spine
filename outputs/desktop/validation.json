@@ -1,0 +1,62 @@
+{
+  "version": "0.1.0",
+  "platform": "macOS arm64",
+  "tests": {
+    "core": {
+      "tests": 50,
+      "pass": 50,
+      "fail": 0,
+      "skipped": 0
+    },
+    "desktop": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    "egg": {
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "skipped": 0
+    },
+    "sites": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "totalPassed": 70,
+  "nativeUI": {
+    "resourceLibrary": true,
+    "templateCount": 22,
+    "starterParts": 6,
+    "starterActions": 5,
+    "search": true,
+    "menuNavigation": true,
+    "previewActionsObserved": [
+      "std",
+      "walk"
+    ],
+    "focusedEditorAndParts": true,
+    "templateComparison": true,
+    "calibrationRestored": true,
+    "codexAccountConnected": true,
+    "nativeSaveAndOpenDialogs": true,
+    "editableExportReimport": true,
+    "quitBeforeAutoSaveRestoredName": "星莓果冻精灵 · 桌面已验证",
+    "windowBoundsRestored": true,
+    "newImageGenerationSubmitted": false
+  },
+  "archive": {
+    "file": "AI-Spine-macOS-arm64.zip",
+    "bytes": 160327812,
+    "sha256": "9b5204a9beb69a5c46ca446359c84c5fd943396c3a369061c6996ab2a798d4e5"
+  },
+  "evidence": [
+    "resource-library.png",
+    "focused-editor.png",
+    "starberry-desktop-project.zip"
+  ]
+}

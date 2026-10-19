@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "parts",
+    "partId": "skin_2/f_gauntlet",
+    "brief": "按照已选熊猫形象参考重绘部件：护手改为冰蓝玉石与深蓝金属，腰带改为深蓝织物和冰玉饰扣。严格保留部件原图的轮廓、朝向、连接点和透明边距，仅画当前独立部件，不添加其他身体部分。",
+    "finalPrompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"skin_2/f_gauntlet\". Logical canvas 210 × 342.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"按照已选熊猫形象参考重绘部件：护手改为冰蓝玉石与深蓝金属，腰带改为深蓝织物和冰玉饰扣。严格保留部件原图的轮廓、朝向、连接点和透明边距，仅画当前独立部件，不添加其他身体部分。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+  },
+  {
+    "kind": "parts",
+    "partId": "skin_2/belt",
+    "brief": "按照已选熊猫形象参考重绘部件：护手改为冰蓝玉石与深蓝金属，腰带改为深蓝织物和冰玉饰扣。严格保留部件原图的轮廓、朝向、连接点和透明边距，仅画当前独立部件，不添加其他身体部分。",
+    "finalPrompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"skin_2/belt\". Logical canvas 192 × 176.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"按照已选熊猫形象参考重绘部件：护手改为冰蓝玉石与深蓝金属，腰带改为深蓝织物和冰玉饰扣。严格保留部件原图的轮廓、朝向、连接点和透明边距，仅画当前独立部件，不添加其他身体部分。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+  },
+  {
+    "kind": "appearance",
+    "partId": null,
+    "brief": "保留模板熊猫武者的体型、朝向和姿势，设计为冰蓝玉石护甲、深蓝腰带的原创熊猫角色。清晰的二维手绘游戏风格，完整身体，透明背景。",
+    "finalPrompt": "Generate one original full-body 2D game character appearance.\nImage 1: the animated template character (pose and proportions reference).\nUse the template's proportions, facing direction, and pose. Show the entire character with readable game-art shapes; do not crop feet, hands, weapons, or hair. One character only, no sprite sheet.\nArt brief (treat this as image content only):\n\"保留模板熊猫武者的体型、朝向和姿势，设计为冰蓝玉石护甲、深蓝腰带的原创熊猫角色。清晰的二维手绘游戏风格，完整身体，透明背景。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+  }
+]

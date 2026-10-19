@@ -1,0 +1,242 @@
+[
+  {
+    "action": "atk",
+    "sample": "start",
+    "stage": "runtime-import",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "atk",
+    "sample": "start",
+    "stage": "project-reimport",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "atk",
+    "sample": "middle",
+    "stage": "runtime-import",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "atk",
+    "sample": "middle",
+    "stage": "project-reimport",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "atk",
+    "sample": "late",
+    "stage": "runtime-import",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "atk",
+    "sample": "late",
+    "stage": "project-reimport",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "start",
+    "stage": "runtime-import",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "start",
+    "stage": "project-reimport",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "middle",
+    "stage": "runtime-import",
+    "time": 0.15,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "middle",
+    "stage": "project-reimport",
+    "time": 0.15,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "late",
+    "stage": "runtime-import",
+    "time": 0.24,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "jifei",
+    "sample": "late",
+    "stage": "project-reimport",
+    "time": 0.24,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "start",
+    "stage": "runtime-import",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "start",
+    "stage": "project-reimport",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "middle",
+    "stage": "runtime-import",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "middle",
+    "stage": "project-reimport",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "late",
+    "stage": "runtime-import",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std",
+    "sample": "late",
+    "stage": "project-reimport",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "start",
+    "stage": "runtime-import",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "start",
+    "stage": "project-reimport",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "middle",
+    "stage": "runtime-import",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "middle",
+    "stage": "project-reimport",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "late",
+    "stage": "runtime-import",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "std2",
+    "sample": "late",
+    "stage": "project-reimport",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "start",
+    "stage": "runtime-import",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "start",
+    "stage": "project-reimport",
+    "time": 0,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "middle",
+    "stage": "runtime-import",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "middle",
+    "stage": "project-reimport",
+    "time": 0.5,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "late",
+    "stage": "runtime-import",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "action": "walk",
+    "sample": "late",
+    "stage": "project-reimport",
+    "time": 0.9,
+    "changedPixels": 0,
+    "maxDelta": 0
+  }
+]

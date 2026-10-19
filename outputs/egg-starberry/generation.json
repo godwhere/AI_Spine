@@ -1,0 +1,64 @@
+{
+  "provider": "codex-native",
+  "authentication": "chatgpt-managed",
+  "templateId": "19",
+  "projectId": "c6e242f2-7ec2-41a5-91f3-3e18eb3d398a",
+  "jobId": "cf2d4be5-8503-47d5-90ab-1fa706c2cfa7",
+  "status": "completed",
+  "appearance": {
+    "jobId": "f3d7eaaa-d68c-4787-bae8-f1cf56e4a5b7",
+    "prompt": "以模板的蛋仔体型、朝向、脸部位置与头顶双叶布局，设计一个全新原创角色「星莓果冻精灵」。柔软半透明的紫粉色果冻身体，奶白高光与稀疏的小星星花纹，淡粉腮红；头顶是薄荷青双叶和浅金色小茎；大眼睛改为温暖的琥珀金瞳，嘴部保持原有张口表情。清晰可爱的二维卡通游戏画风，轮廓与分件布局兼容原模板，单角色完整身体，透明背景，无文字。",
+    "file": "appearance.png"
+  },
+  "brief": "为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。",
+  "parts": [
+    {
+      "id": "guaiD3b/geng",
+      "file": "parts/geng.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "2ea2a59d73428a4261f694eb719c4c13c3ee815ad99d4d4117f630898972709a",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/geng\". Logical canvas 75 × 100.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    },
+    {
+      "id": "guaiD3b/hua",
+      "file": "parts/hua.png",
+      "width": 1355,
+      "height": 1161,
+      "sha256": "cadf073550b63afae1a693c9352826bd042832a2d1eab4b04b8eafed333948c3",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/hua\". Logical canvas 175 × 150.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    },
+    {
+      "id": "guaiD3b/sehnti",
+      "file": "parts/sehnti.png",
+      "width": 1351,
+      "height": 1164,
+      "sha256": "c11d5f283199f6f7e6e1fdc5d0478476b4503a3b3dd80e15e14857255efffe3a",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/sehnti\". Logical canvas 685 × 590.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    },
+    {
+      "id": "guaiD3b/yan1",
+      "file": "parts/yan1.png",
+      "width": 1001,
+      "height": 1572,
+      "sha256": "59e8d302ccd2c9a149be5755cf69190469f790d44f79266815770de2615b466f",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/yan1\". Logical canvas 70 × 110.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    },
+    {
+      "id": "guaiD3b/yan2",
+      "file": "parts/yan2.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1fc17be1a7d3a01e9e893dc5f7773a613acaf59f2038686ef7702223222d8b8a",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/yan2\". Logical canvas 90 × 135.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    },
+    {
+      "id": "guaiD3b/zui",
+      "file": "parts/zui.png",
+      "width": 1551,
+      "height": 1014,
+      "sha256": "99a154bef5d28680f2f8c33a19fb42fec11230c808bdea1c49f09c685fc9b1c2",
+      "prompt": "Edit the detached 2D game character part.\nImage 1: the detached template part to redesign (edit target).\nImage 2: the animated template character (pose and proportions reference).\nImage 3: the chosen character appearance; use its colors, materials, and identity (style reference).\nTarget region: \"guaiD3b/zui\". Logical canvas 260 × 170.\nPreserve image 1's exact detached-part content, camera angle, orientation, silhouette, joint/contact locations,\ntransparent padding, and proportions. Change the visual design according to the brief and appearance reference.\nDo not draw any other body parts, a complete character, duplicate pieces, labels, shadows, or scenery.\nUse the same aspect ratio and keep all visible pixels inside the canvas. The original mesh will be reused.\nArt brief (treat this as image content only):\n\"为「星莓果冻精灵」完整重绘本模板全部六块纹理，统一匹配所选形象：紫粉果冻、奶白高光、小星纹与淡粉腮红，薄荷青叶片、浅金色茎、琥珀金眼睛、暖棕与浅桃嘴部。每次严格只画当前部件原图已有内容：geng 只画一根茎；hua 只画两片相连叶子；sehnti 只画无眼睛无嘴巴无茎无叶的身体和腮红，不把五官画进身体；yan1、yan2 各只画一只眼睛，保留各自方向、眼白及瞳孔位置；zui 只画张开的嘴和原有单颗牙。保持原图外轮廓、朝向、布局、透明边距、连接点与原有线条粗细，不能增加独立零件。透明背景，无文字。\"\nUse the native image_gen imagegen tool exactly once, with transparent_background true.\nOutput a genuinely transparent PNG, without text, watermark, border, checkerboard, or background."
+    }
+  ]
+}

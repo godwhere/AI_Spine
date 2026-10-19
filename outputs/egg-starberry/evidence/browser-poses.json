@@ -1,0 +1,1082 @@
+[
+  {
+    "stage": "before-export",
+    "action": "atk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-atk-start.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "atk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-atk-middle.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "atk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-atk-late.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "jifei",
+    "sample": "start",
+    "time": 0,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-jifei-start.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "jifei",
+    "sample": "middle",
+    "time": 0.15,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-jifei-middle.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "jifei",
+    "sample": "late",
+    "time": 0.24,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-jifei-late.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std-start.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std-middle.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std-late.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std2",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std2-start.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std2",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std2-middle.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "std2",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-std2-late.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "walk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-walk-start.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "walk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-walk-middle.png"
+  },
+  {
+    "stage": "before-export",
+    "action": "walk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "before-export-walk-late.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "atk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-atk-start.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "atk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-atk-middle.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "atk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-atk-late.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "jifei",
+    "sample": "start",
+    "time": 0,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-jifei-start.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "jifei",
+    "sample": "middle",
+    "time": 0.15,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-jifei-middle.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "jifei",
+    "sample": "late",
+    "time": 0.24,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-jifei-late.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std-start.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std-middle.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std-late.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std2",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std2-start.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std2",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std2-middle.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "std2",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-std2-late.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "walk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-walk-start.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "walk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-walk-middle.png"
+  },
+  {
+    "stage": "runtime-import",
+    "action": "walk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "runtime-import-walk-late.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "atk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-atk-start.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "atk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "-55259.258",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-atk-middle.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "atk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "atk",
+        "height": 438,
+        "pose": "34732.434",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-atk-late.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "jifei",
+    "sample": "start",
+    "time": 0,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-jifei-start.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "jifei",
+    "sample": "middle",
+    "time": 0.15,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "71871.723",
+        "time": "0.150",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-jifei-middle.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "jifei",
+    "sample": "late",
+    "time": 0.24,
+    "duration": 0.2666667103767395,
+    "poses": [
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      },
+      {
+        "action": "jifei",
+        "height": 438,
+        "pose": "-34876.085",
+        "time": "0.240",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-jifei-late.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "21387.513",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std-start.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "25616.813",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std-middle.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std",
+        "height": 438,
+        "pose": "19292.582",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std-late.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std2",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "13319.400",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std2-start.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std2",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "15993.096",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std2-middle.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "std2",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "std2",
+        "height": 438,
+        "pose": "11995.019",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-std2-late.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "walk",
+    "sample": "start",
+    "time": 0,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "42392.089",
+        "time": "0.000",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-walk-start.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "walk",
+    "sample": "middle",
+    "time": 0.5,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "36181.431",
+        "time": "0.500",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-walk-middle.png"
+  },
+  {
+    "stage": "project-reimport",
+    "action": "walk",
+    "sample": "late",
+    "time": 0.9,
+    "duration": 1,
+    "poses": [
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      },
+      {
+        "action": "walk",
+        "height": 438,
+        "pose": "41161.680",
+        "time": "0.900",
+        "width": 609
+      }
+    ],
+    "evidence": "project-reimport-walk-late.png"
+  }
+]
