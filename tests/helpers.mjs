@@ -8,9 +8,13 @@ export const pixelEnv = {
 };
 export function template(id) {
   const directory = new URL(`../public/templates/${id}/`, import.meta.url);
+  const item = JSON.parse(fs.readFileSync(new URL("../public/templates/catalog.json", import.meta.url), "utf8"))
+    .find((entry) => String(entry.id) === String(id));
+  if (!item) throw new Error(`Unknown template ${id}`);
+  const paths = [...new Set([item.skeletonFile, ...item.atlasFiles, ...item.textureFiles])];
   return parseBundle(
     Object.fromEntries(
-      ["skeleton.json", "skeleton.atlas", "skeleton.png"].map((name) => [
+      paths.map((name) => [
         name,
         new Uint8Array(fs.readFileSync(new URL(name, directory))),
       ]),

@@ -1,0 +1,29 @@
+{
+  "product": "iSpine",
+  "platform": "macOS arm64",
+  "tests": {
+    "tests": 76,
+    "pass": 76,
+    "fail": 0,
+    "skipped": 0
+  },
+  "renaming": {
+    "bundle": "iSpine.app",
+    "bundleIdentifierRetained": "com.ethan.ai-spine",
+    "profileDirectoryRetained": "AI Spine",
+    "previousResourcesObserved": 3
+  },
+  "resourceTrash": {
+    "confirmationAndCancellationCheckedInNativeUI": true,
+    "temporaryResourceMovedToTrashInNativeUI": true,
+    "trashPersistedAcrossNativeRestart": true,
+    "restoreRetainsBinaryImagesCalibrationAndReferences": {
+      "verifiedBy": "IndexedDB-compatible automated tests",
+      "passed": true
+    },
+    "staleAutosaveRejected": true,
+    "emptyActiveLibraryDoesNotReseedTrashedSamples": true,
+    "nativeRestoreClickPerformed": false
+  },
+  "evidence": "evidence/ispine-resources.png"
+}

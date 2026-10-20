@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "scope": "Shared browser and optional native shell manual part adjustment; Send-to-App UI and receiver removed.",
+  "tests": {
+    "core": 449,
+    "desktop": 9,
+    "egg": 9,
+    "sites": 4,
+    "allPassed": true
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:4180",
+    "draft": "粉发法师·独立骨架研究稿（保留）",
+    "baseParts": 44,
+    "joints": 25,
+    "motions": 7,
+    "dragBefore": {
+      "x": 317,
+      "y": 65
+    },
+    "dragAfter": {
+      "x": 347.9132080078125,
+      "y": 75.30441284179688
+    },
+    "dragUndo": {
+      "x": 317,
+      "y": 65
+    },
+    "keyboardDeltaX": 1,
+    "scaleUndoVerified": true,
+    "sendButtonCount": 0
+  },
+  "native": {
+    "resource": "粉发法师·独立骨架研究稿（保留）",
+    "resources": 4,
+    "trash": 1,
+    "templates": 39,
+    "manualModeOpenedFromResourceInspector": true,
+    "keyboardBeforeX": 317,
+    "keyboardAfterX": 318,
+    "keyboardUndoX": 317,
+    "baseY": 65,
+    "draftSaved": true,
+    "originalProfileRetained": true
+  },
+  "validationBoundary": "All verification edits were undone. This verifies the editor and fixture runtime/export roundtrips; it does not newly accept every character motion or claim official Spine/Unity editor acceptance."
+}

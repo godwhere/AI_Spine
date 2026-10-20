@@ -1,0 +1,100 @@
+[
+  {
+    "skin": "default",
+    "action": "attack",
+    "time": 0.66,
+    "file": "native-default-attack.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "die",
+    "time": 0.51,
+    "file": "native-default-die.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "get_hurt",
+    "time": 0.21,
+    "file": "native-default-get_hurt.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "idle",
+    "time": 0.6,
+    "file": "native-default-idle.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "reborn",
+    "time": 0.51,
+    "file": "native-default-reborn.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "skill",
+    "time": 0.84,
+    "file": "native-default-skill.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "default",
+    "action": "stun",
+    "time": 0.6,
+    "file": "native-default-stun.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "attack",
+    "time": 0.66,
+    "file": "native-skin_2-attack.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "die",
+    "time": 0.51,
+    "file": "native-skin_2-die.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "time": 0.21,
+    "file": "native-skin_2-get_hurt.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "idle",
+    "time": 0.6,
+    "file": "native-skin_2-idle.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "reborn",
+    "time": 0.51,
+    "file": "native-skin_2-reborn.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "skill",
+    "time": 0.84,
+    "file": "native-skin_2-skill.png",
+    "appliedParts": 49
+  },
+  {
+    "skin": "skin_2",
+    "action": "stun",
+    "time": 0.6,
+    "file": "native-skin_2-stun.png",
+    "appliedParts": 49
+  }
+]

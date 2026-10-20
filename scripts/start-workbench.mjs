@@ -1,26 +1,30 @@
-import { existsSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
+import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
+import { execFile } from "node:child_process";
+import { createServer } from "node:http";
+import { startWorkbenchServer, WORKBENCH_PORT } from "../server/workbench-server.mjs";
+import { workbenchProxy } from "../server/workbench-proxy.mjs";
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const url = 'http://127.0.0.1:4173';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), ".."), origin = `http://127.0.0.1:${WORKBENCH_PORT}`;
+const open = () => { if (process.argv.includes("--open")) execFile("/usr/bin/open", [origin], () => {}); };
 try {
-  const response = await fetch(url, { signal: AbortSignal.timeout(800) });
-  if (response.ok && (await response.text()).includes('AI Spine')) {
-    console.log(`工作台已在运行：${url}`);
-    process.exit(0);
-  }
-} catch { /* Start the local service when it is not already running. */ }
-if (!existsSync(resolve(root, 'node_modules/vite/bin/vite.js'))) {
-  console.error('请先在项目目录安装依赖：pnpm install');
-  process.exit(1);
+  const response = await fetch(`${origin}/api/workspace/status`, { signal: AbortSignal.timeout(1000) });
+  if (response.ok && (await response.json()).storage === "local-shared") { open(); process.exit(0); }
+} catch { /* Start the persistent local workbench. */ }
+if (!existsSync(resolve(root, "dist/client/index.html"))) throw new Error("工作台尚未构建，请先运行 npm run build。");
+const server = await startWorkbenchServer({ clientRoot: resolve(root, "dist/client") });
+const aliases = [];
+for (const port of [4173, 4180]) {
+  const forward = workbenchProxy(server.origin, { all: true });
+  const alias = createServer((req, res) => forward(req, res, () => { res.writeHead(404); res.end(); }));
+  try {
+    await new Promise((accept, reject) => { alias.once("error", reject); alias.listen(port, "127.0.0.1", accept); });
+    aliases.push(alias);
+  } catch (error) { if (error.code !== "EADDRINUSE") throw error; }
 }
-try {
-  const { createServer } = await import('vite');
-  const server = await createServer({ root, server: { host: '127.0.0.1', port: 4173, strictPort: true } });
-  await server.listen();
-  console.log(`Spine 工作台已启动：${url}`);
-} catch (error) {
-  console.error(`工作台未能启动：${error.message}`);
-  process.exitCode = 1;
-}
+console.log(`iSpine 本机工作台：${server.origin}`); open();
+let stopping = false;
+for (const signal of ["SIGTERM", "SIGINT"]) process.on(signal, () => {
+  if (!stopping) { stopping = true; for (const alias of aliases) { alias.closeAllConnections(); alias.close(); } void server.close().then(() => process.exit(0)); }
+});

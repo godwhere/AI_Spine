@@ -9,6 +9,9 @@ export const identityTransform = () => ({
 });
 export const browserPixels = {
   createCanvas(width, height) {
+    const Canvas = globalThis.OffscreenCanvas;
+    if (typeof Canvas === "function" && typeof Canvas.prototype?.convertToBlob === "function")
+      return new Canvas(width, height);
     const canvas = document.createElement("canvas");
     canvas.width = width;
     canvas.height = height;
@@ -27,12 +30,10 @@ export const browserPixels = {
     return image;
   },
   async encode(canvas) {
-    const blob = await new Promise((resolve, reject) =>
-      canvas.toBlob(
-        (b) => (b ? resolve(b) : reject(new Error("PNG 编码失败。"))),
-        "image/png",
-      ),
-    );
+    const blob = typeof canvas.convertToBlob === "function"
+      ? await canvas.convertToBlob({ type: "image/png" })
+      : await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+    if (!blob) throw new Error("PNG 编码失败。");
     return new Uint8Array(await blob.arrayBuffer());
   },
 };
@@ -84,8 +85,18 @@ export function alphaBounds(imageData, threshold = 8) {
 export async function extractPart(bundle, part, env = browserPixels) {
   const image = await env.loadImage(bundle.files[part.pageFile]);
   try {
-    const canvas = env.createCanvas(part.originalWidth, part.originalHeight),
-      ctx = canvas.getContext("2d");
+    return extractPartFromImage(image, part, env);
+  } finally {
+    closeImage(image);
+  }
+}
+
+// The caller owns the decoded page and may borrow it for several regions.
+// Keep rotation, trim and PMA handling identical to normal extraction.
+export function extractPartFromImage(image, part, env = browserPixels) {
+  const canvas = env.createCanvas(part.originalWidth, part.originalHeight);
+  try {
+    const ctx = canvas.getContext("2d");
     const top = part.originalHeight - part.offsetY - part.height;
     ctx.save();
     if (part.degrees === 90) {
@@ -127,8 +138,9 @@ export async function extractPart(bundle, part, env = browserPixels) {
       ctx.putImageData(pixels, 0, 0);
     }
     return canvas;
-  } finally {
-    closeImage(image);
+  } catch (error) {
+    canvas.width = 1; canvas.height = 1;
+    throw error;
   }
 }
 

@@ -1,5 +1,6 @@
 import { unpackZip, parseBundle, exportPackage } from "./archive.js";
 import { parseSkeleton } from "../spine/runtime.js";
+import { unityAssetPath } from "./unity-export.js";
 self.onmessage = ({ data }) => {
   try {
     let result;
@@ -7,7 +8,7 @@ self.onmessage = ({ data }) => {
     else if (data.operation === "export") {
       const bytes = exportPackage(data.bundle, data.pages, data.options);
       const roundtrip = parseBundle(unpackZip(bytes), {
-        skeletonPath: data.bundle.skeletonPath,
+        skeletonPath: data.options?.target === "unity" ? unityAssetPath(data.bundle.skeletonPath) : data.bundle.skeletonPath,
       });
       const { data: skeleton } = parseSkeleton(roundtrip);
       if (

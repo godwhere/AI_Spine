@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-20T11:00:27.844066+00:00",
+  "test_results": {
+    "full_suite": {
+      "passed": 409,
+      "failed": 0,
+      "log": "/tmp/ispine-sub2api-final-full-tests.log"
+    },
+    "desktop_suite": {
+      "passed": 9,
+      "failed": 0,
+      "log": "/tmp/ispine-sub2api-desktop-tests.log"
+    },
+    "provider_suite": {
+      "passed": 11,
+      "failed": 0,
+      "log": "/tmp/ispine-sub2api-final-provider-tests.log"
+    }
+  },
+  "build": {
+    "client": "/tmp/ispine-sub2api-client",
+    "log": "/tmp/ispine-sub2api-build.log",
+    "app": "/Users/ethan/Projects/AI_Spine/outputs/desktop/sub2api/iSpine.app",
+    "packaged_provider_matches": {
+      "server/ai-connections.mjs": true,
+      "server/providers/sub2api-images.mjs": true
+    },
+    "ad_hoc_signature_verified": true,
+    "packaged_backend_smoke_test_passed": true,
+    "native_ui_launched": false
+  },
+  "preview": "http://127.0.0.1:4182",
+  "gateway": {
+    "version": "v0.2.17",
+    "local_url": "http://127.0.0.1:18080",
+    "server_loopback_only": true,
+    "dedicated_tunnel": true,
+    "health": "ok",
+    "group": {
+      "id": 8,
+      "name": "iSpine OpenAI",
+      "platform": "openai"
+    }
+  },
+  "acceptance": {
+    "admin_legal_acknowledgement": "accepted_v2026.06.10",
+    "account_authorization_permission": "approved_by_user",
+    "account_oauth_completed": true,
+    "real_upstream_image_generation": true,
+    "actual_route": "chatgpt-web",
+    "evidence": "chatgpt-web-integration.json"
+  },
+  "scope": "Provider integration and isolated deployment; no completed-character acceptance.",
+  "browser_cleanup": {
+    "completed_task_chrome_tabs_closed": 5,
+    "in_app_preview_closed": true,
+    "temporary_preview_server_stopped": true,
+    "oauth_callback_receiver_stopped": true
+  }
+}

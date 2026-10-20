@@ -8,17 +8,17 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; ch
   ".css": "text/css; charset=utf-8", ".json": "application/json", ".png": "image/png",
   ".svg": "image/svg+xml", ".zip": "application/zip", ".atlas": "text/plain", ".skel": "application/octet-stream" };
 export const DESKTOP_PORT = 4175;
-export async function startDesktopServer({ clientRoot, dataRoot, port = DESKTOP_PORT, jobs } = {}) {
+export async function startDesktopServer({ clientRoot, dataRoot, port = DESKTOP_PORT, jobs, protection, workspace } = {}) {
   const root = resolve(clientRoot);
-  jobs ||= new GenerationJobs({ root: resolve(dataRoot, "generation/jobs") });
+  jobs ||= new GenerationJobs({ root: resolve(dataRoot, "generation/jobs"), protection });
   const generation = generationMiddleware(jobs);
   const server = createServer((req, res) => {
     const host = req.headers.host || "";
-    if (!/^127\.0\.0\.1:\d+$/.test(host) || req.headers["sec-fetch-site"] === "cross-site" ||
+    if (!/^(127\.0\.0\.1|localhost):\d+$/.test(host) || req.headers["sec-fetch-site"] === "cross-site" ||
         (req.headers.origin && req.headers.origin !== `http://${host}`)) {
       res.writeHead(403); res.end("Local application only"); return;
     }
-    void generation(req, res, async () => {
+    const serve = () => generation(req, res, async () => {
       try {
         if (!["GET", "HEAD"].includes(req.method)) { res.writeHead(405); res.end(); return; }
         const pathname = decodeURIComponent(new URL(req.url, "http://127.0.0.1").pathname);
@@ -32,6 +32,8 @@ export async function startDesktopServer({ clientRoot, dataRoot, port = DESKTOP_
         res.end(req.method === "HEAD" ? undefined : await readFile(file));
       } catch { res.writeHead(404); res.end("Not found"); }
     });
+    if (workspace) void workspace(req, res, serve);
+    else void serve();
   });
   await new Promise((accept, reject) => {
     server.once("error", reject);

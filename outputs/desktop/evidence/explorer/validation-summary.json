@@ -1,0 +1,138 @@
+{
+  "product": "iSpine",
+  "date": "2026-10-20",
+  "templateCount": 38,
+  "characters": 37,
+  "effects": 1,
+  "selectedMock": 3,
+  "tests": {
+    "core": 121,
+    "egg": 9,
+    "productionServing": 4,
+    "desktop": 7,
+    "total": 141,
+    "failures": 0,
+    "skipped": 0
+  },
+  "native": {
+    "launched": true,
+    "codexConnected": true,
+    "libraryCount": 1,
+    "trashCount": 0,
+    "wukongRegions": 49,
+    "wukongAnimations": 7,
+    "imageGalleryVerified": true,
+    "systemAuthenticationHandledByUser": true,
+    "finalThreeColumnVerified": false,
+    "finalStartup": "Waiting for user to handle macOS Keychain confirmation"
+  },
+  "gallery": [
+    {
+      "cardHeight": 366.6640625,
+      "cardWidth": 366.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14,
+      "width": 1600
+    },
+    {
+      "cardHeight": 314.1328125,
+      "cardWidth": 314.1328125,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14,
+      "width": 1440
+    },
+    {
+      "cardHeight": 214.6640625,
+      "cardWidth": 214.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14.0078125,
+      "width": 1024
+    },
+    {
+      "cardHeight": 154.6640625,
+      "cardWidth": 154.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 10.0078125,
+      "width": 800
+    },
+    {
+      "cardHeight": 114,
+      "cardWidth": 114,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 10,
+      "width": 390
+    }
+  ],
+  "shortWindows": [
+    {
+      "width": 1024,
+      "height": 768,
+      "keyboardReachesCreate": true,
+      "buttonFullyVisible": true,
+      "scrollTop": 50
+    },
+    {
+      "width": 800,
+      "height": 740,
+      "keyboardReachesCreate": true,
+      "buttonBottom": 691.3046875,
+      "buttonFullyVisible": true,
+      "panelBottom": 740,
+      "scrollTop": 0
+    }
+  ],
+  "unity": {
+    "zipBytes": 2268832,
+    "sha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+    "skeleton": "skeleton.json",
+    "parts": 49,
+    "animations": 7,
+    "skins": 2,
+    "exactRuntimeFiles": 3,
+    "readme": true,
+    "unityEditorTested": false,
+    "actualBrowserImport": true,
+    "actualSecondDownload": true,
+    "byteIdenticalRoundtrip": true,
+    "roundtripSha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+    "isolatedVerificationOrigin": "http://127.0.0.1:4176",
+    "nativeLibraryModified": false
+  },
+  "limitations": [
+    "Unity Editor import and scene playback not tested",
+    "No real external API Key image-generation request in this milestone"
+  ],
+  "templateDisplay": {
+    "choices": [
+      "列表视图",
+      "三列图片视图"
+    ],
+    "countsVisible": true,
+    "galleryLayout": false,
+    "headerVisible": true,
+    "listSelected": true,
+    "mode": "list",
+    "nameVisible": true
+  },
+  "delivery": {
+    "file": "iSpine-macOS-arm64-three-columns.zip",
+    "bytes": 168900336,
+    "sha256": "96458496cf70c82234f7177f969480d43b4daee7413137f16297c60d227d909b",
+    "archiveCrcVerified": true
+  }
+}

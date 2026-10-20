@@ -1,0 +1,29 @@
+{
+  "validatedAt": "2026-10-19T16:10:07.725Z",
+  "tests": {
+    "passed": 84,
+    "failed": 0,
+    "skipped": 0
+  },
+  "packagedDesktopTests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "nativeActions": [
+    "idle",
+    "attack",
+    "get_hurt",
+    "die",
+    "reborn",
+    "skill",
+    "stun"
+  ],
+  "browserLibraryActions": 7,
+  "browserEditorSkinActions": 14,
+  "cameraUnchangedAcrossActions": true,
+  "manualZoomRetained": true,
+  "installedBuildMatchesSource": true,
+  "sourceSkeletonAndExportsUnchanged": true,
+  "resourceCount": 3,
+  "trashCount": 3
+}

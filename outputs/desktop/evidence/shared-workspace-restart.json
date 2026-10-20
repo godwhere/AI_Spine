@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-20T22:12:23+0800",
+  "sameDatabaseAfterRestart": true,
+  "resources": 5,
+  "trash": 1,
+  "drafts": 3,
+  "customTemplates": 1,
+  "selectedProvider": "sub2api",
+  "keyLockedAfterRestart": true,
+  "explicitValidationUnlockedSavedKey": true,
+  "secureStorage": true,
+  "imageRequestsIssued": 0,
+  "service": "local.ispine.workbench"
+}

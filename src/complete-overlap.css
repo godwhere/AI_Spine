@@ -1,0 +1,116 @@
+.complete-overlap-backdrop { position:fixed; inset:0; z-index:170; display:flex; align-items:center; justify-content:center; padding:24px; background:#28213975; }
+.complete-overlap-panel { display:flex; flex-direction:column; width:min(1480px,100%); height:min(960px,calc(100dvh - 48px)); min-height:0; overflow:hidden; border:1px solid #d9cdef; border-radius:10px; background:#fbfaff; color:#514361; box-shadow:0 18px 70px #2d214b38; }
+.complete-overlap-panel button,.complete-overlap-panel input,.complete-overlap-panel select { font:inherit; }
+.complete-overlap-panel button { cursor:pointer; }
+.complete-overlap-panel button:disabled { cursor:default; opacity:.5; }
+.complete-overlap-panel button:focus-visible,.complete-overlap-panel input:focus-visible,.complete-overlap-panel select:focus-visible,.complete-overlap-panel summary:focus-visible { outline:2px solid #9167d1; outline-offset:3px; }
+.complete-overlap-panel .button { min-height:34px; border:1px solid #ded3ed; border-radius:5px; padding:7px 10px; background:#fff; color:#795b96; font-size:11px; line-height:1.6; }
+.complete-overlap-panel .button:hover:not(:disabled) { border-color:#ad8bd9; background:#f6f1fd; }
+.complete-overlap-panel .complete-overlap-primary { border-color:#9974ca; background:#8255b8; color:#fff; }
+.complete-overlap-panel .complete-overlap-primary:hover:not(:disabled) { background:#7548ac; border-color:#7548ac; }
+.complete-overlap-header { display:flex; justify-content:space-between; align-items:center; gap:18px; flex-shrink:0; padding:15px 20px; border-bottom:1px solid #e4ddec; background:#fff; }
+.complete-overlap-header h2 { margin:0; font-size:17px; font-weight:600; }
+.complete-overlap-header p { margin:6px 0 0; color:#8a7b99; font-size:11px; line-height:1.7; }
+.complete-overlap-header > button { flex-shrink:0; }
+.complete-overlap-alert,.complete-overlap-notice { flex-shrink:0; margin:0; padding:9px 20px; border-bottom:1px solid #eed5df; background:#fff1f3; color:#a14862; font-size:12px; line-height:1.75; overflow-wrap:anywhere; }
+.complete-overlap-notice { background:#f2edfd; border-color:#e2d7f2; color:#785c99; }
+.complete-overlap-status { display:flex; align-items:center; gap:18px; flex-shrink:0; min-height:35px; padding:7px 20px; border-bottom:1px solid #e4ddec; background:#f7f3fd; color:#8b70a5; font-size:11px; }
+.complete-overlap-status progress { width:140px; height:5px; accent-color:#986dcc; }
+.complete-overlap-body { display:grid; grid-template-columns:220px minmax(0,1fr) 296px; min-height:0; flex:1; overflow:hidden; }
+.complete-overlap-library { display:flex; flex-direction:column; min-height:0; min-width:0; border-right:1px solid #e4ddec; background:#fff; }
+.complete-overlap-library-heading { display:flex; align-items:center; justify-content:space-between; flex-shrink:0; padding:13px 14px; border-bottom:1px solid #eee8f5; font-size:11px; }
+.complete-overlap-library-heading strong { font-size:12px; font-weight:500; }
+.complete-overlap-library-heading > span { color:#a08fae; }
+.complete-overlap-parts { flex:1; min-height:0; padding:6px; overflow-y:auto; scrollbar-width:thin; }
+.complete-overlap-parts > button { display:flex; align-items:center; gap:8px; width:100%; min-height:62px; margin:0 0 3px; padding:8px 6px; border:1px solid transparent; border-radius:5px; background:transparent; text-align:left; }
+.complete-overlap-parts > button:hover { background:#f8f5fd; }
+.complete-overlap-parts > button.selected { border-color:#d8c6ef; background:#f1eafb; }
+.complete-overlap-parts img { width:38px; height:38px; flex-shrink:0; object-fit:contain; border-radius:3px; }
+.complete-overlap-parts > button > span:first-of-type { min-width:0; flex:1; }
+.complete-overlap-parts strong { display:block; font-size:11px; font-weight:500; color:#6d5c81; overflow-wrap:anywhere; }
+.complete-overlap-parts small { display:block; margin-top:5px; font-size:9px; color:#9e8cac; line-height:1.5; }
+.complete-overlap-done { color:#648f83; font-size:14px; }
+.complete-overlap-wait { color:#b6a6c6; font-size:14px; }
+.complete-overlap-main { min-width:0; overflow-y:auto; padding:14px 18px 18px; background:#efedf5; scrollbar-width:thin; }
+.complete-overlap-view-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.complete-overlap-view-heading h3,.complete-overlap-result h3 { margin:0; color:#6a5680; font-size:13px; font-weight:600; }
+.complete-overlap-view-heading p { margin:6px 0 0; font-size:10px; color:#9583a3; line-height:1.5; }
+.complete-overlap-view-heading > label { display:flex; flex-shrink:0; align-items:center; gap:5px; font-size:10px; color:#8a739c; }
+.complete-overlap-panel input[type=checkbox] { width:13px; height:13px; margin:2px 0 0; flex-shrink:0; accent-color:#9369c5; }
+.complete-overlap-comparison { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.complete-overlap-comparison figure { min-width:0; margin:0; }
+.complete-overlap-comparison figcaption { margin:0 0 7px; font-size:11px; color:#8c76a0; }
+.complete-overlap-image,.complete-overlap-preview,.complete-overlap-parts img { background-color:#e4e0ec; background-image:linear-gradient(45deg,#f4f1f8 25%,transparent 25%),linear-gradient(-45deg,#f4f1f8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f4f1f8 75%),linear-gradient(-45deg,transparent 75%,#f4f1f8 75%); background-size:16px 16px; background-position:0 0,0 8px,8px -8px,-8px 0; }
+.complete-overlap-image { position:relative; width:100%; height:clamp(230px,36vh,410px); border:1px solid #d4cfdf; border-radius:5px; overflow:hidden; }
+.complete-overlap-image > svg { position:absolute; inset:0; display:block; width:100%; height:100%; }
+.complete-overlap-caption { margin:9px 0; color:#9985aa; font-size:10px; line-height:1.85; overflow-wrap:anywhere; }
+.complete-overlap-note { margin:9px 0; padding:8px 10px; border:1px solid #ddd1ed; border-radius:4px; background:#f8f4fd; color:#8e72a7; font-size:10px; line-height:1.8; }
+.complete-overlap-controls { min-width:0; overflow-y:auto; padding:0 16px 16px; border-left:1px solid #e4ddec; background:#fff; scrollbar-width:thin; }
+.complete-overlap-control-section { display:flex; flex-direction:column; align-items:stretch; gap:10px; padding:17px 0; border-bottom:1px solid #ece5f2; }
+.complete-overlap-control-section h3 { margin:0; font-size:13px; font-weight:600; color:#746182; }
+.complete-overlap-control-section .complete-overlap-caption { margin:0; }
+.complete-overlap-source-field { display:flex; flex-direction:column; gap:7px; font-size:11px; color:#867197; }
+.complete-overlap-source-field select { width:100%; min-width:0; padding:7px; border:1px solid #e0d5ed; border-radius:4px; background:#fbf8ff; color:#795b90; font-size:10px; }
+.complete-overlap-source-field select:disabled { opacity:.7; }
+.complete-overlap-part-details { margin:0; font-size:10px; color:#9a86aa; }
+.complete-overlap-part-details > div { display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:4px 0; }
+.complete-overlap-part-details dd { margin:0; max-width:60%; color:#79618e; text-align:right; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.complete-overlap-controls fieldset { display:flex; flex-direction:column; gap:12px; min-width:0; margin:0; padding:8px 0; border:0; }
+.complete-overlap-controls fieldset > label,.complete-overlap-final-check { display:flex; align-items:flex-start; gap:8px; margin:0; color:#867197; font-size:11px; line-height:1.85; }
+.complete-overlap-controls fieldset:disabled { opacity:.6; }
+.complete-overlap-controls .complete-overlap-blank-face { padding:9px; border:1px solid #e4d4ee; border-radius:4px; background:#faf5ff; color:#8b63a4; }
+.complete-overlap-issues { margin:0; padding-left:17px; color:#ab6977; font-size:10px; line-height:1.85; overflow-wrap:anywhere; }
+details.complete-overlap-issues { padding:7px 9px; border:1px solid #efdbe0; border-radius:4px; background:#fff7f8; }
+.complete-overlap-issues summary { cursor:pointer; }
+.complete-overlap-issues ul { padding-left:15px; margin:6px 0; }
+.complete-overlap-result { margin-top:20px; padding-top:17px; border-top:1px solid #dcd3e6; }
+.complete-overlap-result > p { margin:7px 0 12px; font-size:10px; line-height:1.8; color:#9783a8; }
+.complete-overlap-result-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.complete-overlap-result-pair figure { min-width:0; margin:0; }
+.complete-overlap-result-pair figcaption { margin-bottom:7px; color:#8c76a0; font-size:11px; }
+.complete-overlap-preview { display:flex; align-items:center; justify-content:center; min-height:240px; border:1px solid #d4cfdf; border-radius:5px; }
+.complete-overlap-preview img { display:block; width:100%; height:340px; max-height:48vh; object-fit:contain; }
+.complete-overlap-metrics { margin-top:12px; padding:10px; border:1px solid #ddd2ea; border-radius:5px; background:#fcfaff; color:#8a719f; font-size:10px; }
+.complete-overlap-metrics table { width:100%; border-collapse:collapse; font-size:10px; }
+.complete-overlap-metrics caption { padding:0 0 8px; text-align:left; font-weight:500; color:#795c92; }
+.complete-overlap-metrics th { font-weight:500; text-align:left; }
+.complete-overlap-metrics th,.complete-overlap-metrics td { padding:6px 4px; border-bottom:1px solid #eee6f5; }
+.complete-overlap-metrics td { text-align:right; font-variant-numeric:tabular-nums; color:#7b5c93; }
+.complete-overlap-metrics dl { margin:10px 0 0; }
+.complete-overlap-metrics dl > div { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:4px; }
+.complete-overlap-metrics dd { margin:0; font-variant-numeric:tabular-nums; color:#795d91; }
+.complete-overlap-metrics p { margin:9px 4px 0; line-height:1.85; color:#a08aaf; }
+.complete-overlap-empty { padding:35px 12px; text-align:center; color:#9a85ac; font-size:12px; line-height:1.9; }
+.complete-overlap-footer { flex-shrink:0; padding:9px 18px; border-top:1px solid #e4ddec; background:#fff; color:#97829f; font-size:10px; line-height:1.75; }
+.complete-overlap-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (max-width:1120px) {
+  .complete-overlap-body { grid-template-columns:185px minmax(0,1fr) 260px; }
+  .complete-overlap-main { padding:12px; }
+  .complete-overlap-comparison { gap:8px; }
+  .complete-overlap-controls { padding:0 12px 12px; }
+}
+@media (max-width:900px) {
+  .complete-overlap-backdrop { padding:10px; }
+  .complete-overlap-panel { height:calc(100dvh - 20px); }
+  .complete-overlap-body { display:block; overflow-y:auto; }
+  .complete-overlap-library { border-right:0; border-bottom:1px solid #e4ddec; }
+  .complete-overlap-library-heading { padding:9px 12px; }
+  .complete-overlap-parts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); flex:none; max-height:185px; }
+  .complete-overlap-main,.complete-overlap-controls { overflow:visible; }
+  .complete-overlap-controls { border-left:0; border-top:1px solid #e4ddec; padding:0 18px 15px; }
+  .complete-overlap-image { height:300px; }
+  .complete-overlap-header { padding:12px; align-items:flex-start; }
+}
+@media (max-width:520px) {
+  .complete-overlap-header h2 { font-size:15px; }
+  .complete-overlap-header p { font-size:10px; }
+  .complete-overlap-view-heading { align-items:flex-start; }
+  .complete-overlap-view-heading > label { margin-top:2px; }
+  .complete-overlap-image { height:230px; }
+  .complete-overlap-comparison figcaption { font-size:10px; }
+  .complete-overlap-status { gap:10px; padding:8px 12px; }
+  .complete-overlap-status progress { width:100px; }
+  .complete-overlap-metrics { padding:7px; }
+  .complete-overlap-metrics th,.complete-overlap-metrics td { padding:6px 2px; font-size:9px; }
+  .complete-overlap-footer { padding:8px 12px; }
+}

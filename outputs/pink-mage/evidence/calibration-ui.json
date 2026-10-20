@@ -1,0 +1,103 @@
+[
+  {
+    "label": "长后发",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左大腿",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左小腿",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右大腿",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右小腿",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左靴",
+    "changes": {
+      "垂直位置": "12"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面右靴",
+    "changes": {
+      "垂直位置": "10"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左外套衣摆",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右外套衣摆",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "躯干与腰带",
+    "changes": {
+      "水平缩放 %": "108"
+    },
+    "applied": true
+  },
+  {
+    "label": "白金前裙",
+    "changes": {
+      "垂直位置": "-6"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左上臂袖",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左前臂宽袖与手",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右上臂袖",
+    "changes": {
+      "水平位置": "-4",
+      "垂直位置": "-4"
+    },
+    "applied": true
+  },
+  {
+    "label": "完整法杖",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右前臂宽袖与握持手",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "头脸与前刘海",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "肩前双侧长鬓发",
+    "changes": {},
+    "applied": true
+  }
+]

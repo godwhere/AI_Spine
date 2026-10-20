@@ -1,5 +1,389 @@
 [
   {
+    "id": "38",
+    "name": "冰霜攻击",
+    "nameEn": "Frost attack",
+    "type": "effect",
+    "categories": [
+      "法术"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 1,
+    "partCount": 9,
+    "boneCount": 6,
+    "versionId": "41",
+    "folder": "/templates/38/",
+    "skeletonFile": "lrsc792.json",
+    "atlasFiles": [
+      "lrsc792.atlas"
+    ],
+    "textureFiles": [
+      "lrsc792.png"
+    ],
+    "thumbnail": "/templates/38/lrsc792.png",
+    "roleFile": "lrsc792.png"
+  },
+  {
+    "id": "37",
+    "name": "青牙重刃战士",
+    "nameEn": "Orc Greatblade Warrior",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 54,
+    "boneCount": 51,
+    "versionId": "39",
+    "folder": "/templates/37/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/37/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "36",
+    "name": "金羽精灵弓手",
+    "nameEn": "Elven Archer",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 83,
+    "boneCount": 76,
+    "versionId": "38",
+    "folder": "/templates/36/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/36/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "35",
+    "name": "金甲圣盾骑士",
+    "nameEn": "Golden Shield Knight",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 50,
+    "boneCount": 63,
+    "versionId": "37",
+    "folder": "/templates/35/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/35/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "34",
+    "name": "烈焰装甲怪",
+    "nameEn": "Blazing Armored Beast",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 50,
+    "boneCount": 40,
+    "versionId": "36",
+    "folder": "/templates/34/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/34/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "33",
+    "name": "金发狮徽剑士",
+    "nameEn": "Golden Lion Swordsman",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 43,
+    "boneCount": 45,
+    "versionId": "35",
+    "folder": "/templates/33/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/33/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "32",
+    "name": "短刃熊猫战士",
+    "nameEn": "Dagger Panda Warrior",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 27,
+    "boneCount": 44,
+    "versionId": "34",
+    "folder": "/templates/32/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/32/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "31",
+    "name": "绿皮双刃魔战士",
+    "nameEn": "Green Dual-Blade Demon",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 43,
+    "boneCount": 26,
+    "versionId": "40",
+    "folder": "/templates/31/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/31/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "30",
+    "name": "装甲战士",
+    "nameEn": "Armored Warrior",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 37,
+    "boneCount": 35,
+    "versionId": "32",
+    "folder": "/templates/30/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/30/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "29",
+    "name": "蓝晶圣盾法师",
+    "nameEn": "Azure Crystal Shield Mage",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 74,
+    "boneCount": 70,
+    "versionId": "31",
+    "folder": "/templates/29/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/29/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "28",
+    "name": "翠羽长弓游侠",
+    "nameEn": "Verdant Longbow Ranger",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 76,
+    "boneCount": 126,
+    "versionId": "30",
+    "folder": "/templates/28/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/28/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "27",
+    "name": "绿皮怪物",
+    "nameEn": "Green Brute",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 6,
+    "partCount": 24,
+    "boneCount": 30,
+    "versionId": "29",
+    "folder": "/templates/27/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/27/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "26",
+    "name": "碧皮骨爪怪",
+    "nameEn": "Jade Boneclaw Goblin",
+    "type": "role",
+    "categories": [
+      "怪物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 30,
+    "boneCount": 37,
+    "versionId": "28",
+    "folder": "/templates/26/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/26/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "25",
+    "name": "花杖少女",
+    "nameEn": "Blossom Staff Maiden",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 8,
+    "partCount": 32,
+    "boneCount": 58,
+    "versionId": "27",
+    "folder": "/templates/25/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/25/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "24",
+    "name": "机车棍棒战士",
+    "nameEn": "Biker Club Warrior",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 7,
+    "partCount": 19,
+    "boneCount": 29,
+    "versionId": "26",
+    "folder": "/templates/24/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/24/role.png",
+    "roleFile": "role.png"
+  },
+  {
+    "id": "23",
+    "name": "剑士",
+    "nameEn": "Swordsman",
+    "type": "role",
+    "categories": [
+      "人物"
+    ],
+    "spineVersion": "4.3.23",
+    "animationCount": 11,
+    "partCount": 15,
+    "boneCount": 15,
+    "versionId": "25",
+    "folder": "/templates/23/",
+    "skeletonFile": "skeleton.json",
+    "atlasFiles": [
+      "skeleton.atlas"
+    ],
+    "textureFiles": [
+      "skeleton.png"
+    ],
+    "thumbnail": "/templates/23/role.png",
+    "roleFile": "role.png"
+  },
+  {
     "id": "22",
     "name": "功夫熊猫",
     "nameEn": "Kung Fu Panda",

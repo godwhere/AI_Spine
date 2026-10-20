@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-20",
+  "tests": {
+    "core": 197,
+    "egg": 9,
+    "sites": 4,
+    "desktop": 9,
+    "total": 219,
+    "failed": 0,
+    "skipped": 0
+  },
+  "actualArtifactChecks": 124,
+  "officialRuntimeSamples": 363,
+  "macOSBundleSignatureVerified": true,
+  "archiveCRCVerified": true,
+  "installed": true,
+  "exampleImportedOnce": true,
+  "codeCommitted": false,
+  "files": [
+    {
+      "name": "iSpine-macOS-arm64.zip",
+      "bytes": 168959224,
+      "sha256": "ab15ad18ccb50129fe48278e5e71dc1f850bfe4dac78dd111bc91e2e635f5b71"
+    },
+    {
+      "name": "晨星剑士-可编辑工程.zip",
+      "bytes": 1858563,
+      "sha256": "02adf5541b26ab14cc3e1a9869322ae38f9f641de67daa865b2bf33703dc59a1"
+    },
+    {
+      "name": "晨星剑士-Spine4.3.zip",
+      "bytes": 838492,
+      "sha256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab"
+    },
+    {
+      "name": "晨星剑士-Unity.zip",
+      "bytes": 839751,
+      "sha256": "97b4f078e2c07bc2c992ecfb64c153418693d5a3f62c54163c03ebb2ff27f127"
+    }
+  ]
+}

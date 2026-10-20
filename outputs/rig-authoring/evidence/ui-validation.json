@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-20",
+  "name": "晨星剑士 · 新骨架",
+  "source": {
+    "illustration": "public/templates/33/role.png",
+    "sha256": "06dfacb1073c9983067ae3b343f234692e2fb80fc80e49a1b8cd3a8a2aa788fc",
+    "templateSkeletonUsed": false
+  },
+  "actualAI": {
+    "provider": "codex-native",
+    "structureJoints": 19,
+    "independentParts": 16,
+    "partConcurrency": 3,
+    "motions": [
+      {
+        "id": "idle",
+        "poses": 5,
+        "manualCorrection": "Root Y at 1.00s changed from -0.8 to 0 to remove unreachable right-foot lock"
+      },
+      {
+        "id": "attack",
+        "poses": 8,
+        "regenerated": true
+      },
+      {
+        "id": "hit",
+        "poses": 7
+      }
+    ]
+  },
+  "uiChecks": {
+    "sourceOnlyDraftResumed": true,
+    "allPartsAppliedThroughUI": true,
+    "reloadPreservedAll16Parts": true,
+    "unfinishedResourceCount": 0,
+    "jointDrag": {
+      "joint": "head",
+      "before": {
+        "x": 267,
+        "y": 194
+      },
+      "after": {
+        "x": 278.3,
+        "y": 200.5
+      },
+      "undoRestored": true
+    },
+    "manualVertexWeight": {
+      "part": "torso_armor",
+      "vertex": 1,
+      "displayedAfterChange": {
+        "root": 0.1742,
+        "torso": 0.4887,
+        "neck": 0.337
+      },
+      "unchangedAfterActualAttackRegeneration": true
+    },
+    "weapon": {
+      "part": "sword",
+      "hand": "leftHand",
+      "mainGripErrorDisplayedPx": 0
+    },
+    "nativeBeforeUpdate": {
+      "resources": 1,
+      "templates": 39,
+      "trash": 0,
+      "codexConnected": true
+    },
+    "calibratedAIImages": 12,
+    "calibrationCancelRetainsOriginal": true,
+    "calibrationErrorRetainsEditorAndAllowsRetry": true,
+    "runtimeReimportRetainsEditableRig": true,
+    "reimportedTorsoWeight": 0.4887,
+    "reimportedMotions": {
+      "idle": 5,
+      "attack": 8,
+      "hit": 7
+    },
+    "nativeAfterUpdate": {
+      "resources": 2,
+      "templates": 39,
+      "trash": 0,
+      "codexConnected": true,
+      "existingWukongReplacements": 49,
+      "existingWukongActions": 7,
+      "newRig": {
+        "joints": 19,
+        "parts": 16,
+        "motions": 3
+      },
+      "restartedWithBothResources": true,
+      "keychainPromptRequired": false,
+      "allThreeActionsPreviewed": true
+    }
+  }
+}

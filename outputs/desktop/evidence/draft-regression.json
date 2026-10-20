@@ -1,0 +1,10 @@
+{
+  "before": 16,
+  "after": 16,
+  "afterReload": 16,
+  "openedAI": true,
+  "previewAction": "stun",
+  "previewSkin": "skin_2",
+  "manualZoom": "120%",
+  "noResourceCreated": true
+}

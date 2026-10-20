@@ -1,0 +1,790 @@
+{
+  "file": "outputs/panda-wukong/wukong-project.zip",
+  "sha256": "a21be8b3bde7c80aee52d883905ca726db271df03d08ee87ff7b2956a78dfcab",
+  "parts": [
+    {
+      "id": "shadow",
+      "visible": 5983,
+      "clipped": 0,
+      "changed": 13547,
+      "overlap": 0.5037517915858697,
+      "transform": {
+        "x": 0.3176838810641628,
+        "y": 1.6408450704225352,
+        "scaleX": 1.174926099808729,
+        "scaleY": 1.174926099808729,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_armorL",
+      "visible": 1931,
+      "clipped": 0,
+      "changed": 2531,
+      "overlap": 0.7713178294573644,
+      "transform": {
+        "x": 0.7083333333333333,
+        "y": 1.1493055555555556,
+        "scaleX": 1.037037037037037,
+        "scaleY": 1.037037037037037,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_armorR",
+      "visible": 17288,
+      "clipped": 0,
+      "changed": 18371,
+      "overlap": 0.9526993424324474,
+      "transform": {
+        "x": -1.7548321464903358,
+        "y": 2.395218718209563,
+        "scaleX": 1.0624046286876907,
+        "scaleY": 1.0624046286876907,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_b_foot",
+      "visible": 7298,
+      "clipped": 0,
+      "changed": 8270,
+      "overlap": 0.9019049975259772,
+      "transform": {
+        "x": -0.23170731707317072,
+        "y": 0.5365853658536586,
+        "scaleX": 1.0163140041996446,
+        "scaleY": 1.0163140041996446,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_b_shoulder",
+      "visible": 17575,
+      "clipped": 0,
+      "changed": 18873,
+      "overlap": 0.9451929295106704,
+      "transform": {
+        "x": -0.18342151675485008,
+        "y": 1.59347442680776,
+        "scaleX": 1.0132964835013252,
+        "scaleY": 1.0132964835013252,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_b_thigh",
+      "visible": 22262,
+      "clipped": 0,
+      "changed": 24797,
+      "overlap": 0.9107084155161078,
+      "transform": {
+        "x": 0.051013513513513464,
+        "y": 0.3935810810810811,
+        "scaleX": 0.9905648648648648,
+        "scaleY": 0.9905648648648648,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_belt",
+      "visible": 15991,
+      "clipped": 0,
+      "changed": 18060,
+      "overlap": 0.9007832898172323,
+      "transform": {
+        "x": -1.6571233810497614,
+        "y": 0.23926380368098155,
+        "scaleX": 0.9955815080362349,
+        "scaleY": 0.9955815080362349,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_beltholderL",
+      "visible": 1116,
+      "clipped": 0,
+      "changed": 1281,
+      "overlap": 0.8865647626709574,
+      "transform": {
+        "x": 0.2595419847328244,
+        "y": 1.1755725190839694,
+        "scaleX": 1.3309071542694833,
+        "scaleY": 1.3309071542694833,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_beltholderR",
+      "visible": 2095,
+      "clipped": 0,
+      "changed": 2526,
+      "overlap": 0.8512632436837816,
+      "transform": {
+        "x": -0.5159038013964313,
+        "y": -0.027152831652443754,
+        "scaleX": 1.0308871678215934,
+        "scaleY": 1.0308871678215934,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_body",
+      "visible": 57085,
+      "clipped": 0,
+      "changed": 59364,
+      "overlap": 0.9708589217971182,
+      "transform": {
+        "x": -0.5,
+        "y": 0.7652582159624413,
+        "scaleX": 1.001283480258047,
+        "scaleY": 1.001283480258047,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_f_arm",
+      "visible": 28729,
+      "clipped": 0,
+      "changed": 31556,
+      "overlap": 0.9311490359562272,
+      "transform": {
+        "x": 0.17142857142857143,
+        "y": -1.0285714285714285,
+        "scaleX": 1.0193877551020407,
+        "scaleY": 1.0193877551020407,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_f_gauntlet",
+      "visible": 63128,
+      "clipped": 0,
+      "changed": 65423,
+      "overlap": 0.9561980529028463,
+      "transform": {
+        "x": -2.2329153605015675,
+        "y": -3.1523510971786832,
+        "scaleX": 0.9959809211040738,
+        "scaleY": 0.9959809211040738,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_f_shoulder",
+      "visible": 19850,
+      "clipped": 0,
+      "changed": 21000,
+      "overlap": 0.9532115440676319,
+      "transform": {
+        "x": 1.1579509071504803,
+        "y": -0.14621131270010673,
+        "scaleX": 1.0073026181339266,
+        "scaleY": 1.0073026181339266,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_f_thigh",
+      "visible": 36332,
+      "clipped": 0,
+      "changed": 38838,
+      "overlap": 0.9338146811070999,
+      "transform": {
+        "x": -2.733153638814016,
+        "y": 0.6388140161725067,
+        "scaleX": 0.9925663214640374,
+        "scaleY": 0.9925663214640374,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_head",
+      "visible": 17977,
+      "clipped": 0,
+      "changed": 19319,
+      "overlap": 0.9359535742548141,
+      "transform": {
+        "x": -0.709346991037132,
+        "y": -0.4186939820742638,
+        "scaleX": 0.9909090909090909,
+        "scaleY": 0.9909090909090909,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_necklace",
+      "visible": 13128,
+      "clipped": 0,
+      "changed": 14298,
+      "overlap": 0.9150617993676344,
+      "transform": {
+        "x": -1.3065040650406503,
+        "y": 2.486720867208672,
+        "scaleX": 1.0437426445977607,
+        "scaleY": 1.0437426445977607,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_ponytail",
+      "visible": 9069,
+      "clipped": 0,
+      "changed": 9683,
+      "overlap": 0.9590556205466341,
+      "transform": {
+        "x": -1.4886363636363638,
+        "y": -0.3116883116883117,
+        "scaleX": 0.998051948051948,
+        "scaleY": 0.998051948051948,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/F_silk",
+      "visible": 23062,
+      "clipped": 0,
+      "changed": 26085,
+      "overlap": 0.8752640225299225,
+      "transform": {
+        "x": -1.0167394468704511,
+        "y": -0.7940320232896652,
+        "scaleX": 0.9649090587547103,
+        "scaleY": 0.9649090587547103,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_arm",
+      "visible": 12378,
+      "clipped": 0,
+      "changed": 13636,
+      "overlap": 0.9211155974278451,
+      "transform": {
+        "x": 0.05986509274873524,
+        "y": 1.1973018549747048,
+        "scaleX": 1.0574643100807126,
+        "scaleY": 1.0574643100807126,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_finger_3",
+      "visible": 2069,
+      "clipped": 0,
+      "changed": 2495,
+      "overlap": 0.8631226454583508,
+      "transform": {
+        "x": -3.681992337164751,
+        "y": -0.3860153256704981,
+        "scaleX": 1.1314781205888285,
+        "scaleY": 1.1314781205888285,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_finger_4",
+      "visible": 1014,
+      "clipped": 0,
+      "changed": 1265,
+      "overlap": 0.8144833197721725,
+      "transform": {
+        "x": -0.358974358974359,
+        "y": -0.7051282051282051,
+        "scaleX": 1.3382173382173381,
+        "scaleY": 1.3382173382173381,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_finger_5",
+      "visible": 1149,
+      "clipped": 0,
+      "changed": 1477,
+      "overlap": 0.8050490883590463,
+      "transform": {
+        "x": 0.04455445544554455,
+        "y": -0.3341584158415841,
+        "scaleX": 1.1535729659922513,
+        "scaleY": 1.1535729659922513,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_finger_6",
+      "visible": 1716,
+      "clipped": 0,
+      "changed": 2124,
+      "overlap": 0.8184007707129094,
+      "transform": {
+        "x": -1.0769633507853404,
+        "y": -0.12146596858638743,
+        "scaleX": 1.3997506856145598,
+        "scaleY": 1.3997506856145598,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_foot",
+      "visible": 5191,
+      "clipped": 0,
+      "changed": 5934,
+      "overlap": 0.9035639412997903,
+      "transform": {
+        "x": -3.2898019075568596,
+        "y": -0.24027879677182684,
+        "scaleX": 1.0117046869934652,
+        "scaleY": 1.0117046869934652,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_gauntlet",
+      "visible": 14054,
+      "clipped": 0,
+      "changed": 15038,
+      "overlap": 0.9492906116353269,
+      "transform": {
+        "x": -0.15517241379310343,
+        "y": 1.6551724137931034,
+        "scaleX": 1.0477773161611965,
+        "scaleY": 1.0477773161611965,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_gauntlet_2",
+      "visible": 5233,
+      "clipped": 0,
+      "changed": 5645,
+      "overlap": 0.9410698096101541,
+      "transform": {
+        "x": 0.9455205811138014,
+        "y": 0.18563357546408393,
+        "scaleX": 1.0997535065331676,
+        "scaleY": 1.0997535065331676,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_hand",
+      "visible": 4409,
+      "clipped": 0,
+      "changed": 5109,
+      "overlap": 0.8836276083467095,
+      "transform": {
+        "x": -2.16027397260274,
+        "y": -0.19680365296803654,
+        "scaleX": 1.03056132097228,
+        "scaleY": 1.03056132097228,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_thigh",
+      "visible": 9027,
+      "clipped": 0,
+      "changed": 9820,
+      "overlap": 0.931311236189285,
+      "transform": {
+        "x": 0.05976277372262774,
+        "y": -1.0378649635036497,
+        "scaleX": 1.3871254321936228,
+        "scaleY": 1.3871254321936228,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/b_upper_arm",
+      "visible": 11616,
+      "clipped": 0,
+      "changed": 12390,
+      "overlap": 0.9521385764715541,
+      "transform": {
+        "x": 0.3230478589420655,
+        "y": 0.5384130982367759,
+        "scaleX": 0.998996184253186,
+        "scaleY": 0.998996184253186,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/belt",
+      "visible": 13008,
+      "clipped": 0,
+      "changed": 14994,
+      "overlap": 0.8776588445176341,
+      "transform": {
+        "x": 0.22083007047768205,
+        "y": 2.723570869224745,
+        "scaleX": 1.0046095251655156,
+        "scaleY": 1.0046095251655156,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/body",
+      "visible": 64012,
+      "clipped": 0,
+      "changed": 68039,
+      "overlap": 0.9511002081474874,
+      "transform": {
+        "x": 0.8677504393673112,
+        "y": 6.5900702987697715,
+        "scaleX": 1.0039380329362755,
+        "scaleY": 1.0039380329362755,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/cheek",
+      "visible": 1548,
+      "clipped": 0,
+      "changed": 2081,
+      "overlap": 0.7769308943089431,
+      "transform": {
+        "x": -0.663891779396462,
+        "y": -0.17221644120707597,
+        "scaleX": 1.038225156087409,
+        "scaleY": 1.038225156087409,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_finger_1",
+      "visible": 2757,
+      "clipped": 0,
+      "changed": 3115,
+      "overlap": 0.9054988475469213,
+      "transform": {
+        "x": -0.48484848484848486,
+        "y": -0.4545454545454546,
+        "scaleX": 1.0700104493207943,
+        "scaleY": 1.0700104493207943,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_finger_2",
+      "visible": 2351,
+      "clipped": 0,
+      "changed": 2844,
+      "overlap": 0.8416058394160584,
+      "transform": {
+        "x": 0.25965665236051505,
+        "y": -0.24034334763948498,
+        "scaleX": 1.116331601536029,
+        "scaleY": 1.116331601536029,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_foot",
+      "visible": 8855,
+      "clipped": 0,
+      "changed": 9691,
+      "overlap": 0.9318613986900486,
+      "transform": {
+        "x": -1.6051724137931034,
+        "y": -0.5732758620689655,
+        "scaleX": 1.1161122978333842,
+        "scaleY": 1.1161122978333842,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_forearm",
+      "visible": 16967,
+      "clipped": 0,
+      "changed": 18334,
+      "overlap": 0.9429001169851262,
+      "transform": {
+        "x": 0,
+        "y": 0.6296296296296297,
+        "scaleX": 1.0034638955502264,
+        "scaleY": 1.0034638955502264,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_gauntlet",
+      "visible": 38831,
+      "clipped": 0,
+      "changed": 40152,
+      "overlap": 0.968015170670038,
+      "transform": {
+        "x": -1.6937931034482758,
+        "y": 3.6758620689655173,
+        "scaleX": 0.9910706075533662,
+        "scaleY": 0.9910706075533662,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_hand",
+      "visible": 10696,
+      "clipped": 0,
+      "changed": 11274,
+      "overlap": 0.9614549402823018,
+      "transform": {
+        "x": -0.7663185378590078,
+        "y": 0.5535248041775457,
+        "scaleX": 1.0334080302625357,
+        "scaleY": 1.0334080302625357,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_thigh",
+      "visible": 9890,
+      "clipped": 0,
+      "changed": 10457,
+      "overlap": 0.9657400156617071,
+      "transform": {
+        "x": -1.9165813715455475,
+        "y": -4.983111566018423,
+        "scaleX": 1.0489480268395315,
+        "scaleY": 1.0489480268395315,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/f_upper_arm",
+      "visible": 21568,
+      "clipped": 0,
+      "changed": 23287,
+      "overlap": 0.9457088979520238,
+      "transform": {
+        "x": -0.08092485549132948,
+        "y": -1.2947976878612717,
+        "scaleX": 1.0147976878612717,
+        "scaleY": 1.0147976878612717,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/head",
+      "visible": 23363,
+      "clipped": 0,
+      "changed": 25630,
+      "overlap": 0.9199177019862309,
+      "transform": {
+        "x": 0.037842190016103006,
+        "y": 0.3071658615136874,
+        "scaleX": 1.0210003818251239,
+        "scaleY": 1.0210003818251239,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/jaw1",
+      "visible": 4795,
+      "clipped": 0,
+      "changed": 5386,
+      "overlap": 0.917352209680505,
+      "transform": {
+        "x": -0.18838028169014084,
+        "y": 0.452112676056338,
+        "scaleX": 0.9906046032291309,
+        "scaleY": 0.9906046032291309,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/jaw2",
+      "visible": 1323,
+      "clipped": 0,
+      "changed": 1912,
+      "overlap": 0.7343400447427293,
+      "transform": {
+        "x": -0.7416472416472417,
+        "y": 0.31507381507381504,
+        "scaleX": 1.111563541943289,
+        "scaleY": 1.111563541943289,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/mouth",
+      "visible": 6538,
+      "clipped": 0,
+      "changed": 7208,
+      "overlap": 0.9252669039145908,
+      "transform": {
+        "x": 0.5358615004122012,
+        "y": 0.28318219291014013,
+        "scaleX": 1.03093678135983,
+        "scaleY": 1.03093678135983,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/necklace",
+      "visible": 38690,
+      "clipped": 0,
+      "changed": 41682,
+      "overlap": 0.9300772842887889,
+      "transform": {
+        "x": -1.337603305785124,
+        "y": 3.1896694214876034,
+        "scaleX": 0.9970871666926556,
+        "scaleY": 0.9970871666926556,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/ponytail",
+      "visible": 7466,
+      "clipped": 0,
+      "changed": 8133,
+      "overlap": 0.9477896341463414,
+      "transform": {
+        "x": -0.32430069930069927,
+        "y": -0.22202797202797203,
+        "scaleX": 1.0525874125874126,
+        "scaleY": 1.0525874125874126,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/silk",
+      "visible": 26517,
+      "clipped": 0,
+      "changed": 28177,
+      "overlap": 0.951714687533807,
+      "transform": {
+        "x": -0.10074626865671642,
+        "y": 2.216417910447761,
+        "scaleX": 1.007462686567164,
+        "scaleY": 1.007462686567164,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/tail",
+      "visible": 24520,
+      "clipped": 0,
+      "changed": 26354,
+      "overlap": 0.9081999219055057,
+      "transform": {
+        "x": -1.5,
+        "y": 0.114453125,
+        "scaleX": 0.9943805265273312,
+        "scaleY": 0.9943805265273312,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    },
+    {
+      "id": "skin_2/thumb",
+      "visible": 8206,
+      "clipped": 0,
+      "changed": 8685,
+      "overlap": 0.9559425032137432,
+      "transform": {
+        "x": -1.201880035810206,
+        "y": -2.3034914950760967,
+        "scaleX": 1.1029543419874663,
+        "scaleY": 1.1029543419874663,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      }
+    }
+  ]
+}

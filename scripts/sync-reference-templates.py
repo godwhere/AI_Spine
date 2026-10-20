@@ -8,6 +8,7 @@ selected template metadata; remote task, account, and billing data is omitted.
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import concurrent.futures
 import hashlib
 import json
@@ -65,7 +66,7 @@ def write_asset(folder: Path, name: str, url: str, expected_hash: str | None, fo
     target = folder / relative
     if not force and target.is_file():
         existing = target.read_bytes()
-        if existing and valid_hash(existing, expected_hash):
+        if existing and len(expected_hash or "") == 64 and valid_hash(existing, expected_hash):
             return relative.as_posix()
     data = fetch_bytes(url)
     if not data or not valid_hash(data, expected_hash):
@@ -83,7 +84,28 @@ def localize_name(value: str | dict | None, language: str, fallback: str = "") -
     return str(value or fallback)
 
 
-def sync_template(item: dict, output: Path, force: bool) -> dict:
+def inspect_atlas(path: Path, folder: Path, texture_files: list[str]) -> tuple[list[str], int]:
+    pages: list[str] = []
+    region_count = 0
+    expect_page = True
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
+        line = raw_line.strip()
+        if not line:
+            expect_page = True
+        elif expect_page:
+            relative = (path.parent / safe_relative_path(line)).relative_to(folder).as_posix()
+            if relative not in texture_files or not (folder / relative).is_file():
+                raise ValueError(f"Atlas {path.name} references a missing texture page: {line}")
+            pages.append(relative)
+            expect_page = False
+        elif ":" not in line:
+            region_count += 1
+    if not pages or not region_count:
+        raise ValueError(f"Atlas {path.name} is missing texture pages or regions")
+    return pages, region_count
+
+
+def sync_template(item: dict, output: Path, force: bool) -> tuple[dict, dict]:
     template_id = str(item["id"])
     version_id = str(item["versionId"])
     detail = fetch_data(f"{API_ROOT}/templates/{template_id}?version_id={version_id}")
@@ -111,9 +133,10 @@ def sync_template(item: dict, output: Path, force: bool) -> dict:
     for texture in manifest.get("texturePages", []):
         if not (folder / safe_relative_path(texture)).is_file():
             raise ValueError(f"Template {template_id} is missing atlas page {texture}")
+    atlas_checks = []
     for atlas in by_role["atlas"]:
-        if not (folder / atlas).read_text(encoding="utf-8-sig").strip():
-            raise ValueError(f"Template {template_id} has an empty atlas")
+        pages, region_count = inspect_atlas(folder / atlas, folder, by_role["texture"])
+        atlas_checks.append({"fileName": atlas, "texturePages": pages, "regionCount": region_count})
     thumbnail_url = item.get("thumbnailUrl")
     thumbnail_file = by_url.get(thumbnail_url)
     if thumbnail_url and not thumbnail_file:
@@ -146,7 +169,29 @@ def sync_template(item: dict, output: Path, force: bool) -> dict:
         "roleFile": next(iter(by_role.get("role", [])), None),
     }
     validate_record(record, output)
-    return record
+    checks = []
+    filenames = set(name for names in by_role.values() for name in names) | {thumbnail_file}
+    for name in sorted(filenames):
+        data = (folder / name).read_bytes()
+        source_assets = [asset for asset in detail.get("assets", []) if asset.get("fileName") == name]
+        source_hashes = sorted({asset["hash"] for asset in source_assets if len(asset.get("hash", "")) == 64})
+        checks.append({
+            "fileName": name,
+            "roles": sorted(role for role, names in by_role.items() if name in names),
+            "bytes": len(data),
+            "sha256": hashlib.sha256(data).hexdigest(),
+            "upstreamSha256Verified": bool(source_hashes),
+        })
+    return record, {
+        "id": template_id,
+        "versionId": version_id,
+        "type": record["type"],
+        "categoryKeys": [category.get("key") for category in detail.get("categories", [])],
+        "animations": list(skeleton["animations"]),
+        "skins": [skin.get("name") for skin in skeleton.get("skins", [])],
+        "atlases": atlas_checks,
+        "files": checks,
+    }
 
 
 def validate_record(record: dict, output: Path) -> None:
@@ -166,19 +211,39 @@ def validate_record(record: dict, output: Path) -> None:
         raise ValueError("Remote asset URL leaked into local catalog")
 
 
-def write_documentation(records: list[dict], output: Path, path: Path) -> None:
-    timestamp = datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="seconds")
+def write_documentation(records: list[dict], checks: list[dict], output: Path, path: Path, timestamp: str,
+                        previous_records: list[dict]) -> None:
     files = [file for file in output.rglob("*") if file.is_file()]
     total_bytes = sum(file.stat().st_size for file in files)
     rows = []
+    check_by_id = {check["id"]: check for check in checks}
+    previous_by_id = {record["id"]: record for record in previous_records}
+    new_records = [record for record in records if record["id"] not in previous_by_id]
+    updated_records = [record for record in records if record["id"] in previous_by_id
+                       and record["versionId"] != previous_by_id[record["id"]]["versionId"]]
+    type_counts = Counter(record["type"] for record in records)
     for record in records:
         size = sum(file.stat().st_size for file in (output / record["id"]).rglob("*") if file.is_file())
-        rows.append(f"| {record['id']} | {record['name']} | {record['versionId']} | {record['boneCount']} | "
-                    f"{record['animationCount']} | {record['partCount']} | {size:,} |")
+        region_count = sum(atlas["regionCount"] for atlas in check_by_id[record["id"]]["atlases"])
+        rows.append(f"| {record['id']} | {record['name']} | {record['type']} | {' / '.join(record['categories'])} | "
+                    f"{record['versionId']} | {record['boneCount']} | {record['animationCount']} | "
+                    f"{record['partCount']} | {region_count} | {size:,} |")
+    effect_lines = []
+    for record in records:
+        if record["type"] != "effect":
+            continue
+        check = check_by_id[record["id"]]
+        effect_lines.append(f"- ID {record['id']}, **{record['name']}**: `type=effect`, "
+                            f"category keys `{', '.join(check['categoryKeys'])}` "
+                            f"(display: {' / '.join(record['categories'])}); "
+                            f"{record['boneCount']} bones, {record['partCount']} attachments, "
+                            f"animation names `{', '.join(check['animations'])}`. "
+                            f"Runtime source: `{record['skeletonFile']}`, "
+                            f"`{', '.join(record['atlasFiles'])}`, `{', '.join(record['textureFiles'])}`.")
     content = f"""# Reference template assets
 
-These files are public reference templates downloaded for local recreation and
-verification of the AI Spine workbench. Downloading them does not grant ownership
+These public reference character and effect templates are retained for local
+interoperability and workbench verification. Downloading them does not grant ownership
 of the source artwork, character IP, animations, or other original-site assets.
 Confirm the applicable rights before redistributing these templates or using them
 in a published product. The independently implemented application does not copy
@@ -189,6 +254,7 @@ the original site's business JavaScript.
 - Asset origin: `gametoolcdn.toolivaai.com`, as returned by the public template API.
 - Download/verification time (Asia/Shanghai): {timestamp}
 - Coverage: **{len(records)} templates**, all public entries returned by the catalog at this time.
+- Types: {', '.join(f'**{count} {kind}**' for kind, count in sorted(type_counts.items()))}.
 - Local asset files plus catalog: **{len(files)} files, {total_bytes:,} bytes ({total_bytes / 1024 / 1024:.2f} MiB)**.
 - Template Spine versions: {', '.join(sorted({str(record['spineVersion']) for record in records}))}.
 
@@ -200,19 +266,43 @@ same downloaded file. API responses, temporary signed URLs, account information,
 and payment/points fields are not retained in the catalog.
 
 The sync script verifies required asset presence, nonempty content, SHA256 hashes
-where supplied, valid Spine JSON, and manifest texture-page presence. Skeleton
+where supplied, valid Spine JSON, manifest texture-page presence, and actual atlas
+page references. `download-manifest.json` records a computed SHA256 for every local
+asset and identifies the files also verified against an upstream SHA256. Skeleton
 bone and animation counts are computed from the downloaded JSON. Part counts are
 the template manifest's attachment count; attachments can share texture regions.
 This data validation does not by itself establish animation rendering or export
 compatibility; those are verified separately in the application workflow.
 
 Refresh with `python3 scripts/sync-reference-templates.py`. At most four templates
-are downloaded concurrently. Existing matching assets are reused; `--force`
-downloads them again. The API metadata is refreshed on every run. Only the
+are downloaded concurrently. Existing assets matching an upstream SHA256 are
+reused; assets without a verifiable SHA256 are refreshed. `--force` downloads all
+assets again. The API metadata is refreshed on every run. Only the
 catalog's explicitly selected fields are written to disk.
 
-| ID | Template | Version ID | Bones | Animations | Attachments | Asset bytes |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
+## Latest synchronization
+
+- Previous catalog: {len(previous_records)} templates.
+- Newly added: {len(new_records)} — {', '.join(f"{record['id']} {record['name']}" for record in new_records) or 'none'}.
+- Existing template version changes: {len(updated_records)} — {', '.join(record['id'] for record in updated_records) or 'none'}.
+- Stable source IDs are preserved; this synchronization does not import resources
+  into the user's library or modify existing authored projects.
+
+## Effect classification
+
+{chr(10).join(effect_lines) or 'No effect templates are currently returned.'}
+
+These effect entries contain Spine skeleton timelines, atlas regions, and texture
+pages. They are animation templates, not standalone static skill icons. A PNG used
+as the source thumbnail or reference may be the packed texture sheet; that PNG
+alone is not the animated effect. Preview the declared animation using the
+skeleton and atlas. The public catalog currently exposes the types and categories
+listed above; no additional skill-icon library is asserted.
+
+## Template coverage
+
+| ID | Template | Type | Categories | Version ID | Bones | Animations | Attachments | Atlas regions | Asset bytes |
+| --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
 {chr(10).join(rows)}
 """
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -231,23 +321,34 @@ def main() -> None:
     items = listing.get("items", [])
     if not items or len(items) != int(listing.get("total", len(items))):
         raise ValueError("Public catalog is empty or exceeds this request's page limit")
+    catalog_file = output / "catalog.json"
+    previous_records = json.loads(catalog_file.read_text()) if catalog_file.is_file() else []
     results: dict[str, dict] = {}
+    inspections: dict[str, dict] = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {executor.submit(sync_template, item, output, args.force): str(item["id"]) for item in items}
         for future in concurrent.futures.as_completed(futures):
             template_id = futures[future]
             try:
-                record = future.result()
+                record, checks = future.result()
             except Exception as error:
                 raise RuntimeError(f"Template {template_id} sync failed: {error}") from error
             results[template_id] = record
+            inspections[template_id] = checks
             print(f"Verified template {template_id}: {record['name']}", flush=True)
     records = [results[str(item["id"])] for item in items]
-    catalog_file = output / "catalog.json"
     staging = catalog_file.with_suffix(".json.download")
     staging.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     staging.replace(catalog_file)
-    write_documentation(records, output, PROJECT_ROOT / "docs" / "reference-assets.md")
+    timestamp = datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="seconds")
+    checks = [inspections[record["id"]] for record in records]
+    (output / "download-manifest.json").write_text(json.dumps({
+        "verifiedAt": timestamp,
+        "templateCount": len(records),
+        "templates": checks,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_documentation(records, checks, output, PROJECT_ROOT / "docs" / "reference-assets.md", timestamp,
+                        previous_records)
     print(f"Complete: {len(records)} templates; all catalog asset references exist locally.")
 
 

@@ -1,0 +1,18 @@
+[
+  {
+    "width": 1024,
+    "height": 768,
+    "keyboardReachesCreate": true,
+    "buttonFullyVisible": true,
+    "scrollTop": 50
+  },
+  {
+    "width": 800,
+    "height": 740,
+    "keyboardReachesCreate": true,
+    "buttonBottom": 691.3046875,
+    "buttonFullyVisible": true,
+    "panelBottom": 740,
+    "scrollTop": 0
+  }
+]

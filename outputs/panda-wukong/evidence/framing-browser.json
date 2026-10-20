@@ -1,0 +1,441 @@
+{
+  "library": [
+    {
+      "animation": "idle",
+      "animationTime": "0.180",
+      "height": 337,
+      "poseChecksum": "1409973.666",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "attack",
+      "animationTime": "0.179",
+      "height": 337,
+      "poseChecksum": "1153536.018",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "get_hurt",
+      "animationTime": "0.131",
+      "height": 337,
+      "poseChecksum": "1704870.888",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "die",
+      "animationTime": "0.138",
+      "height": 337,
+      "poseChecksum": "-41598.337",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "reborn",
+      "animationTime": "0.114",
+      "height": 337,
+      "poseChecksum": "7335723.874",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "skill",
+      "animationTime": "0.185",
+      "height": 337,
+      "poseChecksum": "1145933.296",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    },
+    {
+      "animation": "stun",
+      "animationTime": "0.181",
+      "height": 337,
+      "poseChecksum": "1858164.253",
+      "skin": "default",
+      "viewCenter": "127.215927,239.753065",
+      "viewScale": "0.389793",
+      "width": 642
+    }
+  ],
+  "editor": [
+    {
+      "skin": "default",
+      "action": "idle",
+      "canvases": [
+        {
+          "animation": "idle",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1394934.922",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "idle",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1394934.922",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "attack",
+      "canvases": [
+        {
+          "animation": "attack",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "attack",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "get_hurt",
+      "canvases": [
+        {
+          "animation": "get_hurt",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "get_hurt",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "die",
+      "canvases": [
+        {
+          "animation": "die",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "die",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "reborn",
+      "canvases": [
+        {
+          "animation": "reborn",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "7335668.436",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "reborn",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "7335668.436",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "skill",
+      "canvases": [
+        {
+          "animation": "skill",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "skill",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "default",
+      "action": "stun",
+      "canvases": [
+        {
+          "animation": "stun",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1862783.802",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "stun",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1862783.802",
+          "skin": "default",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "idle",
+      "canvases": [
+        {
+          "animation": "idle",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1394934.922",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "idle",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1394934.922",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "attack",
+      "canvases": [
+        {
+          "animation": "attack",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "attack",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "get_hurt",
+      "canvases": [
+        {
+          "animation": "get_hurt",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "get_hurt",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "die",
+      "canvases": [
+        {
+          "animation": "die",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "die",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "reborn",
+      "canvases": [
+        {
+          "animation": "reborn",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "7335668.436",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "reborn",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "7335668.436",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "skill",
+      "canvases": [
+        {
+          "animation": "skill",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "skill",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1395250.489",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    },
+    {
+      "skin": "skin_2",
+      "action": "stun",
+      "canvases": [
+        {
+          "animation": "stun",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1862783.802",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        },
+        {
+          "animation": "stun",
+          "animationTime": "0.000",
+          "height": 372,
+          "poseChecksum": "1862783.802",
+          "skin": "skin_2",
+          "viewCenter": "127.215927,239.753065",
+          "viewScale": "0.437000",
+          "width": 609
+        }
+      ]
+    }
+  ],
+  "manualZoomRetained": true
+}

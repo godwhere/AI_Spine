@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-20",
+  "isolatedOrigin": "http://127.0.0.1:4176",
+  "fullEditableSource": {
+    "replacedRegions": 49,
+    "actions": 7,
+    "skins": 2
+  },
+  "cancelLeavesTemplateCount": 38,
+  "firstSave": {
+    "catalogCount": 39,
+    "customCount": 1,
+    "originalResources": 2
+  },
+  "sameResourceUpdate": {
+    "catalogCount": 39,
+    "customCount": 1,
+    "originalNamePreserved": true
+  },
+  "unchangedDerivedDraft": {
+    "resourcesBefore": 2,
+    "resourcesAfter": 2
+  },
+  "allActionSelections": [
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "attack"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "die"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "get_hurt"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "idle"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "reborn"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "skill"
+    },
+    {
+      "options": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "value": "stun"
+    }
+  ],
+  "actualDownload": "/Users/ethan/Downloads/悟空 · 自建模板验证 · 新资源-Spine4.3.zip",
+  "actualReimport": true,
+  "deleteDialogCancelled": true,
+  "isolatedBrowserErrors": [],
+  "native": {
+    "resourceCount": 1,
+    "trashCount": 0,
+    "builtinTemplates": 38,
+    "customTemplates": 1,
+    "replacedRegions": 49,
+    "actions": 7,
+    "skins": 2,
+    "savedAndPersistedAcrossRestart": true,
+    "codexConnected": true,
+    "launchesWithoutSystemPassword": 2
+  }
+}

@@ -1,7 +1,9 @@
 import { unzipSync, zipSync, strFromU8, strToU8 } from "fflate";
 import { TextureAtlas } from "@esotericsoftware/spine-webgl";
+import { unityPackageFiles } from "./unity-export.js";
 
 export const MAX_PACKAGE_BYTES = 256 * 1024 * 1024;
+export const MAX_PACKAGE_FILES = 4096;
 const PROJECT_PATH = ".ai-spine/project.json";
 export const decodeText = (bytes) => strFromU8(bytes);
 export const encodeText = (text) => strToU8(text);
@@ -38,7 +40,7 @@ export function unpackZip(bytes) {
   const count = view.getUint16(end + 10, true);
   let position = view.getUint32(end + 16, true),
     total = 0;
-  if (count > 2048 || count === 65535) throw new Error("资源包文件数量过多。");
+  if (count > MAX_PACKAGE_FILES || count === 65535) throw new Error("资源包文件数量过多。");
   for (let i = 0; i < count; i++) {
     if (
       position + 46 > bytes.length ||
@@ -86,7 +88,7 @@ export function resolveFile(files, owner, reference) {
 export function skeletonCandidates(files) {
   return Object.keys(files).filter((path) => {
     if (path.startsWith(".ai-spine/")) return false;
-    if (/\.skel$/i.test(path)) return true;
+    if (/\.skel(?:\.bytes)?$/i.test(path)) return true;
     if (!/\.json$/i.test(path)) return false;
     try {
       return Array.isArray(JSON.parse(decodeText(files[path])).bones);
@@ -109,7 +111,7 @@ export function parseBundle(
   if (files[PROJECT_PATH]) {
     const project = JSON.parse(decodeText(files[PROJECT_PATH]));
     if (project.version !== 1 || !Array.isArray(project.originalFiles))
-      throw new Error("不支持的 AI Spine 工程版本。");
+      throw new Error("不支持的 iSpine 工程版本。");
     const originals = {};
     for (const path of project.originalFiles) {
       const key = cleanPath(path),
@@ -156,7 +158,7 @@ export function parseBundle(
     throw Object.assign(new Error("请选择要导入的骨架。"), { candidates });
   skeletonPath ||= candidates[0];
   if (!files[skeletonPath]) throw new Error("选定的骨架文件不存在。");
-  const binary = /\.skel$/i.test(skeletonPath);
+  const binary = /\.skel(?:\.bytes)?$/i.test(skeletonPath);
   const json = binary ? null : JSON.parse(decodeText(files[skeletonPath]));
   const version = json?.skeleton?.spine;
   if (version && !version.startsWith("4.3."))
@@ -169,7 +171,7 @@ export function parseBundle(
   const sameName = atlasPaths.filter(
     (p) =>
       p.replace(/\.atlas(?:\.txt)?$/i, "") ===
-      skeletonPath.replace(/\.(json|skel)$/i, ""),
+      skeletonPath.replace(/\.(json|skel(?:\.bytes)?)$/i, ""),
   );
   if (sameName.length && candidates.length > 1) atlasPaths = sameName;
   if (!atlasPaths.length)
@@ -317,9 +319,10 @@ export async function loadCatalogTemplate(template) {
 export function exportPackage(
   bundle,
   pageBytes = {},
-  { editable = false, edits = {}, name = bundle.name, generation = {} } = {},
+  { editable = false, edits = {}, name = bundle.name, generation = {}, target } = {},
 ) {
-  const output = { ...bundle.files, ...pageBytes };
+  if (target === "unity" && editable) throw new Error("Unity 资源包与可编辑工程请分别导出。");
+  const output = target === "unity" ? unityPackageFiles(bundle, pageBytes) : { ...bundle.files, ...pageBytes };
   if (editable) {
     const metadata = {
       version: 1,
@@ -355,13 +358,23 @@ export function exportPackage(
     }
     output[PROJECT_PATH] = encodeText(JSON.stringify(metadata));
   }
-  return zipSync(
+  const entries = Object.entries(output);
+  if (entries.length > MAX_PACKAGE_FILES) throw new Error("资源包文件数量过多，请拆分后导出。");
+  let total = 0;
+  for (const [, bytes] of entries) {
+    if (!(bytes instanceof Uint8Array)) throw new Error("资源包包含无效的文件数据。");
+    total += bytes.byteLength;
+    if (total > MAX_PACKAGE_BYTES) throw new Error("资源包解压后超过 256 MB，请拆分后导出。");
+  }
+  const bytes = zipSync(
     Object.fromEntries(
-      Object.entries(output).map(([p, data]) => [
+      entries.map(([p, data]) => [
         p,
         [data, { mtime: new Date("2026-01-01T00:00:00Z") }],
       ]),
     ),
     { level: 6 },
   );
+  if (bytes.byteLength > MAX_PACKAGE_BYTES) throw new Error("资源包超过 256 MB，请拆分后导出。");
+  return bytes;
 }

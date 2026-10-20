@@ -1,4 +1,4 @@
-import { listProjects, saveProject } from "./storage.js";
+import { listProjects, listProjectLibrary, saveProject } from "./storage.js";
 import { parseBundle } from "./archive.js";
 import { unpackInWorker } from "./archive-worker.js";
 import { parseSkeleton } from "../spine/runtime.js";
@@ -7,8 +7,8 @@ export const isDesktop = Boolean(window.aiSpineDesktop);
 let startup;
 export function desktopProjects() {
   startup ||= (async () => {
-    const projects = await listProjects();
-    if (projects.length) return projects;
+    const { projects, trash, hasDeletedProjects } = await listProjectLibrary();
+    if (projects.length || trash.length || hasDeletedProjects) return projects;
     const response = await fetch("/examples/starberry-project.zip");
     if (!response.ok) throw new Error("示例角色加载失败，可通过“导入资源”导入自己的工程。");
     const files = await unpackInWorker(new Uint8Array(await response.arrayBuffer()));

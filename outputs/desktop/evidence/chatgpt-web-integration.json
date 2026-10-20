@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-20T11:00:27.844066+00:00",
+  "route": [
+    "iSpine",
+    "Sub2API",
+    "chatgpt2api",
+    "ChatGPT web"
+  ],
+  "model_version_policy": "Current web engine; precise 2/2.5 selection deferred by user.",
+  "connection": {
+    "selected": "sub2api",
+    "connected": true,
+    "system_encrypted_key": true,
+    "restored_key_validated_after_desktop_restart": true
+  },
+  "server": {
+    "accounts": [
+      {
+        "id": 1,
+        "name": "Ethan Will (ethanwill)",
+        "type": "oauth",
+        "status": "active",
+        "schedulable": false
+      },
+      {
+        "id": 2,
+        "name": "ChatGPT Web - ethanwill",
+        "type": "apikey",
+        "status": "active",
+        "schedulable": true
+      }
+    ],
+    "actual_gateway_usage": {
+      "account_id": 2,
+      "group_id": 9,
+      "model_alias": "gpt-image-2"
+    },
+    "web_request": {
+      "time": "2026-10-20T10:52:09.602245+00:00",
+      "method": "POST",
+      "path": "/backend-api/f/conversation",
+      "status": 200
+    },
+    "authorization_rotation": {
+      "source_token_rotated": true,
+      "web_token_matches_source": true,
+      "refresh_token_kept_only_in_sub2api": true,
+      "source_schedulable": false,
+      "web_account_refreshed": null,
+      "web_refresh_errors": 0,
+      "sync": {
+        "account_id": 1,
+        "updated": true
+      }
+    },
+    "web_authorization_status": "正常",
+    "web_refresh_token_present": false,
+    "services": {
+      "ispine-sub2api.service": "active",
+      "ispine-chatgpt-web.service": "active",
+      "ispine-chatgpt-web-sync.timer": "active"
+    }
+  },
+  "real_generation": {
+    "id": "d46f5407-4655-4d0e-a394-a5431770c51c",
+    "projectId": "web-gateway-connection-check",
+    "fingerprint": "9b00c1b0ec3db33931f293c1c527080be263a24488739dcacd0a78c40f8f04e9",
+    "kind": "appearance",
+    "prompt": "Connection test artwork only. One tiny violet toy robot, full body, front view, rounded head and simple limbs, clean flat game-sprite colors. Keep generous completely transparent empty space around the robot. True RGBA PNG alpha channel. No ground, shadow, text, labels or checkerboard. This test must use the ChatGPT web image route.",
+    "status": "completed",
+    "provider": {
+      "id": "sub2api",
+      "label": "Sub2API",
+      "baseUrl": "http://127.0.0.1:18080/v1",
+      "protocol": "images",
+      "model": "gpt-image-2"
+    },
+    "partIds": [],
+    "createdAt": "2026-10-20T10:52:06.287Z",
+    "updatedAt": "2026-10-20T10:52:29.515Z",
+    "total": 1,
+    "completed": 1,
+    "concurrency": 1,
+    "currentParts": [],
+    "images": [
+      {
+        "id": "image-0",
+        "file": "image-0.png",
+        "width": 1275,
+        "height": 1233,
+        "url": "/api/generation/jobs/d46f5407-4655-4d0e-a394-a5431770c51c/images/image-0",
+        "provider": "sub2api",
+        "controllerModel": "gpt-image-2",
+        "transparent": true,
+        "startedAt": "2026-10-20T10:52:06.291Z",
+        "completedAt": "2026-10-20T10:52:29.514Z"
+      }
+    ]
+  },
+  "image": {
+    "width": 1275,
+    "height": 1233,
+    "alpha": {
+      "transparent": 1084497,
+      "partial": 486890,
+      "opaque": 688
+    },
+    "sha256": "90ce5d2bceaf90dc4998a8d5e91302891dc1f4da0cef2664d24e36f2e463d851"
+  },
+  "ops_tests": {
+    "passed": 3,
+    "failed": 0,
+    "log": "/tmp/ispine-chatgpt-web-route-tests.log"
+  },
+  "acceptance_scope": "Image-provider connection and one isolated transparent-image test; not a completed character or official Spine editor acceptance."
+}

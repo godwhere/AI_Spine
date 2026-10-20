@@ -1,0 +1,214 @@
+{
+  "recorded_at": "2026-10-20T12:03:31.161839+00:00",
+  "source": "Google Antigravity OAuth",
+  "software_connection_changed": false,
+  "native_comparison": {
+    "native_desktop": {
+      "version": "2.24.0",
+      "visible_model": "Gemini 3.8 Flash High",
+      "text_works_reported_by_user": true,
+      "image_generation_tested_by_user": false
+    },
+    "matching_request_model": "gemini-3.8-flash-high",
+    "checks": [
+      {
+        "origin": "Mac",
+        "host": "daily-cloudcode-pa.googleapis.com",
+        "model": "gemini-3.8-flash-high",
+        "started_at": "2026-10-20T11:45:09Z",
+        "user_agent_version": "2.24.0",
+        "http_status": 200,
+        "status": "completed",
+        "text": "OK"
+      },
+      {
+        "origin": "Mac",
+        "host": "cloudcode-pa.googleapis.com",
+        "model": "gemini-3.8-flash-high",
+        "started_at": "2026-10-20T11:45:12Z",
+        "user_agent_version": "2.24.0",
+        "status": "failed",
+        "http_status": 429,
+        "error": "Resource has been exhausted (e.g. check quota).",
+        "error_status": "RESOURCE_EXHAUSTED"
+      },
+      {
+        "origin": "US server",
+        "host": "daily-cloudcode-pa.googleapis.com",
+        "model": "gemini-3.8-flash-high",
+        "started_at": "2026-10-20T11:45:16Z",
+        "user_agent_version": "2.24.0",
+        "status": "failed",
+        "http_status": 400,
+        "error": "User location is not supported for the API use.",
+        "error_status": "FAILED_PRECONDITION"
+      },
+      {
+        "origin": "US server",
+        "host": "cloudcode-pa.googleapis.com",
+        "model": "gemini-3.8-flash-high",
+        "started_at": "2026-10-20T11:45:17Z",
+        "user_agent_version": "2.24.0",
+        "status": "failed",
+        "http_status": 429,
+        "error": "Resource has been exhausted (e.g. check quota).",
+        "error_status": "RESOURCE_EXHAUSTED"
+      }
+    ],
+    "tokens_saved_locally": false
+  },
+  "native_image_test": {
+    "origin": "Mac",
+    "host": "daily-cloudcode-pa.googleapis.com",
+    "model": "gemini-3.1-flash-image",
+    "request_type": "image_gen",
+    "status": "completed",
+    "started_at": "2026-10-20T11:46:59Z",
+    "http_status": 200,
+    "image_count": 1,
+    "received_bytes": 1726669,
+    "mime_type": "image/jpeg",
+    "image_bytes": 567092,
+    "path": "/Users/ethan/Library/Application Support/iSpine Gateway/gemini-test-20261020/local-gemini-image.jpg",
+    "sha256": "337dd0528be4486e679f463b1f65f883de79e8dc08a3ff537e5c3e643e76f4ce",
+    "finished_at": "2026-10-20T11:47:10Z",
+    "image_check": {
+      "width": 1024,
+      "height": 1024,
+      "pixels_with_alpha_below_247": 0,
+      "accepted_as_transparent_part": false
+    }
+  },
+  "selected_egress": {
+    "proxy_id": 1,
+    "account_id": 3,
+    "previous_proxy_id": null,
+    "protocol": "http",
+    "server_bind": "127.0.0.1:19081",
+    "mac_bind": "127.0.0.1:18082",
+    "fallback_mode": "none",
+    "native_model_catalog_passed": true,
+    "native_user_agent_version": "2.23.0",
+    "requires_mac_online": true
+  },
+  "gateway_text_and_renewal": {
+    "checked_at": "2026-10-20T11:57:42Z",
+    "account_id": 3,
+    "proxy_id": 1,
+    "refresh_through_proxy": true,
+    "gateway_text": {
+      "http_status": 200,
+      "text": "OK"
+    },
+    "proxy_still_selected": true,
+    "accounts": [
+      {
+        "id": 2,
+        "name": "ChatGPT Web - ethanwill",
+        "platform": "openai",
+        "status": "active",
+        "schedulable": true,
+        "proxy_id": null
+      },
+      {
+        "id": 1,
+        "name": "Ethan Will (ethanwill)",
+        "platform": "openai",
+        "status": "active",
+        "schedulable": false,
+        "proxy_id": null
+      },
+      {
+        "id": 3,
+        "name": "Gemini Antigravity - ethanwill",
+        "platform": "antigravity",
+        "status": "active",
+        "schedulable": true,
+        "proxy_id": 1
+      }
+    ]
+  },
+  "gateway_image_test": {
+    "started_at": "2026-10-20T11:54:32.537Z",
+    "source": "Google Antigravity OAuth",
+    "model": "gemini-3.1-flash-image",
+    "account_id": 3,
+    "group_id": 10,
+    "endpoint": "http://127.0.0.1:18080/antigravity/v1beta",
+    "workbench_modified": false,
+    "calls": [
+      {
+        "path": "/antigravity/v1beta/models",
+        "status": 200,
+        "elapsed_ms": 160
+      },
+      {
+        "path": "/antigravity/v1beta/models/gemini-3.1-flash-image:generateContent",
+        "status": 429,
+        "elapsed_ms": 6412,
+        "error": "Upstream rate limit exceeded, please retry later"
+      }
+    ],
+    "connection": {
+      "connected": true,
+      "message": "Sub2API 网关与模型 gemini-3.1-flash-image 已验证；实际图片能力在生成时检查。"
+    },
+    "status": "failed",
+    "error": "Sub2API 达到并发或用量限制，请稍后重试或降低同时生成数量。",
+    "finished_at": "2026-10-20T11:54:39.119Z"
+  },
+  "reported_quota": {
+    "checked_at": "2026-10-20T12:00:00Z",
+    "quotas": [
+      {
+        "model": "gemini-3.1-flash-image",
+        "quota": {
+          "remainingFraction": 0.97785914,
+          "resetTime": "2026-10-20T16:37:27Z"
+        }
+      },
+      {
+        "model": "gemini-3.8-flash-high",
+        "quota": {
+          "remainingFraction": 0.97785914,
+          "resetTime": "2026-10-20T16:37:27Z"
+        }
+      }
+    ],
+    "generated_images": false
+  },
+  "transparent_part_pipeline_ready": false,
+  "gateway_image_generation_accepted": false,
+  "findings": [
+    "The same authorized model request succeeds from Mac but fails from direct VPS egress.",
+    "The scoped Mac relay restores actual Sub2API text requests and token refresh.",
+    "Native Mac image generation returned one JPEG without alpha.",
+    "Gateway image rejection reports quota exhaustion, while a fresh model quota query reports about 97.8 percent remaining. Exact image-specific quota or request compatibility remains unresolved."
+  ],
+  "constraints": {
+    "mac_must_be_online": true,
+    "tls_terminated_by_relay": false,
+    "unlisted_destinations_allowed": false,
+    "outbound_fallback": "none",
+    "chatgpt_accounts_use_egress_proxy": false,
+    "extra_paid_overages_enabled": false
+  },
+  "checks": {
+    "python_relay_tests": 4,
+    "live_google_native_text": true,
+    "live_google_native_image": true,
+    "live_sub2api_text": true,
+    "live_refresh_through_proxy": true,
+    "live_gateway_image_passed": false,
+    "provider_tests": 11,
+    "total_focused_tests": 15
+  },
+  "observed_workbench_connection": {
+    "selected": "sub2api",
+    "busy": false,
+    "secureStorage": true,
+    "model": "gpt-image-2",
+    "baseUrl": "http://127.0.0.1:18080/v1",
+    "protocol": "images"
+  }
+}

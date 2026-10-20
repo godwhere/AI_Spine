@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-20T13:56:36.288Z",
+  "desktopBackup": "/Users/ethan/Library/Application Support/iSpine Backups/20261020-211941-before-web",
+  "byteIdenticalRecords": 20,
+  "library": {
+    "resources": 4,
+    "trash": 1,
+    "drafts": 3,
+    "customTemplates": 1
+  },
+  "sqliteIntegrity": "ok",
+  "imageRequestsIssued": 0,
+  "migrationRecheck": {
+    "projects": 0,
+    "trash": 0,
+    "drafts": 0,
+    "templates": 0,
+    "conflicts": 0,
+    "unchanged": 9
+  },
+  "desktopRecordsPreserved": true
+}

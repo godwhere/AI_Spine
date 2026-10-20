@@ -1,0 +1,5546 @@
+[
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-attack-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/before-export-default-attack-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/before-export-default-attack-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-die-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/before-export-default-die-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/before-export-default-die-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-get_hurt-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/before-export-default-get_hurt-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/before-export-default-get_hurt-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-idle-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/before-export-default-idle-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/before-export-default-idle-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-reborn-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/before-export-default-reborn-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/before-export-default-reborn-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-skill-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/before-export-default-skill-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/before-export-default-skill-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-default-stun-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/before-export-default-stun-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "default",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/before-export-default-stun-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-attack-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-attack-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-attack-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-die-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-die-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-die-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-get_hurt-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-get_hurt-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-get_hurt-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-idle-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-idle-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-idle-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-reborn-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-reborn-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-reborn-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-skill-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-skill-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-skill-2.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-stun-0.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-stun-1.png"
+  },
+  {
+    "stage": "before-export",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/before-export-skin_2-stun-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-attack-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-attack-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-attack-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-die-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-die-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-die-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-get_hurt-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-get_hurt-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-get_hurt-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-idle-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-idle-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-idle-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-reborn-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-reborn-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-reborn-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-skill-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-skill-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-skill-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-stun-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-stun-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/runtime-import-default-stun-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-attack-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-attack-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-attack-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-die-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-die-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-die-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-get_hurt-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-get_hurt-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-get_hurt-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-idle-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-idle-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-idle-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-reborn-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-reborn-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-reborn-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-skill-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-skill-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-skill-2.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-stun-0.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-stun-1.png"
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/runtime-import-skin_2-stun-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-attack-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-attack-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-attack-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-die-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-die-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-die-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-get_hurt-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-get_hurt-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-get_hurt-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-idle-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-idle-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-idle-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-reborn-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-reborn-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-reborn-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-skill-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542538.588",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-skill-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-skill-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-stun-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-stun-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "default",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/project-reimport-default-stun-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.513",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-attack-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "600069.962",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.770"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-attack-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "poses": [
+      {
+        "animation": "attack",
+        "label": "模板动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      },
+      {
+        "animation": "attack",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-426022.033",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.760"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-attack-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1373188.607",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-die-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1079022.850",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-die-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "die",
+        "label": "模板动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "die",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7337410.914",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-die-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1421229.309",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-get_hurt-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "946072.276",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.230"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-get_hurt-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "poses": [
+      {
+        "animation": "get_hurt",
+        "label": "模板动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      },
+      {
+        "animation": "get_hurt",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "955719.836",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.530"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-get_hurt-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1396512.332",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-idle-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1284342.623",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-idle-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "idle",
+        "label": "模板动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "idle",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1242516.048",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-idle-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7335668.436",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-reborn-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "7399914.075",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.580"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-reborn-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "poses": [
+      {
+        "animation": "reborn",
+        "label": "模板动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      },
+      {
+        "animation": "reborn",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "258619.817",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.330"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-reborn-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1393492.289",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-skill-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1542087.274",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.990"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-skill-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "poses": [
+      {
+        "animation": "skill",
+        "label": "模板动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      },
+      {
+        "animation": "skill",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "-333612.610",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "2.270"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-skill-2.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1863201.774",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.010"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-stun-0.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1691843.396",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "0.700"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-stun-1.png"
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "poses": [
+      {
+        "animation": "stun",
+        "label": "模板动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 26,
+          "right": 634.5,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 26,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      },
+      {
+        "animation": "stun",
+        "label": "当前资源动画 Spine 动画",
+        "pose": "1749820.375",
+        "rect": {
+          "bottom": 744,
+          "height": 371.5,
+          "left": 645.5,
+          "right": 1254,
+          "top": 372.5,
+          "width": 608.5,
+          "x": 645.5,
+          "y": 372.5
+        },
+        "skin": "skin_2",
+        "time": "1.600"
+      }
+    ],
+    "evidence": "browser/project-reimport-skin_2-stun-2.png"
+  }
+]

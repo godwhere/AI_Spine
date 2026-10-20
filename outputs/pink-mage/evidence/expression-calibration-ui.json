@@ -1,0 +1,124 @@
+[
+  {
+    "label": "脸部与耳朵",
+    "changes": {
+      "垂直缩放 %": "82",
+      "垂直位置": "-1"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左眼·常态",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左眼·闭眼",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左眼·专注",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左眼·受伤",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面右眼·常态",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面右眼·闭眼",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面右眼·专注",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面右眼·受伤",
+    "changes": {
+      "水平缩放 %": "115"
+    },
+    "applied": true
+  },
+  {
+    "label": "画面左眉·常态",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左眉·专注",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面左眉·受伤",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右眉·常态",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右眉·专注",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "画面右眉·受伤",
+    "changes": {},
+    "applied": true
+  },
+  {
+    "label": "嘴型·微笑",
+    "changes": {
+      "水平缩放 %": "120"
+    },
+    "applied": true
+  },
+  {
+    "label": "嘴型·咏唱",
+    "changes": {
+      "水平缩放 %": "120"
+    },
+    "applied": true
+  },
+  {
+    "label": "嘴型·受击",
+    "changes": {
+      "水平缩放 %": "120"
+    },
+    "applied": true
+  },
+  {
+    "label": "嘴型·胜利",
+    "changes": {
+      "水平缩放 %": "120"
+    },
+    "applied": true
+  }
+]

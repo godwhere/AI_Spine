@@ -1,0 +1,758 @@
+[
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "default",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "default",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 1,
+    "time": 0.77,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "attack",
+    "sample": 2,
+    "time": 1.76,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "die",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 1,
+    "time": 0.23,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "get_hurt",
+    "sample": 2,
+    "time": 0.53,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "idle",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 1,
+    "time": 0.58,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "reborn",
+    "sample": 2,
+    "time": 1.33,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 1,
+    "time": 0.99,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "skill",
+    "sample": 2,
+    "time": 2.27,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 0,
+    "time": 0.01,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 1,
+    "time": 0.7,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "runtime-import",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  {
+    "stage": "project-reimport",
+    "skin": "skin_2",
+    "action": "stun",
+    "sample": 2,
+    "time": 1.6,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  }
+]

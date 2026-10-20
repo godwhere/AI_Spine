@@ -1,0 +1,66 @@
+{
+  "list": {
+    "choices": [
+      "列表视图",
+      "三列图片视图"
+    ],
+    "countsVisible": true,
+    "galleryLayout": false,
+    "headerVisible": true,
+    "listSelected": true,
+    "mode": "list",
+    "nameVisible": true
+  },
+  "gallery": [
+    {
+      "cardHeight": 366.6640625,
+      "cardWidth": 366.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14,
+      "width": 1600
+    },
+    {
+      "cardHeight": 314.1328125,
+      "cardWidth": 314.1328125,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14,
+      "width": 1440
+    },
+    {
+      "cardHeight": 214.6640625,
+      "cardWidth": 214.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 14.0078125,
+      "width": 1024
+    },
+    {
+      "cardHeight": 154.6640625,
+      "cardWidth": 154.6640625,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 10.0078125,
+      "width": 800
+    },
+    {
+      "cardHeight": 114,
+      "cardWidth": 114,
+      "columns": 3,
+      "horizontalOverflow": false,
+      "onlyPictures": true,
+      "overlap": false,
+      "rowGap": 10,
+      "width": 390
+    }
+  ]
+}

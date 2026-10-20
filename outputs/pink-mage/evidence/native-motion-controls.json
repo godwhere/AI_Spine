@@ -1,0 +1,37 @@
+[
+  {
+    "motion": "idle",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: idle"
+  },
+  {
+    "motion": "attack",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: attack"
+  },
+  {
+    "motion": "hit",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: hit"
+  },
+  {
+    "motion": "run",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: run"
+  },
+  {
+    "motion": "skill",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: skill"
+  },
+  {
+    "motion": "death",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: death"
+  },
+  {
+    "motion": "victory",
+    "selected": true,
+    "control": "79 pop up button Description: 资源预览动作, Value: victory"
+  }
+]

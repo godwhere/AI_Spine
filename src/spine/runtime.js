@@ -88,7 +88,7 @@ export function measureAnimation(data, animation, skin) {
   if (skin) skeleton.setSkin(skin);
   skeleton.setupPose();
   const state = new AnimationState(new AnimationStateData(data));
-  const target = data.findAnimation(animation),
+  const target = animation ? data.findAnimation(animation) : null,
     track = target ? state.setAnimation(0, target, false) : null;
   let x = Infinity,
     y = Infinity,
@@ -112,6 +112,22 @@ export function measureAnimation(data, animation, skin) {
   return Number.isFinite(x)
     ? { x, y, width: right - x, height: top - y }
     : { x: -200, y: 0, width: 400, height: 400 };
+}
+
+export function measurePreviewBounds(data, skin) {
+  const actions = data.animations.length ? data.animations : [null];
+  let x = Infinity,
+    y = Infinity,
+    right = -Infinity,
+    top = -Infinity;
+  for (const action of actions) {
+    const bounds = measureAnimation(data, action?.name, skin);
+    x = Math.min(x, bounds.x);
+    y = Math.min(y, bounds.y);
+    right = Math.max(right, bounds.x + bounds.width);
+    top = Math.max(top, bounds.y + bounds.height);
+  }
+  return { x, y, width: right - x, height: top - y };
 }
 
 export async function createSpineScene(bundle, canvas) {
@@ -179,6 +195,7 @@ export async function createSpineScene(bundle, canvas) {
       },
       render({
         animation,
+        loop = true,
         skin,
         time,
         zoom = 1,
@@ -186,25 +203,32 @@ export async function createSpineScene(bundle, canvas) {
         bones = false,
       }) {
         if (disposed || context.gl.isContextLost()) return [];
-        if (animation !== activeAnimation || skin !== activeSkin) {
+        if (!bounds || animation !== activeAnimation || skin !== activeSkin) {
           activeAnimation = animation;
           activeSkin = skin;
           skeleton.setSkin(skin || data.defaultSkin || data.skins[0] || null);
           skeleton.setupPose();
           state.clearTracks();
-          track = data.findAnimation(animation)
-            ? state.setAnimation(0, animation, true)
+          track = animation && data.findAnimation(animation)
+            ? state.setAnimation(0, animation, loop)
             : null;
-          const key = `${animation}::${skin}`;
+          // Share a camera across actions so compact poses do not appear larger.
+          const key = skin || "";
           if (!fitCache.has(key))
-            fitCache.set(key, measureAnimation(data, animation, skin));
+            fitCache.set(key, measurePreviewBounds(data, skin));
           bounds = fitCache.get(key);
           lastTime = time;
         }
-        if (track) track.trackTime = time;
+        const resolvedTime = track && !loop
+          ? Math.max(0, Math.min(time, track.animationEnd - track.animationStart))
+          : time;
+        if (track) {
+          track.loop = loop;
+          track.trackTime = resolvedTime;
+        }
         state.apply(skeleton);
-        const delta = Math.max(0, Math.min(0.05, time - lastTime));
-        lastTime = time;
+        const delta = Math.max(0, Math.min(0.05, resolvedTime - lastTime));
+        lastTime = resolvedTime;
         skeleton.update(delta);
         skeleton.updateWorldTransform(Physics.update);
         const width = Math.max(1, canvas.clientWidth),
@@ -256,10 +280,12 @@ export async function createSpineScene(bundle, canvas) {
             triangles: info.attachment.triangles || [0, 1, 2, 2, 3, 0],
           });
         }
-        canvas.dataset.animationTime = time.toFixed(3);
+        canvas.dataset.animationTime = resolvedTime.toFixed(3);
         canvas.dataset.poseChecksum = checksum.toFixed(3);
         canvas.dataset.animation = animation;
         canvas.dataset.skin = skin || "";
+        canvas.dataset.viewScale = scale.toFixed(6);
+        canvas.dataset.viewCenter = `${centerX.toFixed(6)},${centerY.toFixed(6)}`;
         return shapes;
       },
       dispose() {

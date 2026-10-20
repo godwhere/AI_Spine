@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "actualBrowserDownload": "/Users/ethan/Downloads/悟空 · 自建模板验证 · 新资源-Spine4.3.zip",
+  "allRuntimeFilesByteIdentical": true,
+  "regions": 49,
+  "animations": [
+    "attack",
+    "die",
+    "get_hurt",
+    "idle",
+    "reborn",
+    "skill",
+    "stun"
+  ],
+  "skins": [
+    "default",
+    "skin_2"
+  ],
+  "files": [
+    {
+      "name": "skeleton.json",
+      "bytes": 519239,
+      "sha256": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846"
+    },
+    {
+      "name": "skeleton.atlas",
+      "bytes": 2308,
+      "sha256": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f"
+    },
+    {
+      "name": "skeleton.png",
+      "bytes": 2138498,
+      "sha256": "b0c5d31f187883a02fb8ef795d57cb077f190dffcc19f848642cc20a21086730"
+    }
+  ]
+}

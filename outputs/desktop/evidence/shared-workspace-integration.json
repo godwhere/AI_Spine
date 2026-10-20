@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-20T22:15:19.016900+08:00",
+  "canonicalUrl": "http://127.0.0.1:4175",
+  "browserOriginsShareSameDatabase": true,
+  "browserUiChecks": [
+    "Chrome and in-app browser show the same five resources",
+    "Chrome preview renders the original 44-part mage with 7 animations"
+  ],
+  "library": {
+    "resources": 5,
+    "trash": 1,
+    "drafts": 3,
+    "customTemplates": 1
+  },
+  "coreTestsPassed": 458,
+  "retiredAppBundles": 12,
+  "appDeletionRecoverableFromTrash": true,
+  "dataBackupRetained": true,
+  "selectedProvider": "sub2api",
+  "encryptedKeyProfiles": {
+    "codex-native": false,
+    "sub2api": true
+  },
+  "imageRequestsIssuedDuringMigration": 0,
+  "proofScreenshot": "outputs/desktop/evidence/shared-workspace-chrome.png",
+  "acceptanceLimits": [
+    "This is a same-computer local workspace, not cloud or cross-device hosting.",
+    "No new image generation or verification of upstream image recovery was performed."
+  ]
+}

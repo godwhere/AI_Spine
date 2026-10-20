@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-20T20:55:52+08:00",
+  "scope": "User requested raising the ChatGPT web gateway concurrency limit; generation remains paused.",
+  "updates": {
+    "sub2api_web_account": {
+      "id": 2,
+      "before": 1,
+      "after": 3,
+      "method": "normal admin account PUT; verified by a fresh GET"
+    },
+    "chatgpt_web_backend": {
+      "setting": "image_account_concurrency",
+      "before": 1,
+      "after": 3,
+      "method": "normal admin settings POST; verified by a fresh GET and persisted config"
+    }
+  },
+  "verification": {
+    "gateway_user_concurrency": 30,
+    "oauth_source_remains_unschedulable": true,
+    "gemini_unchanged": true,
+    "other_account_fields_unchanged": true,
+    "other_backend_settings_unchanged": true,
+    "services": {
+      "ispine-sub2api.service": "active",
+      "ispine-chatgpt-web.service": "active",
+      "ispine-chatgpt-web-sync.timer": "active"
+    },
+    "gateway_health": "ok",
+    "service_restart_issued": false,
+    "image_requests_issued": 0
+  },
+  "acceptance_limits": [
+    "This verifies configuration persistence and service health, not three simultaneous upstream image generations.",
+    "The earlier image-storage 503 and web-conversation 500 failures have not been retested or fixed by this concurrency change."
+  ],
+  "private_backup_directory": "/root/ispine-sub2api-diagnostics"
+}

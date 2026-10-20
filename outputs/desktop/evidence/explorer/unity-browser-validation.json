@@ -1,0 +1,17 @@
+{
+  "zipBytes": 2268832,
+  "sha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+  "skeleton": "skeleton.json",
+  "parts": 49,
+  "animations": 7,
+  "skins": 2,
+  "exactRuntimeFiles": 3,
+  "readme": true,
+  "unityEditorTested": false,
+  "actualBrowserImport": true,
+  "actualSecondDownload": true,
+  "byteIdenticalRoundtrip": true,
+  "roundtripSha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+  "isolatedVerificationOrigin": "http://127.0.0.1:4176",
+  "nativeLibraryModified": false
+}

@@ -7,6 +7,7 @@ export function SpineViewer({
   pages = EMPTY,
   clock,
   animation,
+  loop = true,
   skin,
   selected,
   onSelect,
@@ -25,7 +26,7 @@ export function SpineViewer({
     [view, setView] = useState({ zoom: 1, pan: { x: 0, y: 0 } });
   const callbacks = useRef();
   callbacks.current = { onReady, onSelect };
-  settings.current = { clock, animation, skin, selected, bones, ...view };
+  settings.current = { clock, animation, loop, skin, selected, bones, ...view };
   useEffect(() => {
     if (!bundle) return;
     let cancelled = false,

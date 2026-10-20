@@ -1,0 +1,239 @@
+{
+  "recordedAt": "2026-10-19T20:44:39.097Z",
+  "initialJob": "902f447e-47aa-437e-b722-c22e91d3e093",
+  "fineJob": "8335d660-8429-4810-8060-7031d9cce0d6",
+  "frozenSnapshotJob": "e3fae195-9c68-45d7-aa0d-85b86c055468",
+  "scope": "Read-only decoded image comparison of real saved jobs, before coordinate registration. No art generated or library data changed.",
+  "unchangedOldParts": [
+    {
+      "id": "leftThigh",
+      "label": "画面左大腿",
+      "firstLogical": {
+        "width": 125,
+        "height": 171,
+        "rgbaSHA256": "3d41a6163b2ccaa4b5e86e37aa1992f76d8ec4bca670a8b03e608a1cda39f597",
+        "visibleBounds": {
+          "x": 18,
+          "y": 6,
+          "width": 94,
+          "height": 159
+        },
+        "visiblePixels": 6288
+      },
+      "laterAppliedSnapshot": {
+        "width": 125,
+        "height": 171,
+        "rgbaSHA256": "3d41a6163b2ccaa4b5e86e37aa1992f76d8ec4bca670a8b03e608a1cda39f597",
+        "visibleBounds": {
+          "x": 18,
+          "y": 6,
+          "width": 94,
+          "height": 159
+        },
+        "visiblePixels": 6288
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    },
+    {
+      "id": "leftShin",
+      "label": "画面左小腿",
+      "firstLogical": {
+        "width": 102,
+        "height": 178,
+        "rgbaSHA256": "2b16a529b0ef9f9be0bad9603bb654aae40ab543192a988dbb04a2a9de8a8f50",
+        "visibleBounds": {
+          "x": 10,
+          "y": 0,
+          "width": 90,
+          "height": 175
+        },
+        "visiblePixels": 6788
+      },
+      "laterAppliedSnapshot": {
+        "width": 102,
+        "height": 178,
+        "rgbaSHA256": "2b16a529b0ef9f9be0bad9603bb654aae40ab543192a988dbb04a2a9de8a8f50",
+        "visibleBounds": {
+          "x": 10,
+          "y": 0,
+          "width": 90,
+          "height": 175
+        },
+        "visiblePixels": 6788
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    },
+    {
+      "id": "rightThigh",
+      "label": "画面右大腿",
+      "firstLogical": {
+        "width": 89,
+        "height": 169,
+        "rgbaSHA256": "7e13b6ab7fc99babf8e468fc71f90dccdf49a92b0e54f87c6db41aa46f98ae00",
+        "visibleBounds": {
+          "x": 27,
+          "y": 20,
+          "width": 51,
+          "height": 140
+        },
+        "visiblePixels": 4740
+      },
+      "laterAppliedSnapshot": {
+        "width": 89,
+        "height": 169,
+        "rgbaSHA256": "7e13b6ab7fc99babf8e468fc71f90dccdf49a92b0e54f87c6db41aa46f98ae00",
+        "visibleBounds": {
+          "x": 27,
+          "y": 20,
+          "width": 51,
+          "height": 140
+        },
+        "visiblePixels": 4740
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    },
+    {
+      "id": "rightShin",
+      "label": "画面右小腿",
+      "firstLogical": {
+        "width": 80,
+        "height": 175,
+        "rgbaSHA256": "6c097019799183b5ca6e672251ca5e972f193a493c3f6558cfa94459e93ed941",
+        "visibleBounds": {
+          "x": 16,
+          "y": 0,
+          "width": 47,
+          "height": 175
+        },
+        "visiblePixels": 5477
+      },
+      "laterAppliedSnapshot": {
+        "width": 80,
+        "height": 175,
+        "rgbaSHA256": "6c097019799183b5ca6e672251ca5e972f193a493c3f6558cfa94459e93ed941",
+        "visibleBounds": {
+          "x": 16,
+          "y": 0,
+          "width": 47,
+          "height": 175
+        },
+        "visiblePixels": 5477
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    },
+    {
+      "id": "leftCoat",
+      "label": "画面左外套衣摆",
+      "firstLogical": {
+        "width": 241,
+        "height": 344,
+        "rgbaSHA256": "0a350b37b6cce39a9b0d0727773a63a22dda4abf84bc35ff7ec530f16cc97b61",
+        "visibleBounds": {
+          "x": 16,
+          "y": 3,
+          "width": 212,
+          "height": 327
+        },
+        "visiblePixels": 17113
+      },
+      "laterAppliedSnapshot": {
+        "width": 241,
+        "height": 344,
+        "rgbaSHA256": "0a350b37b6cce39a9b0d0727773a63a22dda4abf84bc35ff7ec530f16cc97b61",
+        "visibleBounds": {
+          "x": 16,
+          "y": 3,
+          "width": 212,
+          "height": 327
+        },
+        "visiblePixels": 17113
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    },
+    {
+      "id": "rightCoat",
+      "label": "画面右外套衣摆",
+      "firstLogical": {
+        "width": 143,
+        "height": 340,
+        "rgbaSHA256": "981419ccb4d841974101718757b9a3bdbc3c374492508860fb7ba279d2838ef3",
+        "visibleBounds": {
+          "x": 6,
+          "y": 7,
+          "width": 134,
+          "height": 320
+        },
+        "visiblePixels": 11126
+      },
+      "laterAppliedSnapshot": {
+        "width": 143,
+        "height": 340,
+        "rgbaSHA256": "981419ccb4d841974101718757b9a3bdbc3c374492508860fb7ba279d2838ef3",
+        "visibleBounds": {
+          "x": 6,
+          "y": 7,
+          "width": 134,
+          "height": 320
+        },
+        "visiblePixels": 11126
+      },
+      "decodedPixelsUnchanged": true,
+      "originalNativeRetained": false,
+      "limitation": "This old batch did not retain native PNGs; initial generation versus initial resizing cannot be separated."
+    }
+  ],
+  "torso": {
+    "native": {
+      "width": 1273,
+      "height": 1236,
+      "rgbaSHA256": "3224688e7d243fd260c0d936ac99674b2fbe92e1cbda1a36e7dfbfc8c3afb91f",
+      "visibleBounds": {
+        "x": 254,
+        "y": 29,
+        "width": 830,
+        "height": 1172
+      },
+      "visiblePixels": 666296
+    },
+    "logical": {
+      "width": 205,
+      "height": 199,
+      "rgbaSHA256": "9cccbd7f02757ec9fe21935a0ddb33047c906ef8c91aa3e0ef1e258bb849e2d2",
+      "visibleBounds": {
+        "x": 41,
+        "y": 5,
+        "width": 134,
+        "height": 188
+      },
+      "visiblePixels": 17305
+    },
+    "laterAppliedSnapshot": {
+      "width": 205,
+      "height": 199,
+      "rgbaSHA256": "9cccbd7f02757ec9fe21935a0ddb33047c906ef8c91aa3e0ef1e258bb849e2d2",
+      "visibleBounds": {
+        "x": 41,
+        "y": 5,
+        "width": 134,
+        "height": 188
+      },
+      "visiblePixels": 17305
+    },
+    "containScale": 0.1610032362459547,
+    "visibleWidthFractionOfPart": 0.6536585365853659,
+    "nativeCanvasAspect": 1.029935275080906,
+    "logicalCanvasAspect": 1.0301507537688441,
+    "laterDecodedPixelsUnchanged": true,
+    "conclusion": "Independent redrawing and transparent margins change the visible fit. Contain scaling preserves aspect ratio; it does not establish source-pixel correspondence."
+  }
+}

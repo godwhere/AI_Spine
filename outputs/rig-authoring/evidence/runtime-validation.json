@@ -1,0 +1,1211 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-19T19:13:30.718Z",
+  "artifactPhase": "with-runtime-roundtrip",
+  "scope": "Actual downloaded artifacts; official Spine runtime samples, independent PNGs, authoring and job-manifest invariants.",
+  "credentialsAccessed": false,
+  "generatedArtworkDuringValidation": false,
+  "checks": [
+    {
+      "name": "runtime: authoring document hydrates",
+      "passed": true
+    },
+    {
+      "name": "runtime: editable and baked authoring agree",
+      "passed": true
+    },
+    {
+      "name": "editable: authoring document hydrates",
+      "passed": true
+    },
+    {
+      "name": "editable: editable and baked authoring agree",
+      "passed": true
+    },
+    {
+      "name": "unity: authoring document hydrates",
+      "passed": true
+    },
+    {
+      "name": "unity: editable and baked authoring agree",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: authoring document hydrates",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: editable and baked authoring agree",
+      "passed": true
+    },
+    {
+      "name": "actual authoring: AI analysis provenance retained",
+      "passed": true
+    },
+    {
+      "name": "actual authoring: idle, attack and hit present",
+      "passed": true
+    },
+    {
+      "name": "artwork: sword has finished independent artwork",
+      "passed": true,
+      "source": "ai",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: sword has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: sword standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: sword authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_thigh has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_thigh has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_thigh standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_thigh authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_thigh has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_thigh has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_thigh standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_thigh authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_shin has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_shin has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_shin standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_shin authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_shin has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_shin has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_shin standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_shin authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_foot has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_foot has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_foot standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_foot authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_foot has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_foot has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_foot standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_foot authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_upper_arm has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_upper_arm has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_upper_arm standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_upper_arm authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_upper_arm has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_upper_arm has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_upper_arm standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_upper_arm authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: torso_armor has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: torso_armor has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: torso_armor standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: torso_armor authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_forearm has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_forearm has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_forearm standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_forearm authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_hand has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_hand has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_hand standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_hand authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: right_pauldron has finished independent artwork",
+      "passed": true,
+      "source": "ai",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: right_pauldron has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_pauldron standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: right_pauldron authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_forearm has finished independent artwork",
+      "passed": true,
+      "source": "calibrated",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_forearm has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_forearm standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_forearm authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: head has finished independent artwork",
+      "passed": true,
+      "source": "ai",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: head has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: head standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: head authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "artwork: left_hand has finished independent artwork",
+      "passed": true,
+      "source": "ai",
+      "completion": "ready"
+    },
+    {
+      "name": "artwork: left_hand has visible content and alpha",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_hand standalone PNG is present",
+      "passed": true
+    },
+    {
+      "name": "artwork: left_hand authoring and standalone PNG agree",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "editable: skeleton bytes preserved",
+      "passed": true
+    },
+    {
+      "name": "editable: atlas bytes preserved across filename changes",
+      "passed": true
+    },
+    {
+      "name": "editable: all image bytes preserved",
+      "passed": true,
+      "imageFiles": 34
+    },
+    {
+      "name": "editable: joints preserved",
+      "passed": true
+    },
+    {
+      "name": "editable: all parts and mesh weights preserved",
+      "passed": true
+    },
+    {
+      "name": "editable: motions preserved",
+      "passed": true
+    },
+    {
+      "name": "unity: skeleton bytes preserved",
+      "passed": true
+    },
+    {
+      "name": "unity: atlas bytes preserved across filename changes",
+      "passed": true
+    },
+    {
+      "name": "unity: all image bytes preserved",
+      "passed": true,
+      "imageFiles": 34
+    },
+    {
+      "name": "unity: joints preserved",
+      "passed": true
+    },
+    {
+      "name": "unity: all parts and mesh weights preserved",
+      "passed": true
+    },
+    {
+      "name": "unity: motions preserved",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: skeleton bytes preserved",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: atlas bytes preserved across filename changes",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: all image bytes preserved",
+      "passed": true,
+      "imageFiles": 34
+    },
+    {
+      "name": "roundtrip: joints preserved",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: all parts and mesh weights preserved",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: motions preserved",
+      "passed": true
+    },
+    {
+      "name": "roundtrip: all ZIP members preserved",
+      "passed": true,
+      "wholeZIPByteExact": true,
+      "memberCount": 37
+    },
+    {
+      "name": "authoring compiler: actual runtime skeleton matches document",
+      "passed": true,
+      "compiledSHA256": "e82915edda44d7d773b1de564f650f121a6998d17ac94199f8ff9b332d02030c",
+      "runtimeSHA256": "e82915edda44d7d773b1de564f650f121a6998d17ac94199f8ff9b332d02030c"
+    },
+    {
+      "name": "authoring compiler: atlas assembly matches actual export",
+      "passed": true
+    },
+    {
+      "name": "authoring compiler: decoded packed texture matches actual export",
+      "passed": true,
+      "sameDimensions": true,
+      "rgbaExact": true,
+      "maxAlphaError": 0,
+      "maxPremultipliedChannelError": 0
+    },
+    {
+      "name": "runtime: actual skeleton matches authoring counts",
+      "passed": true
+    },
+    {
+      "name": "runtime: at least one genuinely weighted mesh",
+      "passed": true
+    },
+    {
+      "name": "runtime: primary weapon grip is explicitly declared",
+      "passed": true,
+      "count": 1
+    },
+    {
+      "name": "runtime: default/idle 121 real samples include non-baked times",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/idle all joints and vertices finite and bounded",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/idle every weighted part evaluated",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/idle left declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0.0001208916371319591
+    },
+    {
+      "name": "runtime: default/idle right declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0.0006139806063379434
+    },
+    {
+      "name": "runtime: default/idle sword primary grip stays below 0.5px",
+      "passed": true,
+      "maximumError": 7.407303509259503e-8
+    },
+    {
+      "name": "runtime: default/idle loop endpoints match",
+      "passed": true,
+      "enabled": true,
+      "maximumBoneOrMatrixDifference": 0,
+      "maximumVertexDifference": 0
+    },
+    {
+      "name": "runtime: default/attack 121 real samples include non-baked times",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/attack all joints and vertices finite and bounded",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/attack every weighted part evaluated",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/attack left declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0
+    },
+    {
+      "name": "runtime: default/attack right declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0
+    },
+    {
+      "name": "runtime: default/attack sword primary grip stays below 0.5px",
+      "passed": true,
+      "maximumError": 7.407309861937892e-8
+    },
+    {
+      "name": "runtime: default/hit 121 real samples include non-baked times",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/hit all joints and vertices finite and bounded",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/hit every weighted part evaluated",
+      "passed": true
+    },
+    {
+      "name": "runtime: default/hit left declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0
+    },
+    {
+      "name": "runtime: default/hit right declared foot locks stay below 0.5px",
+      "passed": true,
+      "samples": 121,
+      "maxError": 0
+    },
+    {
+      "name": "runtime: default/hit sword primary grip stays below 0.5px",
+      "passed": true,
+      "maximumError": 7.407310192625381e-8
+    },
+    {
+      "name": "job evidence: actual completed attack-regeneration manifest present",
+      "passed": true
+    },
+    {
+      "name": "attack regeneration: joints unchanged",
+      "passed": true
+    },
+    {
+      "name": "attack regeneration: part geometry, binding, mesh weights and prompts unchanged",
+      "passed": true
+    },
+    {
+      "name": "attack regeneration: preexisting idle unchanged",
+      "passed": true,
+      "beforeSHA256": "559faa440a58aa95370a264a773c059c618d0b14bc6f27f1f143467505ceba75",
+      "exportedSHA256": "559faa440a58aa95370a264a773c059c618d0b14bc6f27f1f143467505ceba75"
+    },
+    {
+      "name": "attack regeneration: preexisting hit unchanged",
+      "passed": true,
+      "beforeSHA256": "e6362cda59e6422ae122d8e492088fdfae6df8da8f5e97aa39f48952be63c2f9",
+      "exportedSHA256": "e6362cda59e6422ae122d8e492088fdfae6df8da8f5e97aa39f48952be63c2f9"
+    },
+    {
+      "name": "attack regeneration: selected candidate actually applied",
+      "passed": true,
+      "candidateSHA256": "587c0fcda63f192508253b6c0120771d693a55bb7238981738d1f982d84506ac",
+      "exportedSHA256": "587c0fcda63f192508253b6c0120771d693a55bb7238981738d1f982d84506ac"
+    }
+  ],
+  "packages": [
+    {
+      "kind": "runtime",
+      "file": "dawn-swordsman-Spine4.3.zip",
+      "bytes": 838492,
+      "sha256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+      "skeletonPath": "rig.json",
+      "atlasPaths": [
+        "rig.atlas"
+      ],
+      "texturePaths": [
+        "rig.png"
+      ],
+      "authoringPresent": true,
+      "calibrationRecipes": 0,
+      "runtime": {
+        "bones": 19,
+        "skins": [
+          "default"
+        ],
+        "animations": [
+          "idle",
+          "attack",
+          "hit"
+        ]
+      }
+    },
+    {
+      "kind": "editable",
+      "file": "dawn-swordsman-project.zip",
+      "bytes": 1858563,
+      "sha256": "02adf5541b26ab14cc3e1a9869322ae38f9f641de67daa865b2bf33703dc59a1",
+      "skeletonPath": "rig.json",
+      "atlasPaths": [
+        "rig.atlas"
+      ],
+      "texturePaths": [
+        "rig.png"
+      ],
+      "authoringPresent": true,
+      "calibrationRecipes": 0,
+      "runtime": {
+        "bones": 19,
+        "skins": [
+          "default"
+        ],
+        "animations": [
+          "idle",
+          "attack",
+          "hit"
+        ]
+      }
+    },
+    {
+      "kind": "unity",
+      "file": "dawn-swordsman-Unity.zip",
+      "bytes": 839751,
+      "sha256": "97b4f078e2c07bc2c992ecfb64c153418693d5a3f62c54163c03ebb2ff27f127",
+      "skeletonPath": "rig.json",
+      "atlasPaths": [
+        "rig.atlas.txt"
+      ],
+      "texturePaths": [
+        "rig.png"
+      ],
+      "authoringPresent": true,
+      "calibrationRecipes": 0,
+      "runtime": {
+        "bones": 19,
+        "skins": [
+          "default"
+        ],
+        "animations": [
+          "idle",
+          "attack",
+          "hit"
+        ]
+      }
+    },
+    {
+      "kind": "roundtrip",
+      "file": "dawn-swordsman-roundtrip.zip",
+      "bytes": 838492,
+      "sha256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+      "skeletonPath": "rig.json",
+      "atlasPaths": [
+        "rig.atlas"
+      ],
+      "texturePaths": [
+        "rig.png"
+      ],
+      "authoringPresent": true,
+      "calibrationRecipes": 0,
+      "runtime": {
+        "bones": 19,
+        "skins": [
+          "default"
+        ],
+        "animations": [
+          "idle",
+          "attack",
+          "hit"
+        ]
+      }
+    }
+  ],
+  "parts": [
+    {
+      "id": "sword",
+      "source": "ai",
+      "completion": "ready",
+      "width": 311,
+      "height": 311,
+      "visiblePixels": 15205,
+      "transparentPixels": 96719,
+      "partialAlphaPixels": 15203,
+      "sha256": "ebe8fdf256e915b8a10c3562136cf51506b1107bfda2df644bfe252663ac241f",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_thigh",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 43,
+      "height": 51,
+      "visiblePixels": 1052,
+      "transparentPixels": 2193,
+      "partialAlphaPixels": 1052,
+      "sha256": "f50e558fd39bf3d8bfe22ffc17cd9b03dfa16616635cafc5ac639e8cdd9454a5",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_thigh",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 42,
+      "height": 51,
+      "visiblePixels": 902,
+      "transparentPixels": 2142,
+      "partialAlphaPixels": 902,
+      "sha256": "bc57002d852e2f2840c7d4f8a06fd5ffae406da200dd0993bfa800648d3f2ac2",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_shin",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 47,
+      "height": 47,
+      "visiblePixels": 751,
+      "transparentPixels": 2209,
+      "partialAlphaPixels": 751,
+      "sha256": "aaf4fb5cf6d1889e16b887d941e6d2881846f814dbdc9da61075e96035ea4850",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_shin",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 35,
+      "height": 40,
+      "visiblePixels": 625,
+      "transparentPixels": 1400,
+      "partialAlphaPixels": 625,
+      "sha256": "566570479f42f3dbe7750a73327362e79cdeb7d4026fed6dbcaf3c581c2abbd3",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_foot",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 42,
+      "height": 24,
+      "visiblePixels": 524,
+      "transparentPixels": 1008,
+      "partialAlphaPixels": 524,
+      "sha256": "ef2638c0f65cd29edd56e2f8b6623a62fe2bae969785d6e2a652648bf4cbef41",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_foot",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 37,
+      "height": 23,
+      "visiblePixels": 253,
+      "transparentPixels": 851,
+      "partialAlphaPixels": 253,
+      "sha256": "18d6df93ac2779f86d9c76828c272e355e1c5fab2c13d21d09e790253b082613",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_upper_arm",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 52,
+      "height": 85,
+      "visiblePixels": 2253,
+      "transparentPixels": 4420,
+      "partialAlphaPixels": 2253,
+      "sha256": "03e5f74a212e5fe50689d43bece7dd656bc6417e2b6429c77b38636e17ec1826",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_upper_arm",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 62,
+      "height": 78,
+      "visiblePixels": 2465,
+      "transparentPixels": 4836,
+      "partialAlphaPixels": 2465,
+      "sha256": "9b33984e1fbad1559f0bd90b313404ded962249159406d66aff5717dd4a320e3",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "torso_armor",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 128,
+      "height": 216,
+      "visiblePixels": 15622,
+      "transparentPixels": 27648,
+      "partialAlphaPixels": 15622,
+      "sha256": "27b38fc3fb001c9a283ea3a3fe5a735a3a6b2fe28f0a671567400e0911b9c46b",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_forearm",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 65,
+      "height": 86,
+      "visiblePixels": 2538,
+      "transparentPixels": 5590,
+      "partialAlphaPixels": 2538,
+      "sha256": "0c09de0b58d600277fdb5242ec3951664dbb354c7cd57a3d12cd38709242d80a",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_hand",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 39,
+      "height": 38,
+      "visiblePixels": 840,
+      "transparentPixels": 1482,
+      "partialAlphaPixels": 840,
+      "sha256": "e35e2a8f0e1ab39da958ba819ed4a851d680f11ba446ec40f239f8386c5fa3a1",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "right_pauldron",
+      "source": "ai",
+      "completion": "ready",
+      "width": 116,
+      "height": 132,
+      "visiblePixels": 7000,
+      "transparentPixels": 15311,
+      "partialAlphaPixels": 6999,
+      "sha256": "9c5d8ceb5bccb94c5814767469ac48b869a0ade0d1dfc5e423ec0573293ae924",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_forearm",
+      "source": "calibrated",
+      "completion": "ready",
+      "width": 54,
+      "height": 66,
+      "visiblePixels": 2049,
+      "transparentPixels": 3564,
+      "partialAlphaPixels": 2049,
+      "sha256": "bfc29dd15dba0cd91afcf9ec7871781752fec3a21adab6c417c7d560677261d5",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "head",
+      "source": "ai",
+      "completion": "ready",
+      "width": 152,
+      "height": 167,
+      "visiblePixels": 13654,
+      "transparentPixels": 25384,
+      "partialAlphaPixels": 13654,
+      "sha256": "b68b105b68475df9ab977990cbabffaec0e8f278089de8b67dc12a59c40bb30d",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    },
+    {
+      "id": "left_hand",
+      "source": "ai",
+      "completion": "ready",
+      "width": 69,
+      "height": 66,
+      "visiblePixels": 1814,
+      "transparentPixels": 4554,
+      "partialAlphaPixels": 1814,
+      "sha256": "bfc28c96497bb1da075eed08d44ed30919d0bdb5f0b86b230c0a4aba17778e47",
+      "standalonePNGPresent": true,
+      "standaloneComparison": {
+        "passed": true,
+        "sameDimensions": true,
+        "rgbaExact": true,
+        "maxAlphaError": 0,
+        "maxPremultipliedChannelError": 0
+      }
+    }
+  ],
+  "runtimeMotions": [
+    {
+      "skin": "default",
+      "animation": "idle",
+      "duration": 2,
+      "engine": "@esotericsoftware/spine-webgl official Skeleton/AnimationState; Physics.none",
+      "samples": 121,
+      "nonBakeSamples": 119,
+      "finite": true,
+      "vertexEvaluations": 11979,
+      "weightedVertexEvaluations": 7623,
+      "weightedPartsSeen": 7,
+      "maxAbsoluteVertexCoordinate": 482.539794921875,
+      "footLocks": {
+        "left": {
+          "samples": 121,
+          "maxError": 0.0001208916371319591
+        },
+        "right": {
+          "samples": 121,
+          "maxError": 0.0006139806063379434
+        }
+      },
+      "grips": [
+        {
+          "partId": "sword",
+          "primaryHand": "leftHand",
+          "secondaryHand": null,
+          "primaryMaxError": 7.407303509259503e-8,
+          "secondaryMaxError": 0
+        }
+      ],
+      "loop": {
+        "enabled": true,
+        "maximumBoneOrMatrixDifference": 0,
+        "maximumVertexDifference": 0
+      }
+    },
+    {
+      "skin": "default",
+      "animation": "attack",
+      "duration": 1.100000023841858,
+      "engine": "@esotericsoftware/spine-webgl official Skeleton/AnimationState; Physics.none",
+      "samples": 121,
+      "nonBakeSamples": 119,
+      "finite": true,
+      "vertexEvaluations": 11979,
+      "weightedVertexEvaluations": 7623,
+      "weightedPartsSeen": 7,
+      "maxAbsoluteVertexCoordinate": 497.8363037109375,
+      "footLocks": {
+        "left": {
+          "samples": 121,
+          "maxError": 0
+        },
+        "right": {
+          "samples": 121,
+          "maxError": 0
+        }
+      },
+      "grips": [
+        {
+          "partId": "sword",
+          "primaryHand": "leftHand",
+          "secondaryHand": null,
+          "primaryMaxError": 7.407309861937892e-8,
+          "secondaryMaxError": 0
+        }
+      ],
+      "loop": {
+        "enabled": false,
+        "maximumBoneOrMatrixDifference": 0,
+        "maximumVertexDifference": 0
+      }
+    },
+    {
+      "skin": "default",
+      "animation": "hit",
+      "duration": 0.6000000238418579,
+      "engine": "@esotericsoftware/spine-webgl official Skeleton/AnimationState; Physics.none",
+      "samples": 121,
+      "nonBakeSamples": 119,
+      "finite": true,
+      "vertexEvaluations": 11979,
+      "weightedVertexEvaluations": 7623,
+      "weightedPartsSeen": 7,
+      "maxAbsoluteVertexCoordinate": 496.6195373535156,
+      "footLocks": {
+        "left": {
+          "samples": 121,
+          "maxError": 0
+        },
+        "right": {
+          "samples": 121,
+          "maxError": 0
+        }
+      },
+      "grips": [
+        {
+          "partId": "sword",
+          "primaryHand": "leftHand",
+          "secondaryHand": null,
+          "primaryMaxError": 7.407310192625381e-8,
+          "secondaryMaxError": 0
+        }
+      ],
+      "loop": {
+        "enabled": false,
+        "maximumBoneOrMatrixDifference": 0,
+        "maximumVertexDifference": 0
+      }
+    }
+  ],
+  "jobEvidence": [
+    {
+      "id": "2b9c72d1-e64c-4b30-9b16-b60d5e45d58a",
+      "kind": "motion",
+      "status": "completed",
+      "provider": "codex-native",
+      "sourceDocumentId": "rig-8d78aa3d-c895-4b46-a50c-989e03771493",
+      "requestJointsSHA256": "81f2ccce98fe72af4bcc171cd80b5f0afcd59c51ae799ac9e54cee2105ad2af9",
+      "exportedJointsSHA256": "81f2ccce98fe72af4bcc171cd80b5f0afcd59c51ae799ac9e54cee2105ad2af9",
+      "requestPartsStructureSHA256": "6cdaf775c5ea1d01401ef0676b70062c89108bb950538bf37759f3839ad774fa",
+      "exportedPartsStructureSHA256": "6cdaf775c5ea1d01401ef0676b70062c89108bb950538bf37759f3839ad774fa"
+    }
+  ],
+  "character": {
+    "id": "rig-8d78aa3d-c895-4b46-a50c-989e03771493",
+    "name": "晨星剑士 · 新骨架",
+    "origin": "ai-analysis",
+    "width": 512,
+    "height": 512,
+    "joints": 19,
+    "parts": 16,
+    "motions": 3,
+    "spineVersion": "4.3.23"
+  },
+  "roundtrip": {
+    "wholeZIPByteExact": true,
+    "referenceZIPBytes": 838492,
+    "roundtripZIPBytes": 838492,
+    "referenceZIPSHA256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+    "roundtripZIPSHA256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+    "memberNamesExact": true,
+    "allMemberContentsExact": true,
+    "memberCount": 37,
+    "differences": [],
+    "outerContainerOnlyDiffers": false
+  },
+  "passed": true,
+  "tolerances": {
+    "realRuntimeFootAndGripPixels": 0.5,
+    "loopEndpointDifference": 0.001,
+    "reconstructedTextureAlpha": 1,
+    "reconstructedTexturePremultipliedRGB": 2,
+    "crossPackageBytes": "exact SHA256; atlas filenames may differ"
+  },
+  "limitations": [
+    "CPU geometry and artifact validation do not replace visual seam/occlusion review or an actual external Spine/Unity editor import.",
+    "No credentials or prompt/base64 text are included; job manifests are read only from explicitly supplied paths."
+  ]
+}

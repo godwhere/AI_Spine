@@ -1,0 +1,122 @@
+[
+  {
+    "canvas": {
+      "height": 632.5,
+      "width": 804,
+      "x": 480,
+      "y": 255.5
+    },
+    "columns": "136px 136px 136px",
+    "height": 1000,
+    "inspector": {
+      "height": 798.5,
+      "width": 300,
+      "x": 1300,
+      "y": 201.5
+    },
+    "list": {
+      "height": 798.5,
+      "width": 464,
+      "x": 0,
+      "y": 201.5
+    },
+    "overflow": false,
+    "stage": {
+      "height": 798.5,
+      "width": 836,
+      "x": 464,
+      "y": 201.5
+    },
+    "width": 1600
+  },
+  {
+    "canvas": {
+      "height": 458.5,
+      "width": 688.0078125,
+      "x": 433.59375,
+      "y": 255.5
+    },
+    "columns": "120.531px 120.531px 120.531px",
+    "height": 826,
+    "inspector": {
+      "height": 624.5,
+      "width": 302.3984375,
+      "x": 1137.6015625,
+      "y": 201.5
+    },
+    "list": {
+      "height": 624.5,
+      "width": 417.59375,
+      "x": 0,
+      "y": 201.5
+    },
+    "overflow": false,
+    "stage": {
+      "height": 624.5,
+      "width": 720.0078125,
+      "x": 417.59375,
+      "y": 201.5
+    },
+    "width": 1440
+  },
+  {
+    "canvas": {
+      "height": 400.5,
+      "width": 484,
+      "x": 298,
+      "y": 255.5
+    },
+    "columns": "75.3281px 75.3359px 75.3359px",
+    "height": 768,
+    "inspector": {
+      "height": 566.5,
+      "width": 226,
+      "x": 798,
+      "y": 201.5
+    },
+    "list": {
+      "height": 566.5,
+      "width": 282,
+      "x": 0,
+      "y": 201.5
+    },
+    "overflow": false,
+    "stage": {
+      "height": 566.5,
+      "width": 516,
+      "x": 282,
+      "y": 201.5
+    },
+    "width": 1024
+  },
+  {
+    "canvas": {
+      "height": 317.25,
+      "width": 493,
+      "x": 276,
+      "y": 246.5
+    },
+    "columns": "68px 68px 68px",
+    "height": 740,
+    "inspector": {
+      "height": 72.25,
+      "width": 525,
+      "x": 260,
+      "y": 667.75
+    },
+    "list": {
+      "height": 547.5,
+      "width": 260,
+      "x": 0,
+      "y": 192.5
+    },
+    "overflow": false,
+    "stage": {
+      "height": 475.25,
+      "width": 525,
+      "x": 260,
+      "y": 192.5
+    },
+    "width": 800
+  }
+]

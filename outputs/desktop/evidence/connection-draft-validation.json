@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "tests": {
+    "workbench": 101,
+    "desktop": 7,
+    "skipped": 0
+  },
+  "build": true,
+  "signature": true,
+  "native": {
+    "currentCodexConnected": true,
+    "defaultProvider": "codex-native",
+    "spineReadinessBadge": false,
+    "draftCreation": {
+      "before": 1,
+      "after": 1
+    },
+    "existingWukong": {
+      "parts": 49,
+      "replacements": 49,
+      "actions": 7
+    }
+  },
+  "externalApiKeyGeneration": false
+}

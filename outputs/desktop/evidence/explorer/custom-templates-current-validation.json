@@ -1,0 +1,393 @@
+{
+  "product": "iSpine",
+  "date": "2026-10-20",
+  "templateCount": 39,
+  "characters": 37,
+  "effects": 1,
+  "selectedMock": 3,
+  "tests": {
+    "core": 138,
+    "egg": 9,
+    "productionServing": 4,
+    "desktop": 8,
+    "total": 159,
+    "failures": 0,
+    "skipped": 0
+  },
+  "native": {
+    "launched": true,
+    "codexConnected": true,
+    "libraryCount": 1,
+    "trashCount": 0,
+    "wukongRegions": 49,
+    "wukongAnimations": 7,
+    "wukongSkins": 2,
+    "imageGalleryVerified": true,
+    "finalThreeColumnVerified": true,
+    "finalStartup": "Launched and reopened without a Keychain prompt",
+    "launchesWithoutSystemPassword": 2,
+    "customTemplatesSaved": 1,
+    "customTemplateRestartPersistence": true
+  },
+  "gallery": [
+    {
+      "canvas": {
+        "height": 632.5,
+        "width": 804,
+        "x": 480,
+        "y": 255.5
+      },
+      "columns": "136px 136px 136px",
+      "height": 1000,
+      "inspector": {
+        "height": 798.5,
+        "width": 300,
+        "x": 1300,
+        "y": 201.5
+      },
+      "list": {
+        "height": 798.5,
+        "width": 464,
+        "x": 0,
+        "y": 201.5
+      },
+      "overflow": false,
+      "stage": {
+        "height": 798.5,
+        "width": 836,
+        "x": 464,
+        "y": 201.5
+      },
+      "width": 1600
+    },
+    {
+      "canvas": {
+        "height": 458.5,
+        "width": 688.0078125,
+        "x": 433.59375,
+        "y": 255.5
+      },
+      "columns": "120.531px 120.531px 120.531px",
+      "height": 826,
+      "inspector": {
+        "height": 624.5,
+        "width": 302.3984375,
+        "x": 1137.6015625,
+        "y": 201.5
+      },
+      "list": {
+        "height": 624.5,
+        "width": 417.59375,
+        "x": 0,
+        "y": 201.5
+      },
+      "overflow": false,
+      "stage": {
+        "height": 624.5,
+        "width": 720.0078125,
+        "x": 417.59375,
+        "y": 201.5
+      },
+      "width": 1440
+    },
+    {
+      "canvas": {
+        "height": 400.5,
+        "width": 484,
+        "x": 298,
+        "y": 255.5
+      },
+      "columns": "75.3281px 75.3359px 75.3359px",
+      "height": 768,
+      "inspector": {
+        "height": 566.5,
+        "width": 226,
+        "x": 798,
+        "y": 201.5
+      },
+      "list": {
+        "height": 566.5,
+        "width": 282,
+        "x": 0,
+        "y": 201.5
+      },
+      "overflow": false,
+      "stage": {
+        "height": 566.5,
+        "width": 516,
+        "x": 282,
+        "y": 201.5
+      },
+      "width": 1024
+    },
+    {
+      "canvas": {
+        "height": 317.25,
+        "width": 493,
+        "x": 276,
+        "y": 246.5
+      },
+      "columns": "68px 68px 68px",
+      "height": 740,
+      "inspector": {
+        "height": 72.25,
+        "width": 525,
+        "x": 260,
+        "y": 667.75
+      },
+      "list": {
+        "height": 547.5,
+        "width": 260,
+        "x": 0,
+        "y": 192.5
+      },
+      "overflow": false,
+      "stage": {
+        "height": 475.25,
+        "width": 525,
+        "x": 260,
+        "y": 192.5
+      },
+      "width": 800
+    }
+  ],
+  "unity": {
+    "zipBytes": 2268832,
+    "sha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+    "skeleton": "skeleton.json",
+    "parts": 49,
+    "animations": 7,
+    "skins": 2,
+    "exactRuntimeFiles": 3,
+    "readme": true,
+    "unityEditorTested": false,
+    "actualBrowserImport": true,
+    "actualSecondDownload": true,
+    "byteIdenticalRoundtrip": true,
+    "roundtripSha256": "a85a2de650701357b99af46fcbb8169c81784b04267027312d695f54c55a2811",
+    "isolatedVerificationOrigin": "http://127.0.0.1:4176",
+    "nativeLibraryModified": false
+  },
+  "limitations": [
+    "Unity Editor import and scene playback not tested",
+    "No real external API Key image-generation request in this milestone"
+  ],
+  "templateDisplay": {
+    "choices": [
+      "列表视图",
+      "三列图片视图"
+    ],
+    "mode": "images",
+    "fixedColumns": 3,
+    "compactLeftPane": true,
+    "largeCenterStage": true,
+    "separateRightInspector": true,
+    "countsVisible": false,
+    "nameVisible": false,
+    "accessibleAndHoverNames": true
+  },
+  "delivery": {
+    "file": "iSpine-macOS-arm64-custom-templates.zip",
+    "bytes": 168904821,
+    "sha256": "6ef9fc6319da4d53b5d5ed862e60e7910c83cfcf2d8d17512cd080233c015bea",
+    "archiveCrcVerified": true
+  },
+  "builtinTemplateCount": 38,
+  "customTemplateCount": 1,
+  "access": {
+    "shortAccessChecks": [
+      {
+        "focused": "创建角色",
+        "fullyVisible": true,
+        "height": 768,
+        "rect": {
+          "height": 46,
+          "width": 189,
+          "x": 817,
+          "y": 671.3046875
+        },
+        "width": 1024
+      },
+      {
+        "focused": "创建角色",
+        "fullyVisible": true,
+        "height": 740,
+        "rect": {
+          "height": 46,
+          "width": 480,
+          "x": 283,
+          "y": 663.25
+        },
+        "width": 800
+      }
+    ],
+    "mobileGalleryCheck": {
+      "columns": "109px 109px 109px",
+      "overflow": false,
+      "visibleNames": false,
+      "width": 390
+    }
+  },
+  "customTemplates": {
+    "date": "2026-10-20",
+    "isolatedOrigin": "http://127.0.0.1:4176",
+    "fullEditableSource": {
+      "replacedRegions": 49,
+      "actions": 7,
+      "skins": 2
+    },
+    "cancelLeavesTemplateCount": 38,
+    "firstSave": {
+      "catalogCount": 39,
+      "customCount": 1,
+      "originalResources": 2
+    },
+    "sameResourceUpdate": {
+      "catalogCount": 39,
+      "customCount": 1,
+      "originalNamePreserved": true
+    },
+    "unchangedDerivedDraft": {
+      "resourcesBefore": 2,
+      "resourcesAfter": 2
+    },
+    "allActionSelections": [
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "attack"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "die"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "get_hurt"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "idle"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "reborn"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "skill"
+      },
+      {
+        "options": [
+          "attack",
+          "die",
+          "get_hurt",
+          "idle",
+          "reborn",
+          "skill",
+          "stun"
+        ],
+        "value": "stun"
+      }
+    ],
+    "actualDownload": "/Users/ethan/Downloads/悟空 · 自建模板验证 · 新资源-Spine4.3.zip",
+    "actualReimport": true,
+    "deleteDialogCancelled": true,
+    "isolatedBrowserErrors": [],
+    "native": {
+      "resourceCount": 1,
+      "trashCount": 0,
+      "builtinTemplates": 38,
+      "customTemplates": 1,
+      "replacedRegions": 49,
+      "actions": 7,
+      "skins": 2,
+      "savedAndPersistedAcrossRestart": true,
+      "codexConnected": true,
+      "launchesWithoutSystemPassword": 2
+    },
+    "runtimeValidation": {
+      "passed": true,
+      "actualBrowserDownload": "/Users/ethan/Downloads/悟空 · 自建模板验证 · 新资源-Spine4.3.zip",
+      "allRuntimeFilesByteIdentical": true,
+      "regions": 49,
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "files": [
+        {
+          "name": "skeleton.json",
+          "bytes": 519239,
+          "sha256": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846"
+        },
+        {
+          "name": "skeleton.atlas",
+          "bytes": 2308,
+          "sha256": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f"
+        },
+        {
+          "name": "skeleton.png",
+          "bytes": 2138498,
+          "sha256": "b0c5d31f187883a02fb8ef795d57cb077f190dffcc19f848642cc20a21086730"
+        }
+      ]
+    }
+  }
+}

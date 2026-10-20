@@ -1,0 +1,14 @@
+{
+  "width": 1024,
+  "height": 1024,
+  "visible": 357627,
+  "transparent": 1048565,
+  "bounds": {
+    "minX": 139,
+    "minY": 42,
+    "maxX": 956,
+    "maxY": 981
+  },
+  "jobId": "24ba62d8-0731-4909-bfcd-7b02f3877bd8",
+  "mode": "iSpine managed Codex native imagegen"
+}

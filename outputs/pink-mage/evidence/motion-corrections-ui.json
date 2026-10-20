@@ -1,0 +1,64 @@
+{
+  "scope": "Manual edits made through the visible iSpine keyframe controls after actual motion checks.",
+  "run": {
+    "aiJob": "a1b42928-95a4-4e86-a47f-cf6acc8a71aa",
+    "before": {
+      "leftFootErrorPixels": 2.58,
+      "rightFootErrorPixels": 3.68
+    },
+    "cause": "Foot contact flags stayed enabled while the interpolated root was already moving upward into flight.",
+    "edits": [
+      {
+        "time": 0.1,
+        "feetLeft": false,
+        "rootY": 0
+      },
+      {
+        "time": 0.4,
+        "feetRight": false,
+        "rootY": 0
+      }
+    ],
+    "afterDocumentFK": {
+      "samples": 61,
+      "leftContactSamples": 24,
+      "rightContactSamples": 7,
+      "leftFootErrorPixels": 0,
+      "rightFootErrorPixels": 0,
+      "loopPositionErrorPixels": 0,
+      "loopAngleErrorDegrees": 0
+    },
+    "acceptanceBoundary": "Actual exported official-runtime sampling is a separate check. Flight phases are excluded from planted-foot error."
+  },
+  "death": {
+    "aiJob": "38a75ab8-bb01-41fc-8c74-ca9ccc34f617",
+    "beforeExportedRuntime": {
+      "leftFootErrorPixels": 21.637409749339426,
+      "rightFootErrorPixels": 35.13444627455322,
+      "contactInterval": [
+        0,
+        0.35
+      ]
+    },
+    "cause": "Baked linear rotation keys interpolated toward the unlocked pose before the discrete foot-release boundary. The authored released pose also differed from the prior constrained solution.",
+    "editedThroughUIAt": 0.35,
+    "angles": {
+      "leftThigh": 24.999776,
+      "leftShin": -43.411768,
+      "leftFoot": 16.411992,
+      "leftToe": 3,
+      "rightThigh": -30.305435,
+      "rightShin": 58.599837,
+      "rightFoot": -30.294402,
+      "rightToe": -2
+    },
+    "afterDocumentFK": {
+      "samples": 61,
+      "leftContactSamples": 17,
+      "rightContactSamples": 17,
+      "leftFootErrorPixels": 0,
+      "rightFootErrorPixels": 0
+    },
+    "compilerBoundaryFix": "Separate regression tests and final exported-artifact sampling must validate the release boundary."
+  }
+}

@@ -1,0 +1,1216 @@
+{
+  "character": "齐天悟空 · 金甲猴王",
+  "templateId": "22",
+  "spineVersion": "4.3.23",
+  "regions": 49,
+  "replaced": 49,
+  "bones": 145,
+  "skins": [
+    "default",
+    "skin_2"
+  ],
+  "animations": [
+    "attack",
+    "die",
+    "get_hurt",
+    "idle",
+    "reborn",
+    "skill",
+    "stun"
+  ],
+  "cpuPoseChecks": 1694,
+  "poses": [
+    {
+      "skin": "default",
+      "animation": "attack",
+      "duration": 2.200000047683716,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "die",
+      "duration": 1.6666666269302368,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "get_hurt",
+      "duration": 0.6666666865348816,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "idle",
+      "duration": 2,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "reborn",
+      "duration": 1.6666666269302368,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "skill",
+      "duration": 2.8333330154418945,
+      "samples": 121
+    },
+    {
+      "skin": "default",
+      "animation": "stun",
+      "duration": 2,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "attack",
+      "duration": 2.200000047683716,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "die",
+      "duration": 1.6666666269302368,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "get_hurt",
+      "duration": 0.6666666865348816,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "idle",
+      "duration": 2,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "reborn",
+      "duration": 1.6666666269302368,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "skill",
+      "duration": 2.8333330154418945,
+      "samples": 121
+    },
+    {
+      "skin": "skin_2",
+      "animation": "stun",
+      "duration": 2,
+      "samples": 121
+    }
+  ],
+  "clippedPixels": 0,
+  "unchangedSkeletonAndAtlas": true,
+  "runtimeReimportByteExact": true,
+  "editableReimportImagesAndTransformsExact": true,
+  "nativeGenerationPeakConcurrency": 3,
+  "jobs": [
+    {
+      "id": "1da040d5-5cc9-48df-9474-8de59dccffa0",
+      "status": "cancelled",
+      "requested": 49,
+      "completed": 12,
+      "concurrency": 1,
+      "prompt": "制作原创齐天大圣悟空猴王，严格以已导入的金甲猴王形象为统一风格参考。把熊猫的所有部件重新设计为猴子对应部件：金棕色猴毛、桃棕色裸露猴指与脚趾，头部是明确的猴脸、桃色口鼻、圆猴耳、金色紧箍、琥珀眼，去除熊猫黑眼圈和黑白毛。头发和马尾为金色毛发红绳束发。躯干和肩臂均为金棕猴毛，护腕和护甲为红漆与古金云纹，丝绸腰带为朱红配金边，项链为红金装饰珠片。尾巴为连续金棕色长猴尾，无黑白环纹。保持每个输入部件原有的精确形状、方向、比例、接缝、关节位置和透明留白，不要把完整形象复制到部件内。F_ 部件是相同角色的另一个朝向，保持参考的视角。head 只画头部，不要画马尾或躯干；F_head 按其原有后脑视角绘制，不额外添正面脸；jaw/cheek/mouth 只绘制原来对应的面部碎片。手指部件只画单独指块，不画整只手。所有纹理均为手绘游戏风格，统一光照、饱和度与描边。唯一 shadow 区域保持原来的扁椭圆形透明柔和落地影，改为深暖褐色。其余部件不添加投影或背景。不添加金箍棒、武器、文字或额外肢体，不改变模板骨架。",
+      "createdAt": "2026-10-19T14:50:47.490Z",
+      "updatedAt": "2026-10-19T15:02:08.940Z"
+    },
+    {
+      "id": "c992a743-5e52-4132-ba79-f0c38a390600",
+      "status": "cancelled",
+      "requested": 37,
+      "completed": 23,
+      "concurrency": 1,
+      "prompt": "制作原创齐天大圣悟空猴王，严格以已导入的金甲猴王形象为统一风格参考。把熊猫的所有部件重新设计为猴子对应部件：金棕色猴毛、桃棕色裸露猴指与脚趾，头部是明确的猴脸、桃色口鼻、圆猴耳、金色紧箍、琥珀眼，去除熊猫黑眼圈和黑白毛。头发和马尾为金色毛发红绳束发。躯干和肩臂均为金棕猴毛，护腕和护甲为红漆与古金云纹，丝绸腰带为朱红配金边，项链为红金装饰珠片。尾巴为连续金棕色长猴尾，无黑白环纹。保持每个输入部件原有的精确形状、方向、比例、接缝、关节位置和透明留白，不要把完整形象复制到部件内。F_ 部件是相同角色的另一个朝向，保持参考的视角。head 只画头部，不要画马尾或躯干；F_head 按其原有后脑视角绘制，不额外添正面脸；jaw/cheek/mouth 只绘制原来对应的面部碎片。手指部件只画单独指块，不画整只手。所有纹理均为手绘游戏风格，统一光照、饱和度与描边。唯一 shadow 区域保持原来的扁椭圆形透明柔和落地影，改为深暖褐色。其余部件不添加投影或背景。不添加金箍棒、武器、文字或额外肢体，不改变模板骨架。",
+      "createdAt": "2026-10-19T15:03:44.760Z",
+      "updatedAt": "2026-10-19T15:26:10.437Z"
+    },
+    {
+      "id": "44ea4ea3-f7b7-403e-8a39-2765fa3f2d65",
+      "status": "completed",
+      "requested": 14,
+      "completed": 14,
+      "concurrency": 3,
+      "prompt": "制作原创齐天大圣悟空猴王，严格以已导入的金甲猴王形象为统一风格参考。把熊猫的所有部件重新设计为猴子对应部件：金棕色猴毛、桃棕色裸露猴指与脚趾，头部是明确的猴脸、桃色口鼻、圆猴耳、金色紧箍、琥珀眼，去除熊猫黑眼圈和黑白毛。头发和马尾为金色毛发红绳束发。躯干和肩臂均为金棕猴毛，护腕和护甲为红漆与古金云纹，丝绸腰带为朱红配金边，项链为红金装饰珠片。尾巴为连续金棕色长猴尾，无黑白环纹。保持每个输入部件原有的精确形状、方向、比例、接缝、关节位置和透明留白，不要把完整形象复制到部件内。F_ 部件是相同角色的另一个朝向，保持参考的视角。head 只画头部，不要画马尾或躯干；F_head 按其原有后脑视角绘制，不额外添正面脸；jaw/cheek/mouth 只绘制原来对应的面部碎片。手指部件只画单独指块，不画整只手。所有纹理均为手绘游戏风格，统一光照、饱和度与描边。唯一 shadow 区域保持原来的扁椭圆形透明柔和落地影，改为深暖褐色。其余部件不添加投影或背景。不添加金箍棒、武器、文字或额外肢体，不改变模板骨架。",
+      "createdAt": "2026-10-19T15:27:48.114Z",
+      "updatedAt": "2026-10-19T15:32:45.655Z"
+    }
+  ],
+  "parts": [
+    {
+      "id": "shadow",
+      "visible": 5983,
+      "clipped": 0,
+      "changed": 13547,
+      "overlap": 0.5037517915858697,
+      "transform": {
+        "x": 0.3176838810641628,
+        "y": 1.6408450704225352,
+        "scaleX": 1.174926099808729,
+        "scaleY": 1.174926099808729,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 13465,
+      "visibleRuntimePixels": 6001,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1f904a8df01325dea9c5a00d8020e5a03727eec14d66433292fa34ae5ee09703",
+      "appliedPNG": "44c6c79e1caa4e559d0172b23e218f90cb5122c688f89b01365fe885665a0d2f"
+    },
+    {
+      "id": "skin_2/F_armorL",
+      "visible": 1931,
+      "clipped": 0,
+      "changed": 2531,
+      "overlap": 0.7713178294573644,
+      "transform": {
+        "x": 0.7083333333333333,
+        "y": 1.1493055555555556,
+        "scaleX": 1.037037037037037,
+        "scaleY": 1.037037037037037,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2556,
+      "visibleRuntimePixels": 2025,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "08b2ec66d7f0768fd0809b39becf8769eda531db6e2320596c4cc0ac36b7172f",
+      "appliedPNG": "b0942558fc78b869daa8255f5b8c3ee459a7a4ad0fc4597e4843e8b747adfbf7"
+    },
+    {
+      "id": "skin_2/F_armorR",
+      "visible": 17288,
+      "clipped": 0,
+      "changed": 18371,
+      "overlap": 0.9526993424324474,
+      "transform": {
+        "x": -1.7548321464903358,
+        "y": 2.395218718209563,
+        "scaleX": 1.0624046286876907,
+        "scaleY": 1.0624046286876907,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 18383,
+      "visibleRuntimePixels": 17418,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "87fa11865c4191a1bab9bbb103e8493029a82aaefbdd419cd24de6b2c96fb7dc",
+      "appliedPNG": "e45a00d2d51cce61bd16005e0f98f2c31baea8e29abbefbd6e00b944c12a3eb6"
+    },
+    {
+      "id": "skin_2/F_b_foot",
+      "visible": 7298,
+      "clipped": 0,
+      "changed": 8270,
+      "overlap": 0.9019049975259772,
+      "transform": {
+        "x": -0.23170731707317072,
+        "y": 0.5365853658536586,
+        "scaleX": 1.0163140041996446,
+        "scaleY": 1.0163140041996446,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 8323,
+      "visibleRuntimePixels": 7485,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "c3753143b64a0a1ab0a61beab375d86196804fcaad9ea093746d78a1ba7d5530",
+      "appliedPNG": "7473d866ada2d3f175bcd7141b9f81eaa83b399587b8073bc3f08c5b14cd1177"
+    },
+    {
+      "id": "skin_2/F_b_shoulder",
+      "visible": 17575,
+      "clipped": 0,
+      "changed": 18873,
+      "overlap": 0.9451929295106704,
+      "transform": {
+        "x": -0.18342151675485008,
+        "y": 1.59347442680776,
+        "scaleX": 1.0132964835013252,
+        "scaleY": 1.0132964835013252,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 18870,
+      "visibleRuntimePixels": 17728,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "94c8016c6982a900e08a2764ae1f9d085b6908b66f3d25b117fb719e70ed32f7",
+      "appliedPNG": "5d29e2ebc8d9b284fd52d0ac1d1e10d7d64bbfbaa1840107ce071cb8723496dd"
+    },
+    {
+      "id": "skin_2/F_b_thigh",
+      "visible": 22262,
+      "clipped": 0,
+      "changed": 24797,
+      "overlap": 0.9107084155161078,
+      "transform": {
+        "x": 0.051013513513513464,
+        "y": 0.3935810810810811,
+        "scaleX": 0.9905648648648648,
+        "scaleY": 0.9905648648648648,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 24803,
+      "visibleRuntimePixels": 22349,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "d6bced1a2293e453b1c0980ccdc1f32d5222b4ec8c3d1bcac3f9b4c7b1157a7b",
+      "appliedPNG": "59aaa33849f29a99bc7f33345af4b904684ff8bc691468e915dd7f5fc75e203e"
+    },
+    {
+      "id": "skin_2/F_belt",
+      "visible": 15991,
+      "clipped": 0,
+      "changed": 18060,
+      "overlap": 0.9007832898172323,
+      "transform": {
+        "x": -1.6571233810497614,
+        "y": 0.23926380368098155,
+        "scaleX": 0.9955815080362349,
+        "scaleY": 0.9955815080362349,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 18074,
+      "visibleRuntimePixels": 16253,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "75edd3cd1b06c5ceb4a76a33da3ac09272eb6b0252a96bd7e978a8d0a1f45841",
+      "appliedPNG": "4f73ee66bb560dd2e8b5d036e556e9592574aecad4c9086d2c0e81925f1093b4"
+    },
+    {
+      "id": "skin_2/F_beltholderL",
+      "visible": 1116,
+      "clipped": 0,
+      "changed": 1281,
+      "overlap": 0.8865647626709574,
+      "transform": {
+        "x": 0.2595419847328244,
+        "y": 1.1755725190839694,
+        "scaleX": 1.3309071542694833,
+        "scaleY": 1.3309071542694833,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 1292,
+      "visibleRuntimePixels": 1181,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "4ca38bfd5573227c602676dc3e0f7255fec3eb4d3b45cb716e2361b4969c724f",
+      "appliedPNG": "5cf4b7b8053eeceb76a711dee4b3d9109d61ebec653ba70074756b2fb9a31a04"
+    },
+    {
+      "id": "skin_2/F_beltholderR",
+      "visible": 2095,
+      "clipped": 0,
+      "changed": 2526,
+      "overlap": 0.8512632436837816,
+      "transform": {
+        "x": -0.5159038013964313,
+        "y": -0.027152831652443754,
+        "scaleX": 1.0308871678215934,
+        "scaleY": 1.0308871678215934,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2538,
+      "visibleRuntimePixels": 2176,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "d8f616ed77ca54a9e646107e68e8af6f09789479eeecdd6db8fb36a6f4e495ec",
+      "appliedPNG": "f7cbe630a061ee9a82b2bb34be7b1b5d890fc7adfddcd53a10ac36f5dc499c92"
+    },
+    {
+      "id": "skin_2/F_body",
+      "visible": 57085,
+      "clipped": 0,
+      "changed": 59364,
+      "overlap": 0.9708589217971182,
+      "transform": {
+        "x": -0.5,
+        "y": 0.7652582159624413,
+        "scaleX": 1.001283480258047,
+        "scaleY": 1.001283480258047,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 59400,
+      "visibleRuntimePixels": 57465,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1ccfc8a60c0ce6d788cbd2576b1eead641cb62a736fa8b023104673b936ab796",
+      "appliedPNG": "ee3955578bfaf7575ea3000d4f059a60bd9a5a0204c7e3739e0922d92c13cee2"
+    },
+    {
+      "id": "skin_2/F_f_arm",
+      "visible": 28729,
+      "clipped": 0,
+      "changed": 31556,
+      "overlap": 0.9311490359562272,
+      "transform": {
+        "x": 0.17142857142857143,
+        "y": -1.0285714285714285,
+        "scaleX": 1.0193877551020407,
+        "scaleY": 1.0193877551020407,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 31539,
+      "visibleRuntimePixels": 28933,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "91bf0442163f9a1212d3b3b4edb3ed8af552bb2e7b1745eb45541c897f16f53f",
+      "appliedPNG": "d87c71f55fbd8cdd8ef7be087264bdb1f1aa8825752e9d648cdf82ad42b39210"
+    },
+    {
+      "id": "skin_2/F_f_gauntlet",
+      "visible": 63128,
+      "clipped": 0,
+      "changed": 65423,
+      "overlap": 0.9561980529028463,
+      "transform": {
+        "x": -2.2329153605015675,
+        "y": -3.1523510971786832,
+        "scaleX": 0.9959809211040738,
+        "scaleY": 0.9959809211040738,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 65524,
+      "visibleRuntimePixels": 63407,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "d4bcbd0b831f5691c19872f43d1ec1c6526a277b3a2f7627c62fc14906e7b4a1",
+      "appliedPNG": "b049e20d3420b8e84bdade465319faca35f32a659adcd80efd6d87c47210d4c3"
+    },
+    {
+      "id": "skin_2/F_f_shoulder",
+      "visible": 19850,
+      "clipped": 0,
+      "changed": 21000,
+      "overlap": 0.9532115440676319,
+      "transform": {
+        "x": 1.1579509071504803,
+        "y": -0.14621131270010673,
+        "scaleX": 1.0073026181339266,
+        "scaleY": 1.0073026181339266,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 21035,
+      "visibleRuntimePixels": 20025,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "8233eb3f1165c1e115dcc2f64c02fc5a7d7255ca22463ebf12651d1a165dd1aa",
+      "appliedPNG": "98c5634e108d1d18ed8d408ce8c2d0d639518503a70b4d29c30f86499e3eec02"
+    },
+    {
+      "id": "skin_2/F_f_thigh",
+      "visible": 36332,
+      "clipped": 0,
+      "changed": 38838,
+      "overlap": 0.9338146811070999,
+      "transform": {
+        "x": -2.733153638814016,
+        "y": 0.6388140161725067,
+        "scaleX": 0.9925663214640374,
+        "scaleY": 0.9925663214640374,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 38932,
+      "visibleRuntimePixels": 36800,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "af6886629a002f6b56c1028580a9c1f98481ba46a0923ded0ffd4e373f73d443",
+      "appliedPNG": "35b7f2993605726abbd1bc8274cd671fba591a26b9dc4a0674ec37a2a7aa9f32"
+    },
+    {
+      "id": "skin_2/F_head",
+      "visible": 17977,
+      "clipped": 0,
+      "changed": 19319,
+      "overlap": 0.9359535742548141,
+      "transform": {
+        "x": -0.709346991037132,
+        "y": -0.4186939820742638,
+        "scaleX": 0.9909090909090909,
+        "scaleY": 0.9909090909090909,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 19340,
+      "visibleRuntimePixels": 18144,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "736c8d89598ea0ebe8dbfae03cab6691086478e123f38219152c1f3253a2fba5",
+      "appliedPNG": "4bf51e388324fee53f21bfaf9c04390e375aadc9873540b7108f804ca60e4188"
+    },
+    {
+      "id": "skin_2/F_necklace",
+      "visible": 13128,
+      "clipped": 0,
+      "changed": 14298,
+      "overlap": 0.9150617993676344,
+      "transform": {
+        "x": -1.3065040650406503,
+        "y": 2.486720867208672,
+        "scaleX": 1.0437426445977607,
+        "scaleY": 1.0437426445977607,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 14361,
+      "visibleRuntimePixels": 13271,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "a5e12458700f65a13eac8389b651b5cecac59594eaf013d2a8725f42e8af411b",
+      "appliedPNG": "7a0a8c80998aba07eb3229019c0e077a743f8b77896a92d66a9ba6060ba3ac29"
+    },
+    {
+      "id": "skin_2/F_ponytail",
+      "visible": 9069,
+      "clipped": 0,
+      "changed": 9683,
+      "overlap": 0.9590556205466341,
+      "transform": {
+        "x": -1.4886363636363638,
+        "y": -0.3116883116883117,
+        "scaleX": 0.998051948051948,
+        "scaleY": 0.998051948051948,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 9691,
+      "visibleRuntimePixels": 9147,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "f099ea4d49ed03d339d9d468b27121fac287380c63a1cddc828ff517876df216",
+      "appliedPNG": "0e50b55ff41f65b917441187539dd7902dd983faf3ec16d86fd641be4cc8cc12"
+    },
+    {
+      "id": "skin_2/F_silk",
+      "visible": 23062,
+      "clipped": 0,
+      "changed": 26085,
+      "overlap": 0.8752640225299225,
+      "transform": {
+        "x": -1.0167394468704511,
+        "y": -0.7940320232896652,
+        "scaleX": 0.9649090587547103,
+        "scaleY": 0.9649090587547103,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 26169,
+      "visibleRuntimePixels": 23383,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "acef3dac602488107d6ed837435fff740ca4828588d4cf916dcb3c70115f0028",
+      "appliedPNG": "8c28e9f2ca25e2f1e3b56511366db63037b63f47c7773c7e795eb2c46964c4b7"
+    },
+    {
+      "id": "skin_2/b_arm",
+      "visible": 12378,
+      "clipped": 0,
+      "changed": 13636,
+      "overlap": 0.9211155974278451,
+      "transform": {
+        "x": 0.05986509274873524,
+        "y": 1.1973018549747048,
+        "scaleX": 1.0574643100807126,
+        "scaleY": 1.0574643100807126,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 13703,
+      "visibleRuntimePixels": 12584,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "3284179ee4d524fbcc7e00bd262724c00263129ddae9a11b17ba6d6b0cb1297a",
+      "appliedPNG": "7e113aa9d3530e3b5f0cebb7f5eb311b8dacac8b7babe453328bd9fdd2194638"
+    },
+    {
+      "id": "skin_2/b_finger_3",
+      "visible": 2069,
+      "clipped": 0,
+      "changed": 2495,
+      "overlap": 0.8631226454583508,
+      "transform": {
+        "x": -3.681992337164751,
+        "y": -0.3860153256704981,
+        "scaleX": 1.1314781205888285,
+        "scaleY": 1.1314781205888285,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2497,
+      "visibleRuntimePixels": 2139,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "de62a05eb3d79fa41052e118f76215db0ce4d9e5deb36823233dfef2cdfd0de4",
+      "appliedPNG": "4817578702d6d6e8d7ce6b592f592d1d2d23657b18df8503b9c8c972cccb0905"
+    },
+    {
+      "id": "skin_2/b_finger_4",
+      "visible": 1014,
+      "clipped": 0,
+      "changed": 1265,
+      "overlap": 0.8144833197721725,
+      "transform": {
+        "x": -0.358974358974359,
+        "y": -0.7051282051282051,
+        "scaleX": 1.3382173382173381,
+        "scaleY": 1.3382173382173381,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 1282,
+      "visibleRuntimePixels": 1064,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "076c915aed0fac639ff75168bb384b9199860d1004687f7bc60453c7bfd595b8",
+      "appliedPNG": "4c3f434b59f58df476a6c922d05314080c33c35726052a0bd406f700ad8bc118"
+    },
+    {
+      "id": "skin_2/b_finger_5",
+      "visible": 1149,
+      "clipped": 0,
+      "changed": 1477,
+      "overlap": 0.8050490883590463,
+      "transform": {
+        "x": 0.04455445544554455,
+        "y": -0.3341584158415841,
+        "scaleX": 1.1535729659922513,
+        "scaleY": 1.1535729659922513,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 1479,
+      "visibleRuntimePixels": 1190,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "4a186f65d837c8131a19f50487012881909038dedea0a3dd1559053aa4aeef02",
+      "appliedPNG": "add906eb34bbe6fe439a49e920b25977a1e57a2c25b8fa2d9e5f4950424f7c53"
+    },
+    {
+      "id": "skin_2/b_finger_6",
+      "visible": 1716,
+      "clipped": 0,
+      "changed": 2124,
+      "overlap": 0.8184007707129094,
+      "transform": {
+        "x": -1.0769633507853404,
+        "y": -0.12146596858638743,
+        "scaleX": 1.3997506856145598,
+        "scaleY": 1.3997506856145598,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2144,
+      "visibleRuntimePixels": 1782,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1eafa72b1f68596f6622ab69d026484458c6254d5511ce43ae709cd90da1d3ce",
+      "appliedPNG": "c6145b00918dfbfebf7019daf3c5efa5f6ec289500611df5a3bda8c0e1ece518"
+    },
+    {
+      "id": "skin_2/b_foot",
+      "visible": 5191,
+      "clipped": 0,
+      "changed": 5934,
+      "overlap": 0.9035639412997903,
+      "transform": {
+        "x": -3.2898019075568596,
+        "y": -0.24027879677182684,
+        "scaleX": 1.0117046869934652,
+        "scaleY": 1.0117046869934652,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 5950,
+      "visibleRuntimePixels": 5341,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "8a739cd04e2305f30ecdf2b7f7a0c460a80c741f5e35b92e173801e321d9e4e3",
+      "appliedPNG": "a41c8861095eb0d2f2ed9f277715e65868e0e38731390599a424d84917b28193"
+    },
+    {
+      "id": "skin_2/b_gauntlet",
+      "visible": 14054,
+      "clipped": 0,
+      "changed": 15038,
+      "overlap": 0.9492906116353269,
+      "transform": {
+        "x": -0.15517241379310343,
+        "y": 1.6551724137931034,
+        "scaleX": 1.0477773161611965,
+        "scaleY": 1.0477773161611965,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 15054,
+      "visibleRuntimePixels": 14190,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "514a318bb4c434675671e8905b93d8a20cb25adc1a6509a4de7d938aaa173d1e",
+      "appliedPNG": "26b55670e8c94bd9f83de36b431f392d123e57e3f4573d4b9365242aa75cb120"
+    },
+    {
+      "id": "skin_2/b_gauntlet_2",
+      "visible": 5233,
+      "clipped": 0,
+      "changed": 5645,
+      "overlap": 0.9410698096101541,
+      "transform": {
+        "x": 0.9455205811138014,
+        "y": 0.18563357546408393,
+        "scaleX": 1.0997535065331676,
+        "scaleY": 1.0997535065331676,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 5657,
+      "visibleRuntimePixels": 5299,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "70ca2aafe55d11ff89d598e1906d109c87657166f9e5fc81cc4ac90af24709de",
+      "appliedPNG": "462980c476af061e25e0bf30af7a2ff1a66e2d999422dc6347e5e6d6a3826cf9"
+    },
+    {
+      "id": "skin_2/b_hand",
+      "visible": 4409,
+      "clipped": 0,
+      "changed": 5109,
+      "overlap": 0.8836276083467095,
+      "transform": {
+        "x": -2.16027397260274,
+        "y": -0.19680365296803654,
+        "scaleX": 1.03056132097228,
+        "scaleY": 1.03056132097228,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 5113,
+      "visibleRuntimePixels": 4487,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "376323ea9257c90a05279a5d650e28b46130836087a8d99998490b11198f5214",
+      "appliedPNG": "5d5bddada68b8795dbd807addfa3482567e41edb1775d1efda0e04a4f2a0a46e"
+    },
+    {
+      "id": "skin_2/b_thigh",
+      "visible": 9027,
+      "clipped": 0,
+      "changed": 9820,
+      "overlap": 0.931311236189285,
+      "transform": {
+        "x": 0.05976277372262774,
+        "y": -1.0378649635036497,
+        "scaleX": 1.3871254321936228,
+        "scaleY": 1.3871254321936228,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 9867,
+      "visibleRuntimePixels": 9190,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "aecd45ae82a9ed51df13589bd41a2b73dadf047ff1e7e68355b641a1306cd103",
+      "appliedPNG": "09b8239a05fdf2bff37cbe718ada423c8a804efca2628724fda516005d592ad3"
+    },
+    {
+      "id": "skin_2/b_upper_arm",
+      "visible": 11616,
+      "clipped": 0,
+      "changed": 12390,
+      "overlap": 0.9521385764715541,
+      "transform": {
+        "x": 0.3230478589420655,
+        "y": 0.5384130982367759,
+        "scaleX": 0.998996184253186,
+        "scaleY": 0.998996184253186,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 12414,
+      "visibleRuntimePixels": 11785,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "0180beca513321c710bb438cdeb03908808ad49cb669d1525cb2bfccc701df06",
+      "appliedPNG": "2e5c12c7e7f083c8832f08e55974266310106c023c77cc29b78893956189f034"
+    },
+    {
+      "id": "skin_2/belt",
+      "visible": 13008,
+      "clipped": 0,
+      "changed": 14994,
+      "overlap": 0.8776588445176341,
+      "transform": {
+        "x": 0.22083007047768205,
+        "y": 2.723570869224745,
+        "scaleX": 1.0046095251655156,
+        "scaleY": 1.0046095251655156,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 15036,
+      "visibleRuntimePixels": 13235,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "879cd2ee8a9f6ae38e51e1dc070cbf9498d65e535f2a1f80844dfa39237e8a3d",
+      "appliedPNG": "bb2718fc619f5cbc3519d40ed1d67ee75ecafa94d09ab74925e4c161b0dd019a"
+    },
+    {
+      "id": "skin_2/body",
+      "visible": 64012,
+      "clipped": 0,
+      "changed": 68039,
+      "overlap": 0.9511002081474874,
+      "transform": {
+        "x": 0.8677504393673112,
+        "y": 6.5900702987697715,
+        "scaleX": 1.0039380329362755,
+        "scaleY": 1.0039380329362755,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 67978,
+      "visibleRuntimePixels": 64418,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "95c5162f6a4e3f1faf476e2ffa83655e9ec032e057d89af495e5194f6b1d826f",
+      "appliedPNG": "a5ba335dda595114a10c665e3ac972692b6c287689d67266519f05f643b31989"
+    },
+    {
+      "id": "skin_2/cheek",
+      "visible": 1548,
+      "clipped": 0,
+      "changed": 2081,
+      "overlap": 0.7769308943089431,
+      "transform": {
+        "x": -0.663891779396462,
+        "y": -0.17221644120707597,
+        "scaleX": 1.038225156087409,
+        "scaleY": 1.038225156087409,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2084,
+      "visibleRuntimePixels": 1622,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "a3533271d87e34ddc4a7d7e6b8a93a2f12e18d1544fc76597661dacb60b5e81b",
+      "appliedPNG": "ed2dc333a3c3e2b422c781404da38dd732f73b3584d3fd554a5bbd2a35afee58"
+    },
+    {
+      "id": "skin_2/f_finger_1",
+      "visible": 2757,
+      "clipped": 0,
+      "changed": 3115,
+      "overlap": 0.9054988475469213,
+      "transform": {
+        "x": -0.48484848484848486,
+        "y": -0.4545454545454546,
+        "scaleX": 1.0700104493207943,
+        "scaleY": 1.0700104493207943,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 3125,
+      "visibleRuntimePixels": 2833,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "fd33126f790cdafa18023eddf22caaa2e742d824969df1cabdc02578eb6f45f3",
+      "appliedPNG": "cce6084f0ebe06adefb5b8d254f0d787dcf46d2585017f25d90e03d13600d553"
+    },
+    {
+      "id": "skin_2/f_finger_2",
+      "visible": 2351,
+      "clipped": 0,
+      "changed": 2844,
+      "overlap": 0.8416058394160584,
+      "transform": {
+        "x": 0.25965665236051505,
+        "y": -0.24034334763948498,
+        "scaleX": 1.116331601536029,
+        "scaleY": 1.116331601536029,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 2877,
+      "visibleRuntimePixels": 2462,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "3f87c2e4ec4bd58eb82dcc3733096a964f850bff3c5adeb0ab5cfe2969d02e38",
+      "appliedPNG": "38b964b165ad44a1525c13a61416983e534350b1fd1572a2c1a4d97889e878c2"
+    },
+    {
+      "id": "skin_2/f_foot",
+      "visible": 8855,
+      "clipped": 0,
+      "changed": 9691,
+      "overlap": 0.9318613986900486,
+      "transform": {
+        "x": -1.6051724137931034,
+        "y": -0.5732758620689655,
+        "scaleX": 1.1161122978333842,
+        "scaleY": 1.1161122978333842,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 9704,
+      "visibleRuntimePixels": 9059,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1b91d6ea4f79859382e573cc867a14fc66381a6e756bbe033745d2a982bab5c2",
+      "appliedPNG": "7846d5938feae1e63ca5f9820c5a50bb5e288b982c65dfd96fb5160cb4409ee3"
+    },
+    {
+      "id": "skin_2/f_forearm",
+      "visible": 16967,
+      "clipped": 0,
+      "changed": 18334,
+      "overlap": 0.9429001169851262,
+      "transform": {
+        "x": 0,
+        "y": 0.6296296296296297,
+        "scaleX": 1.0034638955502264,
+        "scaleY": 1.0034638955502264,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 18354,
+      "visibleRuntimePixels": 17074,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "9f9d685ee795ac7786ddeb24019ddb80e5a7f6d65cb260f846ff4668caf09061",
+      "appliedPNG": "9084cc8c2e75123364fa341c0525c4f8029dddb58899194a2aa824f4c124d105"
+    },
+    {
+      "id": "skin_2/f_gauntlet",
+      "visible": 38831,
+      "clipped": 0,
+      "changed": 40152,
+      "overlap": 0.968015170670038,
+      "transform": {
+        "x": -1.6937931034482758,
+        "y": 3.6758620689655173,
+        "scaleX": 0.9910706075533662,
+        "scaleY": 0.9910706075533662,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 40315,
+      "visibleRuntimePixels": 39224,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1b495a319892cd87b1344336c2aace3897b1474595e628c377806bb3e6ed00be",
+      "appliedPNG": "27e21bb29a6d86cf51a57d42799768430d0df8feed9d9519b57a5508fe7e18e2"
+    },
+    {
+      "id": "skin_2/f_hand",
+      "visible": 10696,
+      "clipped": 0,
+      "changed": 11274,
+      "overlap": 0.9614549402823018,
+      "transform": {
+        "x": -0.7663185378590078,
+        "y": 0.5535248041775457,
+        "scaleX": 1.0334080302625357,
+        "scaleY": 1.0334080302625357,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 11310,
+      "visibleRuntimePixels": 10844,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "b73639988a5199030d2dafe709d7686b5600a5997897c1cba83f9a045baa2d57",
+      "appliedPNG": "7ca610aac3497c3d107b3af4bf4359120e4b6972d4e5781b93ca8aa24182aa6d"
+    },
+    {
+      "id": "skin_2/f_thigh",
+      "visible": 9890,
+      "clipped": 0,
+      "changed": 10457,
+      "overlap": 0.9657400156617071,
+      "transform": {
+        "x": -1.9165813715455475,
+        "y": -4.983111566018423,
+        "scaleX": 1.0489480268395315,
+        "scaleY": 1.0489480268395315,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 10475,
+      "visibleRuntimePixels": 10048,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "d46b9ba46da2d2547caec2fc10776bab5feb48fd5f680adc39bbb3255d42c31a",
+      "appliedPNG": "a20b1120a05495c4168b0f347434cd88ec1ea126df2374bfdeb2898c5336469f"
+    },
+    {
+      "id": "skin_2/f_upper_arm",
+      "visible": 21568,
+      "clipped": 0,
+      "changed": 23287,
+      "overlap": 0.9457088979520238,
+      "transform": {
+        "x": -0.08092485549132948,
+        "y": -1.2947976878612717,
+        "scaleX": 1.0147976878612717,
+        "scaleY": 1.0147976878612717,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 23340,
+      "visibleRuntimePixels": 21739,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "c60a763f45111bcf7f75d887693942d57926bb2e219e54ef6dd833d1332705a0",
+      "appliedPNG": "1c1b1493f85081aacb3230341a161b342a37ad1e85cf14626a3482c5fd51c46a"
+    },
+    {
+      "id": "skin_2/head",
+      "visible": 23363,
+      "clipped": 0,
+      "changed": 25630,
+      "overlap": 0.9199177019862309,
+      "transform": {
+        "x": 0.037842190016103006,
+        "y": 0.3071658615136874,
+        "scaleX": 1.0210003818251239,
+        "scaleY": 1.0210003818251239,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 25645,
+      "visibleRuntimePixels": 23548,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "1f9fb89c96cb603f9831cf250b9cbd57f149b9054e7275b6aebebc77580d8f42",
+      "appliedPNG": "80ff72a1cea692434dbd3369f4e996c37395c261351997f837667283bfaea63b"
+    },
+    {
+      "id": "skin_2/jaw1",
+      "visible": 4795,
+      "clipped": 0,
+      "changed": 5386,
+      "overlap": 0.917352209680505,
+      "transform": {
+        "x": -0.18838028169014084,
+        "y": 0.452112676056338,
+        "scaleX": 0.9906046032291309,
+        "scaleY": 0.9906046032291309,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 5394,
+      "visibleRuntimePixels": 4887,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "4e9de122ca1b95945c1dafd36fc9affb7a77d70298c33766929b21736ccb72cf",
+      "appliedPNG": "752b3980d7919738fdedb9b52a02062084c963e84624dbb7ffd8c985b7e25b8c"
+    },
+    {
+      "id": "skin_2/jaw2",
+      "visible": 1323,
+      "clipped": 0,
+      "changed": 1912,
+      "overlap": 0.7343400447427293,
+      "transform": {
+        "x": -0.7416472416472417,
+        "y": 0.31507381507381504,
+        "scaleX": 1.111563541943289,
+        "scaleY": 1.111563541943289,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 1920,
+      "visibleRuntimePixels": 1420,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "21471823476a17deaad02d2ec9e76df00b6f20f09672d3eab215c9a4ba3d58b6",
+      "appliedPNG": "f42b9b8ea80f433d48474db05a63d6e40aec6896f0088d80d1ef45c9d25cc716"
+    },
+    {
+      "id": "skin_2/mouth",
+      "visible": 6538,
+      "clipped": 0,
+      "changed": 7208,
+      "overlap": 0.9252669039145908,
+      "transform": {
+        "x": 0.5358615004122012,
+        "y": 0.28318219291014013,
+        "scaleX": 1.03093678135983,
+        "scaleY": 1.03093678135983,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 7215,
+      "visibleRuntimePixels": 6641,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "bb9483e777ea6b397f70deace8babdd5523f11e4001ac663e0140d0395f343f7",
+      "appliedPNG": "dc02d74c17f4b464ae194b6c884f493b46e94c80b29538a2bcb47520d65fa41d"
+    },
+    {
+      "id": "skin_2/necklace",
+      "visible": 38690,
+      "clipped": 0,
+      "changed": 41682,
+      "overlap": 0.9300772842887889,
+      "transform": {
+        "x": -1.337603305785124,
+        "y": 3.1896694214876034,
+        "scaleX": 0.9970871666926556,
+        "scaleY": 0.9970871666926556,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 41792,
+      "visibleRuntimePixels": 39187,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "652bf8d792164feb96e62c816fa0b6d796512bccab47aef4f32ffa68c65ca549",
+      "appliedPNG": "f80870d8fad10db75c17206be5dcfd9ba8702db050584843b48509f45f300dc1"
+    },
+    {
+      "id": "skin_2/ponytail",
+      "visible": 7466,
+      "clipped": 0,
+      "changed": 8133,
+      "overlap": 0.9477896341463414,
+      "transform": {
+        "x": -0.32430069930069927,
+        "y": -0.22202797202797203,
+        "scaleX": 1.0525874125874126,
+        "scaleY": 1.0525874125874126,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 8142,
+      "visibleRuntimePixels": 7585,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "67c1acd3792138c887b2b7266541aa38db43a186092202fce880fc60c97f694f",
+      "appliedPNG": "0aee17facd68c14b8d1a0d69389261d3e0739ce1471fb3e19526ff9122a8daa9"
+    },
+    {
+      "id": "skin_2/silk",
+      "visible": 26517,
+      "clipped": 0,
+      "changed": 28177,
+      "overlap": 0.951714687533807,
+      "transform": {
+        "x": -0.10074626865671642,
+        "y": 2.216417910447761,
+        "scaleX": 1.007462686567164,
+        "scaleY": 1.007462686567164,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 28222,
+      "visibleRuntimePixels": 26846,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "d58e175afcbe4b3241b77ac709d8e97aa257d135af86fccd755ca5bd40ce1967",
+      "appliedPNG": "8d56b3367ddaeed21d8d36cd0f6fc6ab149ec091364dd33cce9e63e76dcaad67"
+    },
+    {
+      "id": "skin_2/tail",
+      "visible": 24520,
+      "clipped": 0,
+      "changed": 26354,
+      "overlap": 0.9081999219055057,
+      "transform": {
+        "x": -1.5,
+        "y": 0.114453125,
+        "scaleX": 0.9943805265273312,
+        "scaleY": 0.9943805265273312,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 26452,
+      "visibleRuntimePixels": 24954,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "e9e13d2811cb565b56ef03a4470232631ec7d229ac174a7cad2d2f762adcda3f",
+      "appliedPNG": "1b0bb790e0edd34b06e06ec4220141a17a1d0d1ae8bb0660dafa4af1fe009616"
+    },
+    {
+      "id": "skin_2/thumb",
+      "visible": 8206,
+      "clipped": 0,
+      "changed": 8685,
+      "overlap": 0.9559425032137432,
+      "transform": {
+        "x": -1.201880035810206,
+        "y": -2.3034914950760967,
+        "scaleX": 1.1029543419874663,
+        "scaleY": 1.1029543419874663,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "changedRuntimePixels": 8719,
+      "visibleRuntimePixels": 8342,
+      "generatedPixelsPreserved": true,
+      "sourcePNG": "71b9dbdedf945538e014b113b63446d0b559f3767b627fbcb3fbf78f96feebd6",
+      "appliedPNG": "22869b38e7bec0a0e30f556db71659f37035ac3909f95635139b2350cc6f936c"
+    }
+  ],
+  "exports": [
+    {
+      "file": "wukong-project.zip",
+      "bytes": 85001321,
+      "sha256": "a21be8b3bde7c80aee52d883905ca726db271df03d08ee87ff7b2956a78dfcab"
+    },
+    {
+      "file": "wukong-runtime.zip",
+      "bytes": 2267574,
+      "sha256": "8b6a842166fc8cd1c91b5d0233af8ee8c24183d501804eaab95571feb103118d"
+    },
+    {
+      "file": "wukong-reimport-project.zip",
+      "bytes": 85001321,
+      "sha256": "a21be8b3bde7c80aee52d883905ca726db271df03d08ee87ff7b2956a78dfcab"
+    },
+    {
+      "file": "wukong-reimport-runtime.zip",
+      "bytes": 2267574,
+      "sha256": "8b6a842166fc8cd1c91b5d0233af8ee8c24183d501804eaab95571feb103118d"
+    }
+  ],
+  "nativeUIFrames": 14,
+  "browser": {
+    "browserFrames": 126,
+    "comparisons": 84,
+    "exact": 84,
+    "editableExact": 42,
+    "runtimeExact": 42,
+    "maxChangedPixels": 0,
+    "maxChannelDelta": 0
+  },
+  "runtimeZipByteExact": true,
+  "editableZipByteExact": true,
+  "automatedWorkbenchTests": {
+    "passed": 82,
+    "failed": 0,
+    "skipped": 0
+  },
+  "validatedAt": "2026-10-19T15:55:31.388Z"
+}

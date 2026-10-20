@@ -1,0 +1,40 @@
+{
+  "actual_gateway_account_id": 1,
+  "actual_route": "codex",
+  "job": {
+    "id": "eb3e0ec8-7010-4bdd-b12a-09f89bc8db9c",
+    "projectId": "web-gateway-connection-check",
+    "fingerprint": "9b00c1b0ec3db33931f293c1c527080be263a24488739dcacd0a78c40f8f04e9",
+    "kind": "appearance",
+    "prompt": "Connection test artwork only. One tiny violet toy robot, full body, front view, rounded head and simple limbs, clean flat game-sprite colors. Keep generous completely transparent empty space around the robot. True RGBA PNG alpha channel. No ground, shadow, text, labels or checkerboard. This test must use the ChatGPT web image route.",
+    "status": "completed",
+    "provider": {
+      "id": "sub2api",
+      "label": "Sub2API",
+      "baseUrl": "http://127.0.0.1:18080/v1",
+      "protocol": "images",
+      "model": "gpt-image-2"
+    },
+    "partIds": [],
+    "createdAt": "2026-10-20T10:47:12.697Z",
+    "updatedAt": "2026-10-20T10:47:52.467Z",
+    "total": 1,
+    "completed": 1,
+    "concurrency": 1,
+    "currentParts": [],
+    "images": [
+      {
+        "id": "image-0",
+        "file": "image-0.png",
+        "width": 1233,
+        "height": 1275,
+        "url": "/api/generation/jobs/eb3e0ec8-7010-4bdd-b12a-09f89bc8db9c/images/image-0",
+        "provider": "sub2api",
+        "controllerModel": "gpt-image-2",
+        "transparent": true,
+        "startedAt": "2026-10-20T10:47:12.705Z",
+        "completedAt": "2026-10-20T10:47:52.466Z"
+      }
+    ]
+  }
+}

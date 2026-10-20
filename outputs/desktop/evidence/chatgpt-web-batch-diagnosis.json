@@ -1,0 +1,300 @@
+{
+  "checked_at": "2026-10-20T20:50:47+08:00",
+  "scope": {
+    "timezone": "Asia/Shanghai",
+    "main_window": [
+      "2026-10-20T20:22:00+08:00",
+      "2026-10-20T20:42:00+08:00"
+    ],
+    "earlier_context_start": "2026-10-20T20:18:00+08:00",
+    "image_requests_issued_during_diagnosis": 0,
+    "generation_remains_paused": true,
+    "application_code_changed": false,
+    "server_configuration_changed": false
+  },
+  "gateway_account_snapshot": {
+    "id": 2,
+    "concurrency": 1,
+    "status": "active",
+    "schedulable": true,
+    "proxy_id": null,
+    "source": "normal admin account GET, verified during this diagnosis"
+  },
+  "requests": [
+    {
+      "time": "2026-10-20T20:18:51.074+08:00",
+      "request_id": "037e34e6-0a36-4511-8fd3-364433f15eb8",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 28867,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:21:49.239+08:00",
+      "request_id": "09763acb-0804-4af8-a488-00ae992ece46",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 26555,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:21:56.410+08:00",
+      "request_id": "f2c47b1f-dc4f-492a-9f40-665925557ee0",
+      "path": "/v1/images/edits",
+      "status_code": 429,
+      "latency_ms": 32611,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:22:20.417+08:00",
+      "request_id": "97f0fa5a-5f3b-4d27-9d5d-602dc6fe885f",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 56750,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:22:20.547+08:00",
+      "request_id": "52fdcf36-7f58-495c-84ff-75f362dbad86",
+      "path": "/v1/images/edits",
+      "status_code": 429,
+      "latency_ms": 30873,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:23:29.621+08:00",
+      "request_id": "4a9b0f42-fecf-4ea0-8fc9-11f04081d26c",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 23795,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:24:03.432+08:00",
+      "request_id": "3c6a7715-940d-4a0e-88c9-34a605a6b76a",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 33497,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:24:08.659+08:00",
+      "request_id": "464d1d9f-1fa1-438b-8a2e-60cf1d5bbedb",
+      "path": "/v1/images/edits",
+      "status_code": 502,
+      "latency_ms": 4825,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:28:13.076+08:00",
+      "request_id": "5da7608d-99b3-4f71-89e3-fd0ada5d453f",
+      "path": "/v1/images/edits",
+      "status_code": 200,
+      "latency_ms": 186230,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:28:17.678+08:00",
+      "request_id": "b42bcfb7-aa6c-4b8e-9363-28d2881a580d",
+      "path": "/v1/images/edits",
+      "status_code": 502,
+      "latency_ms": 4101,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:29:24.458+08:00",
+      "request_id": "63f27dd6-0ad0-4360-855e-3a6efa2c228a",
+      "path": "/v1/images/edits",
+      "status_code": 429,
+      "latency_ms": 31101,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:29:24.492+08:00",
+      "request_id": "ff45dc49-59cc-4cbf-b562-9aa869f176c8",
+      "path": "/v1/images/edits",
+      "status_code": 429,
+      "latency_ms": 31144,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:35:45.116+08:00",
+      "request_id": "f260a04f-f500-4eb0-85d6-f2f15df944ce",
+      "path": "/v1/images/edits",
+      "status_code": 499,
+      "latency_ms": 411761,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:37:07.219+08:00",
+      "request_id": "0529a0ef-7fa6-48e4-9900-46013433931c",
+      "path": "/v1/images/edits",
+      "status_code": 502,
+      "latency_ms": 260090,
+      "account_id": 2
+    },
+    {
+      "time": "2026-10-20T20:40:03.399+08:00",
+      "request_id": "bbabfe77-249d-4e0a-9063-aba691d19d70",
+      "path": "/v1/images/edits",
+      "status_code": 502,
+      "latency_ms": 67526,
+      "account_id": 2
+    }
+  ],
+  "concurrency_wait_timeouts": [
+    {
+      "time": "2026-10-20T20:21:56.405+08:00",
+      "request_id": "f2c47b1f-dc4f-492a-9f40-665925557ee0",
+      "account_id": 2,
+      "reason": "timeout waiting for account concurrency slot"
+    },
+    {
+      "time": "2026-10-20T20:22:20.546+08:00",
+      "request_id": "52fdcf36-7f58-495c-84ff-75f362dbad86",
+      "account_id": 2,
+      "reason": "timeout waiting for account concurrency slot"
+    },
+    {
+      "time": "2026-10-20T20:29:24.455+08:00",
+      "request_id": "63f27dd6-0ad0-4360-855e-3a6efa2c228a",
+      "account_id": 2,
+      "reason": "timeout waiting for account concurrency slot"
+    },
+    {
+      "time": "2026-10-20T20:29:24.491+08:00",
+      "request_id": "ff45dc49-59cc-4cbf-b562-9aa869f176c8",
+      "account_id": 2,
+      "reason": "timeout waiting for account concurrency slot"
+    }
+  ],
+  "backend_failures": [
+    {
+      "time": "2026-10-20T20:24:08.629+08:00",
+      "phase": "image_upload",
+      "upstream_status": 503,
+      "storage_code": "ServerBusy",
+      "message": "Ingress is over the account limit.",
+      "empty_response_body": false
+    },
+    {
+      "time": "2026-10-20T20:28:17.652+08:00",
+      "phase": "image_upload",
+      "upstream_status": 503,
+      "storage_code": "ServerBusy",
+      "message": "Ingress is over the account limit.",
+      "empty_response_body": false
+    },
+    {
+      "time": "2026-10-20T20:37:07.177+08:00",
+      "phase": "image_download",
+      "upstream_status": 503,
+      "storage_code": "ServerBusy",
+      "message": "The server is busy.",
+      "empty_response_body": false
+    },
+    {
+      "time": "2026-10-20T20:40:03.202+08:00",
+      "phase": "/backend-api/f/conversation",
+      "upstream_status": 500,
+      "storage_code": null,
+      "message": "",
+      "empty_response_body": true
+    }
+  ],
+  "gateway_failure_cooldowns": [
+    {
+      "time": "2026-10-20T20:24:08.651+08:00",
+      "account_id": 2,
+      "cooldown_ms": 0,
+      "failure_streak": 1,
+      "block_scope": "account_model"
+    },
+    {
+      "time": "2026-10-20T20:28:17.668+08:00",
+      "account_id": 2,
+      "cooldown_ms": 0,
+      "failure_streak": 1,
+      "block_scope": "account_model"
+    },
+    {
+      "time": "2026-10-20T20:35:45.100+08:00",
+      "account_id": 2,
+      "cooldown_ms": 10000,
+      "failure_streak": 2,
+      "block_scope": "account_model"
+    },
+    {
+      "time": "2026-10-20T20:37:07.208+08:00",
+      "account_id": 2,
+      "cooldown_ms": 45000,
+      "failure_streak": 3,
+      "block_scope": "account_model"
+    },
+    {
+      "time": "2026-10-20T20:40:03.341+08:00",
+      "account_id": 2,
+      "cooldown_ms": 45000,
+      "failure_streak": 4,
+      "block_scope": "account_model"
+    }
+  ],
+  "authorization_sync": [
+    {
+      "time": "2026-10-20T20:25:45.329+08:00",
+      "account_id": 1,
+      "updated": false
+    },
+    {
+      "time": "2026-10-20T20:30:45.636+08:00",
+      "account_id": 1,
+      "updated": false
+    },
+    {
+      "time": "2026-10-20T20:35:47.648+08:00",
+      "account_id": 1,
+      "updated": false
+    },
+    {
+      "time": "2026-10-20T20:40:48.164+08:00",
+      "account_id": 1,
+      "updated": false
+    }
+  ],
+  "web_route_audit_counts": {
+    "/backend-api/other 200": 129,
+    "/backend-api/conversation/init 200": 12,
+    "/backend-api/accounts/check/v4-2023-04-27 200": 12,
+    "/backend-api/me 200": 12,
+    "/backend-api/f/conversation/prepare 200": 6,
+    "/backend-api/f/conversation 200": 5,
+    "/backend-api/other 503": 1,
+    "/backend-api/f/conversation 500": 1
+  },
+  "confirmed_findings": [
+    "The observed gateway 429 responses correlate with timeout waiting for the single account concurrency slot; they do not establish ChatGPT image quota exhaustion.",
+    "All four gateway 502 completions in the main window correlate in time with backend failures: two storage upload 503 ServerBusy responses, one image download 503 ServerBusy response, and one ChatGPT web conversation 500 response with an empty body.",
+    "Sub2API tries failover after a backend 502, but the only eligible account is excluded for that request, leaving no alternative account.",
+    "The storage response saying account limit refers to the image upload storage service. It is not evidence of ChatGPT subscription or billing quota exhaustion.",
+    "Both services remain active with NRestarts=0. The periodic authorization sync reports no token changes during the window.",
+    "The current iSpine adapter cancels failure bodies before parsing them, and the generation panel initializes concurrency to 3 and restores a job concurrency only for active jobs."
+  ],
+  "unresolved": [
+    "The cause behind the final ChatGPT upstream HTTP 500 is unknown because its response body was empty.",
+    "No image generation was attempted to check whether the upstream recovered.",
+    "Observed storage 503 failures do not prove that local batch size caused those failures.",
+    "This diagnosis does not assess the visual quality or full-character acceptance of produced parts."
+  ],
+  "repair_direction": [
+    "Keep this single-account route serial and persist the explicitly selected concurrency; queue other parts locally instead of making them compete for a short gateway slot timeout.",
+    "Keep bounded, sanitized failure details and request identifiers in job records.",
+    "Add bounded backoff for storage upload/download 503 responses while reusing the current upload or generated file. Avoid blindly replaying generation POST requests after an ambiguous failure.",
+    "Preserve completed candidates and retry only unfinished parts when the user resumes generation."
+  ],
+  "sources": [
+    "root-private systemd journal captures for ispine-sub2api.service, ispine-chatgpt-web.service and ispine-chatgpt-web-sync.service",
+    "root-private web-route.jsonl audit",
+    "pinned chatgpt2api source",
+    "current local provider and GenerationPanel source"
+  ]
+}

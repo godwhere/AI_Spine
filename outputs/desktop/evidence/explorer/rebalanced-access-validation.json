@@ -1,0 +1,34 @@
+{
+  "shortAccessChecks": [
+    {
+      "focused": "创建角色",
+      "fullyVisible": true,
+      "height": 768,
+      "rect": {
+        "height": 46,
+        "width": 189,
+        "x": 817,
+        "y": 671.3046875
+      },
+      "width": 1024
+    },
+    {
+      "focused": "创建角色",
+      "fullyVisible": true,
+      "height": 740,
+      "rect": {
+        "height": 46,
+        "width": 480,
+        "x": 283,
+        "y": 663.25
+      },
+      "width": 800
+    }
+  ],
+  "mobileGalleryCheck": {
+    "columns": "109px 109px 109px",
+    "overflow": false,
+    "visibleNames": false,
+    "width": 390
+  }
+}

@@ -1,9 +1,9 @@
 import { extractPart, browserPixels, readReplacement, autoFit } from "./pixels.js";
 
-// The browser talks only to the local job API. Authentication stays in Codex.
+// The browser talks only to the local job API; provider credentials stay server-side.
 export function buildGenerationRequest(
   bundle,
-  { prompt, partIds = [], appearanceReference } = {},
+  { prompt, partIds = [], appearanceReference, concurrency = 3 } = {},
 ) {
   if (!prompt?.trim()) throw new Error("请填写形象或部件的生成要求。");
   if (prompt.trim().length > 4000) throw new Error("生成要求请控制在 4000 字以内。");
@@ -29,6 +29,7 @@ export function buildGenerationRequest(
   return {
     version: 1,
     kind: parts.length ? "parts" : "appearance",
+    concurrency: parts.length ? concurrency : 1,
     prompt: prompt.trim(),
     template: {
       id: bundle.id,
@@ -102,9 +103,14 @@ export function createLocalGenerationProvider(fetcher = fetch) {
     return body;
   };
   return {
-    status:()=>call("status"),
+    status:(provider)=>call(`status${provider ? `?provider=${encodeURIComponent(provider)}` : ""}`),
+    connection:()=>call("connection"),
+    configure:(options)=>call("connection",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(options)}),
+    login:()=>call("connection/login",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}"}),
+    forgetKey:(provider="openai")=>call(`connection/${encodeURIComponent(provider)}`,{method:"DELETE"}),
     list:async(projectId)=>(await call(`jobs?projectId=${encodeURIComponent(projectId)}`)).jobs,
     get:(id)=>call(`jobs/${encodeURIComponent(id)}`),
+    retry:(id,concurrency=3)=>call(`jobs/${encodeURIComponent(id)}/retry`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({concurrency})}),
     cancel:(id)=>call(`jobs/${encodeURIComponent(id)}`,{method:"DELETE"}),
     start:(request)=>call("jobs",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
       ...request,references:request.references.map(({bytes,...ref})=>({...ref,base64:toBase64(bytes)})),

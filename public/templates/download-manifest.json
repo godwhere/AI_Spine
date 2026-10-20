@@ -1,0 +1,2571 @@
+{
+  "verifiedAt": "2026-10-20T01:16:42+08:00",
+  "templateCount": 38,
+  "templates": [
+    {
+      "id": "38",
+      "versionId": "41",
+      "type": "effect",
+      "categoryKeys": [
+        "fate"
+      ],
+      "animations": [
+        "action"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "lrsc792.atlas",
+          "texturePages": [
+            "lrsc792.png"
+          ],
+          "regionCount": 6
+        }
+      ],
+      "files": [
+        {
+          "fileName": "lrsc792.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 388,
+          "sha256": "a45666130e9fe197017aa332e4f0bf4173b636b0a97ceb2cfd2bd7e6fbf5a2de",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "lrsc792.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 4069,
+          "sha256": "851623ab1484f11518013c32ab2e75c34548a50c1fec311ee1204fe8e70bfc94",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "lrsc792.png",
+          "roles": [
+            "role",
+            "texture"
+          ],
+          "bytes": 599051,
+          "sha256": "1e356c323d21e9e7ee843ad5a96c684c6b69d639ee157e6bf3d07903dff51f48",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "versionId": "39",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 22
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 256275,
+          "sha256": "97dddf4136cfc9a255d8e4dd1626b33c4afe55388759a749b9dbe4f9074ced93",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1001,
+          "sha256": "0bbfadf4e43094bcc294d251e80627da4b826e5d910b47f3fe127264bb124de3",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 173975,
+          "sha256": "dcb13f693d29515d41e223b1533a6ad7cc7a486f00521b9a1507dde6576fce6c",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 242139,
+          "sha256": "8bc775b955c698e42f3cd62d97d5ec20c2ab9e3e8d949af2b3dc3da8f412775e",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "versionId": "38",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 36
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 236569,
+          "sha256": "7414fd4e41ec9a74770aaec41e9f4ea35eefd835fc7cdb0c494c0c2e838af6b1",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1906,
+          "sha256": "5a2d3808f7860f139592faf3f5aa39e15906ec75294025e68b194544d10b6877",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 377263,
+          "sha256": "1c5120b52c66ce5f054d666a17c662b0f3c8b26c0f4af4896a88518b0b609ede",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 122846,
+          "sha256": "5b2cb4842ba19f31e9048ce5d7c5cc4d06555b863303f87988c3284eb67d24e4",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "versionId": "37",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 25
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 250933,
+          "sha256": "57dfa0aa3b2d686e53e0276aa4d86d1c483b6bdb5ff806fca0b65e97f9c70f33",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1441,
+          "sha256": "b54e879c6560dacadaeffb8672e3e453617054bca8e7b4d68cec0b83f3657f04",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 305462,
+          "sha256": "e2eaf9b111196d8001a98366b030337130b4cdcb0949bbb388a137db60ddf6fd",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 139715,
+          "sha256": "90a0efdb91a2c6a6a0c531c17cd16a5339fa248df66f65fc995b651ef37c2500",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "versionId": "36",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 25
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 321403,
+          "sha256": "e1ef9e53ffc05ce41dfa6ae5057ee8e87a967ccd9cbeb09e78835c853be33ff5",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1146,
+          "sha256": "4240521bf2946097ce5fa49c59aec8c0df9f51d6820e5fea394e0e545f7568d9",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 127758,
+          "sha256": "364f6917d5871e1d9d2e49b0bdb62d3531a9892c401d81f1fa53fdd979474d87",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 220569,
+          "sha256": "d4691c2aecb4ee982d22482414cfc249d3fbf3d2bfdf091a76c42e4383ad44fa",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "versionId": "35",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 23
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 180418,
+          "sha256": "06dfacb1073c9983067ae3b343f234692e2fb80fc80e49a1b8cd3a8a2aa788fc",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1110,
+          "sha256": "af7d091519695414f7d45e1f84c2227ba28dc4ace2ee32e38f87340cf2c80d5b",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 133604,
+          "sha256": "f58bb8095f5949ac9db84c2dcbc543615626309b4b0a8edfe21f820b48ec0937",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 91649,
+          "sha256": "3f0fa5ea0b4e5effdefdd2d083156f4aa78ce509929f4eb927cd173c47046187",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "versionId": "34",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "duoi",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 13
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 223966,
+          "sha256": "c2a6559e701bd5fb922ec5a44da0880e676abe443b2153a2f5e4f805b1043145",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 578,
+          "sha256": "68610b5172b60e9bc2ccb0657f7cb631b436d143eb441cf4cfb4884e2605c539",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 114364,
+          "sha256": "a088d95fa1f005fae56d0d8bba061fc6ccc823635e0c2bd3975de7d061e07958",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 124049,
+          "sha256": "12e41a4e27476974658c42e01eeed5ffa33607a89070a5374ca497148756ce58",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "versionId": "40",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 21
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 1665395,
+          "sha256": "98730c4eaa8b10c3f4b2adc7d8b12510e2bd664dfb12c2da5eac2f0243bc4131",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1082,
+          "sha256": "6c68c8c1466c906ad991a56f1b32eee92e923e7eb0132e24207fe41838a3095b",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 94874,
+          "sha256": "277fc9b561b2b57daa588680cb898ff2dd4b8f9a20eda25a3f5920cdcc9b527b",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 150024,
+          "sha256": "f6fdfdc5082a6081d0c25df2ec949ca22c7db7b65ded7a0545a26dcef2516557",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "versionId": "32",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 28
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 243399,
+          "sha256": "160d5a3a494ddf5d48839850fbbb51f2439d1dc075cb15b6fcce60065007c893",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1120,
+          "sha256": "cfdb04221182441a9f3fe4cfd9d0f57762fd6fd826cfa081102d0b791b393e84",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 73816,
+          "sha256": "bbafa1ef7e75ac412d9723abc203fa01a391087675140e15f306b237ec9ee99d",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 85606,
+          "sha256": "66bcc69cd7dfef661d1ab2ae98fe02bd98c6199d135d6bd59bcaf9c1b43c1065",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "versionId": "31",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "ao",
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 33
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 345760,
+          "sha256": "6bc73d899cd4447f84d2feffbf53b7af83b97782cbbb82dbc4a620ac99b7473e",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1389,
+          "sha256": "4791202dce5bb12833464e1ada47c1ce4f69b8a3072c1eb10ca8430af376c9ed",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 249227,
+          "sha256": "e0c17b41d55a44a5acf861d47312e5329591bee7501a4a87ed6319fe2c133d63",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 231214,
+          "sha256": "a80ef16b563bde79ff8d06828e265b80eed19f15fe988928de04fa2e638dac42",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "versionId": "30",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin3"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 34
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 272939,
+          "sha256": "88b90df5fccb9e04a259d5a87c69d9d09be55b5d7403fef0de271e57fd67ba30",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1581,
+          "sha256": "9fce24067bfbe3cd3ab1b8d510d7242d3d5c1f2d2d4c2cae05cdbbc8ddd7216e",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 543252,
+          "sha256": "1d741da6e9b1be107a423e088d70276bf2d9b4e652fb30fb34fed86038cca5f4",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 277892,
+          "sha256": "dca7016a26c85632dadd2db7962aa973f0a6cc56fbe132edfa830c9d1b1b6087",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "versionId": "29",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "skill"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 23
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 214819,
+          "sha256": "bf09917f91481fe869b2a4914a418c5def1b48b7589bb608dd2975f46d1c70f6",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 839,
+          "sha256": "c03d67fca8a75ac09f2bcb872dd197f9af968f33cff3f4a64842c88a4c60e370",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 104662,
+          "sha256": "9ee21fc99283a6554f03f8578aecd1d8686e2c288df379c938c09894f720eff9",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 96897,
+          "sha256": "2942e573d9afc1468c735364a76df99ba39ed6a2b187885fc420f29251eddf4e",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "versionId": "28",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 15
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 237381,
+          "sha256": "fc11a26f51c02439c3f898027375a16e980ff0678c3a04ddd10d25487c72d417",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 681,
+          "sha256": "27c56d6a0abd1be047ddb193105a13647ced939a1561eec9d99fcd855ecc5991",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 115918,
+          "sha256": "a1db3f7a719a4eff820720981ef582f354a90c329ac501b315b105227a8e2211",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 84116,
+          "sha256": "b2ba199746b4111b2f96181b62735f83a2b9cfa1503e99521d88a0b808a00053",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "versionId": "27",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 27
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 236863,
+          "sha256": "bc0480f376ee0363fd3415f76d7336fff88c752c184fccf4baca3fe3de240ec3",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1142,
+          "sha256": "ddd989402ad180ac4755dd465e795d9d402f440872f513d3bd95b867dcdd71f5",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 120183,
+          "sha256": "0ba95a0008d5bbf8299512e38407b01f35af3bbf6b44fc37c85a3f156f5d3b1a",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 61052,
+          "sha256": "72b6380d55504f82ed594de8962eee5440bf220b398fb543cae801480ecafeda",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "versionId": "26",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 17
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 201780,
+          "sha256": "3a83824177887aaef3277933a55680f72fbace4ccd0fed8dbfb679a958cd6d92",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 607,
+          "sha256": "11d8b0fae48a1c19d21015d9457505743138cfbf68f1c4efdf4f7338bca8b43a",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 107106,
+          "sha256": "3ae861b4d2d85a56535e8520334cc4439cf8c12baf0040ce201ab4878d1d6374",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 58568,
+          "sha256": "f14a2c2b99235ca15ae5f345896dfb3442c1b34916c52e737769eb6a08508e06",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "versionId": "25",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 15
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 212454,
+          "sha256": "94e5501cec84ddd28972c198601563d8299dcf5866b2df508fe2c5a62d5470be",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 895,
+          "sha256": "5645ff1fd8af644872b98e85f162421463e7efda01eccb04fa85ec2ff90052c0",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 55182,
+          "sha256": "3fbcae24e1d4bafb6bf0098fd9e1e8221866ef50b7894fbef9e14ded1ba901d7",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 281394,
+          "sha256": "a9ebe776678a4dd25c616414dbde0c36e2fc77abcaa70d845be6473b9485dd80",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "versionId": "24",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 49
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 252287,
+          "sha256": "c4f7d195ec7c709c2d253e983860d16841b32ed2919c3daa5c7b537d48a72402",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 2308,
+          "sha256": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 519239,
+          "sha256": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 363704,
+          "sha256": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "versionId": "23",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 11
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 276536,
+          "sha256": "11a92dbe108290a0c5c4e5ba14461a485aabdc8459aad08bbf91588fb9e49ad1",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 639,
+          "sha256": "d2b9f32f89a675c83e6863d1b28e2ddeeb5bccae2398e9c1233684a82fd5fac3",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 15191,
+          "sha256": "77944f3146381c5e83b3ca04ab8d233a0ee2413b40b3bb8094464fbfbdbca4b1",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 168160,
+          "sha256": "4bb087f9f578e8610a3bd7f3e3f1c9fdb457d4db3a9c493079c672efa41b2229",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "versionId": "21",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 2
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 101686,
+          "sha256": "53c82086db18bd1e395bc135480f7614d98fe669c067a7b49663a2ed65309bb0",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 156,
+          "sha256": "938728e26d56e7d588effe60d0c8bc12cf6b8c9b206014f26b96aed95d7b1341",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 9486,
+          "sha256": "048e853e01d5a0d826c46f7b2c02ca9f5ed8a5b3d048b4ade74dd61f04f06e06",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 177733,
+          "sha256": "74aaa014fb2aa2468291e435dc361bdd884cb5d89ea3e4d16ef16a30ad40bd63",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "versionId": "22",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 6
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 113551,
+          "sha256": "ff37abc263f21f75bde00fc3fe33cee08727c3b0da6c117c5385659efc8f0627",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 391,
+          "sha256": "f90f4aa9c65649c32303b6473b9c60819a29e7b05976edd4482b4160b3e0864d",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 20871,
+          "sha256": "64a6e89957a7c98febd13abe6562f9b9b02e0ad3c38a3988e82952a89c2ed8e0",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 96344,
+          "sha256": "a06229657754d26b5888f5404c82f041d99db3cf66e4c88c951153a616ae9119",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "versionId": "20",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 16
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 168353,
+          "sha256": "54a515ab094a0a873d8ee85317bc74c183fce0f5f84332f177391526495174d8",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 906,
+          "sha256": "34df40167eb0c43d4c5e5eeca91985f65f290600379050e20e4e82ed5072d2d3",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 97343,
+          "sha256": "c345e26b112d21674b4f9480c4060aca8f71f0ad484f0470654223090807896d",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 63611,
+          "sha256": "2667f54d081025ff88864badfe66574c71ce5f694c0d499d5e8de0fece1e4305",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "versionId": "19",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "fx",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 32
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 229451,
+          "sha256": "6cafd576afbee0cf6add54cc5c73595eddc742e7782da8d264f7d24fb0b71826",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1699,
+          "sha256": "54fd3f8303e05228791b54eb614adcd0682f413028ab252526f3c67d3f80dcc1",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 96018,
+          "sha256": "8708d02fce8fcff8e33bd975fada93f3bced067777b149a5d0b1d8246da15221",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 217636,
+          "sha256": "2aa5eb28b9281f0c22b36d15dea1da6b642efcf335ce18598f316948b68cb341",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "versionId": "18",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 15
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 194915,
+          "sha256": "59565613caed412cd8b78ac40cf07ed4c57059e19001941c0233b0c6c9a169b3",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 843,
+          "sha256": "a4ceb3ced0713e3ddd3340c0ae112bc80c59d9047a0a9fda011efc4892f177e7",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 49565,
+          "sha256": "65a50b7f0361ede2fc9152989c381a634989c769c3ff75f04a0c895358caedfe",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 40837,
+          "sha256": "15d8592a7d7bd42f6aba6698cf1bc01d01955dce0a55b9e4ffbc502353c06b27",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "versionId": "17",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 14
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 156141,
+          "sha256": "73f387de9085ea512a64f134afbef3f5bf6436d91180ee1b7098b4dfaa1a78d5",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 755,
+          "sha256": "1c1dd3b3938d6d453e4f81c95c57caac8720bc324eb3430b3eee7e6af6cac7bc",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 150344,
+          "sha256": "1b7801200a919a333c18955ead4be1ceaca001bd55e6d6eeebc880de26e64c6f",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 293700,
+          "sha256": "72bd8c55a3dacbaae9262823fb508e5be83db63d05a335288d6f31162e512f68",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "versionId": "16",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_3"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 54
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 223601,
+          "sha256": "d1a6488b387217105b695d318853c4ebfa4fdc65b9a5726509459de14a4392c3",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 2401,
+          "sha256": "d4eb83777c904937de4de06ee54473bf6fe5b341e0286824dc8ab3d3deb772e6",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 1317316,
+          "sha256": "503eba9e0418dd47b364d339a630b23be14bbbe1772ea9b137ee68d807da84eb",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 257491,
+          "sha256": "e9b79ab40f822de7fe8893b9faf543bc07ff33ede8dde43946f36c1f614ec02e",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "versionId": "13",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 31
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 199957,
+          "sha256": "0bbb10edbd2df4dc30df1dee1fc51f400a289604909565752aa963289d45adbf",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1383,
+          "sha256": "dd6a72d90202aa76f03a45cecfa4e2e660ca58509a3fe32da05713a9baad8f4d",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 291055,
+          "sha256": "efa4a1aacb610f7cc14aa4f50f1724aeb9e0283ac2c31219d2c25cbd35fefdae",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 554652,
+          "sha256": "121b2dd9cd08cc4af9506d24e9efb3f80f077c9dca67b44d98664024951084f9",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "versionId": "12",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 25
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 176579,
+          "sha256": "dff55f84f3997e6b367a89ef846ba5adbfaab698ff995d2af1e79840509674db",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1129,
+          "sha256": "876063af09d5994efd1aa44be5cef2c1196eba1d928f7005a75be5dba120db82",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 210869,
+          "sha256": "56c7a8d4fba4c249c6252bb64a9d76c3e221048ed64fd2b3220aabf9ad6d6607",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 167196,
+          "sha256": "f9c35da688d41c2b6dd68969fd426a4bd362b9921eaa7538990f0e7f176ed4b7",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "versionId": "11",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 15
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 252755,
+          "sha256": "7f313832eb6383d2443d42fc5a4317e18eca26908bfbc03cbbe063a771673fdd",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 935,
+          "sha256": "ac9745cf94a80b75ccf888486ebcdba80d96cef511c2310f8c344cef44c1a253",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 51691,
+          "sha256": "c42789ac374446f1fc4a02d5d3c1683cb5ab376eb1dc7e7778d7f395a92d58ff",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 208721,
+          "sha256": "9e3acd0d517ca65991677463e1e703482cb9fb261a3914bf47ecbf505ff835ff",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "versionId": "10",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 40
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 233247,
+          "sha256": "2839c5ec45f14283c4e1e8c1164995cebd98df34dc317716af2ac3b3c90fc068",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 2394,
+          "sha256": "1fd4901cbb1ac6b168c8739234960c6504b2b90d830a999c7c0e7231fe0554cc",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 138182,
+          "sha256": "3547bbfdb61ef8bca4a29b86a4cbc36f3505c0a6af01ae8ce9d91c5a84b43b48",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 1983298,
+          "sha256": "32f904b0afb0f7a940e4f047145ad5bab4dfcc1476eb05a2e5cb7a9c1ee71038",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "versionId": "9",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 30
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 123092,
+          "sha256": "b6a4b073f2e73896640f365e2c9673166befd792005f0b852d8ee4fb00fd205b",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1182,
+          "sha256": "a21c423ad49920c4dc3fd1ba3dfe644118e009b8120849e14fc09f2b56776446",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 307430,
+          "sha256": "4e94ba7ab13d45a8f561fe455aa39633324e4ecbb4fef724f673f71ff7086bb7",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 340074,
+          "sha256": "ea160bbd81d921410c0a8abb25f4937de7cc2b0a6b01314a7b12e12f25bfef70",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "versionId": "8",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 19
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 120135,
+          "sha256": "d70d02497fd9449f7e3b695fd25912052d6445ef96b88071f45981828c77edd5",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 782,
+          "sha256": "2dc868c9afb200eb2e915f30a8fe9ebbbc27b82a88d3536c5164358672a98adb",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 389011,
+          "sha256": "2c85c454fc9eda0dc04f316c67cf92378388bfd670decdd682a4e0390dbc392a",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 255253,
+          "sha256": "0c6ceb28ea13b37d08882b042b851febed1a44edc5e530884c8ec750511971d5",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "versionId": "7",
+      "type": "role",
+      "categoryKeys": [
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "jifei",
+        "std",
+        "std2",
+        "walk"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 22
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 226843,
+          "sha256": "8d16ecb4a76313b1d71942a95dc29b09537a1b252bb0efb37d0a270a9995ed54",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1171,
+          "sha256": "a9a916c14a78e931e8df736c403e0c03ef79186cd4ae0c591e708a0507b86241",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 71426,
+          "sha256": "4d9af03f64ccda02407f064d811545f59058494fc85eeb52db53a4976ce942b2",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 884526,
+          "sha256": "a66809d961c81e7589ddfa43bdae506d5b54584184b6dcf580c9ee10af8ac4ec",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "versionId": "6",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 20
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 238546,
+          "sha256": "32fd5ca6d9ed44132f74ce73d90630cd677b7e62dfd03a8b0dd1ae485800a904",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 765,
+          "sha256": "eb981a35698c1e57e384b76214a73acbef3b41e970989d14ba254b5de9b20853",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 144343,
+          "sha256": "2c98b3974a276fb78767dc2c065b77c3481a4d346968d93330466ad3ab6e3d54",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 549454,
+          "sha256": "f046d8dfb87f7e28089c733061cb68cc6d762c0b05b20e0b24ebc46ee68339dd",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "versionId": "5",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 39
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 155782,
+          "sha256": "13853bb05e9489c8bb33fc895605cab0a788cdc2330f7526d84da45749a57e41",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1544,
+          "sha256": "c48a3c35adb45c28076648b042c9a0847b59438732d07aa02e67f2f420478f57",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 476584,
+          "sha256": "b5426f606f0f55b83f9b932bd6964414f0821ed4cb424ae27830b2b247ec7f97",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 343501,
+          "sha256": "39780090e816da3be412fc1fca6bce7b2e3666948ac44e5318cce80f662bc976",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "versionId": "4",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 33
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 140930,
+          "sha256": "1303598a14a17cea07520f704b8edc636c1fb7d2aa16e7cdeb55d807720cca53",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 1203,
+          "sha256": "4f925b58be9f5e4ccf8236483cbf7589285ccb9616534a246ff22d8865d109be",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 232817,
+          "sha256": "e10434ec5b8cf7de13a93507a5659e348d27406cebc48f9679c1cf851af7850d",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 335466,
+          "sha256": "e333cc043c41a82906eac3a9cf118041081c5f0449fcaf87cc189e76aeea507f",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "versionId": "3",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "idle",
+        "move",
+        "skill1",
+        "skill2"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 20
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 87675,
+          "sha256": "46278639c33db4e85c63cea80762cb5273bf4d2fa5298d4483325bb5cca2e10b",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 772,
+          "sha256": "8cc7ec05afbf2413340ce3cea7aa623f530edca1de6ccbdb0414efcc61fefba9",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 100366,
+          "sha256": "79146b75754a4a087b8f4f02dc4a37839bf1d2ed16810494bf026342393e3f46",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 133463,
+          "sha256": "20f705206caf6d414d44194112ee2512067ecf773d64d22b2cecf373ceecdc46",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "versionId": "2",
+      "type": "role",
+      "categoryKeys": [
+        "character",
+        "monster"
+      ],
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "skins": [
+        "default",
+        "skin_2"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 21
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 207093,
+          "sha256": "b09e03971b74a0aea645346564eb433e05e16f03a2931927f92ed9cbc6706f6f",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 954,
+          "sha256": "7e56ebc90b0c2c5d78c297d0bc84db022e2149c456e2ee25a0f8d87920579115",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 68266,
+          "sha256": "8e8c29de529f5788e7d262d0e12f39fa2e3aa5169fdd01c03ff410d99b34d6e4",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 714309,
+          "sha256": "51aade61d70b29e164f20ba60f99290a1b18a8bc628dd51a1470e3268fca13e9",
+          "upstreamSha256Verified": true
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "versionId": "1",
+      "type": "role",
+      "categoryKeys": [
+        "character"
+      ],
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "skins": [
+        "default"
+      ],
+      "atlases": [
+        {
+          "fileName": "skeleton.atlas",
+          "texturePages": [
+            "skeleton.png"
+          ],
+          "regionCount": 15
+        }
+      ],
+      "files": [
+        {
+          "fileName": "role.png",
+          "roles": [
+            "role"
+          ],
+          "bytes": 1214384,
+          "sha256": "1c9a3df83c01f32e87c503e8f062c2150005bd3e1a21df6aca21ed5c7626f012",
+          "upstreamSha256Verified": false
+        },
+        {
+          "fileName": "skeleton.atlas",
+          "roles": [
+            "atlas"
+          ],
+          "bytes": 922,
+          "sha256": "315689839c9454070315695a389698d9650dedc177bc6563a9bdb104407e2345",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.json",
+          "roles": [
+            "skeleton"
+          ],
+          "bytes": 48679,
+          "sha256": "2db812cccba4a705012b33df6a06d0434a9f43515f0518c73daf584ce33a9fe3",
+          "upstreamSha256Verified": true
+        },
+        {
+          "fileName": "skeleton.png",
+          "roles": [
+            "texture"
+          ],
+          "bytes": 913203,
+          "sha256": "1888a89f8dc7dd1b4cd20788e1c8eeae380f345b50e2040909bd17dad456e442",
+          "upstreamSha256Verified": true
+        }
+      ]
+    }
+  ]
+}

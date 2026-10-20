@@ -1,9 +1,10 @@
-import { app, BrowserWindow, Menu, dialog, ipcMain, shell, screen } from "electron";
+import { app, BrowserWindow, Menu, dialog, ipcMain, shell, screen, safeStorage } from "electron";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFile } from "node:fs/promises";
 import { writeFileSync, renameSync } from "node:fs";
 import { startDesktopServer } from "./server.mjs";
+import { createDesktopKeyProtection } from "./key-protection.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 let window, backend, allowClose = false, shutdown = false;
@@ -27,7 +28,8 @@ else {
   await app.whenReady();
   try {
     app.setAccessibilitySupportEnabled(true);
-    backend = await startDesktopServer({ clientRoot: join(root, "dist/client"), dataRoot: app.getPath("userData") });
+    backend = await startDesktopServer({ clientRoot: join(root, "dist/client"), dataRoot: app.getPath("userData"),
+      protection: createDesktopKeyProtection(safeStorage) });
     const area = screen.getPrimaryDisplay().workArea;
     let bounds = { width: Math.min(1440, area.width), height: Math.min(960, area.height) };
     try { bounds = { ...bounds, ...JSON.parse(await readFile(stateFile(), "utf8")) }; } catch { /* First launch. */ }
@@ -36,7 +38,7 @@ else {
     if (bounds.x !== undefined) bounds.x = Math.max(area.x, Math.min(bounds.x, area.x + area.width - bounds.width));
     if (bounds.y !== undefined) bounds.y = Math.max(area.y, Math.min(bounds.y, area.y + area.height - bounds.height));
     window = new BrowserWindow({ ...bounds, minWidth: 1100, minHeight: 740, show: false,
-      title: "AI Spine", backgroundColor: "#0b1119", titleBarStyle: "hiddenInset",
+      title: "iSpine", backgroundColor: "#0b1119", titleBarStyle: "hiddenInset",
       trafficLightPosition: { x: 18, y: 17 },
       webPreferences: { preload: join(root, "desktop/preload.cjs"), nodeIntegration: false,
         contextIsolation: true, sandbox: true, webSecurity: true, spellcheck: false } });
@@ -61,10 +63,10 @@ else {
       } catch { /* Window state must not prevent saving and closing a project. */ }
     });
     Menu.setApplicationMenu(Menu.buildFromTemplate([
-      { label: "AI Spine", submenu: [{ role: "about", label: "关于 AI Spine" }, { type: "separator" },
+      { label: "iSpine", submenu: [{ role: "about", label: "关于 iSpine" }, { type: "separator" },
         { label: "显示资源文件夹", click: () => { void shell.openPath(app.getPath("userData")); } },
-        { type: "separator" }, { role: "hide", label: "隐藏 AI Spine" }, { role: "hideOthers", label: "隐藏其他应用" },
-        { type: "separator" }, { role: "quit", label: "退出 AI Spine" }] },
+        { type: "separator" }, { role: "hide", label: "隐藏 iSpine" }, { role: "hideOthers", label: "隐藏其他应用" },
+        { type: "separator" }, { role: "quit", label: "退出 iSpine" }] },
       { label: "文件", submenu: [
         { label: "我的资源", accelerator: "CmdOrCtrl+1", click: () => action("library") },
         { label: "模板库", accelerator: "CmdOrCtrl+2", click: () => action("templates") },
@@ -75,13 +77,13 @@ else {
         { type: "separator" }, { role: "cut", label: "剪切" }, { role: "copy", label: "复制" },
         { role: "paste", label: "粘贴" }, { role: "selectAll", label: "全选" }] },
       { label: "窗口", submenu: [{ role: "minimize", label: "最小化" }, { role: "togglefullscreen", label: "进入全屏" }] },
-      { label: "帮助", submenu: [{ label: "使用引导", click: () => action("guide") }] },
+      { label: "帮助", submenu: [{ label: "AI 连接…", click: () => action("ai-connection") }, { label: "使用引导", click: () => action("guide") }] },
     ]));
     window.once("ready-to-show", () => { window.show(); window.focus(); });
     await window.loadURL(backend.origin);
   } catch (error) {
-    dialog.showErrorBox("AI Spine 无法启动", error.code === "EADDRINUSE"
-      ? "本机 4175 端口已被占用。请关闭另一份 AI Spine 后重新打开。" : error.message);
+    dialog.showErrorBox("iSpine 无法启动", error.code === "EADDRINUSE"
+      ? "本机 4175 端口已被占用。请关闭另一份 iSpine 后重新打开。" : error.message);
     await stop();
   }
 }

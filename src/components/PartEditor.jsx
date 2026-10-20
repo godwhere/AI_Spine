@@ -23,7 +23,7 @@ import {
   partClipping,
 } from "../core/pixels.js";
 
-export function PartEditor({ bundle, part, edit, onApply, onClose }) {
+export function PartEditor({ bundle, part, edit, onApply, onClose, externalError = "", displayName }) {
   const [draft, setDraft] = useState(edit),
     [reference, setReference] = useState(null),
     [image, setImage] = useState(null);
@@ -234,7 +234,7 @@ export function PartEditor({ bundle, part, edit, onApply, onClose }) {
         <header className="modal-header">
           <div>
             <h2 id="part-editor-title">调整细节</h2>
-            <p>{part.id}</p>
+            <p>{displayName || part.name || part.id}</p>
           </div>
           <button
             className="icon-button"
@@ -435,9 +435,9 @@ export function PartEditor({ bundle, part, edit, onApply, onClose }) {
                 素材可能超出原区域。输出保留模板的裁切范围和网格，请在动画中检查边缘。
               </p>
             )}
-            {error && (
+            {(error || externalError) && (
               <p className="error" role="alert">
-                {error}
+                {error || externalError}
               </p>
             )}
           </aside>

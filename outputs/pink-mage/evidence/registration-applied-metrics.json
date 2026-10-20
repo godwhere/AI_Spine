@@ -1,0 +1,2555 @@
+{
+  "actualFrozenJob": "0a2c8bf6-acf2-4e46-aa56-285088c0a867",
+  "coordinateJob": "7fc4efda-4ff7-41c3-8761-427842a63223",
+  "sourceFingerprint": "2afa6fb37d03b280fb3d2cad1e5ba1c44ec0373c9bf7500786ce01616756b7ef",
+  "metrics": {
+    "sourcePixels": 379580,
+    "assemblyPixels": 379580,
+    "alphaIoU": 1,
+    "missingAlphaPixels": 0,
+    "extraAlphaPixels": 0,
+    "maxAlphaError": 5,
+    "alphaMAE": 0.2668924331665039,
+    "maxPremultipliedColorError": 5.470588235294118,
+    "pixelMAE": 0.17230157291197634,
+    "before": {
+      "sourcePixels": 379580,
+      "assemblyPixels": 379580,
+      "alphaIoU": 1,
+      "missingAlphaPixels": 0,
+      "extraAlphaPixels": 0,
+      "maxAlphaError": 1,
+      "alphaMAE": 0.0022563934326171875,
+      "maxPremultipliedColorError": 1.4941176470588236,
+      "pixelMAE": 0.0017144969865387721
+    },
+    "after": {
+      "sourcePixels": 379580,
+      "assemblyPixels": 379580,
+      "alphaIoU": 1,
+      "missingAlphaPixels": 0,
+      "extraAlphaPixels": 0,
+      "maxAlphaError": 5,
+      "alphaMAE": 0.2668924331665039,
+      "maxPremultipliedColorError": 5.470588235294118,
+      "pixelMAE": 0.17230157291197634
+    },
+    "polygonPixels": 358543,
+    "fallbackPixels": 21037,
+    "boneFallbackPixels": 0,
+    "bboxFallbackPixels": 0,
+    "hiddenPixels": 165258,
+    "semiOpaqueThreshold": 250,
+    "hiddenEdgeInsetPixels": 1,
+    "ownedPixels": 379580,
+    "defaultVisiblePartIds": [
+      "backHair",
+      "leftThigh",
+      "leftShin",
+      "rightThigh",
+      "rightShin",
+      "leftFoot",
+      "rightFoot",
+      "leftCoat",
+      "rightCoat",
+      "torso",
+      "frontSkirt",
+      "leftUpperArm",
+      "leftForearm",
+      "rightUpperArm",
+      "staff",
+      "rightForearm",
+      "head",
+      "frontHair",
+      "part-0115f4a2-5a24-4812-a6e0-8cc437111cd2",
+      "part-a32fd778-0f39-4f7c-8d8e-1fdb80940d34",
+      "part-849bedea-33fb-455d-a20d-d0a856153ea7",
+      "part-d86701b0-b414-4bf0-af64-582bb475f13a",
+      "part-c650a718-e6f4-4bcb-bffc-950c202e4f8a",
+      "part-49ca4ac5-4970-46b3-be51-74c4ab98fa76",
+      "part-0b5a2176-89dc-4093-9c39-4d555f8c186b",
+      "part-feaa7392-362c-4df9-9b7e-32da0bc1863a",
+      "part-92e2d082-d7c9-4624-a3af-95302820ed9b",
+      "part-b130ba44-cba2-4ead-bdc4-209ff96fa64b",
+      "part-66012742-23d3-463a-8874-712480a49341",
+      "part-4decf4bd-eb30-4ac9-8516-9e4f42e3f106",
+      "part-15bab55d-488a-419b-bb68-bb979490d722"
+    ],
+    "partDiagnostics": [
+      {
+        "partId": "backHair",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 327,
+          "y": 161,
+          "width": 370,
+          "height": 586
+        },
+        "sourceAllAlphaBounds": {
+          "x": 327,
+          "y": 161,
+          "width": 370,
+          "height": 587
+        },
+        "aiAlphaBounds": {
+          "x": 30,
+          "y": 40,
+          "width": 296,
+          "height": 542,
+          "pixels": 88549
+        },
+        "aiAllAlphaBounds": {
+          "x": 15,
+          "y": 38,
+          "width": 319,
+          "height": 544,
+          "pixels": 93117
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 367,
+          "y": 116,
+          "width": 296,
+          "height": 542
+        },
+        "currentBounds": {
+          "x": 317,
+          "y": 65,
+          "width": 380,
+          "height": 693
+        },
+        "baseBounds": {
+          "x": 337,
+          "y": 76,
+          "width": 350,
+          "height": 682
+        },
+        "aiToSourceWidthRatio": 0.8,
+        "aiToSourceHeightRatio": 0.9249146757679181,
+        "aiCenterOffset": {
+          "x": 3,
+          "y": -67
+        }
+      },
+      {
+        "partId": "leftThigh",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 379,
+          "y": 631,
+          "width": 116,
+          "height": 148
+        },
+        "sourceAllAlphaBounds": {
+          "x": 379,
+          "y": 631,
+          "width": 116,
+          "height": 148
+        },
+        "aiAlphaBounds": {
+          "x": 18,
+          "y": 6,
+          "width": 94,
+          "height": 159,
+          "pixels": 6288
+        },
+        "aiAllAlphaBounds": {
+          "x": 17,
+          "y": 6,
+          "width": 95,
+          "height": 159,
+          "pixels": 6415
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 407,
+          "y": 637,
+          "width": 94,
+          "height": 159
+        },
+        "currentBounds": {
+          "x": 375,
+          "y": 631,
+          "width": 141,
+          "height": 171
+        },
+        "baseBounds": {
+          "x": 389,
+          "y": 631,
+          "width": 125,
+          "height": 171
+        },
+        "aiToSourceWidthRatio": 0.8103448275862069,
+        "aiToSourceHeightRatio": 1.0743243243243243,
+        "aiCenterOffset": {
+          "x": 17,
+          "y": 11.5
+        }
+      },
+      {
+        "partId": "leftShin",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 351,
+          "y": 756,
+          "width": 109,
+          "height": 97
+        },
+        "sourceAllAlphaBounds": {
+          "x": 350,
+          "y": 756,
+          "width": 110,
+          "height": 97
+        },
+        "aiAlphaBounds": {
+          "x": 10,
+          "y": 0,
+          "width": 90,
+          "height": 175,
+          "pixels": 6788
+        },
+        "aiAllAlphaBounds": {
+          "x": 4,
+          "y": 0,
+          "width": 96,
+          "height": 175,
+          "pixels": 6889
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 358,
+          "y": 757,
+          "width": 90,
+          "height": 175
+        },
+        "currentBounds": {
+          "x": 348,
+          "y": 756,
+          "width": 112,
+          "height": 179
+        },
+        "baseBounds": {
+          "x": 348,
+          "y": 757,
+          "width": 102,
+          "height": 178
+        },
+        "aiToSourceWidthRatio": 0.8256880733944955,
+        "aiToSourceHeightRatio": 1.8041237113402062,
+        "aiCenterOffset": {
+          "x": -2.5,
+          "y": 40
+        }
+      },
+      {
+        "partId": "rightThigh",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 561,
+          "y": 711,
+          "width": 53,
+          "height": 62
+        },
+        "sourceAllAlphaBounds": {
+          "x": 525,
+          "y": 711,
+          "width": 89,
+          "height": 96
+        },
+        "aiAlphaBounds": {
+          "x": 27,
+          "y": 20,
+          "width": 51,
+          "height": 140,
+          "pixels": 4740
+        },
+        "aiAllAlphaBounds": {
+          "x": 6,
+          "y": 19,
+          "width": 81,
+          "height": 141,
+          "pixels": 4815
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 556,
+          "y": 656,
+          "width": 51,
+          "height": 140
+        },
+        "currentBounds": {
+          "x": 525,
+          "y": 635,
+          "width": 93,
+          "height": 172
+        },
+        "baseBounds": {
+          "x": 529,
+          "y": 636,
+          "width": 89,
+          "height": 169
+        },
+        "aiToSourceWidthRatio": 0.9622641509433962,
+        "aiToSourceHeightRatio": 2.2580645161290325,
+        "aiCenterOffset": {
+          "x": -6,
+          "y": -16
+        }
+      },
+      {
+        "partId": "rightShin",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 529,
+          "y": 763,
+          "width": 78,
+          "height": 89
+        },
+        "sourceAllAlphaBounds": {
+          "x": 527,
+          "y": 762,
+          "width": 83,
+          "height": 90
+        },
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 0,
+          "width": 47,
+          "height": 175,
+          "pixels": 5477
+        },
+        "aiAllAlphaBounds": {
+          "x": 16,
+          "y": 0,
+          "width": 48,
+          "height": 175,
+          "pixels": 5545
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 546,
+          "y": 761,
+          "width": 47,
+          "height": 175
+        },
+        "currentBounds": {
+          "x": 527,
+          "y": 761,
+          "width": 83,
+          "height": 175
+        },
+        "baseBounds": {
+          "x": 530,
+          "y": 761,
+          "width": 80,
+          "height": 175
+        },
+        "aiToSourceWidthRatio": 0.6025641025641025,
+        "aiToSourceHeightRatio": 1.9662921348314606,
+        "aiCenterOffset": {
+          "x": 1.5,
+          "y": 41
+        }
+      },
+      {
+        "partId": "leftFoot",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 319,
+          "y": 835,
+          "width": 98,
+          "height": 147
+        },
+        "sourceAllAlphaBounds": {
+          "x": 217,
+          "y": 775,
+          "width": 202,
+          "height": 209
+        },
+        "aiAlphaBounds": {
+          "x": 14,
+          "y": 15,
+          "width": 82,
+          "height": 131,
+          "pixels": 6181
+        },
+        "aiAllAlphaBounds": {
+          "x": 13,
+          "y": 15,
+          "width": 83,
+          "height": 131,
+          "pixels": 6254
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 331,
+          "y": 848,
+          "width": 82,
+          "height": 131
+        },
+        "currentBounds": {
+          "x": 217,
+          "y": 775,
+          "width": 205,
+          "height": 209
+        },
+        "baseBounds": {
+          "x": 317,
+          "y": 833,
+          "width": 105,
+          "height": 149
+        },
+        "aiToSourceWidthRatio": 0.8367346938775511,
+        "aiToSourceHeightRatio": 0.891156462585034,
+        "aiCenterOffset": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "partId": "rightFoot",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 532,
+          "y": 837,
+          "width": 120,
+          "height": 137
+        },
+        "sourceAllAlphaBounds": {
+          "x": 530,
+          "y": 837,
+          "width": 168,
+          "height": 141
+        },
+        "aiAlphaBounds": {
+          "x": 5,
+          "y": 15,
+          "width": 115,
+          "height": 128,
+          "pixels": 8560
+        },
+        "aiAllAlphaBounds": {
+          "x": 5,
+          "y": 15,
+          "width": 115,
+          "height": 128,
+          "pixels": 8692
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 533,
+          "y": 852,
+          "width": 115,
+          "height": 128
+        },
+        "currentBounds": {
+          "x": 528,
+          "y": 837,
+          "width": 170,
+          "height": 145
+        },
+        "baseBounds": {
+          "x": 528,
+          "y": 837,
+          "width": 127,
+          "height": 145
+        },
+        "aiToSourceWidthRatio": 0.9583333333333334,
+        "aiToSourceHeightRatio": 0.9343065693430657,
+        "aiCenterOffset": {
+          "x": -1.5,
+          "y": 10.5
+        }
+      },
+      {
+        "partId": "leftCoat",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 274,
+          "y": 499,
+          "width": 231,
+          "height": 337
+        },
+        "sourceAllAlphaBounds": {
+          "x": 271,
+          "y": 499,
+          "width": 234,
+          "height": 339
+        },
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 3,
+          "width": 212,
+          "height": 327,
+          "pixels": 17113
+        },
+        "aiAllAlphaBounds": {
+          "x": 15,
+          "y": 3,
+          "width": 220,
+          "height": 328,
+          "pixels": 17734
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 287,
+          "y": 497,
+          "width": 212,
+          "height": 327
+        },
+        "currentBounds": {
+          "x": 271,
+          "y": 490,
+          "width": 251,
+          "height": 348
+        },
+        "baseBounds": {
+          "x": 271,
+          "y": 494,
+          "width": 241,
+          "height": 344
+        },
+        "aiToSourceWidthRatio": 0.9177489177489178,
+        "aiToSourceHeightRatio": 0.9703264094955489,
+        "aiCenterOffset": {
+          "x": 3.5,
+          "y": -7
+        }
+      },
+      {
+        "partId": "rightCoat",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 580,
+          "y": 501,
+          "width": 132,
+          "height": 338
+        },
+        "sourceAllAlphaBounds": {
+          "x": 580,
+          "y": 501,
+          "width": 134,
+          "height": 338
+        },
+        "aiAlphaBounds": {
+          "x": 6,
+          "y": 7,
+          "width": 134,
+          "height": 320,
+          "pixels": 11126
+        },
+        "aiAllAlphaBounds": {
+          "x": 5,
+          "y": 6,
+          "width": 135,
+          "height": 322,
+          "pixels": 11403
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 579,
+          "y": 506,
+          "width": 134,
+          "height": 320
+        },
+        "currentBounds": {
+          "x": 561,
+          "y": 493,
+          "width": 155,
+          "height": 346
+        },
+        "baseBounds": {
+          "x": 573,
+          "y": 499,
+          "width": 143,
+          "height": 340
+        },
+        "aiToSourceWidthRatio": 1.0151515151515151,
+        "aiToSourceHeightRatio": 0.9467455621301775,
+        "aiCenterOffset": {
+          "x": 0,
+          "y": -4
+        }
+      },
+      {
+        "partId": "torso",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 390,
+          "y": 321,
+          "width": 205,
+          "height": 193
+        },
+        "sourceAllAlphaBounds": {
+          "x": 390,
+          "y": 321,
+          "width": 205,
+          "height": 193
+        },
+        "aiAlphaBounds": {
+          "x": 41,
+          "y": 5,
+          "width": 134,
+          "height": 188,
+          "pixels": 17305
+        },
+        "aiAllAlphaBounds": {
+          "x": 41,
+          "y": 4,
+          "width": 134,
+          "height": 190,
+          "pixels": 17502
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 440,
+          "y": 327,
+          "width": 134,
+          "height": 188
+        },
+        "currentBounds": {
+          "x": 390,
+          "y": 321,
+          "width": 214,
+          "height": 209
+        },
+        "baseBounds": {
+          "x": 399,
+          "y": 322,
+          "width": 205,
+          "height": 199
+        },
+        "aiToSourceWidthRatio": 0.6536585365853659,
+        "aiToSourceHeightRatio": 0.9740932642487047,
+        "aiCenterOffset": {
+          "x": 14.5,
+          "y": 3.5
+        }
+      },
+      {
+        "partId": "frontSkirt",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 451,
+          "y": 513,
+          "width": 183,
+          "height": 259
+        },
+        "sourceAllAlphaBounds": {
+          "x": 451,
+          "y": 513,
+          "width": 183,
+          "height": 259
+        },
+        "aiAlphaBounds": {
+          "x": 5,
+          "y": 3,
+          "width": 179,
+          "height": 243,
+          "pixels": 27449
+        },
+        "aiAllAlphaBounds": {
+          "x": 5,
+          "y": 2,
+          "width": 180,
+          "height": 251,
+          "pixels": 27755
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 453,
+          "y": 513,
+          "width": 179,
+          "height": 243
+        },
+        "currentBounds": {
+          "x": 448,
+          "y": 510,
+          "width": 190,
+          "height": 263
+        },
+        "baseBounds": {
+          "x": 448,
+          "y": 510,
+          "width": 190,
+          "height": 263
+        },
+        "aiToSourceWidthRatio": 0.9781420765027322,
+        "aiToSourceHeightRatio": 0.9382239382239382,
+        "aiCenterOffset": {
+          "x": 0,
+          "y": -8
+        }
+      },
+      {
+        "partId": "leftUpperArm",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 363,
+          "y": 354,
+          "width": 79,
+          "height": 125
+        },
+        "sourceAllAlphaBounds": {
+          "x": 363,
+          "y": 354,
+          "width": 79,
+          "height": 125
+        },
+        "aiAlphaBounds": {
+          "x": 14,
+          "y": 15,
+          "width": 67,
+          "height": 134,
+          "pixels": 4233
+        },
+        "aiAllAlphaBounds": {
+          "x": 14,
+          "y": 8,
+          "width": 67,
+          "height": 141,
+          "pixels": 4305
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 373,
+          "y": 368,
+          "width": 67,
+          "height": 134
+        },
+        "currentBounds": {
+          "x": 359,
+          "y": 353,
+          "width": 92,
+          "height": 161
+        },
+        "baseBounds": {
+          "x": 359,
+          "y": 353,
+          "width": 91,
+          "height": 161
+        },
+        "aiToSourceWidthRatio": 0.8481012658227848,
+        "aiToSourceHeightRatio": 1.072,
+        "aiCenterOffset": {
+          "x": 4,
+          "y": 18.5
+        }
+      },
+      {
+        "partId": "leftForearm",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 280,
+          "y": 461,
+          "width": 148,
+          "height": 191
+        },
+        "sourceAllAlphaBounds": {
+          "x": 71,
+          "y": 345,
+          "width": 357,
+          "height": 307
+        },
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 7,
+          "width": 118,
+          "height": 177,
+          "pixels": 10212
+        },
+        "aiAllAlphaBounds": {
+          "x": 15,
+          "y": 7,
+          "width": 119,
+          "height": 177,
+          "pixels": 10327
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 294,
+          "y": 468,
+          "width": 118,
+          "height": 177
+        },
+        "currentBounds": {
+          "x": 71,
+          "y": 345,
+          "width": 357,
+          "height": 308
+        },
+        "baseBounds": {
+          "x": 278,
+          "y": 461,
+          "width": 136,
+          "height": 192
+        },
+        "aiToSourceWidthRatio": 0.7972972972972973,
+        "aiToSourceHeightRatio": 0.9267015706806283,
+        "aiCenterOffset": {
+          "x": -1,
+          "y": 0
+        }
+      },
+      {
+        "partId": "rightUpperArm",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 562,
+          "y": 381,
+          "width": 87,
+          "height": 100
+        },
+        "sourceAllAlphaBounds": {
+          "x": 562,
+          "y": 381,
+          "width": 87,
+          "height": 100
+        },
+        "aiAlphaBounds": {
+          "x": 18,
+          "y": 14,
+          "width": 70,
+          "height": 92,
+          "pixels": 2473
+        },
+        "aiAllAlphaBounds": {
+          "x": 18,
+          "y": 14,
+          "width": 70,
+          "height": 92,
+          "pixels": 2525
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 581,
+          "y": 394,
+          "width": 70,
+          "height": 92
+        },
+        "currentBounds": {
+          "x": 562,
+          "y": 380,
+          "width": 108,
+          "height": 134
+        },
+        "baseBounds": {
+          "x": 563,
+          "y": 380,
+          "width": 107,
+          "height": 132
+        },
+        "aiToSourceWidthRatio": 0.8045977011494253,
+        "aiToSourceHeightRatio": 0.92,
+        "aiCenterOffset": {
+          "x": 10.5,
+          "y": 9
+        }
+      },
+      {
+        "partId": "staff",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 634,
+          "y": 308,
+          "width": 215,
+          "height": 604
+        },
+        "sourceAllAlphaBounds": {
+          "x": 633,
+          "y": 307,
+          "width": 336,
+          "height": 656
+        },
+        "aiAlphaBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 610,
+          "pixels": 13011
+        },
+        "aiAllAlphaBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 612,
+          "pixels": 13806
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 634,
+          "y": 300,
+          "width": 220,
+          "height": 610
+        },
+        "currentBounds": {
+          "x": 633,
+          "y": 300,
+          "width": 336,
+          "height": 663
+        },
+        "baseBounds": {
+          "x": 634,
+          "y": 300,
+          "width": 220,
+          "height": 617
+        },
+        "aiToSourceWidthRatio": 1.0232558139534884,
+        "aiToSourceHeightRatio": 1.009933774834437,
+        "aiCenterOffset": {
+          "x": 2.5,
+          "y": -5
+        }
+      },
+      {
+        "partId": "rightForearm",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 600,
+          "y": 448,
+          "width": 144,
+          "height": 158
+        },
+        "sourceAllAlphaBounds": {
+          "x": 600,
+          "y": 448,
+          "width": 144,
+          "height": 158
+        },
+        "aiAlphaBounds": {
+          "x": 7,
+          "y": 6,
+          "width": 134,
+          "height": 139,
+          "pixels": 9582
+        },
+        "aiAllAlphaBounds": {
+          "x": 6,
+          "y": 6,
+          "width": 136,
+          "height": 149,
+          "pixels": 9712
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 628,
+          "y": 453,
+          "width": 134,
+          "height": 139
+        },
+        "currentBounds": {
+          "x": 600,
+          "y": 447,
+          "width": 169,
+          "height": 162
+        },
+        "baseBounds": {
+          "x": 621,
+          "y": 447,
+          "width": 148,
+          "height": 162
+        },
+        "aiToSourceWidthRatio": 0.9305555555555556,
+        "aiToSourceHeightRatio": 0.879746835443038,
+        "aiCenterOffset": {
+          "x": 23,
+          "y": -4.5
+        }
+      },
+      {
+        "partId": "head",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 373,
+          "y": 185,
+          "width": 231,
+          "height": 153
+        },
+        "sourceAllAlphaBounds": {
+          "x": 373,
+          "y": 185,
+          "width": 231,
+          "height": 153
+        },
+        "aiAlphaBounds": {
+          "x": 34,
+          "y": 20,
+          "width": 216,
+          "height": 144,
+          "pixels": 21938
+        },
+        "aiAllAlphaBounds": {
+          "x": 33,
+          "y": 17,
+          "width": 228,
+          "height": 149,
+          "pixels": 22205
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 392,
+          "y": 187,
+          "width": 216,
+          "height": 144
+        },
+        "currentBounds": {
+          "x": 358,
+          "y": 167,
+          "width": 307,
+          "height": 184
+        },
+        "baseBounds": {
+          "x": 358,
+          "y": 167,
+          "width": 307,
+          "height": 184
+        },
+        "aiToSourceWidthRatio": 0.935064935064935,
+        "aiToSourceHeightRatio": 0.9411764705882353,
+        "aiCenterOffset": {
+          "x": 11.5,
+          "y": -2.5
+        }
+      },
+      {
+        "partId": "frontHair",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 396,
+          "y": 180,
+          "width": 72,
+          "height": 275
+        },
+        "sourceAllAlphaBounds": {
+          "x": 396,
+          "y": 180,
+          "width": 72,
+          "height": 275
+        },
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 0,
+          "width": 74,
+          "height": 271,
+          "pixels": 9090
+        },
+        "aiAllAlphaBounds": {
+          "x": 12,
+          "y": 0,
+          "width": 80,
+          "height": 272,
+          "pixels": 9378
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 403,
+          "y": 182,
+          "width": 74,
+          "height": 271
+        },
+        "currentBounds": {
+          "x": 387,
+          "y": 180,
+          "width": 110,
+          "height": 281
+        },
+        "baseBounds": {
+          "x": 387,
+          "y": 182,
+          "width": 110,
+          "height": 279
+        },
+        "aiToSourceWidthRatio": 1.0277777777777777,
+        "aiToSourceHeightRatio": 0.9854545454545455,
+        "aiCenterOffset": {
+          "x": 8,
+          "y": 0
+        }
+      },
+      {
+        "partId": "part-0115f4a2-5a24-4812-a6e0-8cc437111cd2",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 139,
+          "y": 236,
+          "width": 275,
+          "height": 509
+        },
+        "sourceAllAlphaBounds": {
+          "x": 137,
+          "y": 236,
+          "width": 277,
+          "height": 522
+        },
+        "aiAlphaBounds": {
+          "x": 2,
+          "y": 0,
+          "width": 286,
+          "height": 511,
+          "pixels": 71666
+        },
+        "aiAllAlphaBounds": {
+          "x": 0,
+          "y": 0,
+          "width": 290,
+          "height": 512,
+          "pixels": 73814
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 139,
+          "y": 240,
+          "width": 286,
+          "height": 511
+        },
+        "currentBounds": {
+          "x": 137,
+          "y": 236,
+          "width": 290,
+          "height": 522
+        },
+        "baseBounds": {
+          "x": 137,
+          "y": 240,
+          "width": 290,
+          "height": 518
+        },
+        "aiToSourceWidthRatio": 1.04,
+        "aiToSourceHeightRatio": 1.0039292730844793,
+        "aiCenterOffset": {
+          "x": 5.5,
+          "y": 5
+        }
+      },
+      {
+        "partId": "part-a32fd778-0f39-4f7c-8d8e-1fdb80940d34",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 608,
+          "y": 307,
+          "width": 279,
+          "height": 445
+        },
+        "sourceAllAlphaBounds": {
+          "x": 608,
+          "y": 307,
+          "width": 282,
+          "height": 450
+        },
+        "aiAlphaBounds": {
+          "x": 3,
+          "y": 17,
+          "width": 278,
+          "height": 466,
+          "pixels": 43075
+        },
+        "aiAllAlphaBounds": {
+          "x": 0,
+          "y": 16,
+          "width": 282,
+          "height": 482,
+          "pixels": 45204
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 603,
+          "y": 265,
+          "width": 278,
+          "height": 466
+        },
+        "currentBounds": {
+          "x": 597,
+          "y": 245,
+          "width": 293,
+          "height": 513
+        },
+        "baseBounds": {
+          "x": 600,
+          "y": 248,
+          "width": 290,
+          "height": 510
+        },
+        "aiToSourceWidthRatio": 0.996415770609319,
+        "aiToSourceHeightRatio": 1.047191011235955,
+        "aiCenterOffset": {
+          "x": -5.5,
+          "y": -31.5
+        }
+      },
+      {
+        "partId": "part-849bedea-33fb-455d-a20d-d0a856153ea7",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 234,
+          "y": 566,
+          "width": 104,
+          "height": 67
+        },
+        "sourceAllAlphaBounds": {
+          "x": 68,
+          "y": 464,
+          "width": 270,
+          "height": 313
+        },
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 8,
+          "width": 86,
+          "height": 57,
+          "pixels": 2248
+        },
+        "aiAllAlphaBounds": {
+          "x": 16,
+          "y": 8,
+          "width": 86,
+          "height": 57,
+          "pixels": 2291
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 250,
+          "y": 582,
+          "width": 86,
+          "height": 57
+        },
+        "currentBounds": {
+          "x": 68,
+          "y": 464,
+          "width": 276,
+          "height": 313
+        },
+        "baseBounds": {
+          "x": 234,
+          "y": 574,
+          "width": 110,
+          "height": 78
+        },
+        "aiToSourceWidthRatio": 0.8269230769230769,
+        "aiToSourceHeightRatio": 0.8507462686567164,
+        "aiCenterOffset": {
+          "x": 7,
+          "y": 11
+        }
+      },
+      {
+        "partId": "part-d86701b0-b414-4bf0-af64-582bb475f13a",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 729,
+          "y": 466,
+          "width": 77,
+          "height": 61
+        },
+        "sourceAllAlphaBounds": {
+          "x": 729,
+          "y": 466,
+          "width": 79,
+          "height": 63
+        },
+        "aiAlphaBounds": {
+          "x": 9,
+          "y": 20,
+          "width": 64,
+          "height": 51,
+          "pixels": 2223
+        },
+        "aiAllAlphaBounds": {
+          "x": 7,
+          "y": 14,
+          "width": 67,
+          "height": 57,
+          "pixels": 2269
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 744,
+          "y": 486,
+          "width": 64,
+          "height": 51
+        },
+        "currentBounds": {
+          "x": 729,
+          "y": 466,
+          "width": 85,
+          "height": 94
+        },
+        "baseBounds": {
+          "x": 735,
+          "y": 466,
+          "width": 79,
+          "height": 94
+        },
+        "aiToSourceWidthRatio": 0.8311688311688312,
+        "aiToSourceHeightRatio": 0.8360655737704918,
+        "aiCenterOffset": {
+          "x": 8.5,
+          "y": 15
+        }
+      },
+      {
+        "partId": "part-c650a718-e6f4-4bcb-bffc-950c202e4f8a",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 337,
+          "y": 42,
+          "width": 324,
+          "height": 283
+        },
+        "sourceAllAlphaBounds": {
+          "x": 63,
+          "y": 40,
+          "width": 663,
+          "height": 285
+        },
+        "aiAlphaBounds": {
+          "x": 5,
+          "y": 4,
+          "width": 323,
+          "height": 226,
+          "pixels": 46278
+        },
+        "aiAllAlphaBounds": {
+          "x": 5,
+          "y": 3,
+          "width": 324,
+          "height": 228,
+          "pixels": 47194
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 338,
+          "y": 43,
+          "width": 323,
+          "height": 226
+        },
+        "currentBounds": {
+          "x": 63,
+          "y": 39,
+          "width": 663,
+          "height": 286
+        },
+        "baseBounds": {
+          "x": 333,
+          "y": 39,
+          "width": 332,
+          "height": 232
+        },
+        "aiToSourceWidthRatio": 0.9969135802469136,
+        "aiToSourceHeightRatio": 0.7985865724381626,
+        "aiCenterOffset": {
+          "x": 0.5,
+          "y": -27.5
+        }
+      },
+      {
+        "partId": "part-49ca4ac5-4970-46b3-be51-74c4ab98fa76",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 560,
+          "y": 175,
+          "width": 80,
+          "height": 263
+        },
+        "sourceAllAlphaBounds": {
+          "x": 560,
+          "y": 175,
+          "width": 80,
+          "height": 263
+        },
+        "aiAlphaBounds": {
+          "x": 19,
+          "y": 10,
+          "width": 68,
+          "height": 247,
+          "pixels": 6527
+        },
+        "aiAllAlphaBounds": {
+          "x": 19,
+          "y": 10,
+          "width": 68,
+          "height": 247,
+          "pixels": 6719
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 552,
+          "y": 192,
+          "width": 68,
+          "height": 247
+        },
+        "currentBounds": {
+          "x": 533,
+          "y": 174,
+          "width": 107,
+          "height": 287
+        },
+        "baseBounds": {
+          "x": 533,
+          "y": 182,
+          "width": 100,
+          "height": 279
+        },
+        "aiToSourceWidthRatio": 0.85,
+        "aiToSourceHeightRatio": 0.9391634980988594,
+        "aiCenterOffset": {
+          "x": -14,
+          "y": 9
+        }
+      },
+      {
+        "partId": "part-0b5a2176-89dc-4093-9c39-4d555f8c186b",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 806,
+          "y": 83,
+          "width": 151,
+          "height": 245
+        },
+        "sourceAllAlphaBounds": {
+          "x": 745,
+          "y": 81,
+          "width": 214,
+          "height": 249
+        },
+        "aiAlphaBounds": {
+          "x": 14,
+          "y": 1,
+          "width": 144,
+          "height": 251,
+          "pixels": 16211
+        },
+        "aiAllAlphaBounds": {
+          "x": 4,
+          "y": 0,
+          "width": 154,
+          "height": 252,
+          "pixels": 16683
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 809,
+          "y": 83,
+          "width": 144,
+          "height": 251
+        },
+        "currentBounds": {
+          "x": 745,
+          "y": 81,
+          "width": 216,
+          "height": 261
+        },
+        "baseBounds": {
+          "x": 795,
+          "y": 82,
+          "width": 166,
+          "height": 260
+        },
+        "aiToSourceWidthRatio": 0.9536423841059603,
+        "aiToSourceHeightRatio": 1.0244897959183674,
+        "aiCenterOffset": {
+          "x": -0.5,
+          "y": 3
+        }
+      },
+      {
+        "partId": "part-feaa7392-362c-4df9-9b7e-32da0bc1863a",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 441,
+          "y": 489,
+          "width": 154,
+          "height": 75
+        },
+        "sourceAllAlphaBounds": {
+          "x": 441,
+          "y": 489,
+          "width": 154,
+          "height": 75
+        },
+        "aiAlphaBounds": {
+          "x": 31,
+          "y": 3,
+          "width": 122,
+          "height": 64,
+          "pixels": 1881
+        },
+        "aiAllAlphaBounds": {
+          "x": 30,
+          "y": 2,
+          "width": 123,
+          "height": 66,
+          "pixels": 1963
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 457,
+          "y": 495,
+          "width": 122,
+          "height": 64
+        },
+        "currentBounds": {
+          "x": 426,
+          "y": 489,
+          "width": 180,
+          "height": 77
+        },
+        "baseBounds": {
+          "x": 426,
+          "y": 492,
+          "width": 180,
+          "height": 74
+        },
+        "aiToSourceWidthRatio": 0.7922077922077922,
+        "aiToSourceHeightRatio": 0.8533333333333334,
+        "aiCenterOffset": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      {
+        "partId": "part-92e2d082-d7c9-4624-a3af-95302820ed9b",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 437,
+          "y": 205,
+          "width": 65,
+          "height": 45
+        },
+        "sourceAllAlphaBounds": {
+          "x": 437,
+          "y": 205,
+          "width": 65,
+          "height": 45
+        },
+        "aiAlphaBounds": {
+          "x": 3,
+          "y": 11,
+          "width": 61,
+          "height": 40,
+          "pixels": 1445
+        },
+        "aiAllAlphaBounds": {
+          "x": 3,
+          "y": 10,
+          "width": 64,
+          "height": 41,
+          "pixels": 1525
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 435,
+          "y": 209,
+          "width": 61,
+          "height": 40
+        },
+        "currentBounds": {
+          "x": 432,
+          "y": 198,
+          "width": 78,
+          "height": 64
+        },
+        "baseBounds": {
+          "x": 432,
+          "y": 198,
+          "width": 78,
+          "height": 64
+        },
+        "aiToSourceWidthRatio": 0.9384615384615385,
+        "aiToSourceHeightRatio": 0.8888888888888888,
+        "aiCenterOffset": {
+          "x": -4,
+          "y": 1.5
+        }
+      },
+      {
+        "partId": "part-f35a3042-e355-41f0-89d6-80fc4ec045ba",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 10,
+          "y": 22,
+          "width": 56,
+          "height": 19,
+          "pixels": 300
+        },
+        "aiAllAlphaBounds": {
+          "x": 9,
+          "y": 21,
+          "width": 57,
+          "height": 27,
+          "pixels": 346
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 442,
+          "y": 220,
+          "width": 56,
+          "height": 19
+        },
+        "currentBounds": {
+          "x": 425,
+          "y": 190,
+          "width": 91,
+          "height": 76
+        },
+        "baseBounds": {
+          "x": 432,
+          "y": 198,
+          "width": 78,
+          "height": 64
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-cb76c0ce-860c-43d8-9ce6-bfab99b3cc37",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 7,
+          "y": 12,
+          "width": 58,
+          "height": 34,
+          "pixels": 1169
+        },
+        "aiAllAlphaBounds": {
+          "x": 7,
+          "y": 11,
+          "width": 58,
+          "height": 36,
+          "pixels": 1219
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 439,
+          "y": 210,
+          "width": 58,
+          "height": 34
+        },
+        "currentBounds": {
+          "x": 429,
+          "y": 195,
+          "width": 88,
+          "height": 72
+        },
+        "baseBounds": {
+          "x": 432,
+          "y": 198,
+          "width": 78,
+          "height": 64
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-8671b59c-0441-470e-a908-e40e2dd25fc9",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 13,
+          "y": 22,
+          "width": 52,
+          "height": 22,
+          "pixels": 312
+        },
+        "aiAllAlphaBounds": {
+          "x": 13,
+          "y": 21,
+          "width": 52,
+          "height": 28,
+          "pixels": 344
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 445,
+          "y": 220,
+          "width": 52,
+          "height": 22
+        },
+        "currentBounds": {
+          "x": 420,
+          "y": 186,
+          "width": 99,
+          "height": 81
+        },
+        "baseBounds": {
+          "x": 432,
+          "y": 198,
+          "width": 78,
+          "height": 64
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-b130ba44-cba2-4ead-bdc4-209ff96fa64b",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 541,
+          "y": 245,
+          "width": 56,
+          "height": 38
+        },
+        "sourceAllAlphaBounds": {
+          "x": 541,
+          "y": 245,
+          "width": 56,
+          "height": 38
+        },
+        "aiAlphaBounds": {
+          "x": 19,
+          "y": 9,
+          "width": 45,
+          "height": 28,
+          "pixels": 903
+        },
+        "aiAllAlphaBounds": {
+          "x": 19,
+          "y": 8,
+          "width": 45,
+          "height": 30,
+          "pixels": 932
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 551,
+          "y": 251,
+          "width": 45,
+          "height": 28
+        },
+        "currentBounds": {
+          "x": 532,
+          "y": 242,
+          "width": 78,
+          "height": 48
+        },
+        "baseBounds": {
+          "x": 532,
+          "y": 242,
+          "width": 78,
+          "height": 48
+        },
+        "aiToSourceWidthRatio": 0.8035714285714286,
+        "aiToSourceHeightRatio": 0.7368421052631579,
+        "aiCenterOffset": {
+          "x": 4.5,
+          "y": 1
+        }
+      },
+      {
+        "partId": "part-d0f9f427-f102-44cd-988a-9a0993a14727",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 13,
+          "y": 17,
+          "width": 47,
+          "height": 16,
+          "pixels": 219
+        },
+        "aiAllAlphaBounds": {
+          "x": 13,
+          "y": 13,
+          "width": 57,
+          "height": 27,
+          "pixels": 267
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 545,
+          "y": 259,
+          "width": 47,
+          "height": 16
+        },
+        "currentBounds": {
+          "x": 525,
+          "y": 234,
+          "width": 94,
+          "height": 58
+        },
+        "baseBounds": {
+          "x": 532,
+          "y": 242,
+          "width": 78,
+          "height": 48
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-ae813168-0d84-455a-8d5b-dfbd4a40e9e9",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 15,
+          "y": 12,
+          "width": 45,
+          "height": 24,
+          "pixels": 677
+        },
+        "aiAllAlphaBounds": {
+          "x": 14,
+          "y": 11,
+          "width": 46,
+          "height": 26,
+          "pixels": 713
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 547,
+          "y": 254,
+          "width": 45,
+          "height": 24
+        },
+        "currentBounds": {
+          "x": 522,
+          "y": 234,
+          "width": 98,
+          "height": 60
+        },
+        "baseBounds": {
+          "x": 532,
+          "y": 242,
+          "width": 78,
+          "height": 48
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-4a5dfbcd-7534-42d1-867b-cf5af5a59b5d",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 24,
+          "y": 17,
+          "width": 34,
+          "height": 13,
+          "pixels": 187
+        },
+        "aiAllAlphaBounds": {
+          "x": 24,
+          "y": 17,
+          "width": 34,
+          "height": 14,
+          "pixels": 217
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 556,
+          "y": 259,
+          "width": 34,
+          "height": 13
+        },
+        "currentBounds": {
+          "x": 501,
+          "y": 225,
+          "width": 129,
+          "height": 80
+        },
+        "baseBounds": {
+          "x": 532,
+          "y": 242,
+          "width": 78,
+          "height": 48
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-66012742-23d3-463a-8874-712480a49341",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 453,
+          "y": 182,
+          "width": 72,
+          "height": 24
+        },
+        "sourceAllAlphaBounds": {
+          "x": 453,
+          "y": 182,
+          "width": 72,
+          "height": 24
+        },
+        "aiAlphaBounds": {
+          "x": 20,
+          "y": 8,
+          "width": 41,
+          "height": 12,
+          "pixels": 62
+        },
+        "aiAllAlphaBounds": {
+          "x": 19,
+          "y": 8,
+          "width": 44,
+          "height": 12,
+          "pixels": 71
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 458,
+          "y": 189,
+          "width": 41,
+          "height": 12
+        },
+        "currentBounds": {
+          "x": 438,
+          "y": 180,
+          "width": 89,
+          "height": 32
+        },
+        "baseBounds": {
+          "x": 438,
+          "y": 181,
+          "width": 78,
+          "height": 31
+        },
+        "aiToSourceWidthRatio": 0.5694444444444444,
+        "aiToSourceHeightRatio": 0.5,
+        "aiCenterOffset": {
+          "x": -10.5,
+          "y": 1
+        }
+      },
+      {
+        "partId": "part-756d1584-9ebb-4007-94c4-6b8b3fbd699b",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 26,
+          "y": 11,
+          "width": 27,
+          "height": 7,
+          "pixels": 23
+        },
+        "aiAllAlphaBounds": {
+          "x": 26,
+          "y": 11,
+          "width": 28,
+          "height": 8,
+          "pixels": 30
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 464,
+          "y": 192,
+          "width": 27,
+          "height": 7
+        },
+        "currentBounds": {
+          "x": 383,
+          "y": 155,
+          "width": 209,
+          "height": 83
+        },
+        "baseBounds": {
+          "x": 438,
+          "y": 181,
+          "width": 78,
+          "height": 31
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-54116146-b89c-41c5-a584-d30a3d70b6b2",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 25,
+          "y": 10,
+          "width": 29,
+          "height": 9,
+          "pixels": 28
+        },
+        "aiAllAlphaBounds": {
+          "x": 24,
+          "y": 10,
+          "width": 30,
+          "height": 10,
+          "pixels": 32
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 463,
+          "y": 191,
+          "width": 29,
+          "height": 9
+        },
+        "currentBounds": {
+          "x": 390,
+          "y": 158,
+          "width": 195,
+          "height": 77
+        },
+        "baseBounds": {
+          "x": 438,
+          "y": 181,
+          "width": 78,
+          "height": 31
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-4decf4bd-eb30-4ac9-8516-9e4f42e3f106",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 565,
+          "y": 219,
+          "width": 38,
+          "height": 22
+        },
+        "sourceAllAlphaBounds": {
+          "x": 565,
+          "y": 219,
+          "width": 38,
+          "height": 22
+        },
+        "aiAlphaBounds": {
+          "x": 22,
+          "y": 13,
+          "width": 32,
+          "height": 9,
+          "pixels": 40
+        },
+        "aiAllAlphaBounds": {
+          "x": 14,
+          "y": 3,
+          "width": 59,
+          "height": 28,
+          "pixels": 58
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 565,
+          "y": 218,
+          "width": 32,
+          "height": 9
+        },
+        "currentBounds": {
+          "x": 543,
+          "y": 205,
+          "width": 75,
+          "height": 37
+        },
+        "baseBounds": {
+          "x": 543,
+          "y": 205,
+          "width": 75,
+          "height": 37
+        },
+        "aiToSourceWidthRatio": 0.8421052631578947,
+        "aiToSourceHeightRatio": 0.4090909090909091,
+        "aiCenterOffset": {
+          "x": -3,
+          "y": -7.5
+        }
+      },
+      {
+        "partId": "part-99a77a35-b881-4522-9173-f2a77f730ea5",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 22,
+          "y": 13,
+          "width": 39,
+          "height": 8,
+          "pixels": 56
+        },
+        "aiAllAlphaBounds": {
+          "x": 22,
+          "y": 13,
+          "width": 39,
+          "height": 8,
+          "pixels": 66
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 565,
+          "y": 218,
+          "width": 39,
+          "height": 8
+        },
+        "currentBounds": {
+          "x": 543,
+          "y": 205,
+          "width": 75,
+          "height": 45
+        },
+        "baseBounds": {
+          "x": 543,
+          "y": 205,
+          "width": 75,
+          "height": 37
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-d46a9ac5-e2de-48d5-bc8e-6a18d0a87727",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 25,
+          "y": 15,
+          "width": 22,
+          "height": 6,
+          "pixels": 28
+        },
+        "aiAllAlphaBounds": {
+          "x": 25,
+          "y": 14,
+          "width": 24,
+          "height": 8,
+          "pixels": 34
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 568,
+          "y": 220,
+          "width": 22,
+          "height": 6
+        },
+        "currentBounds": {
+          "x": 521,
+          "y": 198,
+          "width": 131,
+          "height": 65
+        },
+        "baseBounds": {
+          "x": 543,
+          "y": 205,
+          "width": 75,
+          "height": 37
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-15bab55d-488a-419b-bb68-bb979490d722",
+        "defaultVisible": true,
+        "sourceVisibleBounds": {
+          "x": 492,
+          "y": 287,
+          "width": 29,
+          "height": 14
+        },
+        "sourceAllAlphaBounds": {
+          "x": 492,
+          "y": 287,
+          "width": 29,
+          "height": 14
+        },
+        "aiAlphaBounds": {
+          "x": 13,
+          "y": 13,
+          "width": 26,
+          "height": 9,
+          "pixels": 56
+        },
+        "aiAllAlphaBounds": {
+          "x": 13,
+          "y": 13,
+          "width": 27,
+          "height": 9,
+          "pixels": 61
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 493,
+          "y": 291,
+          "width": 26,
+          "height": 9
+        },
+        "currentBounds": {
+          "x": 480,
+          "y": 278,
+          "width": 54,
+          "height": 35
+        },
+        "baseBounds": {
+          "x": 480,
+          "y": 278,
+          "width": 54,
+          "height": 35
+        },
+        "aiToSourceWidthRatio": 0.896551724137931,
+        "aiToSourceHeightRatio": 0.6428571428571429,
+        "aiCenterOffset": {
+          "x": -0.5,
+          "y": 1.5
+        }
+      },
+      {
+        "partId": "part-818f5b9b-819f-4cd9-819b-c83dffa39700",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 17,
+          "y": 13,
+          "width": 18,
+          "height": 9,
+          "pixels": 81
+        },
+        "aiAllAlphaBounds": {
+          "x": 17,
+          "y": 13,
+          "width": 18,
+          "height": 9,
+          "pixels": 83
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 497,
+          "y": 291,
+          "width": 18,
+          "height": 9
+        },
+        "currentBounds": {
+          "x": 464,
+          "y": 265,
+          "width": 88,
+          "height": 58
+        },
+        "baseBounds": {
+          "x": 480,
+          "y": 278,
+          "width": 54,
+          "height": 35
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-4a9229f4-669a-4249-b793-d9321a2824e6",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 20,
+          "y": 14,
+          "width": 15,
+          "height": 7,
+          "pixels": 64
+        },
+        "aiAllAlphaBounds": {
+          "x": 20,
+          "y": 13,
+          "width": 15,
+          "height": 8,
+          "pixels": 66
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 500,
+          "y": 292,
+          "width": 15,
+          "height": 7
+        },
+        "currentBounds": {
+          "x": 453,
+          "y": 260,
+          "width": 105,
+          "height": 68
+        },
+        "baseBounds": {
+          "x": 480,
+          "y": 278,
+          "width": 54,
+          "height": 35
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      },
+      {
+        "partId": "part-26056e9f-8f37-4f1b-914a-205484696fed",
+        "defaultVisible": false,
+        "sourceVisibleBounds": null,
+        "sourceAllAlphaBounds": null,
+        "aiAlphaBounds": {
+          "x": 16,
+          "y": 12,
+          "width": 20,
+          "height": 10,
+          "pixels": 111
+        },
+        "aiAllAlphaBounds": {
+          "x": 16,
+          "y": 12,
+          "width": 21,
+          "height": 10,
+          "pixels": 118
+        },
+        "aiGlobalAlphaBounds": {
+          "x": 496,
+          "y": 290,
+          "width": 20,
+          "height": 10
+        },
+        "currentBounds": {
+          "x": 468,
+          "y": 269,
+          "width": 80,
+          "height": 52
+        },
+        "baseBounds": {
+          "x": 480,
+          "y": 278,
+          "width": 54,
+          "height": 35
+        },
+        "aiToSourceWidthRatio": null,
+        "aiToSourceHeightRatio": null,
+        "aiCenterOffset": null
+      }
+    ],
+    "alignedVariants": [
+      {
+        "partId": "part-f35a3042-e355-41f0-89d6-80fc4ec045ba",
+        "neutralPartId": "part-92e2d082-d7c9-4624-a3af-95302820ed9b",
+        "scale": 1.1607142857142858,
+        "center": {
+          "x": 469.5,
+          "y": 227.5
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 437,
+          "y": 205,
+          "width": 65,
+          "height": 45
+        },
+        "alignedWidth": 65,
+        "alignedHeight": 22.05357142857143
+      },
+      {
+        "partId": "part-cb76c0ce-860c-43d8-9ce6-bfab99b3cc37",
+        "neutralPartId": "part-92e2d082-d7c9-4624-a3af-95302820ed9b",
+        "scale": 1.1206896551724137,
+        "center": {
+          "x": 469.5,
+          "y": 227.5
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 437,
+          "y": 205,
+          "width": 65,
+          "height": 45
+        },
+        "alignedWidth": 65,
+        "alignedHeight": 38.103448275862064
+      },
+      {
+        "partId": "part-8671b59c-0441-470e-a908-e40e2dd25fc9",
+        "neutralPartId": "part-92e2d082-d7c9-4624-a3af-95302820ed9b",
+        "scale": 1.25,
+        "center": {
+          "x": 469.5,
+          "y": 227.5
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 437,
+          "y": 205,
+          "width": 65,
+          "height": 45
+        },
+        "alignedWidth": 65,
+        "alignedHeight": 27.5
+      },
+      {
+        "partId": "part-d0f9f427-f102-44cd-988a-9a0993a14727",
+        "neutralPartId": "part-b130ba44-cba2-4ead-bdc4-209ff96fa64b",
+        "scale": 1.1914893617021276,
+        "center": {
+          "x": 569,
+          "y": 264
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 541,
+          "y": 245,
+          "width": 56,
+          "height": 38
+        },
+        "alignedWidth": 56,
+        "alignedHeight": 19.06382978723404
+      },
+      {
+        "partId": "part-ae813168-0d84-455a-8d5b-dfbd4a40e9e9",
+        "neutralPartId": "part-b130ba44-cba2-4ead-bdc4-209ff96fa64b",
+        "scale": 1.2444444444444445,
+        "center": {
+          "x": 569,
+          "y": 264
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 541,
+          "y": 245,
+          "width": 56,
+          "height": 38
+        },
+        "alignedWidth": 56,
+        "alignedHeight": 29.866666666666667
+      },
+      {
+        "partId": "part-4a5dfbcd-7534-42d1-867b-cf5af5a59b5d",
+        "neutralPartId": "part-b130ba44-cba2-4ead-bdc4-209ff96fa64b",
+        "scale": 1.6470588235294117,
+        "center": {
+          "x": 569,
+          "y": 264
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 541,
+          "y": 245,
+          "width": 56,
+          "height": 38
+        },
+        "alignedWidth": 56,
+        "alignedHeight": 21.41176470588235
+      },
+      {
+        "partId": "part-756d1584-9ebb-4007-94c4-6b8b3fbd699b",
+        "neutralPartId": "part-66012742-23d3-463a-8874-712480a49341",
+        "scale": 2.6666666666666665,
+        "center": {
+          "x": 489,
+          "y": 194
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 453,
+          "y": 182,
+          "width": 72,
+          "height": 24
+        },
+        "alignedWidth": 72,
+        "alignedHeight": 18.666666666666664
+      },
+      {
+        "partId": "part-54116146-b89c-41c5-a584-d30a3d70b6b2",
+        "neutralPartId": "part-66012742-23d3-463a-8874-712480a49341",
+        "scale": 2.4827586206896552,
+        "center": {
+          "x": 489,
+          "y": 194
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 453,
+          "y": 182,
+          "width": 72,
+          "height": 24
+        },
+        "alignedWidth": 72,
+        "alignedHeight": 22.344827586206897
+      },
+      {
+        "partId": "part-99a77a35-b881-4522-9173-f2a77f730ea5",
+        "neutralPartId": "part-4decf4bd-eb30-4ac9-8516-9e4f42e3f106",
+        "scale": 0.9743589743589743,
+        "center": {
+          "x": 584,
+          "y": 230
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 565,
+          "y": 219,
+          "width": 38,
+          "height": 22
+        },
+        "alignedWidth": 38,
+        "alignedHeight": 7.794871794871795
+      },
+      {
+        "partId": "part-d46a9ac5-e2de-48d5-bc8e-6a18d0a87727",
+        "neutralPartId": "part-4decf4bd-eb30-4ac9-8516-9e4f42e3f106",
+        "scale": 1.7272727272727273,
+        "center": {
+          "x": 584,
+          "y": 230
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 565,
+          "y": 219,
+          "width": 38,
+          "height": 22
+        },
+        "alignedWidth": 38,
+        "alignedHeight": 10.363636363636363
+      },
+      {
+        "partId": "part-818f5b9b-819f-4cd9-819b-c83dffa39700",
+        "neutralPartId": "part-15bab55d-488a-419b-bb68-bb979490d722",
+        "scale": 1.6111111111111112,
+        "center": {
+          "x": 506.5,
+          "y": 294
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 492,
+          "y": 287,
+          "width": 29,
+          "height": 14
+        },
+        "alignedWidth": 29,
+        "alignedHeight": 14.5
+      },
+      {
+        "partId": "part-4a9229f4-669a-4249-b793-d9321a2824e6",
+        "neutralPartId": "part-15bab55d-488a-419b-bb68-bb979490d722",
+        "scale": 1.9333333333333333,
+        "center": {
+          "x": 506.5,
+          "y": 294
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 492,
+          "y": 287,
+          "width": 29,
+          "height": 14
+        },
+        "alignedWidth": 29,
+        "alignedHeight": 13.533333333333333
+      },
+      {
+        "partId": "part-26056e9f-8f37-4f1b-914a-205484696fed",
+        "neutralPartId": "part-15bab55d-488a-419b-bb68-bb979490d722",
+        "scale": 1.45,
+        "center": {
+          "x": 506.5,
+          "y": 294
+        },
+        "aspectRatioPreserved": true,
+        "sourceNeutralBounds": {
+          "x": 492,
+          "y": 287,
+          "width": 29,
+          "height": 14
+        },
+        "alignedWidth": 29,
+        "alignedHeight": 14.5
+      }
+    ],
+    "pendingVariants": [],
+    "compositor": "cpu-canvas-source-over",
+    "weakPixelOwnerPolicy": "nearest-rigid",
+    "weakPixelAssignments": 1153
+  },
+  "scope": "CPU setup-pose artwork diagnostics from the actual UI-applied frozen document; no library changes or image generation.",
+  "states": [
+    {
+      "state": "default",
+      "blueIrisPixels": 718,
+      "sourceIrisPixels": 724,
+      "transparentPixelsAtSourceIris": 0
+    },
+    {
+      "state": "closed",
+      "blueIrisPixels": 0,
+      "sourceIrisPixels": 724,
+      "transparentPixelsAtSourceIris": 0
+    },
+    {
+      "state": "hurt",
+      "blueIrisPixels": 0,
+      "sourceIrisPixels": 724,
+      "transparentPixelsAtSourceIris": 0
+    },
+    {
+      "state": "chant",
+      "blueIrisPixels": 718,
+      "sourceIrisPixels": 724,
+      "transparentPixelsAtSourceIris": 0
+    }
+  ]
+}

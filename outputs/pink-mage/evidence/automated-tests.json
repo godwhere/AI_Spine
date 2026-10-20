@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-10-19T19:52:54.850Z",
+  "suites": [
+    {
+      "suite": "core",
+      "tests": 214,
+      "pass": 214,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "egg",
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "sites",
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "desktop",
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "skipped": 0
+    }
+  ],
+  "total": 236,
+  "productionBuild": true,
+  "signatureVerified": true
+}

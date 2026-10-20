@@ -1,0 +1,20 @@
+						10 button 我的资源 3
+						13 button 模板库 39
+						16 button 回收站 0
+					21 button AI 连接：Codex 账号已连接
+						24 text Codex 账号已连接
+						25 image
+						46 toggle button Description: 预览 粉发法师 · Q版, Value: 1
+							47 text 粉发法师 · Q版
+							48 text 自建骨架 · 44 个部件
+						51 toggle button Description: 预览 晨星剑士 · 新骨架, Value: 0
+							52 text 晨星剑士 · 新骨架
+						56 toggle button Description: 预览 齐天悟空 · 金甲猴王, Value: 0
+							57 text 齐天悟空 · 金甲猴王
+							65 text 粉发法师 · Q版
+							85 heading 粉发法师 · Q版, Value: 2
+								86 text 粉发法师 · Q版
+								95 container 骨骼
+									96 text 骨骼
+								97 text 25
+	125 iSpine
