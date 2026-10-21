@@ -1,0 +1,57 @@
+{
+  "plan": "docs/architecture-execution-plan.md#p5-\u5206\u79bb\u56fe\u7247\u6570\u636e\u4e0e\u7248\u672c\u5316\u4fdd\u5b58",
+  "steps": [
+    1,
+    2
+  ],
+  "status": "implemented and isolated acceptance passed; full phase incomplete",
+  "requirements": [
+    {
+      "requirement": "Frontend asset repository and capability selection",
+      "status": "proven-in-isolation",
+      "evidence": [
+        "src/core/workspace.js",
+        "src/infrastructure/workspace-v2.js",
+        "tests/workspace-v2-composition.test.mjs"
+      ]
+    },
+    {
+      "requirement": "Stable mutations and recovery without losing newer edits",
+      "status": "proven-in-isolation",
+      "evidence": [
+        "src/application/save-coordinator.js",
+        "tests/workspace-v2-client.test.mjs",
+        "tests/browser/workspace-v2.spec.mjs"
+      ]
+    },
+    {
+      "requirement": "Unchanged materials do not upload on rename, calibration or keyframe edits",
+      "status": "proven-in-isolation",
+      "evidence": [
+        "tests/workspace-v2-client.test.mjs",
+        "tests/browser/workspace-v2.spec.mjs"
+      ]
+    },
+    {
+      "requirement": "Actual browser resource/draft/template and export/reimport workflows",
+      "status": "proven-in-isolation",
+      "evidence": [
+        "tests/browser/application.spec.mjs",
+        "tests/browser/exports.spec.mjs",
+        "tests/browser/saving.spec.mjs",
+        "tests/browser/sessions.spec.mjs",
+        "downloads.json"
+      ]
+    },
+    {
+      "requirement": "Legacy behavior preserved and no fallback storage branch",
+      "status": "proven-in-isolation",
+      "evidence": [
+        "tests/browser-services.test.mjs",
+        "tests/workspace-v2-composition.test.mjs",
+        "verification.json"
+      ]
+    }
+  ],
+  "fullPhaseComplete": false
+}

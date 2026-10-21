@@ -3,14 +3,18 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
-import { getMotionStudyFingerprints, diagnoseMotionStudyFrame, proposeMotionStudyGapOwnership, proposeCalibratedBaseMotionMapping,
-  acceptMotionStudyOwnershipCandidate, prepareMotionStudyFrames, applyMotionStudy, motionStudyMappingFingerprint } from "../src/core/rig-motion-studies.js";
-import { inferMotionGapOwners, rasterMotionOwners } from "../src/core/rig-motion-ownership.js";
-import { registerRigSourcePixels } from "../src/core/rig-registration.js";
-import { rigCompositionFingerprint } from "../src/core/rig-client.js";
-import { buildRigFiles, compileRigSkeleton } from "../src/core/rig-authoring.js";
-import { attachRigAuthoring, readRigAuthoring, imageDataBytes } from "../src/core/rig-project.js";
-import { parseBundle, exportPackage, unpackZip } from "../src/core/archive.js";
+import { getMotionStudyFingerprints, motionStudyMappingFingerprint } from "../shared/domain/motion-study.mjs";
+import { diagnoseMotionStudyFrame, proposeMotionStudyGapOwnership, proposeCalibratedBaseMotionMapping, acceptMotionStudyOwnershipCandidate, prepareMotionStudyFrames, applyMotionStudy } from "../src/infrastructure/motion-study-images.js";
+import { inferMotionGapOwners, rasterMotionOwners } from "../engine/images/motion-ownership.js";
+import { registerRigSourcePixels } from "../src/infrastructure/rig-registration.js";
+import { rigCompositionFingerprint } from "../shared/domain/generation.mjs";
+import { buildRigFiles } from "../src/infrastructure/rig-authoring.js";
+import { compileRigSkeleton } from "../engine/rig/compile.js";
+import { attachRigAuthoring, readRigAuthoring } from "../engine/archive/rig-project.js";
+import { imageDataBytes } from "../shared/codec/image-data.mjs";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
 import { pixelEnv } from "./helpers.mjs";
 
 const rect=(x,y,w,h)=>[{x,y},{x:x+w,y},{x:x+w,y:y+h},{x,y:y+h}];

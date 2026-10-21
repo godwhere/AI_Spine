@@ -1,0 +1,2073 @@
+{
+  "templates": {
+    "1": {
+      "fingerprint": "482001b3aa800ac2297bbbc3e1981fb2df6716bd9438389ddfd0cac79cb9c291",
+      "bones": 15,
+      "regions": 15,
+      "animations": [
+        {
+          "name": "unit_attack",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "unit_damage",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_dead",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_no_shadow",
+          "duration": 0
+        },
+        {
+          "name": "unit_p_skill",
+          "duration": 1
+        },
+        {
+          "name": "unit_run",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill_hit",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "unit_wait",
+          "duration": 0.3333333134651184
+        },
+        {
+          "name": "unit_walk",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_win",
+          "duration": 0.5
+        }
+      ],
+      "bounds": [
+        {
+          "x": -62.67094020822098,
+          "y": -29.664610893424406,
+          "width": 335.75325034064264,
+          "height": 220.50512689676106
+        }
+      ]
+    },
+    "2": {
+      "fingerprint": "7d46f212f68052353533870b664342de9a9b8633cc1f8a1aab196eebba6b5652",
+      "bones": 26,
+      "regions": 21,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.8333333730697632
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -477.8023846580154,
+          "y": -144.48183611619606,
+          "width": 1168.577371413373,
+          "height": 1293.5936738302685
+        },
+        {
+          "x": -477.8023846580154,
+          "y": -144.48183611619606,
+          "width": 1168.577371413373,
+          "height": 1293.5936738302685
+        }
+      ]
+    },
+    "3": {
+      "fingerprint": "817f5e49aa1327cb59ccb01307bdaff543a9bc998e559fb8182c08ebf6de5db2",
+      "bones": 31,
+      "regions": 20,
+      "animations": [
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1
+        },
+        {
+          "name": "skill1",
+          "duration": 1.1666666269302368
+        },
+        {
+          "name": "skill2",
+          "duration": 1.5
+        }
+      ],
+      "bounds": [
+        {
+          "x": -106.60276280524819,
+          "y": -13.533753759633884,
+          "width": 312.290251281267,
+          "height": 333.642808358983
+        }
+      ]
+    },
+    "4": {
+      "fingerprint": "fe018202b9e777f2393768bc499a02ac78f7654a9464ffb493febb09cd67c8c8",
+      "bones": 67,
+      "regions": 33,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.4333332777023315
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 0.5666666030883789
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.4666666984558105
+        },
+        {
+          "name": "skill1",
+          "duration": 2
+        },
+        {
+          "name": "skill2",
+          "duration": 3
+        }
+      ],
+      "bounds": [
+        {
+          "x": -472.7606262950129,
+          "y": -213.31166042999982,
+          "width": 945.5212489279164,
+          "height": 786.6233208599996
+        }
+      ]
+    },
+    "5": {
+      "fingerprint": "bc57203cdb7dc243b28385cf20a0d6feffbbbf77e63221142fbe47fd4bb44c0e",
+      "bones": 73,
+      "regions": 39,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 0.5333333015441895
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill1",
+          "duration": 2
+        },
+        {
+          "name": "skill2",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -213.53787268748343,
+          "y": -19.409021612543384,
+          "width": 514.7688321107635,
+          "height": 345.98744881272177
+        }
+      ]
+    },
+    "6": {
+      "fingerprint": "f764b184b749990ba0c84121f07b051b6be012715dfeed73b5aed8b0698a5420",
+      "bones": 31,
+      "regions": 20,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.7333333492279053
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 0.6000000238418579
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "skill1",
+          "duration": 2.4000000953674316
+        },
+        {
+          "name": "skill2",
+          "duration": 1.8666666746139526
+        }
+      ],
+      "bounds": [
+        {
+          "x": -348.0473607431479,
+          "y": -192.7036965241805,
+          "width": 851.9048209681391,
+          "height": 713.7921293882871
+        }
+      ]
+    },
+    "7": {
+      "fingerprint": "9fe27ff8ae320f2d0a5d5919d07fbe4308a288db1ab3e3720ed45fe563f3e96f",
+      "bones": 59,
+      "regions": 22,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1
+        },
+        {
+          "name": "jifei",
+          "duration": 0.2666667103767395
+        },
+        {
+          "name": "std",
+          "duration": 1
+        },
+        {
+          "name": "std2",
+          "duration": 1
+        },
+        {
+          "name": "walk",
+          "duration": 1
+        }
+      ],
+      "bounds": [
+        {
+          "x": -308.2994734967654,
+          "y": -178.07670305605768,
+          "width": 792.5694500734587,
+          "height": 712.2814200982704
+        }
+      ]
+    },
+    "8": {
+      "fingerprint": "f54abaf40b8a36117567a1b7f0aba8f2417f7f54add4548c3e59e3a5d6daa4c5",
+      "bones": 39,
+      "regions": 19,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 2.3333330154418945
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 2.6666669845581055
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.5
+        },
+        {
+          "name": "skill1",
+          "duration": 3.0999999046325684
+        },
+        {
+          "name": "skill2",
+          "duration": 2.766666889190674
+        }
+      ],
+      "bounds": [
+        {
+          "x": -224.7106509120164,
+          "y": -119.00000765768404,
+          "width": 426.1950177371096,
+          "height": 579.3500339874275
+        }
+      ]
+    },
+    "9": {
+      "fingerprint": "4344585a2571cce53bafe1c746e92c5dbcdb3a2844c9a26bb2c0c3be42aff738",
+      "bones": 69,
+      "regions": 30,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.399999976158142
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.600000023841858
+        },
+        {
+          "name": "skill1",
+          "duration": 2.5333330631256104
+        },
+        {
+          "name": "skill2",
+          "duration": 2.5999999046325684
+        }
+      ],
+      "bounds": [
+        {
+          "x": -435.7076876854678,
+          "y": -296.6099981557207,
+          "width": 1518.5175208962517,
+          "height": 1478.1456594793547
+        }
+      ]
+    },
+    "10": {
+      "fingerprint": "c2c9292fe3c2f333c0501867260cf6fa5313b74546a15fed5e7ac6872c67d6de",
+      "bones": 53,
+      "regions": 40,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1
+        },
+        {
+          "name": "jifei",
+          "duration": 0.2666667103767395
+        },
+        {
+          "name": "std",
+          "duration": 1
+        },
+        {
+          "name": "std2",
+          "duration": 1
+        },
+        {
+          "name": "walk",
+          "duration": 1
+        }
+      ],
+      "bounds": [
+        {
+          "x": -217.62981636775385,
+          "y": -33.38879810405712,
+          "width": 655.1076010324364,
+          "height": 477.63922859360326
+        }
+      ]
+    },
+    "11": {
+      "fingerprint": "b41b1bc9a8e3e828a128efea9d3e929aaaa3972a6407d6cf0c02b065d28a774a",
+      "bones": 15,
+      "regions": 15,
+      "animations": [
+        {
+          "name": "unit_attack",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "unit_damage",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_dead",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_no_shadow",
+          "duration": 0
+        },
+        {
+          "name": "unit_p_skill",
+          "duration": 1
+        },
+        {
+          "name": "unit_run",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill_hit",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "unit_wait",
+          "duration": 0.3333333134651184
+        },
+        {
+          "name": "unit_walk",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_win",
+          "duration": 0.5
+        }
+      ],
+      "bounds": [
+        {
+          "x": -117.06711364242874,
+          "y": -29.49392185611357,
+          "width": 384.6620926564568,
+          "height": 225.7037883384156
+        }
+      ]
+    },
+    "12": {
+      "fingerprint": "5c537fa4039aa37326577e8c6c13106265884ba036267b4cf693cfccedb09b8b",
+      "bones": 65,
+      "regions": 25,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2.1666669845581055
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -691.1468622900419,
+          "y": -106.35987954548449,
+          "width": 1398.0526201890839,
+          "height": 999.0883037307415
+        },
+        {
+          "x": -691.1468622900419,
+          "y": -106.35987954548449,
+          "width": 1398.0526201890839,
+          "height": 999.0883037307415
+        }
+      ]
+    },
+    "13": {
+      "fingerprint": "39632a07e3bb22dd6d00021115b267bb614a54a829161149f58da8c1599e3abb",
+      "bones": 116,
+      "regions": 31,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "reborn",
+          "duration": 1
+        },
+        {
+          "name": "skill",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -698.9067836828955,
+          "y": -161.1172272020101,
+          "width": 1287.4989501969021,
+          "height": 820.7460354465327
+        },
+        {
+          "x": -698.9067836828955,
+          "y": -161.1172272020101,
+          "width": 1287.4989501969021,
+          "height": 820.7460354465327
+        }
+      ]
+    },
+    "14": {
+      "fingerprint": "dd40358daef7152fea2201541d1a9023693f339e24af3f62f8498be9eec47e61",
+      "bones": 377,
+      "regions": 54,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.7999999523162842
+        },
+        {
+          "name": "die",
+          "duration": 1.100000023841858
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 1.7999999523162842
+        },
+        {
+          "name": "reborn",
+          "duration": 0.5
+        },
+        {
+          "name": "skill",
+          "duration": 2.5
+        },
+        {
+          "name": "stun",
+          "duration": 1.600000023841858
+        }
+      ],
+      "bounds": [
+        {
+          "x": -419.9895881655277,
+          "y": -17.933498179014176,
+          "width": 1192.562940343626,
+          "height": 692.0968443598479
+        },
+        {
+          "x": -419.9895881655277,
+          "y": -17.933498179014176,
+          "width": 1192.562940343626,
+          "height": 692.0968443598479
+        }
+      ]
+    },
+    "15": {
+      "fingerprint": "931b029b9283c1a0ead06feb74b7cd8ab5b42c72df62bc47311a81d9a73bac0a",
+      "bones": 45,
+      "regions": 14,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 1.8333333730697632
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -749.4804975790274,
+          "y": -184.89786023874063,
+          "width": 1699.9676523839953,
+          "height": 977.6229124700208
+        },
+        {
+          "x": -749.4804975790274,
+          "y": -184.89786023874063,
+          "width": 1699.9676523839953,
+          "height": 977.6229124700208
+        }
+      ]
+    },
+    "16": {
+      "fingerprint": "5fc9eced3274cb6982cd2ba789331e818d72111be01d0d003a583274683f9649",
+      "bones": 15,
+      "regions": 15,
+      "animations": [
+        {
+          "name": "unit_attack",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "unit_damage",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_dead",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_no_shadow",
+          "duration": 0
+        },
+        {
+          "name": "unit_p_skill",
+          "duration": 1
+        },
+        {
+          "name": "unit_run",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill_hit",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "unit_wait",
+          "duration": 0.3333333134651184
+        },
+        {
+          "name": "unit_walk",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_win",
+          "duration": 0.5
+        }
+      ],
+      "bounds": [
+        {
+          "x": -96.27303954815662,
+          "y": -33.502260905462194,
+          "width": 369.50306620519586,
+          "height": 235.8039602919941
+        }
+      ]
+    },
+    "17": {
+      "fingerprint": "82033ea61d47f1d96431f821163a70d1fc540fa7047df8ea71baa2345b2667ff",
+      "bones": 41,
+      "regions": 32,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "die",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "fx",
+          "duration": 0
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "skill",
+          "duration": 1.8666666746139526
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -707.3955994467525,
+          "y": -567.4702001271737,
+          "width": 1567.9767433430093,
+          "height": 1601.473047942742
+        },
+        {
+          "x": -707.3955994467525,
+          "y": -567.4702001271737,
+          "width": 1567.9767433430093,
+          "height": 1601.473047942742
+        }
+      ]
+    },
+    "18": {
+      "fingerprint": "4a958885e99cfac451884a840ceab7e52f48f4953e7815c3e20b1519e28963e8",
+      "bones": 41,
+      "regions": 16,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 0.76666659116745
+        },
+        {
+          "name": "jifei",
+          "duration": 0.2666667103767395
+        },
+        {
+          "name": "std",
+          "duration": 1
+        },
+        {
+          "name": "std2",
+          "duration": 1
+        },
+        {
+          "name": "walk",
+          "duration": 1
+        }
+      ],
+      "bounds": [
+        {
+          "x": -180.4714820807984,
+          "y": -146.64021215374686,
+          "width": 618.2902699750963,
+          "height": 398.9064582980108
+        }
+      ]
+    },
+    "19": {
+      "fingerprint": "3c1452e40af2706ef85d8249cf106c045bb1bbfb21a161fcea4b42c4b2518fa5",
+      "bones": 14,
+      "regions": 6,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1
+        },
+        {
+          "name": "jifei",
+          "duration": 0.2666667103767395
+        },
+        {
+          "name": "std",
+          "duration": 1
+        },
+        {
+          "name": "std2",
+          "duration": 1
+        },
+        {
+          "name": "walk",
+          "duration": 1
+        }
+      ],
+      "bounds": [
+        {
+          "x": -76.21186901918449,
+          "y": -40.556595897461065,
+          "width": 176.85300487044978,
+          "height": 175.2159594142658
+        }
+      ]
+    },
+    "20": {
+      "fingerprint": "da7c68aa2383ff6b9b55c019e697dfb02829d70e71a95404d076721e6d7403b5",
+      "bones": 7,
+      "regions": 2,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 0.8333333134651184
+        },
+        {
+          "name": "jifei",
+          "duration": 0.20000000298023224
+        },
+        {
+          "name": "std",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "std2",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "walk",
+          "duration": 0.800000011920929
+        }
+      ],
+      "bounds": [
+        {
+          "x": -33.96923634922458,
+          "y": -14.512589067890952,
+          "width": 96.94878318244938,
+          "height": 87.81823868717217
+        }
+      ]
+    },
+    "21": {
+      "fingerprint": "cfc6bd62682586c763728b84d346886f67adcb7c3bf2d197de6a36cfec403676",
+      "bones": 27,
+      "regions": 11,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "jifei",
+          "duration": 0.20000000298023224
+        },
+        {
+          "name": "std",
+          "duration": 1.600000023841858
+        },
+        {
+          "name": "std2",
+          "duration": 1.600000023841858
+        },
+        {
+          "name": "walk",
+          "duration": 1.3333333730697632
+        }
+      ],
+      "bounds": [
+        {
+          "x": -95.05615842542572,
+          "y": -23.74817821168161,
+          "width": 253.09167464631503,
+          "height": 162.31791103758732
+        }
+      ]
+    },
+    "22": {
+      "fingerprint": "6aaf8851adce5cfdbfefbda0f6d6d606e0b48d7dc2d7ee2f28f64a262b7b5b7e",
+      "bones": 145,
+      "regions": 49,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 2.200000047683716
+        },
+        {
+          "name": "die",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "skill",
+          "duration": 2.8333330154418945
+        },
+        {
+          "name": "stun",
+          "duration": 2
+        }
+      ],
+      "bounds": [
+        {
+          "x": -450.8718158554371,
+          "y": -130.9565970084438,
+          "width": 1156.1754853356372,
+          "height": 741.4193241199343
+        },
+        {
+          "x": -450.8718158554371,
+          "y": -130.9565970084438,
+          "width": 1156.1754853356372,
+          "height": 741.4193241199343
+        }
+      ]
+    },
+    "23": {
+      "fingerprint": "6e8fa1fff8ad82520877154f9f3718f78e8c51519d17450b56aebbea53a99847",
+      "bones": 15,
+      "regions": 15,
+      "animations": [
+        {
+          "name": "unit_attack",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "unit_damage",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_dead",
+          "duration": 0.5
+        },
+        {
+          "name": "unit_no_shadow",
+          "duration": 0
+        },
+        {
+          "name": "unit_p_skill",
+          "duration": 1.1333333253860474
+        },
+        {
+          "name": "unit_run",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_skill_hit",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "unit_wait",
+          "duration": 0.3333333134651184
+        },
+        {
+          "name": "unit_walk",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "unit_win",
+          "duration": 0.5
+        }
+      ],
+      "bounds": [
+        {
+          "x": -117.02965016193176,
+          "y": -40.14837211122366,
+          "width": 392.28235358870324,
+          "height": 255.16132666943932
+        }
+      ]
+    },
+    "24": {
+      "fingerprint": "5fe1f1060c3347fd2e7642cd12bcd6c2fc79326c6d9d986e75e9447c0b9d6ead",
+      "bones": 29,
+      "regions": 17,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.5333333015441895
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "skill1",
+          "duration": 3
+        }
+      ],
+      "bounds": [
+        {
+          "x": -321.32317182201245,
+          "y": -117.4873060487138,
+          "width": 654.2029557349741,
+          "height": 573.0287010145654
+        }
+      ]
+    },
+    "25": {
+      "fingerprint": "a0cc0429db5bb25edebe49e2d519e5b1a4b9060c5646bc71a13f912ea5f84b22",
+      "bones": 58,
+      "regions": 27,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.9666666984558105
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.1333333253860474
+        },
+        {
+          "name": "skill1",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "skill2",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -347.9097585971104,
+          "y": -118.71608688354483,
+          "width": 933.1691435756052,
+          "height": 802.6106656475882
+        }
+      ]
+    },
+    "26": {
+      "fingerprint": "f8f1e9c6d35bd7394b1826977180e0fd5b36d7f1d9fdaf3734cb5e1f189a9508",
+      "bones": 37,
+      "regions": 15,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2.3333330154418945
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -340.5946523601493,
+          "y": -156.1171630355579,
+          "width": 805.3076003573581,
+          "height": 994.5317143806083
+        },
+        {
+          "x": -340.5946523601493,
+          "y": -156.1171630355579,
+          "width": 805.3076003573581,
+          "height": 994.5317143806083
+        }
+      ]
+    },
+    "27": {
+      "fingerprint": "47e0112be0ac8c6b3bdc90c325f95751323c0bb1004447b7d267782f8b349d57",
+      "bones": 30,
+      "regions": 23,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.1666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1.1666666269302368
+        },
+        {
+          "name": "hurt",
+          "duration": 0.5333333015441895
+        },
+        {
+          "name": "idle",
+          "duration": 1.2000000476837158
+        },
+        {
+          "name": "move",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 1.7333333492279053
+        }
+      ],
+      "bounds": [
+        {
+          "x": -246.81837938023642,
+          "y": -62.06917552531835,
+          "width": 567.0724737684441,
+          "height": 738.3636412692889
+        }
+      ]
+    },
+    "28": {
+      "fingerprint": "2ab12213906010a883e28aa04e86c2dbb3d9d13cebea47317c8e121e8c5f02c4",
+      "bones": 126,
+      "regions": 34,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.5
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1
+        },
+        {
+          "name": "skill",
+          "duration": 2.3333330154418945
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -1055.0049609121434,
+          "y": -369.11476735702576,
+          "width": 1803.4825722427743,
+          "height": 1404.9162641317107
+        },
+        {
+          "x": -1055.0049609121434,
+          "y": -369.11476735702576,
+          "width": 1803.4825722427743,
+          "height": 1404.9162641317107
+        }
+      ]
+    },
+    "29": {
+      "fingerprint": "6818037cd75379db16a0ed2081d8bd8b3e274b8b5d2fcfce54f518b7dc75b854",
+      "bones": 70,
+      "regions": 33,
+      "animations": [
+        {
+          "name": "ao",
+          "duration": 2.6666669845581055
+        },
+        {
+          "name": "attack",
+          "duration": 2.5333330631256104
+        },
+        {
+          "name": "die",
+          "duration": 2.1666669845581055
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 4
+        },
+        {
+          "name": "reborn",
+          "duration": 2.1666669845581055
+        },
+        {
+          "name": "skill",
+          "duration": 2.866666555404663
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -693.1021453150016,
+          "y": -165.9833134702488,
+          "width": 1325.340057021836,
+          "height": 1192.76613448582
+        },
+        {
+          "x": -693.1021453150016,
+          "y": -165.9833134702488,
+          "width": 1325.340057021836,
+          "height": 1192.76613448582
+        }
+      ]
+    },
+    "30": {
+      "fingerprint": "ffac297ac93509f7963ada12eafa315f69abd0f62c625c8b77a1546967c24bba",
+      "bones": 35,
+      "regions": 28,
+      "animations": [
+        {
+          "name": "atk",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "die",
+          "duration": 1.5
+        },
+        {
+          "name": "hurt",
+          "duration": 0.6333333253860474
+        },
+        {
+          "name": "idle",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "move",
+          "duration": 1
+        },
+        {
+          "name": "resurgence",
+          "duration": 1.5333333015441895
+        },
+        {
+          "name": "skill1",
+          "duration": 2.700000047683716
+        }
+      ],
+      "bounds": [
+        {
+          "x": -323.61830078351284,
+          "y": -131.93577527952965,
+          "width": 919.3950922023608,
+          "height": 759.5843862438107
+        }
+      ]
+    },
+    "31": {
+      "fingerprint": "3ec89e6dde1e1515fc63f276130794aa3d877591c102a735c52b54c412da6fea",
+      "bones": 26,
+      "regions": 21,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.5
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -614.2477498397567,
+          "y": -234.74695092420632,
+          "width": 1360.9095576007753,
+          "height": 831.3176469319222
+        },
+        {
+          "x": -614.2477498397567,
+          "y": -234.74695092420632,
+          "width": 1360.9095576007753,
+          "height": 831.3176469319222
+        }
+      ]
+    },
+    "32": {
+      "fingerprint": "12fac287220ff104a631185f45b986ed699dfc66d299bd9c7f21908c1458dfe4",
+      "bones": 44,
+      "regions": 13,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 0.800000011920929
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "duoi",
+          "duration": 2.6666669845581055
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "reborn",
+          "duration": 1
+        },
+        {
+          "name": "skill",
+          "duration": 2
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -1247.510807125404,
+          "y": -219.07747123436775,
+          "width": 1768.0794014844116,
+          "height": 1470.3818837107933
+        },
+        {
+          "x": -1247.510807125404,
+          "y": -219.07747123436775,
+          "width": 1768.0794014844116,
+          "height": 1470.3818837107933
+        }
+      ]
+    },
+    "33": {
+      "fingerprint": "043552df350f3ff96661671b70c8f866289d89aece25f20c6540598e3f214043",
+      "bones": 45,
+      "regions": 23,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.7999999523162842
+        },
+        {
+          "name": "die",
+          "duration": 1.8333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6000000238418579
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 1.8333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2.1666669845581055
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -593.8761102585242,
+          "y": -284.30738305092257,
+          "width": 1380.5962033493206,
+          "height": 3058.4705402773957
+        },
+        {
+          "x": -593.8761102585242,
+          "y": -284.30738305092257,
+          "width": 1380.5962033493206,
+          "height": 3058.4705402773957
+        }
+      ]
+    },
+    "34": {
+      "fingerprint": "a44684f2ebb71616f17aab6400e0f8d1c298d4ebb9e36bd45fdcd5bd341df085",
+      "bones": 40,
+      "regions": 25,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.2999999523162842
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 0.9333332777023315
+        },
+        {
+          "name": "skill",
+          "duration": 2.1666669845581055
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -487.3154231283021,
+          "y": -136.75966139909866,
+          "width": 997.1833537623811,
+          "height": 827.1157162024842
+        },
+        {
+          "x": -487.3154231283021,
+          "y": -136.75966139909866,
+          "width": 997.1833537623811,
+          "height": 827.1157162024842
+        }
+      ]
+    },
+    "35": {
+      "fingerprint": "6b8fabba43fe69a0a331c33296b7cbfd76f300bd93d524ea72e4128531c55d0a",
+      "bones": 63,
+      "regions": 25,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.8333333730697632
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.5666666030883789
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "skill",
+          "duration": 3.3333330154418945
+        },
+        {
+          "name": "stun",
+          "duration": 1.600000023841858
+        }
+      ],
+      "bounds": [
+        {
+          "x": -408.04011067115687,
+          "y": -85.18356722094777,
+          "width": 1174.4839697079215,
+          "height": 931.9270548903706
+        },
+        {
+          "x": -408.04011067115687,
+          "y": -85.18356722094777,
+          "width": 1174.4839697079215,
+          "height": 931.9270548903706
+        }
+      ]
+    },
+    "36": {
+      "fingerprint": "13ac2e1970ecadd566d18e148f78459833c654765a067c623f9f4d03525a22f0",
+      "bones": 76,
+      "regions": 36,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 2
+        },
+        {
+          "name": "die",
+          "duration": 1
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "idle",
+          "duration": 2
+        },
+        {
+          "name": "reborn",
+          "duration": 0.6666666865348816
+        },
+        {
+          "name": "skill",
+          "duration": 3.133333444595337
+        },
+        {
+          "name": "stun",
+          "duration": 1.600000023841858
+        }
+      ],
+      "bounds": [
+        {
+          "x": -509.83406998075634,
+          "y": -186.7389228000426,
+          "width": 945.5929088308133,
+          "height": 958.9699229647757
+        },
+        {
+          "x": -509.83406998075634,
+          "y": -186.7389228000426,
+          "width": 945.5929088308133,
+          "height": 958.9699229647757
+        }
+      ]
+    },
+    "37": {
+      "fingerprint": "4d0b49988478f02d7b0079022e0c75ce46b7c587ea742457987967c5c7bc99f3",
+      "bones": 51,
+      "regions": 22,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "die",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "get_hurt",
+          "duration": 0.46666669845581055
+        },
+        {
+          "name": "idle",
+          "duration": 1.6666666269302368
+        },
+        {
+          "name": "reborn",
+          "duration": 1.3333333730697632
+        },
+        {
+          "name": "skill",
+          "duration": 2.200000047683716
+        },
+        {
+          "name": "stun",
+          "duration": 1.6666666269302368
+        }
+      ],
+      "bounds": [
+        {
+          "x": -1163.7494321579356,
+          "y": -315.2242405286271,
+          "width": 2351.658545866639,
+          "height": 1963.9627987343674
+        },
+        {
+          "x": -1163.7494321579356,
+          "y": -315.2242405286271,
+          "width": 2351.658545866639,
+          "height": 1963.9627987343674
+        }
+      ]
+    },
+    "38": {
+      "fingerprint": "dd06568462ff14c167bc7e1a04d6e14f40bc507a69a8d5fa91393a9628c2348d",
+      "bones": 6,
+      "regions": 6,
+      "animations": [
+        {
+          "name": "action",
+          "duration": 1
+        }
+      ],
+      "bounds": [
+        {
+          "x": -291.60614160864174,
+          "y": -43.04003060391412,
+          "width": 608.8961558875221,
+          "height": 357.00005290763386
+        }
+      ]
+    }
+  },
+  "pixels": [
+    {
+      "rotate": 0,
+      "pma": false,
+      "extracted": "d4f59b3ad5e10ee690b9f21954513f86f9b0c1cf06b97996481669b033513349",
+      "pages": {
+        "page.png": "2522dde23ec2b8cc53a9617cd1ff657ba98ed66324b24cc6b01f37f8cdc745be"
+      }
+    },
+    {
+      "rotate": 0,
+      "pma": true,
+      "extracted": "79a434c7fcf525062dd4e18854b2de58d77be0fe6b56a15bcf7b6c7b91ead70a",
+      "pages": {
+        "page.png": "48cce5c3cddd37d763e2b4946b80fcd3a7ef4ef7e6a307ae05f87441cfa3c507"
+      }
+    },
+    {
+      "rotate": 90,
+      "pma": false,
+      "extracted": "d4f59b3ad5e10ee690b9f21954513f86f9b0c1cf06b97996481669b033513349",
+      "pages": {
+        "page.png": "dafdb5b4a208560f53446ea28aa262d09c8b905ecb1621fe920ca13e6b071eec"
+      }
+    },
+    {
+      "rotate": 90,
+      "pma": true,
+      "extracted": "79a434c7fcf525062dd4e18854b2de58d77be0fe6b56a15bcf7b6c7b91ead70a",
+      "pages": {
+        "page.png": "2e2c10e211b9b32def9b9f60a7bef45d6dde0b07aef1c158ba906f0f70ac102b"
+      }
+    }
+  ],
+  "rig": {
+    "source": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+    "composition": "1b65003459f8d911d8260fb41c5793ebc74338c2955c4a6676368f94b8b0a883",
+    "study": {
+      "baseFingerprint": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      "geometryFingerprint": "d99d9e83e296a9aa0586e121d819adde8c2a6e1ba6e54a09c100c12f5e7dccbd",
+      "protectedIdleFingerprint": "7f6acf9c2d7d22f9d74e0a6d4e3c34b926dc0d57e1112e7396b3ecdc4e6510d6",
+      "originalArtworkFingerprint": "1ba055d76eeaaceadedc25806373d4c8d1aeaaf9e71d1ae0e0dd82b9792cabd3"
+    },
+    "regionName": "ms_attack_frame1_torso_706553d55a1f9752",
+    "slotName": "ms_slot_c3214c29bbd57336797538522dba039484bf7966",
+    "samples": "4282b1782df45af7654f66d97c289adc59014c79da6fc7f7c1d491b51674c842",
+    "inspections": [
+      {
+        "motionId": "idle",
+        "duration": 2,
+        "samples": 61,
+        "finite": true,
+        "issues": [],
+        "maxVertexDistance": 4.902870596823936,
+        "maxFootSlide": {
+          "left": 1.5631940186722204e-13,
+          "right": 1.797546735911271e-13
+        },
+        "footContactSamples": {
+          "left": 61,
+          "right": 61
+        },
+        "loop": {
+          "enabled": true,
+          "positionError": 0,
+          "angleError": 0,
+          "matrixError": 0,
+          "drawOrderContinuous": true,
+          "attachmentsContinuous": true,
+          "attachmentChanges": []
+        },
+        "weaponGrips": [],
+        "solver": {
+          "feet": "two-bone-ik",
+          "twoHandGrip": true,
+          "sampler": "rig-document-fk",
+          "bakeRate": 30
+        }
+      },
+      {
+        "motionId": "attack",
+        "duration": 1.1,
+        "samples": 61,
+        "finite": true,
+        "issues": [],
+        "maxVertexDistance": 188.1110030070722,
+        "maxFootSlide": {
+          "left": 2.3437142008433856e-13,
+          "right": 1.4210854715202004e-13
+        },
+        "footContactSamples": {
+          "left": 61,
+          "right": 61
+        },
+        "loop": {
+          "enabled": false,
+          "positionError": 0,
+          "angleError": 0,
+          "matrixError": 0,
+          "drawOrderContinuous": true,
+          "attachmentsContinuous": true,
+          "attachmentChanges": []
+        },
+        "weaponGrips": [],
+        "solver": {
+          "feet": "two-bone-ik",
+          "twoHandGrip": true,
+          "sampler": "rig-document-fk",
+          "bakeRate": 30
+        }
+      },
+      {
+        "motionId": "hit",
+        "duration": 0.6,
+        "samples": 61,
+        "finite": true,
+        "issues": [],
+        "maxVertexDistance": 5.859285502108464e-14,
+        "maxFootSlide": {
+          "left": 0,
+          "right": 0
+        },
+        "footContactSamples": {
+          "left": 0,
+          "right": 0
+        },
+        "loop": {
+          "enabled": false,
+          "positionError": 0,
+          "angleError": 0,
+          "matrixError": 0,
+          "drawOrderContinuous": true,
+          "attachmentsContinuous": false,
+          "attachmentChanges": [
+            "face"
+          ]
+        },
+        "weaponGrips": [],
+        "solver": {
+          "feet": "two-bone-ik",
+          "twoHandGrip": true,
+          "sampler": "rig-document-fk",
+          "bakeRate": 30
+        }
+      },
+      {
+        "motionId": "release_test",
+        "duration": 1.1,
+        "samples": 61,
+        "finite": true,
+        "issues": [],
+        "maxVertexDistance": 215.93388513770142,
+        "maxFootSlide": {
+          "left": 1.4210854715202004e-13,
+          "right": 1.1368683772161603e-13
+        },
+        "footContactSamples": {
+          "left": 19,
+          "right": 19
+        },
+        "loop": {
+          "enabled": false,
+          "positionError": 150.7473935324094,
+          "angleError": 80,
+          "matrixError": 1.2306970819374816,
+          "drawOrderContinuous": true,
+          "attachmentsContinuous": true,
+          "attachmentChanges": []
+        },
+        "weaponGrips": [],
+        "solver": {
+          "feet": "two-bone-ik",
+          "twoHandGrip": true,
+          "sampler": "rig-document-fk",
+          "bakeRate": 30
+        }
+      }
+    ],
+    "skeleton": "e030398063bad2fd557174146f5149f4834ad7eb291c4e35d56abce2c8e4bf00",
+    "files": {
+      ".ispine/rig/document.json": "12c67d075566a0d59d73504c41b7dc09a11b1e6c1fee5e8a976da2fb0909bc0b",
+      ".ispine/rig/parts/head_hurt.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/head.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftFoot.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftForearm.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftHand.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftShin.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftThigh.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/leftUpperArm.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightFoot.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightForearm.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightHand.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightShin.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightThigh.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/rightUpperArm.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/parts/torso.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/rig/source.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      "images/head_hurt.png": "9bbbd792283152c0cf77b2ed836f35a1cccb9c4b2c7b12cd670c60505b74f9b2",
+      "images/head.png": "9bbbd792283152c0cf77b2ed836f35a1cccb9c4b2c7b12cd670c60505b74f9b2",
+      "images/leftFoot.png": "b1a1f13252e3cf5c534d4631a2bda6a33ffb2bcc129b686b1b7792afaa11573b",
+      "images/leftForearm.png": "6c8f3ae56c3d199942417731a31ddb67a3194290281b3922614592961d3cd036",
+      "images/leftHand.png": "911a8907143a145def23d678056c037f1e69c962edaee3081883406ccce62688",
+      "images/leftShin.png": "4ca263bfda6fdb08d34869fbb38b404dd9c7629c2a257f7c04ede712ac43c79b",
+      "images/leftThigh.png": "2eae75b09f2e2891db291332dadf1b018c3cde17c23dc458f7ed679cae46c285",
+      "images/leftUpperArm.png": "2eae75b09f2e2891db291332dadf1b018c3cde17c23dc458f7ed679cae46c285",
+      "images/rightFoot.png": "b1a1f13252e3cf5c534d4631a2bda6a33ffb2bcc129b686b1b7792afaa11573b",
+      "images/rightForearm.png": "6c8f3ae56c3d199942417731a31ddb67a3194290281b3922614592961d3cd036",
+      "images/rightHand.png": "911a8907143a145def23d678056c037f1e69c962edaee3081883406ccce62688",
+      "images/rightShin.png": "4ca263bfda6fdb08d34869fbb38b404dd9c7629c2a257f7c04ede712ac43c79b",
+      "images/rightThigh.png": "2eae75b09f2e2891db291332dadf1b018c3cde17c23dc458f7ed679cae46c285",
+      "images/rightUpperArm.png": "2eae75b09f2e2891db291332dadf1b018c3cde17c23dc458f7ed679cae46c285",
+      "images/torso.png": "54f17e3d8ab603b274b0e4b140db6a5ca0e3ca7c0ef63eeaf04e92feee3ea9a7",
+      "rig.atlas": "68aed4e029d61a970c7c10e947a48d429c73c59d924e10d2f4ba39ba288f1e9d",
+      "rig.json": "e030398063bad2fd557174146f5149f4834ad7eb291c4e35d56abce2c8e4bf00",
+      "rig.png": "b4c64295ad8ba57af7b7d5f45cd35a7ca9d57d3d85782858048d82f81e2ad74a"
+    },
+    "roundTrip": "f1b06ae3c031c9095144e6ba3bf0827867baad14cccd438dba7dcc6a4b692f0f"
+  },
+  "variants": {
+    "partId": "tv_e5afa334158694a515c7",
+    "metadata": {
+      "regionId": "tv_e5afa334158694a515c7",
+      "originalPartId": "face",
+      "name": "Hurt",
+      "animations": [
+        "unit_damage",
+        "unit_dead"
+      ],
+      "binding": {
+        "skinName": "default",
+        "slotName": "face",
+        "attachmentName": "face"
+      },
+      "attachmentDefinition": {
+        "x": 22.71297,
+        "y": -3.75501,
+        "scaleX": 0.33,
+        "scaleY": 0.33,
+        "rotation": -90,
+        "width": 288,
+        "height": 288,
+        "path": "tv_e5afa334158694a515c7"
+      },
+      "nativePath": ".ispine/template-variants/native/tv_e5afa334158694a515c7.png",
+      "nativeSHA256": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      "pageFile": ".ispine/template-variants/pages/tv_e5afa334158694a515c7.png",
+      "atlasFile": ".ispine/template-variants/pages/tv_e5afa334158694a515c7.atlas",
+      "provenance": {
+        "jobId": "fixture-job",
+        "imageId": "fixture-image"
+      },
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "flipX": false,
+        "flipY": false
+      },
+      "normalization": {
+        "mode": "contain-logical-frame-then-calibrate",
+        "originalWidth": 288,
+        "originalHeight": 288,
+        "width": 186,
+        "height": 171,
+        "offsetX": 54,
+        "offsetY": 45,
+        "degrees": 90,
+        "clippedVisiblePixels": 9704,
+        "preservesWorldQuad": true,
+        "pma": false
+      },
+      "warnings": [
+        "候选有可见像素超出原区域裁切范围，请在部件校准中检查；原生 PNG 已完整保留。"
+      ],
+      "unchanged": false
+    },
+    "files": {
+      ".ispine/template-variants/base/atlas-0.bin": "a4ceb3ced0713e3ddd3340c0ae112bc80c59d9047a0a9fda011efc4892f177e7",
+      ".ispine/template-variants/base/skeleton.bin": "65a50b7f0361ede2fc9152989c381a634989c769c3ff75f04a0c895358caedfe",
+      ".ispine/template-variants/manifest.json": "4d0d07c285a827bf2aaf797ee15c23d34d9a2b2320ea38e2d8dac3b1e026027b",
+      ".ispine/template-variants/native/tv_e5afa334158694a515c7.png": "99d0fa538578bb05e4c328f2e5e4709c2b300b045cc92a5c296e4c45ea1471bc",
+      ".ispine/template-variants/pages/tv_e5afa334158694a515c7.atlas": "036955166c1cd60ae603f7652c4a6e1fb238871f7fa3be8758a83ed333ff105f",
+      ".ispine/template-variants/pages/tv_e5afa334158694a515c7.png": "96626108818ad9236e05b65f0511f85a7f2e4027bcd4020b1c76efba2916a26f",
+      "skeleton.atlas": "a4ceb3ced0713e3ddd3340c0ae112bc80c59d9047a0a9fda011efc4892f177e7",
+      "skeleton.json": "6c11293007990bfe6e034b1f6a664e92554e32d477a34fb9ce77c81c8ba90e3e",
+      "skeleton.png": "15d8592a7d7bd42f6aba6698cf1bc01d01955dce0a55b9e4ffbc502353c06b27"
+    }
+  },
+  "exports": {
+    "runtime": {
+      "sha256": "3f0c19fc0ed44e776776164b4cd34b680de3c2cd7ab7443dd38b6445c7327c89",
+      "entries": {
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1"
+      }
+    },
+    "editable": {
+      "sha256": "9a4c0253830b06e8bdd6f526fccc12d601e941e5deedca453d604516f89281b1",
+      "entries": {
+        ".ai-spine/original/skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        ".ai-spine/original/skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        ".ai-spine/original/skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        ".ai-spine/project.json": "2335e6689d31d12e730c973ab423106fda6ca28c096c332c96a96a2f29563d8f",
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1"
+      }
+    },
+    "unity": {
+      "sha256": "896973bc504f88c86f598af798eadbeef9015b7a016fee7a5ba5f7bc99171646",
+      "entries": {
+        "README-Unity.md": "f2910ef903ea57ffdfc1473756a22c58afe38775fc7dab82eafa4e9ff1ea836e",
+        "skeleton.atlas.txt": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1"
+      }
+    }
+  }
+}

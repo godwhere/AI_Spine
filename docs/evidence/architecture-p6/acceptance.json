@@ -1,0 +1,54 @@
+{
+  "phase": "P6",
+  "status": "passed in source and isolation",
+  "requirements": [
+    {
+      "requirement": "All three image adapters and explicit planning capability",
+      "evidence": [
+        "tests/ai-connections.test.mjs",
+        "tests/sub2api.test.mjs",
+        "tests/job-lifecycle.test.mjs"
+      ]
+    },
+    {
+      "requirement": "Retry identity and only unfinished fixed parts/frames",
+      "evidence": [
+        "tests/generation.test.mjs",
+        "tests/rig-service.test.mjs",
+        "tests/rig-motion-study-service.test.mjs",
+        "tests/sub2api.test.mjs"
+      ]
+    },
+    {
+      "requirement": "Cancellation, late native turn start, both queues and manifest/admission shutdown",
+      "evidence": [
+        "tests/job-lifecycle.test.mjs",
+        "tests/generation.test.mjs"
+      ]
+    },
+    {
+      "requirement": "No automatic resumption or cross-instance job interruption",
+      "evidence": [
+        "tests/isolation.test.mjs",
+        "tests/bootstrap.test.mjs",
+        "history-copy.json"
+      ]
+    },
+    {
+      "requirement": "No implicit key unlock or credential leakage",
+      "evidence": [
+        "tests/ai-connections.test.mjs",
+        "tests/workspace.test.mjs",
+        "live-preservation.json"
+      ]
+    },
+    {
+      "requirement": "Complete-character acceptance remains independent",
+      "evidence": [
+        "docs/generation.md",
+        "docs/ai-connections.md"
+      ]
+    }
+  ],
+  "productionActivationPendingP7": true
+}

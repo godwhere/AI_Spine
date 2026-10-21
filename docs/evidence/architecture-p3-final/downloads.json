@@ -1,0 +1,185 @@
+{
+  "verification": "Actual browser downloads were reimported through the file input and persisted as independent resources; detailed checks are in tests/browser/exports.spec.mjs",
+  "archives": [
+    {
+      "file": "native-project.zip",
+      "path": "/tmp/ispine-browser-results/exports-authored-weighted--81690-gh-visible-browser-controls/native-project.zip",
+      "bytes": 90487,
+      "sha256": "cdbcbef12db41265dc1b7d2231aac8a87217cc532706fb6645809775aff20e42",
+      "archiveEntries": 72,
+      "atlasRegions": 15,
+      "bones": 18,
+      "motions": [
+        "idle",
+        "attack",
+        "hit",
+        "release_test"
+      ],
+      "constraints": [],
+      "editableProject": true,
+      "authoring": {
+        "partEntriesIncludingVariants": 15,
+        "attachmentGroups": [
+          "eyeLeft"
+        ],
+        "hasSourceImage": true,
+        "hasIndependentPartImages": true
+      }
+    },
+    {
+      "file": "native-runtime.zip",
+      "path": "/tmp/ispine-browser-results/exports-authored-weighted--81690-gh-visible-browser-controls/native-runtime.zip",
+      "bytes": 46206,
+      "sha256": "b769d6a12c2697fce25737d10dd88c048346549de8cb6e7fe3a696d237da7bab",
+      "archiveEntries": 35,
+      "atlasRegions": 15,
+      "bones": 18,
+      "motions": [
+        "idle",
+        "attack",
+        "hit",
+        "release_test"
+      ],
+      "constraints": [],
+      "editableProject": false,
+      "authoring": {
+        "partEntriesIncludingVariants": 15,
+        "attachmentGroups": [
+          "eyeLeft"
+        ],
+        "hasSourceImage": true,
+        "hasIndependentPartImages": true
+      }
+    },
+    {
+      "file": "native-unity.zip",
+      "path": "/tmp/ispine-browser-results/exports-authored-weighted--81690-gh-visible-browser-controls/native-unity.zip",
+      "bytes": 47465,
+      "sha256": "26bae4c5158ecb2d7a184422aee1a06f84c1f6e6932e1c7c20cf8c45a464761c",
+      "archiveEntries": 36,
+      "atlasRegions": 15,
+      "bones": 18,
+      "motions": [
+        "idle",
+        "attack",
+        "hit",
+        "release_test"
+      ],
+      "constraints": [],
+      "editableProject": false,
+      "authoring": {
+        "partEntriesIncludingVariants": 15,
+        "attachmentGroups": [
+          "eyeLeft"
+        ],
+        "hasSourceImage": true,
+        "hasIndependentPartImages": true
+      }
+    },
+    {
+      "file": "template-project.zip",
+      "path": "/tmp/ispine-browser-results/exports-original-template--95339-gh-visible-browser-controls/template-project.zip",
+      "bytes": 1832835,
+      "sha256": "43abf8ff1f57a17022fb469bc6534e65a275c2b3c4cff0a7edbdedf45cd88466",
+      "archiveEntries": 8,
+      "atlasRegions": 49,
+      "bones": 145,
+      "motions": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "constraints": [
+        "3a",
+        "3b",
+        "4a",
+        "4b",
+        "1a",
+        "2a",
+        "1b",
+        "2b",
+        "1c",
+        "path",
+        "path2",
+        "b_thigh",
+        "f_thigh"
+      ],
+      "editableProject": true,
+      "authoring": null
+    },
+    {
+      "file": "template-runtime.zip",
+      "path": "/tmp/ispine-browser-results/exports-original-template--95339-gh-visible-browser-controls/template-runtime.zip",
+      "bytes": 1327092,
+      "sha256": "ee86b1e5ce9d883e3eba6fc33bb9c4443a2acac5bb0de8a7a77a1eae6134855f",
+      "archiveEntries": 3,
+      "atlasRegions": 49,
+      "bones": 145,
+      "motions": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "constraints": [
+        "3a",
+        "3b",
+        "4a",
+        "4b",
+        "1a",
+        "2a",
+        "1b",
+        "2b",
+        "1c",
+        "path",
+        "path2",
+        "b_thigh",
+        "f_thigh"
+      ],
+      "editableProject": false,
+      "authoring": null
+    },
+    {
+      "file": "template-unity.zip",
+      "path": "/tmp/ispine-browser-results/exports-original-template--95339-gh-visible-browser-controls/template-unity.zip",
+      "bytes": 1328350,
+      "sha256": "642a421bf7d38ce86ca82363fe914637224c58196568acaf9b1d0937521b92ea",
+      "archiveEntries": 4,
+      "atlasRegions": 49,
+      "bones": 145,
+      "motions": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "constraints": [
+        "3a",
+        "3b",
+        "4a",
+        "4b",
+        "1a",
+        "2a",
+        "1b",
+        "2b",
+        "1c",
+        "path",
+        "path2",
+        "b_thigh",
+        "f_thigh"
+      ],
+      "editableProject": false,
+      "authoring": null
+    }
+  ]
+}

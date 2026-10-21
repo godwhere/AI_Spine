@@ -1,0 +1,35 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "docs/architecture-progress.md",
+    "scripts/measure-workspace.mjs",
+    "server/http/workspace-routes.mjs",
+    "tests/browser-services.test.mjs",
+    "tests/browser/saving.spec.mjs",
+    "README.md",
+    "docs/architecture-execution-plan.md",
+    "docs/architecture-plan.md",
+    "docs/validation.md",
+    "docs/workbench.md",
+    "package.json",
+    "server/workspace-store.mjs",
+    "src/core/storage.js",
+    "src/core/workspace.js",
+    "tests/workspace.test.mjs"
+  ],
+  "added": [
+    "docs/evidence/architecture-p4/acceptance.json",
+    "docs/evidence/architecture-p4/content.json",
+    "docs/evidence/architecture-p4/dependencies.json",
+    "docs/evidence/architecture-p4/live-copy.json",
+    "docs/evidence/architecture-p4/live-preservation.json",
+    "docs/evidence/architecture-p4/performance.json",
+    "docs/evidence/architecture-p4/verification.json",
+    "scripts/workspace-index.mjs",
+    "server/workspace/project-index.mjs",
+    "tests/browser/summary.spec.mjs",
+    "tests/project-index.test.mjs"
+  ],
+  "protectedChanges": []
+}

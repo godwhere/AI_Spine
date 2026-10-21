@@ -1,0 +1,72 @@
+{
+  "stage": "P2",
+  "capturedAt": "2026-10-20T16:08:34.144532+00:00",
+  "scope": "browser-only; P3 desktop retirement pending",
+  "baselineCommit": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "tests": {
+    "main": {
+      "passed": 476,
+      "log": "/tmp/ispine-P2-main-final.log"
+    },
+    "browser": {
+      "passed": 15,
+      "log": "/tmp/ispine-P2-browser-final.log",
+      "includesHistoricalCloseBridge": true
+    },
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "supportLog": "/tmp/ispine-P2-support.log",
+    "pythonWebEntry": 3,
+    "pythonEgress": 4,
+    "templateClockFollowup": 8
+  },
+  "equivalence": {
+    "equal": true,
+    "templates": 38,
+    "pixelCases": 4,
+    "rigMotions": 4,
+    "beforeSHA256": "315362a7d3fea429aed330b6445782ff1b69fa310d9125b7f4464c7052e73bdf",
+    "afterSHA256": "315362a7d3fea429aed330b6445782ff1b69fa310d9125b7f4464c7052e73bdf",
+    "includes": [
+      "runtime/editable/unity ZIP bytes and entry hashes",
+      "all template fingerprints and skin/animation bounds",
+      "rotation and PMA calibration pixels",
+      "weighted rig and attachment-switch compile output",
+      "foot release samples",
+      "editable authoring round-trip"
+    ]
+  },
+  "architecture": {
+    "files": 122,
+    "imports": 525,
+    "serverToSrc": 0,
+    "remainingExceptions": [
+      {
+        "from": "server/workbench-server.mjs",
+        "to": "desktop/server.mjs",
+        "kind": "ImportDeclaration",
+        "line": 3,
+        "rule": "server-no-desktop"
+      }
+    ],
+    "platformReferences": [],
+    "cycles": []
+  },
+  "protectedChanges": [],
+  "isolation": {
+    "productionDataSwitched": false,
+    "realAICalled": false,
+    "productionDistOverwritten": false,
+    "nativeAppBuiltOrInstalled": false,
+    "preview": "http://127.0.0.1:62889",
+    "provider": "fake-only"
+  },
+  "remaining": [
+    "P3 browser feature boundaries, service extraction and desktop retirement",
+    "P4 summary queries",
+    "P5 binary storage and coordinated migration",
+    "P6 jobs/provider boundaries",
+    "P7 final acceptance"
+  ]
+}

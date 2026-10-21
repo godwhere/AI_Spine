@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { captureTemplatePreview } from "../src/core/template-preview.js";
+import { captureTemplatePreview } from "../src/infrastructure/template-preview.js";
 import { synthetic } from "./helpers.mjs";
 
 function documentFixture({ emptyOutput = false } = {}) {

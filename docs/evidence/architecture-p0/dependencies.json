@@ -1,0 +1,1709 @@
+{
+  "files": 80,
+  "edges": [
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 1
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "node:fs",
+      "kind": "require",
+      "line": 2
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "node:path",
+      "kind": "require",
+      "line": 3
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "desktop/main.mjs",
+      "kind": "dynamic",
+      "line": 19
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "electron",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "desktop/key-protection.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "desktop/preload.cjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 1
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "server/generation-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "server/generation-plugin.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "@electron/packager",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "scripts/desktop-assets.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "@babel/parser",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/desktop-assets.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/desktop-assets.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:os",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:perf_hooks",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:timers/promises",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "server/workspace-store.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "tests/helpers.mjs",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/preview-isolated.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/preview-isolated.mjs",
+      "to": "tests/support/isolated-workbench.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "scripts/desktop-assets.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 10
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "server/workbench-server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "server/workbench-proxy.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/codex-native.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/openai-images.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/sub2api-images.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:readline",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:events",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "server/generation-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "server/workbench-proxy.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/codex-rpc.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/ai-connections.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/rig-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 222
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:util",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/providers/openai-images.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/providers/sub2api-images.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/providers/sub2api-images.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 65
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "server/codex-structured.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 73
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 120
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 156
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 202
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/codex-structured.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/rig-planning.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/rig-motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 54
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 82
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 132
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 150
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 390
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 440
+    },
+    {
+      "from": "server/workbench-proxy.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "node:os",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/workspace-store.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/workspace-middleware.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/key-protection.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/workspace-middleware.mjs",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:sqlite",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:v8",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/project-content.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/rig-drafts.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/custom-templates.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 34
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/PartEditor.jsx",
+      "kind": "ImportDeclaration",
+      "line": 35
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/GenerationPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 36
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/AIConnectionPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 37
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/CreationWorkflow.jsx",
+      "kind": "ImportDeclaration",
+      "line": 38
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/ResourceLibrary.jsx",
+      "kind": "ImportDeclaration",
+      "line": 39
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/TemplateLibrary.jsx",
+      "kind": "ImportDeclaration",
+      "line": 40
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/RigWorkbench.jsx",
+      "kind": "ImportDeclaration",
+      "line": 41
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/desktop.js",
+      "kind": "ImportDeclaration",
+      "line": 42
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 43
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 44
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/archive-worker.js",
+      "kind": "ImportDeclaration",
+      "line": 49
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 50
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 51
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 52
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 53
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/template-variants.js",
+      "kind": "ImportDeclaration",
+      "line": 54
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/project-draft.js",
+      "kind": "ImportDeclaration",
+      "line": 55
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/template-preview.js",
+      "kind": "ImportDeclaration",
+      "line": 56
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/custom-templates.js",
+      "kind": "ImportDeclaration",
+      "line": 57
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/rig-drafts.js",
+      "kind": "ImportDeclaration",
+      "line": 58
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/rig-draft-writer.js",
+      "kind": "ImportDeclaration",
+      "line": 59
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 60
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "src/core/rig-registration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "src/complete-overlap.css",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/components/CreationWorkflow.jsx",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/core/motion-study-client.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/PartAppearancePanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PartAppearancePanel.jsx",
+      "to": "src/core/rig-part-annotations.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "src/components/PoseTransformControls.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PoseTransformControls.jsx",
+      "to": "src/core/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PreviewTransport.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PreviewTransport.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/PreviewTransport.jsx",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/ResourceThumbnail.jsx",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "src/components/ResourceThumbnail.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/ResourceThumbnail.jsx",
+      "to": "src/core/thumbnail.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigCanvas.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/RigCanvas.jsx",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-registration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/RigCanvas.jsx",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PartEditor.jsx",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/MotionStudyPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/CompleteOverlapPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 14
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PoseTransformControls.jsx",
+      "kind": "ImportDeclaration",
+      "line": 15
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PartAppearancePanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-preview-time.js",
+      "kind": "ImportDeclaration",
+      "line": 17
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/motion-study-client.js",
+      "kind": "ImportDeclaration",
+      "line": 18
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 19
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-part-adjustment.js",
+      "kind": "ImportDeclaration",
+      "line": 20
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/rig-workbench.css",
+      "kind": "ImportDeclaration",
+      "line": 21
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/PreviewTransport.jsx",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/ResourceThumbnail.jsx",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/core/archive.js",
+      "to": "fflate",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/archive.js",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/archive.js",
+      "to": "src/core/unity-export.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/core/archive-worker.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "src/core/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "src/core/unity-export.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-authoring.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-authoring.js",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-authoring.js",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/core/rig-authoring.js",
+      "to": "src/core/rig-atlas.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/core/rig-client.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-images.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-images.js",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-motion-studies.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-motion-studies.js",
+      "to": "src/core/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-motion-studies.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-motion-studies.js",
+      "to": "src/core/rig-motion-ownership.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/rig-part-adjustment.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-part-adjustment.js",
+      "to": "src/core/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-part-annotations.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-part-annotations.js",
+      "to": "src/core/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-part-annotations.js",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-preview-time.js",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-project.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-project.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-project.js",
+      "to": "src/core/rig-motion-studies.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-registration.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-registration.js",
+      "to": "src/core/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-registration.js",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-registration.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/storage.js",
+      "to": "src/core/project-content.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/storage.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/template-preview.js",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/template-variants.js",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/template-variants.js",
+      "to": "src/core/pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/workspace.js",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "react-dom/client",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/App.jsx",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/styles.css",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/explorer.css",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "src/core/archive.js",
+      "kind": "ImportDeclaration",
+      "line": 16
+    }
+  ],
+  "violations": [
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3,
+      "rule": "server-no-desktop"
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/project-content.js",
+      "kind": "ImportDeclaration",
+      "line": 6,
+      "rule": "server-no-src"
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/rig-drafts.js",
+      "kind": "ImportDeclaration",
+      "line": 7,
+      "rule": "server-no-src"
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/custom-templates.js",
+      "kind": "ImportDeclaration",
+      "line": 8,
+      "rule": "server-no-src"
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "src/core/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 9,
+      "rule": "server-no-src"
+    }
+  ],
+  "unexpected": [],
+  "stale": [],
+  "invalid": [],
+  "unresolved": [],
+  "cycles": []
+}

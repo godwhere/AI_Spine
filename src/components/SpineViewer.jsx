@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Maximize2, ZoomIn, ZoomOut, LoaderCircle } from "lucide-react";
-import { createSpineScene, pickPart } from "../spine/runtime.js";
+import { usePreviewRuntime } from "./PreviewRuntime.jsx";
+import { pickPart } from "../../engine/spine/geometry.js";
 
 export function SpineViewer({
   bundle,
@@ -12,10 +13,12 @@ export function SpineViewer({
   selected,
   onSelect,
   onReady,
+  previewPort,
   label = "动画预览",
   bones = false,
   revision = 0,
 }) {
+  const runtime = usePreviewRuntime();
   const canvas = useRef(),
     overlay = useRef(),
     scene = useRef(),
@@ -28,6 +31,15 @@ export function SpineViewer({
   callbacks.current = { onReady, onSelect };
   settings.current = { clock, animation, loop, skin, selected, bones, ...view };
   useEffect(() => {
+    if (!previewPort) return;
+    const port = { captureThumbnail() {
+      if (!scene.current || !canvas.current?.width) return null;
+      return canvas.current.toDataURL("image/png");
+    } };
+    previewPort.current = port;
+    return () => { if (previewPort.current === port) previewPort.current = null; };
+  }, [previewPort]);
+  useEffect(() => {
     if (!bundle) return;
     let cancelled = false,
       frame = 0,
@@ -35,7 +47,7 @@ export function SpineViewer({
     setLoading(true);
     setError("");
     setView({ zoom: 1, pan: { x: 0, y: 0 } });
-    createSpineScene(bundle, canvas.current)
+    runtime.createScene(bundle, canvas.current)
       .then((value) => {
         instance = value;
         if (cancelled) {
@@ -106,7 +118,7 @@ export function SpineViewer({
       if (scene.current === instance) scene.current = null;
       instance?.dispose();
     };
-  }, [bundle]);
+  }, [bundle, runtime]);
   useEffect(() => {
     if (!bundle) return;
     let cancelled = false;

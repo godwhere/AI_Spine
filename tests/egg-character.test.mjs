@@ -3,9 +3,12 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { createHash } from "node:crypto";
 import { Skeleton, AnimationState, AnimationStateData, Physics } from "@esotericsoftware/spine-webgl";
-import { parseBundle, unpackZip } from "../src/core/archive.js";
-import { parseSkeleton, attachmentVertices } from "../src/spine/runtime.js";
-import { extractPart, drawReplacement } from "../src/core/pixels.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { parseSkeleton } from "../engine/spine/parse.js";
+import { attachmentVertices } from "../engine/spine/geometry.js";
+import { extractPart } from "../src/infrastructure/calibration.js";
+import { drawReplacement } from "../engine/images/calibration.js";
 import { template, pixelEnv } from "./helpers.mjs";
 
 // Live account calls are performed explicitly in the workbench, never by tests.

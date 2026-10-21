@@ -1,0 +1,36 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "docs/architecture-progress.md",
+    "docs/workspace-v2-protocol.md",
+    "scripts/preview-isolated.mjs",
+    "shared/domain/workspace-assets.mjs",
+    "src/app/browser-services.js",
+    "src/application/rig-draft-writer.js",
+    "src/application/save-coordinator.js",
+    "tests/browser/fixtures.mjs",
+    "tests/save-coordinator.test.mjs",
+    "docs/architecture-execution-plan.md",
+    "docs/architecture-plan.md",
+    "docs/validation.md",
+    "docs/workbench.md",
+    "package.json",
+    "src/core/rig-drafts.js",
+    "src/core/storage.js",
+    "src/core/workspace.js"
+  ],
+  "added": [
+    "docs/evidence/architecture-p5-client/acceptance.json",
+    "docs/evidence/architecture-p5-client/content.json",
+    "docs/evidence/architecture-p5-client/dependencies.json",
+    "docs/evidence/architecture-p5-client/downloads.json",
+    "docs/evidence/architecture-p5-client/live-preservation.json",
+    "docs/evidence/architecture-p5-client/verification.json",
+    "src/infrastructure/workspace-v2.js",
+    "tests/browser/workspace-v2.spec.mjs",
+    "tests/workspace-v2-client.test.mjs",
+    "tests/workspace-v2-composition.test.mjs"
+  ],
+  "protectedChanges": []
+}

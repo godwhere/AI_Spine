@@ -10,13 +10,12 @@ import {
   VertexAttachment,
   RegionAttachment,
 } from "@esotericsoftware/spine-webgl";
-import {
-  parseSkeleton,
-  measureAnimation,
-  measurePreviewBounds,
-  pickPart,
-} from "../src/spine/runtime.js";
-import { parseBundle, exportPackage, unpackZip, decodeText } from "../src/core/archive.js";
+import { parseSkeleton } from "../engine/spine/parse.js";
+import { attachmentVertices, measureAnimation, measurePreviewBounds, pickPart } from "../engine/spine/geometry.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { decodeText } from "../shared/codec/text.mjs";
 import { template, synthetic } from "./helpers.mjs";
 const catalog = JSON.parse(
   fs.readFileSync(new URL("../public/templates/catalog.json", import.meta.url)),
@@ -134,7 +133,7 @@ test("scene rendering holds non-loop end poses and final attachments while defau
   const imports = [...source.matchAll(/^import\s*\{([^}]+)\}\s*from[^;]+;/gm)].flatMap((match) => match[1].split(",").map((name) => name.trim()).filter(Boolean));
   // Only the GPU and image decoding boundary is replaced. The scene below uses
   // the production render function and the official skeleton/animation state.
-  const bindings = { ...spine, decodeText,
+  const bindings = { ...spine, decodeText, parseSkeleton, attachmentVertices, measureAnimation, measurePreviewBounds, pickPart,
     ManagedWebGLRenderingContext: class { gl = { isContextLost: () => false, viewport() {}, clearColor() {}, clear() {} }; dispose() {} },
     SceneRenderer: class { skeletonRenderer = {}; camera = { setViewport() {}, position: { set() {} }, update() {} }; begin() {} drawSkeleton() {} end() {} dispose() {} },
     GLTexture: class { constructor(context, image) { this.image = image; } setFilters() {} setWraps() {} getImage() { return this.image; } dispose() {} },

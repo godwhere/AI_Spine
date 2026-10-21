@@ -3,16 +3,15 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { transformWithEsbuild } from "vite";
 import { createCanvas } from "@napi-rs/canvas";
-import { createHumanoidDraft } from "../src/core/rig-authoring.js";
+import { createHumanoidDraft } from "../src/infrastructure/rig-authoring.js";
 import { validateRigDocument, validateMotionStudyMapping } from "../shared/rig-schema.mjs";
-import * as rig from "../src/core/rig-client.js";
-import * as studies from "../src/core/motion-study-client.js";
-import * as motionCore from "../src/core/rig-motion-studies.js";
+import { rigClient as rig, motionStudyCore as motionCore } from "./support/rig-bindings.mjs";
+import * as studies from "../src/application/motion-study.js";
 import { pixelEnv } from "./helpers.mjs";
 
 const { getMotionStudyFingerprints } = motionCore;
 
-const source = await readFile(new URL("../src/components/MotionStudyPanel.jsx", import.meta.url), "utf8");
+const source = await readFile(new URL("../src/features/rig/MotionStudyPanel.jsx", import.meta.url), "utf8");
 const imports = [...source.matchAll(/^import\s*\{([^}]+)\}\s*from[^;]+;/gm)].flatMap((match) => match[1].split(",").map((value) => value.trim()));
 const { code } = await transformWithEsbuild(source.replace(/^import\s*\{[^}]+\}\s*from[^;]+;\n/gm, "").replace("export function MotionStudyPanel", "function MotionStudyPanel"), "MotionStudyPanel.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
 const factory = new Function(...imports, "jsx", "React", "setInterval", "clearInterval", `${code};return {MotionStudyPanel,MotionStudyCanvas};`);
@@ -48,14 +47,14 @@ function panel({ initialDocument = character(), motionId = "attack", history = [
     }, cancel: async (id) => { const job = { ...jobs.get(id), status: "cancelled" }; jobs.set(id, job); return job; },
   };
   const values = { ...rig, ...studies, ...motionCore, validateMotionStudyMapping, useState: state, useRef: ref, useEffect: effect, createRigClient: () => client,
-    loadMotionStudyImages: (...args) => studies.loadMotionStudyImages(...args, async (bytes) => ({ dataURL: rig.bytesToImageDataURL(bytes) })), ...bindings };
+    loadMotionStudyImages: (...args) => studies.loadMotionStudyImages(...args.slice(0, 5), async (bytes) => ({ dataURL: rig.bytesToImageDataURL(bytes) })), ...bindings };
   const Component = factory(...imports.map((name) => values[name]), jsx, { Fragment: "fragment" }, (callback) => { timers.set(++timerId, callback); return timerId; }, (id) => timers.delete(id)).MotionStudyPanel;
   const onBusyChange = (value) => busy.push(value);
   const settle = async () => {
     for (let i = 0; i < 50; i++) {
       if (dirty) {
         cursor = 0; dirty = false; effects = [];
-        tree = Component({ document, motion: document.motions.find((motion) => motion.id === motionId), onBusyChange, onClose: () => { closed++; },
+        tree = Component({ imageTools: values, client, document, motion: document.motions.find((motion) => motion.id === motionId), onBusyChange, onClose: () => { closed++; },
           onStudyChange: (id, update, { checkpoint = false } = {}) => { document = validateRigDocument({ ...document, motionStudies: { ...document.motionStudies, [id]: update(document.motionStudies?.[id]) } }); drafts.push(document); checkpoints.push(checkpoint); dirty = true; } });
         for (const callback of effects) callback();
       }

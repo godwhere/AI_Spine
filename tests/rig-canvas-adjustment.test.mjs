@@ -2,9 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { transformWithEsbuild } from "vite";
-import { rigDefaultVisiblePartIds } from "../src/core/rig-client.js";
+import { rigDefaultVisiblePartIds } from "../shared/domain/rig.mjs";
 
-const source = await readFile(new URL("../src/components/RigCanvas.jsx", import.meta.url), "utf8");
+const source = await readFile(new URL("../src/features/rig/RigCanvas.jsx", import.meta.url), "utf8");
 const { code } = await transformWithEsbuild(source.replace(/^import .*;\n/gm, "").replace("export function RigCanvas", "function RigCanvas"), "RigCanvas.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
 const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
 const factory = new Function("useRef", "useState", "useEffect", "rigDefaultVisiblePartIds", "jsx", "React", `${code};return RigCanvas;`);

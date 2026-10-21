@@ -1,7 +1,11 @@
 import { request } from "node:http";
 
 // Validate the caller before forwarding to the one production data owner.
-export function workbenchProxy(target = "http://127.0.0.1:4175", { all = false } = {}) {
+export function workbenchProxy(target, { all = false } = {}) {
+  const upstreamIdentity = new URL(target);
+  if (upstreamIdentity.protocol !== "http:" || !["localhost", "127.0.0.1"].includes(upstreamIdentity.hostname) ||
+      !upstreamIdentity.port || upstreamIdentity.username || upstreamIdentity.password || upstreamIdentity.pathname !== "/" || upstreamIdentity.search || upstreamIdentity.hash)
+    throw new Error("后台代理必须显式指向本机工作台地址。");
   return (req, res, next) => {
     const path = new URL(req.url, "http://127.0.0.1").pathname;
     if (!all && !/^\/api\/(?:workspace|generation|rig)\//.test(path)) return next();

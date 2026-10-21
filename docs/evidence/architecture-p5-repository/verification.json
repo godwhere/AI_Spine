@@ -1,0 +1,71 @@
+{
+  "stage": "P5",
+  "batch": "isolated-repository",
+  "status": "batch-complete; P5 remains in progress",
+  "capturedAt": "2026-10-20T18:41:06.824612+00:00",
+  "planStep": 1,
+  "tests": {
+    "main": 533,
+    "focusedRepository": 14,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "logs": [
+      "/tmp/ispine-P5-repository-delivery-main.log",
+      "/tmp/ispine-P5-repository-final-focused.log",
+      "/tmp/ispine-P5-repository-delivery-support.log"
+    ]
+  },
+  "implemented": [
+    "documents_v2 with independent storage/resource versions",
+    "asset_blobs keyed by original-byte SHA-256 and independent asset_refs",
+    "known-field lossless decomposition and reconstruction; unknown authored fields retained",
+    "expectedVersion=0 explicit creation and version-checked writes",
+    "stable per-entity mutation receipts with conflicting reuse rejection",
+    "one transaction for document, references, index callback, revision and receipt",
+    "persistent upload leases, deduplication and reference/lease-aware collection",
+    "trash retains references; permanent deletion removes V1/V2 resource content and retains an ID tombstone",
+    "read-only explicit integrity scan for documents, raw hashes, references and leases"
+  ],
+  "evidence": [
+    "raw source ZIP entries and byte-identical runtime/editable/Unity exports after storage roundtrip",
+    "draft source, appearance, part, registration, motion-frame, composition and segment data URLs retain exact encoding",
+    "database reopen recovers source bytes, versions, uncommitted leases and mutation receipts",
+    "SQLite trigger fails after receipt insertion: real project_index, document, refs, revision and receipt roll back together",
+    "rename, part-transform and motion-time descriptor saves remain below 64 KiB JSON and neither select asset BLOB bytes nor insert BLOBs",
+    "source deletion preserves independent custom-template and rig-draft references after lease expiry and collection",
+    "known field marker-like objects in unknown extension data remain ordinary authored data",
+    "future storage schema rejects startup and live writes",
+    "explicit integrity check is read-only and locates corrupt bytes, orphan refs and tombstone conflicts"
+  ],
+  "architecture": {
+    "files": 155,
+    "imports": 569,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "isolation": {
+    "productionServicePID": 71292,
+    "productionRestarted": false,
+    "productionSchemaActivated": false,
+    "v2ConstructedOnlyByTemporaryTests": true,
+    "realAIOrKeyProtectionInvoked": false,
+    "changedLiveScopes": [],
+    "liveFilesVerified": 1366,
+    "sourceCopyInspection": {
+      "records": 21,
+      "binaryTypes": {
+        "Uint8Array": 423
+      },
+      "openedReadOnly": true
+    }
+  },
+  "notYetProven": [
+    "HTTP capability negotiation, V2 routes and client/save-coordinator integration",
+    "compound draft/template compatibility with one active repository",
+    "consistent-copy checkpointed migration, export/reimport and reverse-conversion drill",
+    "maintenance coordination, backup and production activation",
+    "P6 and P7"
+  ]
+}

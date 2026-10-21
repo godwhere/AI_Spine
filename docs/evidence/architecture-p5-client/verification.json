@@ -1,0 +1,83 @@
+{
+  "stage": "P5",
+  "batch": "browser-asset-and-receipt-adapter",
+  "status": "steps 1 and 2 implemented and isolated acceptance passed; migration and activation pending",
+  "capturedAt": "2026-10-20T19:33:44.552118+00:00",
+  "tests": {
+    "main": 548,
+    "focusedClientCompositionCoordinatorDraft": 29,
+    "browserFormat1": 24,
+    "browserFormat2": 13,
+    "browserDefaultRun": 28,
+    "defaultRunFormat2Overlap": 4,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "logs": [
+      "/tmp/ispine-P5-client-main.log",
+      "/tmp/ispine-P5-client-final-focused.log",
+      "/tmp/ispine-P5-client-browser-v2.log",
+      "/tmp/ispine-P5-client-browser-all.log",
+      "/tmp/ispine-P5-client-support.log"
+    ]
+  },
+  "implemented": [
+    "Status capabilities select one protocol without switching repositories on failure",
+    "Workspace identity pinned across status updates; unknown formats and incomplete capabilities require refresh",
+    "Known immutable assets reuse hashes; bounded parallel missing-blob uploads and verified downloads",
+    "Known asset values are replaced before metadata cloning; unknown authored fields retained",
+    "Ordinary editor, rig draft and rig publication coordinators receive explicit UUID factories",
+    "Unknown mutations retain the exact original request including derived thumbnail, base version and upload identity",
+    "Native receipt replay resolves A before a newer pending C; another client B still causes conflict",
+    "V1 unknown commits retain read-back recovery even across a later capability change",
+    "Configured API prefix applies to raw blobs and JSON; no isolated IndexedDB fallback",
+    "Hash caches use weak ownership; downloaded bytes and settled-request cache budgets are bounded"
+  ],
+  "browserEvidence": [
+    "Actual calibration, rename, reload and original/replacement PNG equality; subsequent PUTs limited to newly captured preview thumbnails",
+    "Two lost save responses produce one A commit, original UUID replay then one C commit",
+    "Concurrent pages retain stale local content and save it under an independent resource ID",
+    "Draft keyframe time and angle edits upload zero image bytes and survive server restart",
+    "Source-only drafts, resource-linked rig publication, real part/joint drags and undo",
+    "Custom template cancellation, save/update and independent snapshot lifetime",
+    "Visible fake-provider candidate application and calibration",
+    "Manual camera preservation, fixed template grid and narrow navigation",
+    "Six actual downloaded runtime/editable/Unity ZIPs from original and weighted native rigs reimported through file inputs"
+  ],
+  "artifacts": {
+    "downloads": "downloads.json",
+    "editorScreenshot": "/tmp/ispine-P5-client-browser-v2/workspace-v2-V2-browser-ca-6537c--source-or-replacement-PNGs/v2-editor.png",
+    "visualInspection": "Original and edited Spine preview render successfully; existing layout and source art retained."
+  },
+  "architecture": {
+    "files": 158,
+    "imports": 580,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "isolation": {
+    "preview": "http://127.0.0.1:56585",
+    "previewFormat": 2,
+    "provider": "fake-only",
+    "productionServicePID": 71292,
+    "productionRestarted": false,
+    "productionFormatChanged": false,
+    "productionStaticBuildOverwritten": false,
+    "realAIOrKeyProtectionInvoked": false,
+    "liveFilesVerified": 1366,
+    "changedLiveScopes": []
+  },
+  "limits": [
+    "Browser transfer assertions exclude newly captured preview thumbnails from unchanged-asset upload totals.",
+    "Backend still hydrates records for existing domain validation; no zero-BLOB-read claim for integrated saves.",
+    "Legacy browser migration still uses the existing guarded route; full migration/cutover matrices remain step 3 work.",
+    "No official Spine editor acceptance or real AI generation was run."
+  ],
+  "pending": [
+    "Consistency-copy checkpointed migration, old browser/cached page switching and namespace/hash validation",
+    "Downloaded export/reimport on migrated actual data and reverse conversion preserving post-activation writes",
+    "Maintenance, backup, task/editor coordination and production activation",
+    "P6 and P7"
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "onlyCopyModified": true,
+  "work": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/export-working",
+  "projects": 6,
+  "formats": 3,
+  "comparisons": 18,
+  "allByteIdentical": true,
+  "fullTemporaryReport": "/tmp/ispine-P5-migration-live-exports.json",
+  "archives": [
+    {
+      "stage": "before",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2b29bb38330b-runtime.zip",
+      "bytes": 7906593,
+      "sha256": "5994f6430e5c914fbcf407e8ec030a0baf544c126300e74ee6e389ac96957a01",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 138
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2b29bb38330b-project.zip",
+      "bytes": 15819871,
+      "sha256": "fba8418a8b4447bde9b50d748b53fbad7525a531f94ad055ee762dd15b5d1d7a",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 277
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2b29bb38330b-unity.zip",
+      "bytes": 7907852,
+      "sha256": "c95dcfa88360dd5db1402cab0aa295767a6d13cdd9cd83d1ae62cb23663a54db",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 139
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/e1c9171dfe79-runtime.zip",
+      "bytes": 957708,
+      "sha256": "b44e8ee42b4e91ef3e107538c54007370deac9757c4699d3968c1b4c39f02abd",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 9
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/e1c9171dfe79-project.zip",
+      "bytes": 6225207,
+      "sha256": "790ea08d276c0c474bfb556a200113abc05f6fe9c941f0b680df0c055e4eab86",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 35
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/e1c9171dfe79-unity.zip",
+      "bytes": 959028,
+      "sha256": "261e3d063917a8860217a76701ab1ba74ec70dd0e8519c4c1274ba104675a8ab",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 10
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/3670b804aa59-runtime.zip",
+      "bytes": 23913215,
+      "sha256": "5667c9b8d39cf23ecabda22bcd27dc9b7c60ca9ea27ce37cb5b1af7b297ef4e6",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 157
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/3670b804aa59-project.zip",
+      "bytes": 48766295,
+      "sha256": "1ecb6509be8da248c20795b5ccca6f02fbc07b7c5066e2cf3afe8668c13dbcde",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 316
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/3670b804aa59-unity.zip",
+      "bytes": 23914474,
+      "sha256": "0c278659f38d0fed8994d6ad67e1e230297c2c14b950c74625948e6b95250752",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 158
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2adecf471883-runtime.zip",
+      "bytes": 2068043,
+      "sha256": "ec34424e04648ac208d5ca75863e816e1bcf4ebdd17864992bdac269dfb476d5",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 3
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2adecf471883-project.zip",
+      "bytes": 84801790,
+      "sha256": "62f61e2e6bc4f3df5e2f1daa059e6ee599e4aab5bdfd4da3595bdd2ceb2ef85e",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 57
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/2adecf471883-unity.zip",
+      "bytes": 2069301,
+      "sha256": "8e4cc86c78b3d05cdcf940660af9e10ccee994597209f24adcfb843f50d415b8",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 4
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a7dd3ba7a6b3-runtime.zip",
+      "bytes": 838492,
+      "sha256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 37
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a7dd3ba7a6b3-project.zip",
+      "bytes": 1858563,
+      "sha256": "02adf5541b26ab14cc3e1a9869322ae38f9f641de67daa865b2bf33703dc59a1",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 76
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a7dd3ba7a6b3-unity.zip",
+      "bytes": 839751,
+      "sha256": "97b4f078e2c07bc2c992ecfb64c153418693d5a3f62c54163c03ebb2ff27f127",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 38
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a5251e9f4d4d-runtime.zip",
+      "bytes": 214321,
+      "sha256": "14e64a7b0e94b45f5b4f8a3f75d70d87dcfb1efe5d61a32e4c9e7ecc3beeac1c",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 3
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a5251e9f4d4d-project.zip",
+      "bytes": 4666329,
+      "sha256": "951c7e1be5b4029c505ded5817775c2039cf8bbc1daa6ef0d6badff82fddd38c",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 12
+    },
+    {
+      "stage": "before",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-before/a5251e9f4d4d-unity.zip",
+      "bytes": 215579,
+      "sha256": "466331353897af3bf12cd96bdcfc3be011d65a7d3404d16b810fb703868c1bd2",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 4
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2b29bb38330b-runtime.zip",
+      "bytes": 7906593,
+      "sha256": "5994f6430e5c914fbcf407e8ec030a0baf544c126300e74ee6e389ac96957a01",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 138
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2b29bb38330b-project.zip",
+      "bytes": 15819871,
+      "sha256": "fba8418a8b4447bde9b50d748b53fbad7525a531f94ad055ee762dd15b5d1d7a",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 277
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2b29bb38330b224383938e8a4db12bd16fcbf3f0bd220cb3b08b92148f33fd1b",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2b29bb38330b-unity.zip",
+      "bytes": 7907852,
+      "sha256": "c95dcfa88360dd5db1402cab0aa295767a6d13cdd9cd83d1ae62cb23663a54db",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 139
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/e1c9171dfe79-runtime.zip",
+      "bytes": 957708,
+      "sha256": "b44e8ee42b4e91ef3e107538c54007370deac9757c4699d3968c1b4c39f02abd",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 9
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/e1c9171dfe79-project.zip",
+      "bytes": 6225207,
+      "sha256": "790ea08d276c0c474bfb556a200113abc05f6fe9c941f0b680df0c055e4eab86",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 35
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "e1c9171dfe791c76e53dae98a41783febbe1fe2fc2f8614aced60eb6e46bfb3f",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/e1c9171dfe79-unity.zip",
+      "bytes": 959028,
+      "sha256": "261e3d063917a8860217a76701ab1ba74ec70dd0e8519c4c1274ba104675a8ab",
+      "animations": [
+        "unit_attack",
+        "unit_damage",
+        "unit_dead",
+        "unit_no_shadow",
+        "unit_p_skill",
+        "unit_run",
+        "unit_skill",
+        "unit_skill_hit",
+        "unit_wait",
+        "unit_walk",
+        "unit_win"
+      ],
+      "regions": 16,
+      "entryCount": 10
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/3670b804aa59-runtime.zip",
+      "bytes": 23913215,
+      "sha256": "5667c9b8d39cf23ecabda22bcd27dc9b7c60ca9ea27ce37cb5b1af7b297ef4e6",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 157
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/3670b804aa59-project.zip",
+      "bytes": 48766295,
+      "sha256": "1ecb6509be8da248c20795b5ccca6f02fbc07b7c5066e2cf3afe8668c13dbcde",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 316
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "3670b804aa59882ef07d7de5296ebe089775d4c06fae143380b4192d9c24661e",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/3670b804aa59-unity.zip",
+      "bytes": 23914474,
+      "sha256": "0c278659f38d0fed8994d6ad67e1e230297c2c14b950c74625948e6b95250752",
+      "animations": [
+        "idle",
+        "attack",
+        "hit",
+        "run",
+        "skill",
+        "death",
+        "victory"
+      ],
+      "regions": 44,
+      "entryCount": 158
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2adecf471883-runtime.zip",
+      "bytes": 2068043,
+      "sha256": "ec34424e04648ac208d5ca75863e816e1bcf4ebdd17864992bdac269dfb476d5",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 3
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2adecf471883-project.zip",
+      "bytes": 84801790,
+      "sha256": "62f61e2e6bc4f3df5e2f1daa059e6ee599e4aab5bdfd4da3595bdd2ceb2ef85e",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 57
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/2adecf471883-unity.zip",
+      "bytes": 2069301,
+      "sha256": "8e4cc86c78b3d05cdcf940660af9e10ccee994597209f24adcfb843f50d415b8",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entryCount": 4
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a7dd3ba7a6b3-runtime.zip",
+      "bytes": 838492,
+      "sha256": "3aa6531aafa23b54d35abc5b7497d5dfa08696f64b38e62211599205ff5a01ab",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 37
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a7dd3ba7a6b3-project.zip",
+      "bytes": 1858563,
+      "sha256": "02adf5541b26ab14cc3e1a9869322ae38f9f641de67daa865b2bf33703dc59a1",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 76
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a7dd3ba7a6b337a997eab048d74aea4c3eeb016855b7119e02752b4849bb688d",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a7dd3ba7a6b3-unity.zip",
+      "bytes": 839751,
+      "sha256": "97b4f078e2c07bc2c992ecfb64c153418693d5a3f62c54163c03ebb2ff27f127",
+      "animations": [
+        "idle",
+        "attack",
+        "hit"
+      ],
+      "regions": 16,
+      "entryCount": 38
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "runtime",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a5251e9f4d4d-runtime.zip",
+      "bytes": 214321,
+      "sha256": "14e64a7b0e94b45f5b4f8a3f75d70d87dcfb1efe5d61a32e4c9e7ecc3beeac1c",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 3
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "project",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a5251e9f4d4d-project.zip",
+      "bytes": 4666329,
+      "sha256": "951c7e1be5b4029c505ded5817775c2039cf8bbc1daa6ef0d6badff82fddd38c",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 12
+    },
+    {
+      "stage": "after",
+      "sourceIdHash": "a5251e9f4d4db110f58cbdcd0990027f4f4e4b0de1f0a9c656b3109bf1c24147",
+      "mode": "unity",
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/exports-after/a5251e9f4d4d-unity.zip",
+      "bytes": 215579,
+      "sha256": "466331353897af3bf12cd96bdcfc3be011d65a7d3404d16b810fb703868c1bd2",
+      "animations": [
+        "atk",
+        "die",
+        "hurt",
+        "idle",
+        "move",
+        "resurgence",
+        "skill1",
+        "skill2"
+      ],
+      "regions": 27,
+      "entryCount": 4
+    }
+  ]
+}

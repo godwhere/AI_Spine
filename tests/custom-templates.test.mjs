@@ -2,13 +2,15 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { IDBFactory, IDBObjectStore } from "fake-indexeddb";
-import { parseBundle, encodeText } from "../src/core/archive.js";
-import { parseSkeleton } from "../src/spine/runtime.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { encodeText } from "../shared/codec/text.mjs";
+import { parseSkeleton } from "../engine/spine/parse.js";
 import { synthetic, template } from "./helpers.mjs";
+import { createCustomTemplateRecord } from "../src/infrastructure/template-snapshot.js";
 
 async function fixture() {
   globalThis.indexedDB = new IDBFactory();
-  return import(`../src/core/custom-templates.js?case=${crypto.randomUUID()}`);
+  return { ...await import(`../src/infrastructure/template-repository.js?case=${crypto.randomUUID()}`), createCustomTemplateRecord };
 }
 function project(bundle, id = "authored-one") {
   return {
@@ -45,6 +47,8 @@ test("a custom template snapshots real runtime files without project edits, prom
   assert.equal(record.id, `custom-${source.id}`);
   assert.equal(record.source, "custom"); assert.equal(record.sourceProjectId, source.id);
   assert.equal(record.name, source.name); assert.equal(record.thumbnail, source.thumbnail);
+  assert.equal(typeof record.createdAt, "string"); assert.ok(Number.isFinite(Date.parse(record.createdAt)));
+  assert.equal(record.updatedAt, record.createdAt);
   assert.deepEqual(record.categories, ["人物", "怪物"]);
   assert.equal(record.animationCount, 7); assert.equal(record.regionCount, 49);
   assert.equal(record.skeletonFile, record.skeletonPath);
@@ -80,7 +84,7 @@ test("saving, listing, and reopening use a separate database with lightweight me
   };
   try { assert.deepEqual(await storage.listCustomTemplates(), list); }
   finally { IDBObjectStore.prototype.getAll = getAll; }
-  const reopened = await import(`../src/core/custom-templates.js?reopen=${crypto.randomUUID()}`);
+  const reopened = await import(`../src/infrastructure/template-repository.js?reopen=${crypto.randomUUID()}`);
   const loaded = await reopened.getCustomTemplate(record.id);
   assert.deepEqual(loaded.files, record.files);
   loaded.files[loaded.skeletonPath][0] = 0;
@@ -129,7 +133,7 @@ test("adding the same resource updates its stable template and preserves its cre
 
 test("resource edits, trash, and permanent deletion cannot change a saved template snapshot", async () => {
   const storage = await fixture();
-  const resources = await import(`../src/core/storage.js?custom-case=${crypto.randomUUID()}`);
+  const resources = await import(`../src/infrastructure/project-repository.js?custom-case=${crypto.randomUUID()}`);
   const bundle = synthetic(), source = project(bundle);
   await resources.saveProject(source);
   const record = storage.createCustomTemplateRecord(source, bundle.files);
@@ -147,7 +151,7 @@ test("resource edits, trash, and permanent deletion cannot change a saved templa
 
 test("deleting only a custom template removes both stores and preserves its source project", async (t) => {
   const storage = await fixture();
-  const resources = await import(`../src/core/storage.js?custom-case=${crypto.randomUUID()}`);
+  const resources = await import(`../src/infrastructure/project-repository.js?custom-case=${crypto.randomUUID()}`);
   const bundle = synthetic(), source = project(bundle);
   await resources.saveProject(source);
   const projectBefore = await resources.listProjects();

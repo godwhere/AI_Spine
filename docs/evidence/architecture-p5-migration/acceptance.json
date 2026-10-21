@@ -1,0 +1,55 @@
+{
+  "step": 3,
+  "status": "copy migration and reverse conversion passed; production activation pending",
+  "requirements": [
+    {
+      "requirement": "All original namespaces, ID tombstones, metadata, unknown fields, raw bytes, identity, revision and browser mappings",
+      "evidence": [
+        "tests/workspace-migration.test.mjs",
+        "production-copy.json"
+      ]
+    },
+    {
+      "requirement": "Real process exits at six forward checkpoints and reverse activation commit",
+      "evidence": [
+        "tests/workspace-migration.test.mjs",
+        "/tmp/ispine-P5-migration-checkpoints.log"
+      ]
+    },
+    {
+      "requirement": "Current V2 edits survive reverse conversion; retired writers cannot fork data",
+      "evidence": [
+        "tests/workspace-migration.test.mjs",
+        "production-copy.json"
+      ]
+    },
+    {
+      "requirement": "Six production-copy projects times three formats: byte-identical ZIPs and browser reimport of all eighteen migrated packages",
+      "evidence": [
+        "exports.json",
+        "reimports.json"
+      ]
+    },
+    {
+      "requirement": "Maintenance editing, fresh profile deferred migration, abort/retry, restart, cached V1 to V2 and V2 to V1 pages",
+      "evidence": [
+        "tests/browser/migration.spec.mjs",
+        "/tmp/ispine-P5-migration-browser-final.log"
+      ]
+    },
+    {
+      "requirement": "Read-only inspection, corrupt source/target/backup fail closed, upload retry after maintenance and lease expiry",
+      "evidence": [
+        "tests/workspace-migration.test.mjs",
+        "tests/workspace-v2-client.test.mjs"
+      ]
+    }
+  ],
+  "fullPhaseComplete": false,
+  "pending": [
+    "production task/editor coordination",
+    "current full backup",
+    "production activation and installed-build verification",
+    "final scale matrix in P7"
+  ]
+}

@@ -16,5 +16,5 @@ export default defineConfig({
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [react(), generationPlugin()],
+  plugins: [react(), generationPlugin({ backendOrigin: process.env.ISPINE_BACKEND_ORIGIN })],
 });

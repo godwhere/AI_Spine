@@ -1,0 +1,22 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "docs/architecture-progress.md",
+    "docs/architecture-execution-plan.md",
+    "docs/architecture-plan.md",
+    "docs/validation.md",
+    "package.json"
+  ],
+  "added": [
+    "docs/evidence/architecture-p5-repository/acceptance.json",
+    "docs/evidence/architecture-p5-repository/content.json",
+    "docs/evidence/architecture-p5-repository/dependencies.json",
+    "docs/evidence/architecture-p5-repository/live-preservation.json",
+    "docs/evidence/architecture-p5-repository/verification.json",
+    "server/workspace/v2-repository.mjs",
+    "shared/domain/workspace-assets.mjs",
+    "tests/workspace-v2.test.mjs"
+  ],
+  "protectedChanges": []
+}

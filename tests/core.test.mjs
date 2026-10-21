@@ -1,20 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { zipSync } from "fflate";
-import {
-  cleanPath,
-  parseBundle,
-  unpackZip,
-  exportPackage,
-  resolveFile,
-  MAX_PACKAGE_FILES,
-  MAX_PACKAGE_BYTES,
-} from "../src/core/archive.js";
-import { identityTransform } from "../src/core/pixels.js";
-import {
-  buildGenerationRequest,
-  createGenerationService,
-} from "../src/core/generation.js";
+import { cleanPath, resolveFile } from "../engine/archive/paths.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { unpackZip, MAX_PACKAGE_FILES, MAX_PACKAGE_BYTES } from "../engine/archive/zip.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { identityTransform } from "../engine/images/calibration.js";
+import { buildGenerationRequest, createGenerationService } from "../src/infrastructure/generation-client.js";
 import { template, synthetic } from "./helpers.mjs";
 
 test("runtime export keeps skeleton and atlas byte-for-byte, then imports again", () => {

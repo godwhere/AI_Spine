@@ -1,0 +1,48 @@
+{
+  "plan": "docs/architecture-execution-plan.md#p5-\u5206\u79bb\u56fe\u7247\u6570\u636e\u4e0e\u7248\u672c\u5316\u4fdd\u5b58",
+  "step": 2,
+  "status": "backend transport sub-batch complete; full step 2 incomplete",
+  "proven": [
+    {
+      "requirement": "Capabilities, query/upload/read and small document commands",
+      "evidence": [
+        "tests/workspace-v2-http.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Missing/forged hash, wrong version, foreign-origin PUT and declared/chunked size rejection",
+      "evidence": [
+        "tests/workspace-v2-http.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Same mutation retry after restart; old receipts cannot recreate deleted/moved records",
+      "evidence": [
+        "tests/workspace-v2-http.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "One canonical repository with safe legacy compatibility and SQLite writer guards",
+      "evidence": [
+        "tests/workspace-v2-http.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Draft/template atomic pairs; source deletion preserves independent entities",
+      "evidence": [
+        "tests/workspace-v2-http.test.mjs",
+        "verification.json"
+      ]
+    }
+  ],
+  "notYetProven": [
+    "Frontend and save coordinator integration",
+    "V2 browser acceptance",
+    "Copy migration, reverse conversion and production activation"
+  ],
+  "fullPhaseComplete": false
+}

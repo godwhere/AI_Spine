@@ -1,16 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {
-  extractPart,
-  extractPartFromImage,
-  compilePages,
-  renderReplacement,
-  autoFit,
-  identityTransform,
-  alphaBounds,
-  browserPixels,
-} from "../src/core/pixels.js";
-import { parseBundle, exportPackage, unpackZip } from "../src/core/archive.js";
+import { extractPart, extractPartFromImage, compilePages, renderReplacement, autoFit } from "../src/infrastructure/calibration.js";
+import { identityTransform, alphaBounds } from "../engine/images/calibration.js";
+import { browserPixels } from "../src/infrastructure/browser-pixels.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
 import { pixelEnv as env, synthetic, template } from "./helpers.mjs";
 const pixel = (canvas, x, y) => [
   ...canvas.getContext("2d").getImageData(x, y, 1, 1).data,

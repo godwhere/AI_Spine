@@ -1,0 +1,63 @@
+{
+  "stage": "P3",
+  "status": "in_progress",
+  "completedScope": "Node service composition, HTTP/API extraction, environment lifecycle and desktop source/dependency retirement",
+  "capturedAt": "2026-10-20T16:26:57.880520+00:00",
+  "baselineCommit": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "tests": {
+    "main": 489,
+    "browser": 16,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "bootstrapLifecycleCases": 5,
+    "logs": [
+      "/tmp/ispine-P3-main-final.log",
+      "/tmp/ispine-P3-browser-final.log",
+      "/tmp/ispine-P3-support.log"
+    ]
+  },
+  "architecture": {
+    "files": 119,
+    "imports": 501,
+    "exceptions": 0,
+    "cycles": [],
+    "desktopBridges": [],
+    "retiredDependencies": []
+  },
+  "activeDependencyTree": {
+    "electronPackages": [],
+    "SHA256": "fb41d004efa3aa0ecdf3697111edb81c6ec211cf2d06fc71ca7b0cabdcc1e006",
+    "source": "/tmp/ispine-P3-tree.json"
+  },
+  "launchAgent": {
+    "label": "local.ispine.workbench",
+    "callsWorkbenchStarter": true,
+    "nativeShellArguments": false,
+    "modified": false
+  },
+  "lifecycleProof": [
+    "standalone bind failure does not create workspace or generation directories",
+    "Vite bind failure never constructs services",
+    "Vite restart drains old owner before new service construction",
+    "another preview cannot interrupt live generation",
+    "launcher reuses an existing service without owning its close"
+  ],
+  "isolation": {
+    "productionServiceRestarted": false,
+    "productionDataMigratedOrDeleted": false,
+    "productionDistOverwritten": false,
+    "nativeAppBuiltOrInstalled": false,
+    "realAIOrKeychainCalled": false,
+    "preview": "http://127.0.0.1:63756",
+    "provider": "fake-only"
+  },
+  "protectedChanges": [],
+  "pending": [
+    "frontend service composition",
+    "library/editor/rig/generation/connections feature boundaries",
+    "import/export/template/candidate/save application use cases",
+    "single rig session document owner and five panels",
+    "full P3 layout/narrow-screen/gesture/camera/download acceptance"
+  ]
+}

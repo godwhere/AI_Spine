@@ -1,11 +1,18 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { createRigClient, rigGeometry, assertRigJobMatches, assertRigAppearanceMatches, assertRigPartJobMatches, assertRigRegistrationMatches, rigRegistrationPolygons, rigCompositionFingerprint, rigRetryablePartIds, rigSourceFingerprint, rigWithAppearance, rigReadiness, rigSourceRequest, bytesToImageDataURL, rigAttachmentGroups, rigDefaultVisiblePartIds, rigWithPartAttachmentGroup, rigWithPartFields, rigWithoutPart, rigWithDefaultAttachment } from "../src/core/rig-client.js";
-import { readRigImage, readRigReference, readRigPartCandidate, composeRigSourceView, inspectRigPartAlpha, createRigPartCalibration, bakeRigPartCalibration } from "../src/core/rig-images.js";
-import { browserPixels, alphaBounds, autoFit, identityTransform } from "../src/core/pixels.js";
-import { createHumanoidDraft, validateRigDocument, resolveRigAttachments } from "../src/core/rig-authoring.js";
-import { rigGeometry as serverGeometry } from "../server/rig-service.mjs";
+import { createRigClient } from "../src/infrastructure/rig-client.js";
+import { rigGeometry, rigReadiness, rigAttachmentGroups, rigDefaultVisiblePartIds, rigWithPartAttachmentGroup, rigWithPartFields, rigWithoutPart, rigWithDefaultAttachment } from "../shared/domain/rig.mjs";
+import { assertRigJobMatches, assertRigAppearanceMatches, assertRigPartJobMatches, assertRigRegistrationMatches, rigRegistrationPolygons, rigCompositionFingerprint, rigRetryablePartIds, rigSourceFingerprint, rigWithAppearance, rigSourceRequest } from "../shared/domain/generation.mjs";
+import { bytesToImageDataURL } from "../shared/codec/image-data.mjs";
+import { readRigImage, readRigReference, readRigPartCandidate, composeRigSourceView, inspectRigPartAlpha, createRigPartCalibration, bakeRigPartCalibration } from "../src/infrastructure/rig-images.js";
+import { browserPixels } from "../src/infrastructure/browser-pixels.js";
+import { alphaBounds, identityTransform } from "../engine/images/calibration.js";
+import { autoFit } from "../src/infrastructure/calibration.js";
+import { createHumanoidDraft } from "../src/infrastructure/rig-authoring.js";
+import { validateRigDocument } from "../shared/rig-schema.mjs";
+import { resolveRigAttachments } from "../engine/rig/attachments.js";
+import { rigGeometry as serverGeometry } from "../server/jobs/rig-service.mjs";
 
 test("rig HTTP client submits only explicit requests and preserves the selected planner", async () => {
   const calls = [], client = createRigClient(async (path, options) => {

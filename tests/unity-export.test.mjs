@@ -1,9 +1,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { exportPackage, unpackZip, parseBundle, skeletonCandidates, encodeText, decodeText } from "../src/core/archive.js";
-import { parseSkeleton, measureAnimation } from "../src/spine/runtime.js";
-import { compilePages, extractPart, identityTransform } from "../src/core/pixels.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { skeletonCandidates } from "../engine/archive/bundle.js";
+import { encodeText, decodeText } from "../shared/codec/text.mjs";
+import { parseSkeleton } from "../engine/spine/parse.js";
+import { measureAnimation } from "../engine/spine/geometry.js";
+import { compilePages, extractPart } from "../src/infrastructure/calibration.js";
+import { identityTransform } from "../engine/images/calibration.js";
 import { synthetic, pixelEnv } from "./helpers.mjs";
 
 function binaryFixture() {
@@ -111,7 +117,7 @@ test("the real package worker returns Uint8Array and validates renamed JSON and 
   const previousSelf = globalThis.self, messages = [];
   globalThis.self = { postMessage: (message) => messages.push(message) };
   t.after(() => { globalThis.self = previousSelf; });
-  await import(`../src/core/package.worker.js?unity=${crypto.randomUUID()}`);
+  await import(`../src/workers/package.worker.js?unity=${crypto.randomUUID()}`);
   for (const bundle of [synthetic(), binaryFixture()]) {
     self.onmessage({ data: { operation: "export", bundle, pages: {}, options: { target: "unity" } } });
     const response = messages.pop(); assert.equal(response.error, undefined);

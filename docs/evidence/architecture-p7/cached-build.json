@@ -1,0 +1,9 @@
+{
+  "isolated": true,
+  "cachedPageExportAfterBuildAndServiceSwitch": true,
+  "worker": "/assets/package.worker-C9tKtRZG.js",
+  "retainedWorkers": [],
+  "downloadRegions": 49,
+  "latestHTMLAfterReload": true,
+  "realAIRequests": 0
+}

@@ -1,7 +1,8 @@
+import { attachSaveExitGuards } from "../src/application/exit-guards.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { createRigDraftWriter, attachRigDraftExitGuards } from "../src/core/rig-draft-writer.js";
+import { createRigDraftWriter } from "../src/application/rig-draft-writer.js";
 
 const deferred = () => { let resolve, reject; const promise = new Promise((a, b) => { resolve = a; reject = b; }); return { promise, resolve, reject }; };
 function fixture(save) {
@@ -20,7 +21,7 @@ test("debounced edits coalesce, but saved status waits for the actual transactio
   assert.equal(timers.size, 1); assert.equal(writer.hasUnsaved(), true); assert.equal(statuses.at(-1).status, "pending");
   const flushing = writer.flush(); assert.equal(timers.size, 0); assert.equal(statuses.at(-1).status, "saving");
   assert.equal(calls.length, 1); assert.equal(calls[0][0].name, "latest approved study");
-  assert.deepEqual(calls[0][1], { resourceId: "resource-A", resourceUpdatedAt: "revision-A" });
+  assert.deepEqual(calls[0][1], { resourceId: "resource-A", resourceUpdatedAt: "revision-A", expectedUpdatedAt: undefined });
   assert.equal(commits.length, 0); assert.equal(writer.hasUnsaved(), true);
   commit.resolve({ id: "resource-resource-A" }); await flushing;
   assert.equal(commits.length, 1); assert.equal(writer.hasUnsaved(), false); assert.equal(statuses.at(-1).status, "saved");
@@ -34,6 +35,26 @@ test("navigation flush drains edits arriving during a write in serial order", as
   assert.deepEqual(calls, ["first", "second"]); assert.equal(writer.hasUnsaved(), true);
   second.resolve({ id: "A" }); await flushing;
   assert.equal(writer.hasUnsaved(), false);
+});
+
+test("draft sessions keep their own loaded base version and advance only their own receipts", async () => {
+  const calls = [], writer = createRigDraftWriter({ save: async (_document, options) => {
+    calls.push(options.expectedUpdatedAt); return { updatedAt: `saved-${calls.length}` };
+  }, schedule: () => 0, cancel() {} });
+  writer.setSession("A", { expectedVersion: "loaded-A" }); writer.enqueue(draft("first")); await writer.flush();
+  writer.enqueue(draft("second")); await writer.flush();
+  writer.setSession("B", { expectedVersion: "loaded-B" }); writer.enqueue(draft("other", "B")); await writer.flush();
+  assert.deepEqual(calls, ["loaded-A", "saved-1", "loaded-B"]);
+});
+
+test("replacing source artwork uses a separate draft identity without borrowing the old version", async () => {
+  const calls = [], writer = createRigDraftWriter({ save: async (document, options) => {
+    calls.push([document.id, options.expectedUpdatedAt]); return { id: document.id, updatedAt: `version-${calls.length}` };
+  }, schedule: () => 0, cancel() {} });
+  writer.setSession("A", { entityId: "old-source", expectedVersion: "loaded-old" });
+  writer.enqueue({ sessionKey: "A", document: { id: "old-source", name: "old" } }); await writer.flush();
+  writer.enqueue({ sessionKey: "A", document: { id: "new-source", name: "new" } }); await writer.flush();
+  assert.deepEqual(calls, [["old-source", "loaded-old"], ["new-source", undefined]]);
 });
 
 test("failed drafts survive a session switch and retry without accepting old-session callbacks", async () => {
@@ -58,7 +79,7 @@ test("a failed old write cannot replace a newer pending document", async () => {
 test("refresh confirmation remains active through pending, failed and in-flight writes", async () => {
   const windowTarget = new EventTarget(), documentTarget = new EventTarget(); documentTarget.visibilityState = "visible";
   const commit = deferred(), { writer } = fixture(() => commit.promise);
-  const detach = attachRigDraftExitGuards(writer, { window: windowTarget, document: documentTarget });
+  const detach = attachSaveExitGuards(writer, { window: windowTarget, document: documentTarget });
   const unload = () => { const event = new Event("beforeunload", { cancelable: true }); windowTarget.dispatchEvent(event); return event; };
   assert.equal(unload().defaultPrevented, false);
   writer.enqueue(draft("still writing")); assert.equal(unload().defaultPrevented, true); assert.equal(unload().defaultPrevented, true);
@@ -73,7 +94,7 @@ test("background/pagehide starts an early flush and unload stops blocking only a
   const windowTarget = new EventTarget(), documentTarget = new EventTarget(); documentTarget.visibilityState = "visible";
   let commit = deferred(), calls = 0;
   const { writer } = fixture(() => { calls++; return commit.promise; });
-  const detach = attachRigDraftExitGuards(writer, { window: windowTarget, document: documentTarget });
+  const detach = attachSaveExitGuards(writer, { window: windowTarget, document: documentTarget });
   writer.enqueue(draft("hidden document")); documentTarget.visibilityState = "hidden"; documentTarget.dispatchEvent(new Event("visibilitychange"));
   assert.equal(calls, 1); commit.resolve({ id: "A" }); await writer.flush();
   const event = new Event("beforeunload", { cancelable: true }); windowTarget.dispatchEvent(event); assert.equal(event.defaultPrevented, false);
@@ -82,7 +103,7 @@ test("background/pagehide starts an early flush and unload stops blocking only a
 });
 
 test("the App callback captures its own session and cannot relabel stale documents", async () => {
-  const source = await readFile(new URL("../src/App.jsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../src/app/AppShell.jsx", import.meta.url), "utf8");
   const callbackSource = source.slice(source.indexOf("  const updateRigDraft ="), source.indexOf("  useEffect(() => {\n    rigDraftMounted"));
   const factory = new Function("useCallback", "rigSessionRef", "rigDraftWriter", "rigSession", `${callbackSource}; return onRigDraftChange;`);
   const queued = [], session = { current: { key: "A", resourceId: "R1", resourceUpdatedAt: "old" } }, writer = { current: { enqueue: (value) => queued.push(value) } };

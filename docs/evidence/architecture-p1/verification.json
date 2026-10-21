@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-20",
+  "baseline": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "completed": [
+    "P0",
+    "P1"
+  ],
+  "next": "P2",
+  "productionChanged": false,
+  "realAIInvoked": false,
+  "tests": {
+    "main": {
+      "passed": 472,
+      "failed": 0
+    },
+    "browser": {
+      "passed": 14,
+      "failed": 0
+    },
+    "architecture": {
+      "passed": 3
+    },
+    "isolation": {
+      "passed": 2
+    },
+    "desktop": {
+      "passed": 8,
+      "skipped": 1
+    },
+    "sites": {
+      "passed": 4
+    }
+  },
+  "architecture": {
+    "files": 83,
+    "imports": 283,
+    "exceptions": 5,
+    "unexpected": [],
+    "cycles": []
+  },
+  "download": {
+    "kind": "editable",
+    "sha256": "96ee80e98a96f8f99e98172daa1332c3e505cec2ba7fda10cdb21f195d6d1795",
+    "bytes": 565593,
+    "entries": 7,
+    "regions": 22,
+    "animations": [
+      "attack",
+      "die",
+      "get_hurt",
+      "idle",
+      "reborn",
+      "skill",
+      "stun"
+    ]
+  },
+  "logs": [
+    "/tmp/ispine-P1-main-final.log",
+    "/tmp/ispine-P1-browser-final.log",
+    "/tmp/ispine-P1-support-final.log",
+    "/tmp/ispine-P1-screenshot-final.log"
+  ]
+}

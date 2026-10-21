@@ -3,12 +3,12 @@ import assert from "node:assert/strict";
 import { mkdtemp, rm, mkdir, writeFile, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { WorkspaceStore } from "../server/workspace-store.mjs";
-import { startWorkbenchServer } from "../server/workbench-server.mjs";
+import { createWorkspaceStore } from "../server/bootstrap/workspace.mjs";
+import { startWorkbenchServer } from "../server/bootstrap/workbench.mjs";
 import { encodeWorkspace, decodeWorkspace } from "../shared/workspace-codec.mjs";
-import { localKeyProtection } from "../server/key-protection.mjs";
+import { localKeyProtection } from "../server/infrastructure/key-protection.mjs";
 import { synthetic } from "./helpers.mjs";
-import { createCustomTemplateRecord } from "../src/core/custom-templates.js";
+import { createCustomTemplateRecord } from "../src/infrastructure/template-snapshot.js";
 
 const PROJECTS = "ai-spine-local-workbench", DRAFTS = "ispine-rig-drafts", TEMPLATES = "ai-spine-custom-templates";
 const project = (id = "character") => ({ id, name: "Character", files: { "source.png": new Uint8Array([137,80,78,71]) },
@@ -18,12 +18,12 @@ const draft = { version: 1, id: "source-draft", name: "Source draft", width: 32,
   sourceImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLbtAAAAABJRU5ErkJggg==" };
 async function fixture(t) {
   const root = await mkdtemp(join(tmpdir(), "ispine-shared-"));
-  const store = new WorkspaceStore(root); t.after(() => { store.close(); return rm(root, { recursive: true, force: true }); });
+  const store = createWorkspaceStore(root); t.after(() => { store.close(); return rm(root, { recursive: true, force: true }); });
   return { root, store };
 }
 
 test("binary source art and calibration persist across separate store connections and restart", async (t) => {
-  const { root, store } = await fixture(t), second = new WorkspaceStore(root); t.after(() => second.close());
+  const { root, store } = await fixture(t), second = createWorkspaceStore(root); t.after(() => second.close());
   const saved = store.call("projects", "save", [project()]);
   assert.deepEqual(second.call("projects", "get", [saved.id]), saved);
   assert.deepEqual(decodeWorkspace(JSON.parse(JSON.stringify(encodeWorkspace(saved)))), saved);
@@ -31,7 +31,7 @@ test("binary source art and calibration persist across separate store connection
   const summary = second.call("projects", "summary").projects[0];
   assert.equal(summary.files, undefined); assert.equal(summary.generation, undefined); assert.equal(summary.edits, undefined);
   assert.equal(summary.replacementCount, 1);
-  const reopened = new WorkspaceStore(root);
+  const reopened = createWorkspaceStore(root);
   assert.deepEqual(reopened.call("projects", "get", [saved.id]).edits, saved.edits); reopened.close();
 });
 test("shared revisions reject another client's stale save while retaining authored no-op semantics", async (t) => {
@@ -45,7 +45,8 @@ test("shared revisions reject another client's stale save while retaining author
 test("trash, restoration and atomic permanent deletion retain ID-only stale-save protection", async (t) => {
   const { store } = await fixture(t), first = store.call("projects", "save", [project()]);
   store.call("projects", "save", [project("second")]); store.call("projects", "trash", [first.id]);
-  assert.deepEqual(store.call("projects", "list").trash[0].files, first.files);
+  assert.equal(store.call("projects", "list").trash[0].files, undefined);
+  assert.deepEqual(store.call("projects", "read", [first.id]).files, first.files);
   assert.throws(() => store.call("projects", "save", [first]), /回收站/);
   assert.throws(() => store.call("projects", "remove", [[first.id, "second"]]), /回收站/);
   assert.equal(store.call("projects", "list").trash.length, 1);
@@ -118,7 +119,8 @@ test("HTTP clients share one library; foreign origins cannot read or mutate it; 
   };
   try {
     const saved=await call("save",[project()]);assert.equal(saved.status,200);
-    const other=await call("list",[]);assert.deepEqual(other.value.projects[0].files,saved.value.files);
+    const other=await call("list",[]);assert.equal(other.value.projects[0].files,undefined);
+    assert.deepEqual((await call("get",[saved.value.id])).value.files,saved.value.files);
     assert.equal((await fetch(server.origin+"/api/workspace/status",{headers:{Origin:"https://foreign.example"}})).status,403);
     assert.equal((await fetch(server.origin+"/api/workspace/projects",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}"})).status,403);
     await server.close(); server=await startWorkbenchServer({clientRoot,dataRoot:root,port:0,protection:undefined,jobs:jobs()});

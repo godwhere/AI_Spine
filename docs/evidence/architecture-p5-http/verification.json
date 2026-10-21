@@ -1,0 +1,75 @@
+{
+  "stage": "P5",
+  "batch": "unified-repository-and-http",
+  "status": "backend batch complete; frontend and migration remain pending",
+  "capturedAt": "2026-10-20T19:04:23.120894+00:00",
+  "tests": {
+    "main": 540,
+    "focusedIndexRepositoryHTTP": 31,
+    "httpCases": 7,
+    "browserFormat1": 24,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "logs": [
+      "/tmp/ispine-P5-http-delivery-main.log",
+      "/tmp/ispine-P5-http-delivery-focused.log",
+      "/tmp/ispine-P5-http-browser.log",
+      "/tmp/ispine-P5-http-delivery-support.log"
+    ]
+  },
+  "implemented": [
+    "Explicit active-format marker and one canonical V2 read/write repository",
+    "Projects, drafts and custom templates retain existing domain validation and independent lifecycles",
+    "Independent metadata/payload writes commit atomically for drafts and templates",
+    "Capabilities, missing-blob query, raw PUT/GET and versioned collection commands",
+    "Small durable receipts, conflicting reuse rejection and retired-receipt invalidation",
+    "Numeric version conditions; optional timestamp conditions remain enforced",
+    "Linked draft movement checks the original draft version",
+    "Atomic versioned multi-delete increments global revision once and clears legacy payloads",
+    "V1 compatibility reads and timestamp CAS writes use V2; unsafe legacy writes require refresh",
+    "SQLite guards reject old binary writers and format-aware service instances reject stale format access",
+    "UPSERT-safe index dirty triggers preserve derived/source atomicity"
+  ],
+  "transfer": {
+    "case": "workspace-v2-http-transfer",
+    "sourceBytes": 1048576,
+    "firstUploadedBytes": 1048649,
+    "secondUploadedBytes": 0,
+    "firstCommandBytes": 886,
+    "secondCommandBytes": 871,
+    "receiptBytes": 558
+  },
+  "evidenceBoundary": [
+    "HTTP tests use temporary format-2 workspaces and fake-only generation",
+    "24 browser regressions use the existing format-1 client; no V2 browser claim",
+    "No production conversion, activation, restart or static build overwrite",
+    "Backend commits currently hydrate records for existing domain validation; no claim of zero BLOB reads on integrated HTTP saves",
+    "HTTP size checks cover declared and chunked PUT/POST bodies; source/entity total and reference limits remain enforced"
+  ],
+  "architecture": {
+    "files": 157,
+    "imports": 577,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "isolation": {
+    "preview": "http://127.0.0.1:55647",
+    "previewFormat": 1,
+    "provider": "fake-only",
+    "productionServicePID": 71292,
+    "productionRestarted": false,
+    "productionFormatChanged": false,
+    "realAIOrKeyProtectionInvoked": false,
+    "liveFilesVerified": 1366,
+    "changedLiveScopes": []
+  },
+  "pending": [
+    "Frontend capability negotiation, asset adapter, stable mutation IDs and save-coordinator retry integration",
+    "Actual format-2 browser workflows and downloaded export/reimport",
+    "Checkpointed consistency-copy migration and reverse conversion retaining post-activation edits",
+    "Maintenance, backup, task/editor coordination and production activation",
+    "P6 and P7"
+  ]
+}

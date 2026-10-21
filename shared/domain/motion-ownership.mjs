@@ -1,0 +1,3 @@
+const MOTION_MAX_GAP_RATIO = .15;
+
+export { MOTION_MAX_GAP_RATIO };

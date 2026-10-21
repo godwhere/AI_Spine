@@ -7,14 +7,16 @@ import { EventEmitter } from "node:events";
 import { createCipheriv, createDecipheriv, randomBytes } from "node:crypto";
 import { createServer } from "node:http";
 import { createCanvas } from "@napi-rs/canvas";
-import { AIConnections } from "../server/ai-connections.mjs";
-import { GenerationJobs } from "../server/generation-service.mjs";
-import { generationMiddleware } from "../server/generation-plugin.mjs";
+import { AIConnections } from "../server/ai/connections.mjs";
+import { GenerationJobs } from "../server/jobs/generation-service.mjs";
+import { generationMiddleware } from "../server/http/generation-routes.mjs";
 import { openAIImagesProvider } from "../server/providers/openai-images.mjs";
 import { codexNativeProvider } from "../server/providers/codex-native.mjs";
-import { createLocalGenerationProvider, prepareGenerationRequest, applyGeneratedParts } from "../src/core/generation.js";
-import { exportPackage, unpackZip, parseBundle } from "../src/core/archive.js";
-import { compilePages } from "../src/core/pixels.js";
+import { createLocalGenerationProvider, prepareGenerationRequest, applyGeneratedParts } from "../src/infrastructure/generation-client.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { compilePages } from "../src/infrastructure/calibration.js";
 import { synthetic, pixelEnv } from "./helpers.mjs";
 
 const API_KEY = "sk-ispine-test-fixture-only", MODEL = "gpt-image-2.5-sunburst";
@@ -114,7 +116,7 @@ test("official Codex login returns only a validated browser URL and rejects fore
   await assert.rejects(adapter.login(), /有效的官方登录页面/);
 });
 test("the registry accepts another image provider without changing generation job contracts", async (t) => {
-  const provider = { id: "future-ai", label: "Future AI", auth: "api-key", models: ["test-image"],
+  const provider = { id: "future-ai", label: "Future AI", auth: "api-key", capabilities: ["image"], models: ["test-image"],
     status: async ({ key }) => ({ connected: key === API_KEY, message: "test connection" }),
     generate: async (_settings, options) => ({ result: options.prompt, model: "test-image" }) };
   const connections = new AIConnections({ root: await temp(t), providers: [provider] }); t.after(() => connections.close());
@@ -124,7 +126,7 @@ test("the registry accepts another image provider without changing generation jo
 });
 test("provider errors cannot echo API keys into connection responses or job failures", async (t) => {
   let failStatus = false;
-  const provider = { id: "future-ai", label: "Future AI", auth: "api-key", models: ["test-image"],
+  const provider = { id: "future-ai", label: "Future AI", auth: "api-key", capabilities: ["image"], models: ["test-image"],
     async status({ key }) { if (failStatus) throw new Error(`invalid ${key}`); return { connected: true }; },
     async generate({ key }) { throw new Error(`request failed for ${key}`); } };
   const connections = new AIConnections({ root: await temp(t), providers: [provider] }); t.after(() => connections.close());
@@ -151,7 +153,7 @@ test("API generation passes real references through jobs, mapping, calibration, 
     } });
   const middleware = generationMiddleware(jobs), server = createServer((req, res) => void middleware(req, res, () => { res.writeHead(404); res.end(); }));
   await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); server.closeAllConnections(); await new Promise((resolve) => server.close(resolve)); });
+  t.after(async () => { await jobs.close(); server.closeAllConnections(); await new Promise((resolve) => server.close(resolve)); });
   const base = `http://127.0.0.1:${server.address().port}`;
   const client = createLocalGenerationProvider((path, options = {}) => fetch(base + path, { ...options, headers: { ...options.headers, Origin: base } }));
   for (const endpoint of ["connection", "connection/login"]) {
@@ -186,7 +188,7 @@ test("cancelling API batches aborts every request and blocks connection changes 
       signals.push(init.signal);
       return new Promise((_resolve, reject) => init.signal.addEventListener("abort", () => reject(new DOMException("cancelled", "AbortError")), { once: true }));
     } });
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); });
+  t.after(async () => { await jobs.close(); });
   await jobs.connections.configure({ provider: "openai", apiKey: API_KEY, model: MODEL, remember: false });
   const parts = ["hand", "arm", "belt"].map((id) => ({ id, width: 32, height: 32 }));
   const result = await jobs.create({ version: 1, kind: "parts", projectId: "cancel-check", prompt: "blue", concurrency: 3, template: { fingerprint: "a".repeat(64) }, parts,
@@ -308,7 +310,7 @@ test("legacy stored keys unlock once on real concurrent API generation without s
   let requests = 0;
   const jobs = new GenerationJobs({ root: join(root, "jobs"), rpc: rpcStub(), protection: storage, generate() { throw new Error("unexpected native fallback"); },
     fetcher: async (_url, init) => { assert.equal(init.headers.Authorization, `Bearer ${API_KEY}`); requests++; return Response.json({ data: [{ b64_json: png.toString("base64") }] }); } });
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); });
+  t.after(async () => { await jobs.close(); });
   await jobs.loading; await jobs.connections.info(); await jobs.connections.snapshot();
   assert.deepEqual(calls, { available: 0, encrypt: 0, decrypt: 0 });
   const parts = ["hand", "arm", "belt"].map((id) => ({ id, width: 32, height: 32 }));

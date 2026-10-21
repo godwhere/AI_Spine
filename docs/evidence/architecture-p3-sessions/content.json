@@ -1,0 +1,39 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "docs/architecture-progress.md",
+    "src/app/AppShell.jsx",
+    "README.md",
+    "docs/architecture-execution-plan.md",
+    "docs/architecture-plan.md",
+    "docs/validation.md",
+    "package.json",
+    "src/components/RigWorkbench.jsx",
+    "tests/rig-workbench.test.mjs"
+  ],
+  "added": [
+    "docs/evidence/architecture-p3-sessions/content.json",
+    "docs/evidence/architecture-p3-sessions/dependencies.json",
+    "src/application/editor-workspace.js",
+    "src/application/navigation.js",
+    "src/application/rig-session.js",
+    "src/features/editor/EditorView.jsx",
+    "src/features/rig/RigBindingPanel.jsx",
+    "src/features/rig/RigControls.jsx",
+    "src/features/rig/RigMotionPanel.jsx",
+    "src/features/rig/RigMotionStart.jsx",
+    "src/features/rig/RigPartDetails.jsx",
+    "src/features/rig/RigPartsOverview.jsx",
+    "src/features/rig/RigPartsPanel.jsx",
+    "src/features/rig/RigRegistrationPanel.jsx",
+    "src/features/rig/RigRegistrationToolbar.jsx",
+    "src/features/rig/RigSavePanel.jsx",
+    "src/features/rig/RigStructurePanel.jsx",
+    "src/features/rig/RigValidationPanel.jsx",
+    "tests/browser/sessions.spec.mjs",
+    "tests/editor-workspace.test.mjs",
+    "tests/support/rig-panel-harness.mjs"
+  ],
+  "protectedChanges": []
+}

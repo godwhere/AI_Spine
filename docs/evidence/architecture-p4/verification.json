@@ -1,0 +1,63 @@
+{
+  "stage": "P4",
+  "status": "complete",
+  "capturedAt": "2026-10-20T18:24:46.852748+00:00",
+  "tests": {
+    "main": 519,
+    "browser": 24,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "logs": [
+      "/tmp/ispine-P4-delivery-main.log",
+      "/tmp/ispine-P4-delivery-browser.log",
+      "/tmp/ispine-P4-delivery-support.log",
+      "/tmp/ispine-P4-maintenance-delivery.log"
+    ]
+  },
+  "architecture": {
+    "files": 153,
+    "imports": 564,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "index": {
+    "version": 1,
+    "summaryPayloadReads": 0,
+    "sourceRecordEncodingUnchanged": true,
+    "derivedThumbnailCache": true,
+    "maintenanceReadsDoNotAdvanceRevision": true,
+    "oldWriterDeleteCleansDerivedContentAtomically": true
+  },
+  "productionCopy": {
+    "projects": 4,
+    "trash": 2,
+    "sourceRecordBytesUnchanged": true,
+    "identityPreserved": true,
+    "revisionPreserved": true,
+    "consistent": true
+  },
+  "isolation": {
+    "preview": "http://127.0.0.1:53961",
+    "provider": "fake-only",
+    "productionServicePID": 71292,
+    "productionRestarted": false,
+    "productionStaticBuildOverwritten": false,
+    "productionSchemaChanged": false,
+    "realAIOrKeyProtectionInvoked": false,
+    "liveFilesVerified": 1366,
+    "changedLiveScopes": []
+  },
+  "pendingStages": [
+    "P5",
+    "P6",
+    "P7"
+  ],
+  "limits": [
+    "SQLite summary timing excludes HTTP, thumbnail transfer and UI paint; OS file cache was not cleared.",
+    "First index backfill scans old payloads once and is measured separately.",
+    "Save payloads still include unchanged binary assets until P5.",
+    "Production activation and migration remain P5 work."
+  ]
+}

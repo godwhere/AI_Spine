@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { compactThumbnail } from "../core/thumbnail.js";
+import { compactThumbnail } from "../../engine/images/thumbnail.js";
 
 export function ResourceThumbnail({ src, alt = "" }) {
   const [display, setDisplay] = useState(null);

@@ -4,8 +4,8 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createCanvas } from "@napi-rs/canvas";
-import { RigJobs } from "../server/rig-service.mjs";
-import { RIG_PART_IMAGE_INSTRUCTIONS } from "../server/rig-planning.mjs";
+import { RigJobs } from "../server/jobs/rig-service.mjs";
+import { RIG_PART_IMAGE_INSTRUCTIONS } from "../server/jobs/handlers/rig-prompts.mjs";
 
 async function generatedPrompt(t, { features = false, selected = "head" } = {}) {
   const root = await mkdtemp(join(tmpdir(), "ispine-complete-part-prompt-")), id = "fixture";

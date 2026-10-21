@@ -5,10 +5,10 @@ import { transformWithEsbuild } from "vite";
 
 // Execute the real component with isolated hooks and a controlled clock. This
 // exercises its async handlers without a browser, network, or real credentials.
-const source = (await readFile(new URL("../src/components/AIConnectionPanel.jsx", import.meta.url), "utf8"))
+const source = (await readFile(new URL("../src/features/connections/AIConnectionPanel.jsx", import.meta.url), "utf8"))
   .replace(/^import .*;\n/gm, "").replace("export function AIConnectionPanel", "function AIConnectionPanel");
 const { code } = await transformWithEsbuild(source, "AIConnectionPanel.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx", jsxFragment: "Fragment" });
-const factory = new Function("useEffect", "useRef", "useState", "createLocalGenerationProvider", "jsx", "setInterval", "clearInterval",
+const factory = new Function("useEffect", "useRef", "useState", "jsx", "setInterval", "clearInterval",
   "Sparkles", "KeyRound", "RefreshCw", "Check", "LoaderCircle", "ExternalLink", "X", "Fragment", `${code}; return AIConnectionPanel;`);
 const text = (node) => typeof node === "string" ? node : node && typeof node === "object" ? (node.children || []).map(text).join("") : "";
 const descendants = (node) => node && typeof node === "object" ? [node, ...(node.children || []).flatMap(descendants)] : [];
@@ -56,14 +56,14 @@ function panel() {
     });
   };
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
-  const component = factory(useEffect, useRef, useState, () => client, jsx,
+  const component = factory(useEffect, useRef, useState, jsx,
     (callback) => { timers.set(++nextTimer, callback); return nextTimer; }, (id) => timers.delete(id), ...Array(8).fill("icon"));
   const find = (predicate) => descendants(tree).find(predicate);
   const settle = async () => {
     for (let i = 0; i < 20; i++) {
       if (dirty) {
         dirty = false; cursor = 0; scheduled = [];
-        tree = component({ onClose() {}, onChanged() {} });
+        tree = component({ client, onClose() {}, onChanged() {} });
         for (const effect of scheduled) effect();
       }
       await new Promise(setImmediate);

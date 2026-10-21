@@ -1,0 +1,200 @@
+{
+  "state": "running-verified",
+  "backup": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-053038-architecture-complete",
+  "dataRoot": "/Users/ethan/Library/Application Support/AI Spine",
+  "oldPID": 97366,
+  "launchAgent": "/Users/ethan/Library/LaunchAgents/local.ispine.workbench.plist",
+  "buildManifest": "/tmp/ispine-P7-production-build.json",
+  "gate": {
+    "main": 573,
+    "browserV1": 33,
+    "browserV2": 33,
+    "supportIncludingEgg": 19,
+    "python": 7,
+    "engineTemplatesEqual": 38,
+    "activeJobs": 0,
+    "jobStates": {
+      "cancelled": 4,
+      "failed": 9,
+      "completed": 54
+    },
+    "observedChromePage": "resource library; no editor open"
+  },
+  "fullBackupVerified": true,
+  "dataFiles": 1183,
+  "dataBytes": 1267095606,
+  "oldBuildFiles": 162,
+  "sourceSnapshot": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-053038-architecture-complete/source",
+  "backupCreatedAt": "2026-10-20T21:30:55.030294+00:00",
+  "assets": {
+    "format": 2,
+    "documents": {
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-local-workbench/projects": 6,
+      "ispine-rig-drafts/documents": 3,
+      "ispine-rig-drafts/metadata": 3
+    },
+    "assets": 271,
+    "bytes": 124510126,
+    "references": 651,
+    "invalid": [],
+    "consistent": true
+  },
+  "index": {
+    "version": 1,
+    "deletionCleanup": true,
+    "upsertSafeTriggers": true,
+    "checked": 6,
+    "missing": [],
+    "stale": [],
+    "orphaned": [],
+    "dirty": [],
+    "invalid": [],
+    "consistent": true
+  },
+  "tables": {
+    "asset_blobs": {
+      "rows": 271,
+      "sha256": "9782556262dcb3c7ee1499ed172470ced9d25ff0df2051f853b06f55919ad7d0"
+    },
+    "asset_refs": {
+      "rows": 651,
+      "sha256": "1cd30baf31850f9a4130d2c52ab43a79860bcf4856d216ddc1d3fd1438f58498"
+    },
+    "asset_uploads": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "documents_v2": {
+      "rows": 14,
+      "sha256": "9e9a3b20890846f5991043c8d79c4107a7e6c8611d0901ac404b7a4933332646"
+    },
+    "migrations": {
+      "rows": 10,
+      "sha256": "f9d50517b2705404dede35246f7dc0eb08bdc1db0016853aa46f9efbe029bc58"
+    },
+    "mutations": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "project_index": {
+      "rows": 6,
+      "sha256": "a047d703e7891ad4018d7d91797c5a2f5f6929c1f163c4ca8fc293e40add26d5"
+    },
+    "project_index_dirty": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "project_thumbnails": {
+      "rows": 6,
+      "sha256": "a8c5d8ab78159ae5dae1b21c71a401dd86e44d9af1dfc4f990bc66b3223234a3"
+    },
+    "records": {
+      "rows": 21,
+      "sha256": "05f258122ec5906f7ecabf37f1f7a4b04f198a2882e0e02575709d260307f2e5"
+    },
+    "records_v1_stage": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "settings": {
+      "rows": 9,
+      "sha256": "841d5bb12f04ae42e9756b1de27e49c2e675273682fa2fc2d6224fe5915234da"
+    },
+    "workspace_migration_rows": {
+      "rows": 21,
+      "sha256": "222023b68805b2181c44c672b142b68342a744d42e7ded7ba9da955fd86c21b6"
+    },
+    "workspace_migrations": {
+      "rows": 1,
+      "sha256": "c6146088e92e5ec16d667ca6308a38d7d2c9eeb395b51b3089136f6b6d25c226"
+    }
+  },
+  "workspaceIdentity": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+  "revision": 4,
+  "previousBuild": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P7-production-dI7Bd1/previous-dist",
+  "installedBuildFiles": 162,
+  "retainedWorkers": [],
+  "installedAt": "2026-10-20T21:31:02.268Z",
+  "productionPID": 98561,
+  "http": [
+    {
+      "port": 4175,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    },
+    {
+      "port": 4173,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    },
+    {
+      "port": 4180,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    }
+  ],
+  "tablesByteEqualToPreRelease": true,
+  "installedFilesVerified": 162,
+  "summary": {
+    "projects": 4,
+    "trash": 2
+  },
+  "connection": {
+    "provider": "sub2api",
+    "connected": false,
+    "message": "API Key \u5df2\u5b89\u5168\u4fdd\u5b58\u5728\u672c\u673a\u3002\u8bf7\u5728 AI \u8fde\u63a5\u4e2d\u70b9\u51fb\u300c\u4fdd\u5b58\u5e76\u9a8c\u8bc1\u8fde\u63a5\u300d\u9a8c\u8bc1\u5e76\u4f7f\u7528\uff1b\u4e5f\u53ef\u5728\u5b9e\u9645\u751f\u6210\u65f6\u89e3\u9501\u3002",
+    "newImageCapabilitiesPresent": true,
+    "automaticUnlock": false,
+    "automaticFallback": false
+  },
+  "verifiedAt": "2026-10-20T21:31:22.585Z",
+  "allProfileAndMigrationFilesBackedUp": true,
+  "sqliteEphemeralSidecarsExcluded": true,
+  "backupCurrentDifferences": [
+    "logs/workbench.log"
+  ]
+}

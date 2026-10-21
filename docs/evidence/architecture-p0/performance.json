@@ -1,0 +1,146 @@
+{
+  "measuredAt": "2026-10-20T14:58:14.096Z",
+  "node": "v24.19.0",
+  "cpu": "Apple M4",
+  "synthetic": true,
+  "samples": [
+    {
+      "count": 10,
+      "assetMiB": 1,
+      "iterations": 30,
+      "coldMs": 16.520792,
+      "p50Ms": 16.678207999999984,
+      "p95Ms": 21.821957999999995,
+      "eventLoopP95Ms": 23.101439,
+      "eventLoopMaxMs": 26.640383,
+      "storageBytes": 10563584,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": true
+    },
+    {
+      "count": 100,
+      "assetMiB": 1,
+      "iterations": 30,
+      "coldMs": 325.4073329999999,
+      "p50Ms": 181.0112909999998,
+      "p95Ms": 303.461458,
+      "eventLoopP95Ms": 285.474815,
+      "eventLoopMaxMs": 314.048511,
+      "storageBytes": 105066496,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": true
+    },
+    {
+      "count": 500,
+      "assetMiB": 1,
+      "iterations": 30,
+      "coldMs": 1336.0154590000002,
+      "p50Ms": 1346.351625000003,
+      "p95Ms": 2384.467000000004,
+      "eventLoopP95Ms": 2359.295999,
+      "eventLoopMaxMs": 2512.388095,
+      "storageBytes": 525062144,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": true
+    },
+    {
+      "count": 10,
+      "assetMiB": 10,
+      "iterations": 30,
+      "coldMs": 137.74000000000524,
+      "p50Ms": 135.07233299999643,
+      "p95Ms": 1192.8567919999987,
+      "eventLoopP95Ms": 1192.230911,
+      "eventLoopMaxMs": 1569.718271,
+      "storageBytes": 105041920,
+      "renameRequestBytes": 13981276,
+      "summaryReadsPayload": true
+    },
+    {
+      "count": 1,
+      "assetMiB": 50,
+      "iterations": 30,
+      "coldMs": 30.105249999993248,
+      "p50Ms": 15.835250000003725,
+      "p95Ms": 17.88329199999862,
+      "eventLoopP95Ms": 18.317311,
+      "eventLoopMaxMs": 28.999679,
+      "storageBytes": 52539392,
+      "renameRequestBytes": 69905328,
+      "summaryReadsPayload": true
+    }
+  ],
+  "exports": [
+    {
+      "name": "runtime",
+      "templateId": "22",
+      "bytes": 498338,
+      "sha256": "3f0c19fc0ed44e776776164b4cd34b680de3c2cd7ab7443dd38b6445c7327c89",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P0-runtime.zip"
+    },
+    {
+      "name": "editable",
+      "templateId": "22",
+      "bytes": 996990,
+      "sha256": "9a4c0253830b06e8bdd6f526fccc12d601e941e5deedca453d604516f89281b1",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        ".ai-spine/original/skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        ".ai-spine/original/skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        ".ai-spine/original/skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        ".ai-spine/project.json": "2335e6689d31d12e730c973ab423106fda6ca28c096c332c96a96a2f29563d8f"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P0-editable.zip"
+    },
+    {
+      "name": "unity",
+      "templateId": "22",
+      "bytes": 499596,
+      "sha256": "896973bc504f88c86f598af798eadbeef9015b7a016fee7a5ba5f7bc99171646",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas.txt": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        "README-Unity.md": "f2910ef903ea57ffdfc1473756a22c58afe38775fc7dab82eafa4e9ff1ea836e"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P0-unity.zip"
+    }
+  ]
+}

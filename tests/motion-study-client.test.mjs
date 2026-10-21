@@ -1,11 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createCanvas } from "@napi-rs/canvas";
-import { createHumanoidDraft } from "../src/core/rig-authoring.js";
-import { getMotionStudyFingerprints } from "../src/core/rig-motion-studies.js";
-import { rigSourceFingerprint, rigGeometry, bytesToImageDataURL } from "../src/core/rig-client.js";
+import { createHumanoidDraft } from "../src/infrastructure/rig-authoring.js";
+import { getMotionStudyFingerprints } from "../shared/domain/motion-study.mjs";
+import { rigSourceFingerprint } from "../shared/domain/generation.mjs";
+import { rigGeometry } from "../shared/domain/rig.mjs";
+import { bytesToImageDataURL } from "../shared/codec/image-data.mjs";
 import { motionStudyPlan, motionStudyRequest, motionStudySources, motionStudyFrameImage, patchMotionStudyFrame, restoreMotionStudyPlan,
-  assertMotionStudyCurrent, assertMotionStudyJob, loadMotionStudyHistory, loadMotionStudyImages, loadMotionStudyMappings, setMotionStudyPlayback } from "../src/core/motion-study-client.js";
+  assertMotionStudyCurrent, assertMotionStudyJob, loadMotionStudyHistory, loadMotionStudyImages, loadMotionStudyMappings, setMotionStudyPlayback } from "../src/application/motion-study.js";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
 
 function artwork(color = "#c74a96") {

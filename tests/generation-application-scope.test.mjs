@@ -2,13 +2,14 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { transformWithEsbuild } from "vite";
+import { assertTemplateCandidateProject } from "../shared/domain/generation.mjs";
 
 // Exercise the real handlers and local UI state without a browser or AI calls.
-const source = (await readFile(new URL("../src/components/GenerationPanel.jsx", import.meta.url), "utf8"))
+const source = (await readFile(new URL("../src/features/generation/GenerationPanel.jsx", import.meta.url), "utf8"))
   .replace(/^import .*;\n/gm, "").replace("export function GenerationPanel", "function GenerationPanel");
 const { code } = await transformWithEsbuild(source, "GenerationPanel.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx", jsxFragment: "Fragment" });
-const factory = new Function("useEffect", "useRef", "useState", "createLocalGenerationProvider", "prepareGenerationRequest", "readReplacement", "CreationWorkflow",
-  "X", "Sparkles", "Upload", "RefreshCw", "Check", "LoaderCircle", "Download", "Square", "jsx", "Fragment", "setInterval", "clearInterval", `${code}; return GenerationPanel;`);
+const factory = new Function("useEffect", "useRef", "useState", "CreationWorkflow",
+  "X", "Sparkles", "Upload", "RefreshCw", "Check", "LoaderCircle", "Download", "Square", "jsx", "Fragment", "setInterval", "clearInterval", "assertTemplateCandidateProject", `${code}; return GenerationPanel;`);
 const text = (node) => typeof node === "string" || typeof node === "number" ? String(node) : node && typeof node === "object" ? (node.children || []).map(text).join("") : "";
 const descend = (node) => node && typeof node === "object" ? [node, ...(node.children || []).flatMap(descend)] : [];
 const sameDependencies = (a, b) => Boolean(a && b && a.length === b.length && a.every((value, i) => Object.is(value, b[i])));
@@ -32,12 +33,13 @@ function panel({ jobs = [fixtureJob()], currentAnimation = "hurt", initialKind =
     previous?.cleanup?.(); cells[i] = { dependencies, cleanup: effect() };
   }); };
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
-  const Component = factory(useEffect, useRef, useState, () => client, async (_bundle, options) => { preparations.push(structuredClone(options));
-    return { kind: options.partIds.length ? "parts" : "appearance", ...options }; }, () => { throw new Error("Unexpected file upload"); }, "workflow",
-  ...Array(8).fill("icon"), jsx, "fragment", (callback) => { timers.set(++timerId, callback); return timerId; }, (id) => timers.delete(id));
+  const Component = factory(useEffect, useRef, useState, "workflow",
+  ...Array(8).fill("icon"), jsx, "fragment", (callback) => { timers.set(++timerId, callback); return timerId; }, (id) => timers.delete(id), assertTemplateCandidateProject);
   const settle = async () => {
     for (let i = 0; i < 30; i++) {
-      if (dirty) { cursor = 0; dirty = false; effects = []; tree = Component({ bundle, projectId: "project", selectedPart: "face", currentAnimation, ai, initialKind,
+      if (dirty) { cursor = 0; dirty = false; effects = []; tree = Component({ provider: client,
+        prepareGenerationRequest: async (_bundle, options) => { preparations.push(structuredClone(options)); return { kind: options.partIds.length ? "parts" : "appearance", ...options }; },
+        readReplacement: () => { throw new Error("Unexpected file upload"); }, bundle, projectId: "project", selectedPart: "face", currentAnimation, ai, initialKind,
         captureTemplate: async () => new Uint8Array([9]), onChange(value) { changes.push(value); ai = value; dirty = true; },
         async onApply(...args) { applies.push(args); if (applyError) throw new Error(applyError); }, onClose() { closed++; }, onConfigure() {}, onStep() {} });
         for (const effect of effects) effect(); }
@@ -127,6 +129,13 @@ test("failed application and closing retain candidates without persisting scope 
   const cancelled = panel(); await cancelled.settle(); await cancelled.change("候选应用范围", "animations"); await cancelled.change("变体名称", "Unused head");
   await cancelled.click(cancelled.find((node) => node.type === "button" && text(node) === "返回工作台"));
   assert.equal(cancelled.closed, 1); assert.equal(cancelled.applies.length, 0); assert.equal(cancelled.changes.length, 0); cancelled.unmount();
+});
+
+test("foreign resource candidates are disabled and forced submit rejects before any image read", async () => {
+  const job = { ...fixtureJob(), projectId: "foreign" }, ui = panel({ jobs: [job] }); await ui.settle();
+  assert.ok(ui.candidateButton("face").props.disabled);
+  await ui.click(ui.candidateButton("face"), { force: true }); assert.match(ui.text(), /另一份资源/);
+  assert.equal(ui.imageReads.length, 0); assert.equal(ui.applies.length, 0); assert.equal(ui.changes.length, 0); ui.unmount();
 });
 
 test("the appearance tab has no application scope and still applies an appearance reference normally", async () => {

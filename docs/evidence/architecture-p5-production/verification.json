@@ -1,0 +1,58 @@
+{
+  "phase": "P5",
+  "status": "production format 2 activated and verified",
+  "capturedAt": "2026-10-20T20:17:50.697921+00:00",
+  "productionPID": 94728,
+  "previousPID": 71292,
+  "ports": [
+    4175,
+    4173,
+    4180
+  ],
+  "backup": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2",
+  "fullBackupFiles": 1183,
+  "fullBackupBytes": 1143027672,
+  "oldBuildFiles": 160,
+  "installedBuildVerifiedFiles": 160,
+  "records": 21,
+  "projects": 4,
+  "trash": 2,
+  "identityPreserved": true,
+  "revision": 4,
+  "assetIntegrity": {
+    "format": 2,
+    "documents": {
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-local-workbench/projects": 6,
+      "ispine-rig-drafts/documents": 3,
+      "ispine-rig-drafts/metadata": 3
+    },
+    "assets": 271,
+    "bytes": 124510126,
+    "references": 651,
+    "invalid": [],
+    "consistent": true
+  },
+  "summaryIntegrity": {
+    "version": 1,
+    "deletionCleanup": true,
+    "upsertSafeTriggers": true,
+    "checked": 6,
+    "missing": [],
+    "stale": [],
+    "orphaned": [],
+    "dirty": [],
+    "invalid": [],
+    "consistent": true
+  },
+  "maintenanceReleased": true,
+  "productionAIRequests": 0,
+  "savedKeysUnlocked": false,
+  "logs": [
+    "/tmp/ispine-P5-production-backup.log",
+    "/tmp/ispine-P5-production-activate.log",
+    "/tmp/ispine-P5-production-verify.log",
+    "/tmp/ispine-P5-production-index.log"
+  ]
+}

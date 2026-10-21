@@ -7,12 +7,14 @@ import { EventEmitter } from "node:events";
 import { createServer } from "node:http";
 import { createCanvas } from "@napi-rs/canvas";
 import { sub2apiImagesProvider, sub2apiSettings } from "../server/providers/sub2api-images.mjs";
-import { AIConnections } from "../server/ai-connections.mjs";
-import { GenerationJobs } from "../server/generation-service.mjs";
-import { generationMiddleware } from "../server/generation-plugin.mjs";
-import { createLocalGenerationProvider, prepareGenerationRequest, applyGeneratedParts } from "../src/core/generation.js";
-import { exportPackage, unpackZip, parseBundle } from "../src/core/archive.js";
-import { compilePages } from "../src/core/pixels.js";
+import { AIConnections } from "../server/ai/connections.mjs";
+import { GenerationJobs } from "../server/jobs/generation-service.mjs";
+import { generationMiddleware } from "../server/http/generation-routes.mjs";
+import { createLocalGenerationProvider, prepareGenerationRequest, applyGeneratedParts } from "../src/infrastructure/generation-client.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { compilePages } from "../src/infrastructure/calibration.js";
 import { pixelEnv, synthetic } from "./helpers.mjs";
 
 const KEY = "sk-sub2api-fixture-only", MODEL = "gpt-image-2.5-sunburst", BASE = "https://gateway.example/v1";
@@ -141,7 +143,7 @@ test("Sub2API runs through the real local HTTP workflow, candidate application a
   } });
   const middleware = generationMiddleware(jobs), server = createServer((req, res) => void middleware(req, res, () => { res.writeHead(404); res.end(); }));
   await new Promise((done) => server.listen(0, "127.0.0.1", done));
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); server.closeAllConnections(); await new Promise((done) => server.close(done)); });
+  t.after(async () => { await jobs.close(); server.closeAllConnections(); await new Promise((done) => server.close(done)); });
   const origin = `http://127.0.0.1:${server.address().port}`;
   const client = createLocalGenerationProvider((path, init = {}) => fetch(origin + path, { ...init, headers: { ...init.headers, Origin: origin } }));
   await client.configure({ provider: "sub2api", baseUrl: BASE, apiKey: KEY, model: MODEL, remember: false });
@@ -176,7 +178,7 @@ test("an opaque gateway image cannot pass as a completed transparent candidate",
   const opaque = createCanvas(32, 32); opaque.getContext("2d").fillRect(0, 0, 32, 32);
   const jobs = new GenerationJobs({ root: await temp(t), rpc: rpc(), fetcher: async (url) => url.endsWith("/models") ? models()
     : Response.json({ data: [{ b64_json: opaque.toBuffer("image/png").toString("base64") }] }) });
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); });
+  t.after(async () => { await jobs.close(); });
   await jobs.connections.configure({ provider: "sub2api", apiKey: KEY, model: MODEL, baseUrl: BASE, remember: false });
   const result = await settle(jobs, (await jobs.create({ version: 1, kind: "appearance", projectId: "opaque-gateway-check", prompt: "transparent test",
     template: { fingerprint: "a".repeat(64) }, parts: [], references: [] })).id);
@@ -189,7 +191,7 @@ test("Sub2API cancels every concurrent part request without switching providers"
     signals.push(init.signal);
     return new Promise((_resolve, reject) => init.signal.addEventListener("abort", () => reject(new DOMException("cancelled", "AbortError")), { once: true }));
   } });
-  t.after(async () => { jobs.close(); await jobs.drainingPromise?.catch(() => {}); });
+  t.after(async () => { await jobs.close(); });
   await jobs.connections.configure({ provider: "sub2api", baseUrl: BASE, apiKey: KEY, model: MODEL, remember: false });
   const parts = ["hand", "arm", "belt"].map((id) => ({ id, width: 32, height: 32 }));
   const created = await jobs.create({ version: 1, kind: "parts", projectId: "sub2api-cancel", prompt: "purple", concurrency: 3,

@@ -1,0 +1,22 @@
+// Component harnesses inject named production imports, grouped only for tests.
+import * as schema from "../../shared/rig-schema.mjs";
+import * as creation from "../../src/infrastructure/rig-authoring.js";
+import * as geometry from "../../engine/rig/geometry.js";
+import * as sample from "../../engine/rig/sample.js";
+import * as inspect from "../../engine/rig/inspect.js";
+import * as attachments from "../../engine/rig/attachments.js";
+import * as data from "../../shared/domain/rig.mjs";
+import * as candidates from "../../shared/domain/generation.mjs";
+import * as codec from "../../shared/codec/image-data.mjs";
+import * as client from "../../src/infrastructure/rig-client.js";
+import * as images from "../../src/infrastructure/rig-images.js";
+import * as registration from "../../src/infrastructure/rig-registration.js";
+import * as registrationRules from "../../engine/images/registration.js";
+import * as studies from "../../shared/domain/motion-study.mjs";
+import * as studyImages from "../../src/infrastructure/motion-study-images.js";
+import * as studySampling from "../../engine/rig/motion-study.js";
+export const authoring = { ...schema, ...creation, ...geometry, ...sample, ...inspect, ...attachments };
+export const rigClient = { ...data, ...candidates, ...codec, ...client };
+export const rigImages = images;
+export const rigRegistration = { ...registrationRules, ...registration };
+export const motionStudyCore = { ...studies, ...studySampling, ...studyImages };

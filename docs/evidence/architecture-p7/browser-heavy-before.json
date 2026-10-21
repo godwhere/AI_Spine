@@ -1,0 +1,29 @@
+{
+  "onlyIsolatedCopy": true,
+  "provider": "fake-only",
+  "sourceArchiveBytes": 84801790,
+  "sourceIdHash": "2adecf47188393ff88e54de73e179d390740d9b18e52c0aa1bbf19a36fe43eb6",
+  "archiveSHA": "62f61e2e6bc4f3df5e2f1daa059e6ee599e4aab5bdfd4da3595bdd2ceb2ef85e",
+  "phases": [
+    {
+      "name": "calibration",
+      "at": 100.79999995231628
+    },
+    {
+      "name": "actual-85MiB-editable-import",
+      "at": 101.69999992847443
+    }
+  ],
+  "entries": [
+    {
+      "startTime": 744.1999999284744,
+      "duration": 166,
+      "phase": "actual-85MiB-editable-import"
+    }
+  ],
+  "longTasks": 1,
+  "totalLongTaskMs": 166,
+  "maximumLongTaskMs": 166,
+  "thresholdMs": 50,
+  "measuredInRealBrowser": true
+}

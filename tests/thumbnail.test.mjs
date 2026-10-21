@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createCanvas } from "@napi-rs/canvas";
 import { transformWithEsbuild } from "vite";
-import { alphaBounds, compactThumbnail } from "../src/core/thumbnail.js";
+import { alphaBounds, compactThumbnail } from "../engine/images/thumbnail.js";
 
 const makeCanvas = () => createCanvas(1, 1);
 const pixels = (canvas) => canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height);

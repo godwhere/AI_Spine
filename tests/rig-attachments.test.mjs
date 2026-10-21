@@ -3,12 +3,23 @@ import assert from "node:assert/strict";
 import { createCanvas } from "@napi-rs/canvas";
 import { Skeleton, AnimationState, AnimationStateData, Physics } from "@esotericsoftware/spine-webgl";
 import { validateRigDocument, validateRigMotion } from "../shared/rig-schema.mjs";
-import { createHumanoidDraft, buildRigFiles, compileRigSkeleton, sampleRigPose, inspectRigMotion,
-  resolveRigAttachments, rigPartSlotName, replaceRigMotion, getRigPartMesh, setRigPartWeights } from "../src/core/rig-authoring.js";
-import { parseBundle, exportPackage, unpackZip } from "../src/core/archive.js";
-import { parseSkeleton, attachmentVertices } from "../src/spine/runtime.js";
-import { attachRigAuthoring, readRigAuthoring, synchronizeRigAuthoring, imageDataBytes } from "../src/core/rig-project.js";
-import { compilePages, identityTransform } from "../src/core/pixels.js";
+import { createHumanoidDraft, buildRigFiles } from "../src/infrastructure/rig-authoring.js";
+import { compileRigSkeleton } from "../engine/rig/compile.js";
+import { sampleRigPose } from "../engine/rig/sample.js";
+import { inspectRigMotion } from "../engine/rig/inspect.js";
+import { resolveRigAttachments, rigPartSlotName } from "../engine/rig/attachments.js";
+import { replaceRigMotion } from "../shared/rig-schema.mjs";
+import { getRigPartMesh, setRigPartWeights } from "../engine/rig/geometry.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { parseSkeleton } from "../engine/spine/parse.js";
+import { attachmentVertices } from "../engine/spine/geometry.js";
+import { attachRigAuthoring, readRigAuthoring } from "../engine/archive/rig-project.js";
+import { synchronizeRigAuthoring } from "../src/infrastructure/rig-project.js";
+import { imageDataBytes } from "../shared/codec/image-data.mjs";
+import { compilePages } from "../src/infrastructure/calibration.js";
+import { identityTransform } from "../engine/images/calibration.js";
 import { pixelEnv } from "./helpers.mjs";
 
 function artwork(color) {

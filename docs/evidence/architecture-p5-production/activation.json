@@ -1,0 +1,160 @@
+{
+  "backup": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2",
+  "dataRoot": "/Users/ethan/Library/Application Support/AI Spine",
+  "oldPID": 71292,
+  "launchAgent": "/Users/ethan/Library/LaunchAgents/local.ispine.workbench.plist",
+  "stageManifest": "/tmp/ispine-P5-production-build.json",
+  "state": "running-verified",
+  "gate": {
+    "copyMigration": true,
+    "main": 563,
+    "browserDefault": 31,
+    "browserAdditionalV2": 13,
+    "all18RealCopyExportsReimported": true,
+    "activeJobs": 0,
+    "observedChromePage": "resource library; no editor open"
+  },
+  "fullBackupVerified": true,
+  "dataFiles": 1183,
+  "dataBytes": 1143027672,
+  "oldBuildFiles": 160,
+  "backupCreatedAt": "2026-10-20T20:13:09.819933+00:00",
+  "migration": {
+    "id": "07fa3aed-68c6-46b7-bf1f-3d42015a0c58",
+    "sourceFormat": 1,
+    "targetFormat": 2,
+    "state": "activated",
+    "checkpoint": 21,
+    "total": 21,
+    "backupPath": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2/maintenance-consistent.sqlite",
+    "backupVerified": true,
+    "activeFormat": 2,
+    "maintenance": false,
+    "report": {
+      "consistent": true,
+      "sourceFormat": 1,
+      "targetFormat": 2,
+      "records": 21,
+      "counts": {
+        "ai-spine-local-workbench/removedProjects": 7,
+        "ai-spine-local-workbench/projects": 6,
+        "ispine-rig-drafts/metadata": 3,
+        "ispine-rig-drafts/documents": 3,
+        "ai-spine-custom-templates/metadata": 1,
+        "ai-spine-custom-templates/files": 1
+      },
+      "identity": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+      "revision": "4",
+      "sourceDigest": "6e76081c4ed879ce0ba5d6ae6f0b9668b6138ceaeba5310588fb1276d6ceaeda",
+      "originalPayloadDigest": "8fd4300e935d37e18582ca9bb090bc21dd14effe1664195e7f5fb97cd1fab69c",
+      "browserMappingsPreserved": true,
+      "bytesAndUnknownFieldsPreserved": true
+    }
+  },
+  "assets": {
+    "format": 2,
+    "documents": {
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-local-workbench/projects": 6,
+      "ispine-rig-drafts/documents": 3,
+      "ispine-rig-drafts/metadata": 3
+    },
+    "assets": 271,
+    "bytes": 124510126,
+    "references": 651,
+    "invalid": [],
+    "consistent": true
+  },
+  "index": {
+    "version": 1,
+    "deletionCleanup": true,
+    "upsertSafeTriggers": true,
+    "checked": 6,
+    "missing": [],
+    "stale": [],
+    "orphaned": [],
+    "dirty": [],
+    "invalid": [],
+    "consistent": true
+  },
+  "originalPayloadBytesPreserved": true,
+  "identityAndRevisionPreserved": true,
+  "previousBuild": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-production-kM4QQR/previous-dist",
+  "buildFiles": 160,
+  "installedAt": "2026-10-20T20:13:52.060Z",
+  "verifiedAt": "2026-10-20T20:16:12.273Z",
+  "productionPID": 94728,
+  "http": [
+    {
+      "port": 4175,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    },
+    {
+      "port": 4173,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    },
+    {
+      "port": 4180,
+      "status": {
+        "id": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+        "revision": 4,
+        "storage": "local-shared",
+        "version": 2,
+        "maintenance": false,
+        "writable": true,
+        "capabilities": {
+          "protocols": [
+            1,
+            2
+          ],
+          "assets": true,
+          "mutationReceipts": true
+        }
+      }
+    }
+  ],
+  "installedFilesVerified": 160,
+  "roundtripRecords": 21,
+  "summary": {
+    "projects": 4,
+    "trash": 2
+  },
+  "connection": {
+    "provider": "sub2api",
+    "connected": false,
+    "message": "API Key 已安全保存在本机。请在 AI 连接中点击「保存并验证连接」验证并使用；也可在实际生成时解锁。",
+    "automaticUnlock": false,
+    "automaticFallback": false
+  }
+}

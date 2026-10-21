@@ -1,0 +1,229 @@
+{
+  "plan": "docs/architecture-execution-plan.md#p3-整理网页边界并退役桌面代码",
+  "status": "complete",
+  "executionSteps": [
+    {
+      "step": "1",
+      "requirement": "HTTP service and route ownership",
+      "status": "proven",
+      "evidence": [
+        "server/http/server.mjs",
+        "server/http/workspace-routes.mjs",
+        "server/http/generation-routes.mjs",
+        "server/http/rig-routes.mjs",
+        "tests/backend.test.mjs"
+      ]
+    },
+    {
+      "step": "2",
+      "requirement": "Preserved backend/archive tests after desktop retirement",
+      "status": "proven",
+      "evidence": [
+        "tests/backend.test.mjs",
+        "tests/archive-fixtures.test.mjs",
+        "tests/bootstrap.test.mjs"
+      ]
+    },
+    {
+      "step": "3",
+      "requirement": "One browser composition root and explicit capabilities",
+      "status": "proven",
+      "evidence": [
+        "src/app/browser-services.js",
+        "src/main.jsx",
+        "tests/browser-services.test.mjs"
+      ]
+    },
+    {
+      "step": "4",
+      "requirement": "Library, editor, rig, generation and connections features",
+      "status": "proven",
+      "evidence": [
+        "src/features/library",
+        "src/features/editor",
+        "src/features/rig",
+        "src/features/generation",
+        "src/features/connections"
+      ]
+    },
+    {
+      "step": "5",
+      "requirement": "Application commands for imports/templates/candidates/export/save",
+      "status": "proven",
+      "evidence": [
+        "src/application/resource-actions.js",
+        "src/application/apply-candidate.js",
+        "src/application/export-project.js",
+        "src/application/editor-workspace.js",
+        "src/application/rig-resource.js"
+      ]
+    },
+    {
+      "step": "6",
+      "requirement": "One rig session and separate five panels",
+      "status": "proven",
+      "evidence": [
+        "src/application/rig-session.js",
+        "src/application/rig-commands.js",
+        "tests/rig-workbench.test.mjs",
+        "tests/browser/sessions.spec.mjs"
+      ]
+    },
+    {
+      "step": "7",
+      "requirement": "Runtime clock/camera and actual downloads/imports",
+      "status": "proven",
+      "evidence": [
+        "src/components/SpineViewer.jsx",
+        "src/spine/runtime.js",
+        "tests/runtime.test.mjs",
+        "tests/browser/sessions.spec.mjs",
+        "tests/browser/exports.spec.mjs"
+      ]
+    },
+    {
+      "step": "8",
+      "requirement": "Browser exit guards, no native bridge and no empty-library seeding",
+      "status": "proven",
+      "evidence": [
+        "src/application/exit-guards.js",
+        "tests/rig-draft-writer.test.mjs",
+        "tests/browser/browser-only.spec.mjs",
+        "tests/browser/saving.spec.mjs"
+      ]
+    },
+    {
+      "step": "9",
+      "requirement": "Production/development/preview/test environments and launcher",
+      "status": "proven",
+      "evidence": [
+        "server/bootstrap/environments.mjs",
+        "server/bootstrap/launcher.mjs",
+        "server/generation-plugin.mjs",
+        "tests/bootstrap.test.mjs",
+        "tests/support/isolated-workbench.mjs",
+        "tests/browser/fixtures.mjs"
+      ]
+    },
+    {
+      "step": "10",
+      "requirement": "Retired Electron sources, commands and runtime dependencies",
+      "status": "proven",
+      "evidence": [
+        "package.json",
+        "pnpm-lock.yaml",
+        "dependencies.json",
+        "/tmp/ispine-P3-final-dependency-tree.json"
+      ]
+    },
+    {
+      "step": "11",
+      "requirement": "No compatibility forwarding, missing modules, cycles or desktop exceptions",
+      "status": "proven",
+      "evidence": [
+        "dependencies.json",
+        "ui-identifiers.json",
+        "tests/architecture.test.mjs"
+      ]
+    }
+  ],
+  "acceptanceGates": [
+    {
+      "gate": "AppShell has no concrete storage requests/image algorithm/job business",
+      "status": "proven",
+      "evidence": [
+        "src/app/AppShell.jsx",
+        "src/application/library-controller.js",
+        "src/features/editor/use-calibrated-preview.js",
+        "dependencies.json"
+      ]
+    },
+    {
+      "gate": "Application has no JSX, DOM query or concrete HTTP repository imports",
+      "status": "proven",
+      "evidence": [
+        "dependencies.json",
+        "tests/architecture.test.mjs"
+      ]
+    },
+    {
+      "gate": "Preserved layout, view modes and narrow navigation",
+      "status": "proven",
+      "evidence": [
+        "content.json",
+        "tests/browser/baseline.spec.mjs",
+        "tests/browser/sessions.spec.mjs"
+      ]
+    },
+    {
+      "gate": "Distinct part/joint/camera dragging",
+      "status": "proven",
+      "evidence": [
+        "tests/browser/sessions.spec.mjs",
+        "tests/rig-canvas-adjustment.test.mjs"
+      ]
+    },
+    {
+      "gate": "Service failure does not use another browser database",
+      "status": "proven",
+      "evidence": [
+        "tests/browser/browser-only.spec.mjs",
+        "tests/browser-services.test.mjs"
+      ]
+    },
+    {
+      "gate": "No Electron/desktop/IPC dependencies in runtime",
+      "status": "proven",
+      "evidence": [
+        "dependencies.json",
+        "/tmp/ispine-P3-final-dependency-tree.json"
+      ]
+    },
+    {
+      "gate": "Standalone browser launcher starts and supplies the URL opened by the real browser",
+      "status": "proven",
+      "evidence": [
+        "tests/bootstrap.test.mjs",
+        "tests/support/isolated-workbench.mjs",
+        "tests/browser/fixtures.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "gate": "Backend security/lifecycle, migration and archive coverage preserved",
+      "status": "proven",
+      "evidence": [
+        "tests/backend.test.mjs",
+        "tests/bootstrap.test.mjs",
+        "tests/workspace.test.mjs",
+        "tests/archive-fixtures.test.mjs"
+      ]
+    },
+    {
+      "gate": "Main/browser/build gates pass, including actual download/reimport",
+      "status": "proven",
+      "evidence": [
+        "verification.json",
+        "downloads.json",
+        "tests/browser/exports.spec.mjs"
+      ]
+    },
+    {
+      "gate": "User data/backups/ciphertext/history protected; no key unlock or paused-job restart",
+      "status": "proven",
+      "evidence": [
+        "live-preservation.json",
+        "content.json",
+        "tests/backend.test.mjs",
+        "tests/bootstrap.test.mjs",
+        "tests/isolation.test.mjs",
+        "tests/support/isolated-workbench.mjs"
+      ]
+    }
+  ],
+  "limits": [
+    "Live-file equality is recorded for the explicit final verification window, with production process identity unchanged.",
+    "Only isolated workspaces and fake AI capabilities were used for UI acceptance.",
+    "No official Spine editor, physical device, production data transition, or P4-P7 completion is claimed."
+  ]
+}

@@ -3,12 +3,19 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { IDBFactory, IDBObjectStore } from "fake-indexeddb";
-import { buildRigFiles, createHumanoidDraft } from "../src/core/rig-authoring.js";
-import { parseBundle, exportPackage, unpackZip } from "../src/core/archive.js";
-import { compilePages, extractPart, identityTransform } from "../src/core/pixels.js";
-import { attachRigAuthoring, hasRigAuthoring, imageDataBytes, imageDataURL, readRigAuthoring, rigWithCalibratedParts, synchronizeRigAuthoring, rigAuthoringSummary, RIG_DOCUMENT_PATH } from "../src/core/rig-project.js";
+import { buildRigFiles, createHumanoidDraft } from "../src/infrastructure/rig-authoring.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { compilePages, extractPart } from "../src/infrastructure/calibration.js";
+import { identityTransform } from "../engine/images/calibration.js";
+import { attachRigAuthoring, readRigAuthoring } from "../engine/archive/rig-project.js";
+import { hasRigAuthoring, rigAuthoringSummary, RIG_DOCUMENT_PATH } from "../shared/domain/rig-summary.mjs";
+import { imageDataBytes, imageDataURL } from "../shared/codec/image-data.mjs";
+import { rigWithCalibratedParts, synchronizeRigAuthoring } from "../src/infrastructure/rig-project.js";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
-import { getMotionStudyFingerprints, prepareMotionStudyFrames, applyMotionStudy, motionStudyRegionName } from "../src/core/rig-motion-studies.js";
+import { getMotionStudyFingerprints, motionStudyRegionName } from "../shared/domain/motion-study.mjs";
+import { prepareMotionStudyFrames, applyMotionStudy } from "../src/infrastructure/motion-study-images.js";
 
 const env = { createCanvas, loadImage: (value) => loadImage(typeof value === "string" ? value : Buffer.from(value)),
   encode: async (canvas) => new Uint8Array(canvas.toBuffer("image/png")) };
@@ -193,7 +200,7 @@ test("rig images support exact binary data and reject non-images or oversized re
 
 async function drafts() {
   globalThis.indexedDB = new IDBFactory();
-  return import(`../src/core/rig-drafts.js?test=${crypto.randomUUID()}`);
+  return import(`../src/infrastructure/rig-draft-repository.js?test=${crypto.randomUUID()}`);
 }
 test("rig drafts stay outside the resource database, list without artwork, and restore independently after reload", async () => {
   const storage = await drafts(), { document } = await fixture();
@@ -208,7 +215,7 @@ test("rig drafts stay outside the resource database, list without artwork, and r
   assert.equal(list[0].id, "resource-saved-resource"); assert.equal(list[0].documentId, document.id);
   assert.equal(list[0].resourceUpdatedAt, "2026-10-20T10:00:00.000Z");
   assert.deepEqual((await indexedDB.databases()).map((entry) => entry.name), ["ispine-rig-drafts"]);
-  const reopened = await import(`../src/core/rig-drafts.js?reload=${crypto.randomUUID()}`);
+  const reopened = await import(`../src/infrastructure/rig-draft-repository.js?reload=${crypto.randomUUID()}`);
   const loaded = await reopened.getRigDraft(saved.id);
   assert.deepEqual(loaded.document.parts, document.parts);
   loaded.document.joints[0].x += 15;

@@ -1,0 +1,84 @@
+{
+  "stage": "P3",
+  "status": "in_progress",
+  "batch": "frontend composition, library/generation/connections features and application use cases",
+  "capturedAt": "2026-10-20T16:54:14.734476+00:00",
+  "baselineCommit": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "tests": {
+    "main": 496,
+    "browser": 18,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "finalFocused": 11,
+    "newApplicationCases": 6,
+    "newCompositionCases": 1,
+    "logs": [
+      "/tmp/ispine-P3-front-main-final.log",
+      "/tmp/ispine-P3-front-browser-final.log",
+      "/tmp/ispine-P3-front-support.log",
+      "/tmp/ispine-P3-front-final-focused.log"
+    ]
+  },
+  "architecture": {
+    "files": 129,
+    "imports": 510,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "composition": {
+    "entry": "src/app/browser-services.js",
+    "shell": "src/app/AppShell.jsx",
+    "pinned": [
+      "storageMode",
+      "apiBase",
+      "fetcher"
+    ],
+    "injected": [
+      "repositories",
+      "workers",
+      "preview scene and capture",
+      "downloads",
+      "images",
+      "AI and rig clients"
+    ],
+    "features": [
+      "library",
+      "generation",
+      "connections"
+    ]
+  },
+  "applicationUseCases": [
+    "resource import/open/preview/trash/restore",
+    "baked independent template save/update",
+    "three-format export and forced persistence",
+    "frozen candidate application and calibration preservation",
+    "project save policy and tagged summary receipts",
+    "rig resource restoration/publication/conflict fork"
+  ],
+  "newBrowserProof": [
+    "cancel template creation without saving",
+    "save and update the same custom template ID",
+    "fake-provider visible generation submission",
+    "explicit mapped candidate application",
+    "calibration survives save and reload",
+    "source files and raw backend candidate remain unchanged"
+  ],
+  "isolation": {
+    "productionServiceRestarted": false,
+    "productionDataMigratedOrDeleted": false,
+    "productionDistOverwritten": false,
+    "nativeAppBuiltOrInstalled": false,
+    "realAIOrKeychainCalled": false,
+    "preview": "http://127.0.0.1:65202",
+    "provider": "fake-only"
+  },
+  "protectedChanges": [],
+  "pending": [
+    "editor document/history/save-as/navigation ownership",
+    "editor feature boundary",
+    "single rig document session and five panels",
+    "full P3 narrow-screen/gesture/camera/download acceptance"
+  ]
+}

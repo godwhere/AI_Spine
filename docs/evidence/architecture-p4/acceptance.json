@@ -1,0 +1,97 @@
+{
+  "plan": "docs/architecture-execution-plan.md#p4-\u5efa\u7acb\u72ec\u7acb\u8d44\u6e90\u6458\u8981\u67e5\u8be2",
+  "status": "complete",
+  "executionSteps": [
+    {
+      "step": 1,
+      "requirement": "Versioned, reentrant summary backfill",
+      "status": "proven",
+      "evidence": [
+        "server/workspace/project-index.mjs",
+        "tests/project-index.test.mjs",
+        "live-copy.json"
+      ]
+    },
+    {
+      "step": 2,
+      "requirement": "Summary and source changes share transactions",
+      "status": "proven",
+      "evidence": [
+        "server/workspace-store.mjs",
+        "tests/project-index.test.mjs"
+      ]
+    },
+    {
+      "step": 3,
+      "requirement": "List reads index; explicit open loads source",
+      "status": "proven",
+      "evidence": [
+        "src/core/storage.js",
+        "server/http/workspace-routes.mjs",
+        "tests/browser/summary.spec.mjs"
+      ]
+    },
+    {
+      "step": 4,
+      "requirement": "Read transactions and revisions reflect actual writes",
+      "status": "proven",
+      "evidence": [
+        "server/workspace-store.mjs",
+        "tests/project-index.test.mjs"
+      ]
+    },
+    {
+      "step": 5,
+      "requirement": "Explicit consistency check and rebuild",
+      "status": "proven",
+      "evidence": [
+        "scripts/workspace-index.mjs",
+        "live-copy.json",
+        "tests/project-index.test.mjs"
+      ]
+    }
+  ],
+  "acceptanceGates": [
+    {
+      "gate": "Summary does not read records.payload or deserialize source",
+      "status": "proven",
+      "evidence": [
+        "tests/project-index.test.mjs",
+        "performance.json"
+      ]
+    },
+    {
+      "gate": "Interruption rolls source/index/thumbnail/revision back together",
+      "status": "proven",
+      "evidence": [
+        "tests/project-index.test.mjs"
+      ]
+    },
+    {
+      "gate": "Rebuild twice is identical; corrupt rows abort explicitly",
+      "status": "proven",
+      "evidence": [
+        "tests/project-index.test.mjs",
+        "live-copy.json"
+      ]
+    },
+    {
+      "gate": "10, 100 and 500 entity measurements",
+      "status": "proven",
+      "evidence": [
+        "performance.json"
+      ]
+    },
+    {
+      "gate": "Resources, trash, tombstones, templates and drafts retain lifecycles",
+      "status": "proven",
+      "evidence": [
+        "tests/workspace.test.mjs",
+        "tests/project-index.test.mjs",
+        "tests/browser/saving.spec.mjs",
+        "verification.json"
+      ]
+    }
+  ],
+  "evidenceBoundary": "New code exercised on temporary databases, real browser and a production read-only consistency copy. Production service and data are not activated."
+}

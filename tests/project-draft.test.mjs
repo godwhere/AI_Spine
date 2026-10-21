@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { shouldPersistProject } from "../src/core/project-draft.js";
+import { shouldPersistProject } from "../shared/domain/project.mjs";
 
 const emptyDraft = { project: { id: "draft", isDraft: true, initialName: "功夫熊猫 · 新资源" }, name: "功夫熊猫 · 新资源", edits: {}, generation: {} };
 test("opening template previews and AI dialogs without authoring content keeps a temporary draft", () => {

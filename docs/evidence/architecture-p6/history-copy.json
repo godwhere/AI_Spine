@@ -1,0 +1,15 @@
+{
+  "onlyCopyModified": true,
+  "sourceReadOnlyBackup": "/Users/ethan/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2",
+  "records": 67,
+  "templateJobs": 23,
+  "rigJobs": 44,
+  "states": {
+    "failed": 9,
+    "cancelled": 4,
+    "completed": 54
+  },
+  "allFileBytesPreserved": true,
+  "AIRequests": 0,
+  "automaticResumption": false
+}

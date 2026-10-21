@@ -7,12 +7,15 @@ import { createServer, request as httpRequest } from "node:http";
 import { EventEmitter } from "node:events";
 import { createCanvas } from "@napi-rs/canvas";
 import { synthetic, pixelEnv, template } from "./helpers.mjs";
-import { prepareGenerationRequest, applyGeneratedParts, templateFingerprint, createLocalGenerationProvider } from "../src/core/generation.js";
-import { compilePages } from "../src/core/pixels.js";
-import { exportPackage, parseBundle, unpackZip } from "../src/core/archive.js";
-import { GenerationJobs, validateRequest, imagePrompt } from "../server/generation-service.mjs";
-import { generationMiddleware } from "../server/generation-plugin.mjs";
-import { generateNativeImage } from "../server/codex-rpc.mjs";
+import { prepareGenerationRequest, applyGeneratedParts, createLocalGenerationProvider } from "../src/infrastructure/generation-client.js";
+import { templateFingerprint } from "../shared/domain/generation.mjs";
+import { compilePages } from "../src/infrastructure/calibration.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { GenerationJobs, validateRequest, imagePrompt } from "../server/jobs/generation-service.mjs";
+import { generationMiddleware } from "../server/http/generation-routes.mjs";
+import { generateNativeImage } from "../server/infrastructure/codex-rpc.mjs";
 
 const canvas=createCanvas(32,32),ctx=canvas.getContext("2d");
 ctx.fillStyle="#54baff";ctx.fillRect(6,8,20,16);
@@ -32,7 +35,7 @@ const rpcStub=()=>({start:async()=>{},request:async()=>({account:{type:"chatgpt"
 async function fixture(t,generate) {
   const root=await mkdtemp(join(tmpdir(),"ai-spine-generation-"));
   const jobs=new GenerationJobs({root,rpc:rpcStub(),generate});
-  t.after(async()=>{jobs.close();await jobs.drainingPromise?.catch(()=>{});await rm(root,{recursive:true,force:true});});
+  t.after(async()=>{await jobs.close();await rm(root,{recursive:true,force:true});});
   await jobs.loading;
   return {root,jobs};
 }
@@ -203,16 +206,16 @@ test("continuing a partial job keeps completed candidates and uses its original 
 test("continuation refuses unknown and running jobs, and never silently retries a completed appearance",async(t)=>{
   const {jobs}=await fixture(t,async()=>({result:png.toString("base64")}));
   await assert.rejects(()=>jobs.retry("missing"),/不存在/);
-  jobs.closed=true;
+  jobs.draining=true;
   const queued=await jobs.create(request());await assert.rejects(()=>jobs.retry(queued.id),/只能继续/);
-  await jobs.cancel(queued.id);jobs.closed=false;
+  await jobs.cancel(queued.id);jobs.draining=false;
   const done=await settled(jobs,(await jobs.retry(queued.id)).id);
   assert.equal(done.status,"completed");assert.equal(done.images.length,1);
   await assert.rejects(()=>jobs.retry(done.id),/只能继续/);
 });
 test("interrupted jobs are never silently re-submitted on local service restart",async(t)=>{
   const {root,jobs}=await fixture(t,async()=>{throw new Error("unused");});
-  jobs.closed=true;const job=await jobs.create(request());
+  jobs.draining=true;const job=await jobs.create(request());
   const restored=new GenerationJobs({root,rpc:rpcStub()});t.after(()=>restored.close());
   const value=await restored.get(job.id);assert.equal(value.status,"failed");assert.match(value.error,/重启/);
 });

@@ -1,0 +1,31 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "docs/architecture-progress.md",
+    "server/http/workspace-routes.mjs",
+    "server/workspace/project-index.mjs",
+    "server/workspace/v2-repository.mjs",
+    "shared/domain/workspace-assets.mjs",
+    "tests/support/isolated-workbench.mjs",
+    "README.md",
+    "docs/architecture-execution-plan.md",
+    "docs/architecture-plan.md",
+    "docs/validation.md",
+    "package.json",
+    "server/workspace-store.mjs"
+  ],
+  "added": [
+    "docs/evidence/architecture-p5-http/acceptance.json",
+    "docs/evidence/architecture-p5-http/content.json",
+    "docs/evidence/architecture-p5-http/dependencies.json",
+    "docs/evidence/architecture-p5-http/live-preservation.json",
+    "docs/evidence/architecture-p5-http/transfer.json",
+    "docs/evidence/architecture-p5-http/verification.json",
+    "docs/workspace-v2-protocol.md",
+    "server/workspace/v2-commands.mjs",
+    "server/workspace/v2-mode.mjs",
+    "tests/workspace-v2-http.test.mjs"
+  ],
+  "protectedChanges": []
+}

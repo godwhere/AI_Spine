@@ -1,0 +1,54 @@
+{
+  "baseline": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "meaning": "prompt text, patterns, dimensions and validation constants preserved; port identity changes validated separately",
+  "comparisons": [
+    {
+      "source": "server/generation-service.mjs",
+      "method": "imagePrompt",
+      "target": "server/jobs/template-request.mjs",
+      "literals": 26,
+      "sha256": "3717fdb49d58337fb5f9946dea0a0df69d53e845d18741214f3862a109ee2760",
+      "equal": true
+    },
+    {
+      "source": "server/generation-service.mjs",
+      "method": "generatePart",
+      "target": "server/jobs/template-images.mjs",
+      "literals": 37,
+      "sha256": "53ceead52861418be774ca1a12784c760056f439f851eb3ddf90129c3b34fdd0",
+      "equal": true
+    },
+    {
+      "source": "server/rig-service.mjs",
+      "method": "analyze",
+      "target": "server/jobs/rig-planning.mjs",
+      "literals": 49,
+      "sha256": "f71991c149bee0608429b833f3558f63021d2f263f6b7e4cd741759a197bfa25",
+      "equal": true
+    },
+    {
+      "source": "server/rig-service.mjs",
+      "method": "generatePart",
+      "target": "server/jobs/rig-images.mjs",
+      "literals": 79,
+      "sha256": "d8aaa4b9876568504df61944f2d65e90a2411fe9069865db0f92f04bf136fe51",
+      "equal": true
+    },
+    {
+      "source": "server/rig-service.mjs",
+      "method": "generateAppearance",
+      "target": "server/jobs/rig-images.mjs",
+      "literals": 46,
+      "sha256": "51d6d6b834e96dcd6fa97854495ddcd8e4dbae863be73275f22ef97e06609ff6",
+      "equal": true
+    },
+    {
+      "source": "server/rig-service.mjs",
+      "method": "generateParts",
+      "target": "server/jobs/rig-images.mjs",
+      "literals": 6,
+      "sha256": "818d1a2ca779fa44f3034101637ff56aa568c1ff21c5eeb172924997c6eef61d",
+      "equal": true
+    }
+  ]
+}

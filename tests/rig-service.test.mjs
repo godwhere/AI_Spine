@@ -7,12 +7,13 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createServer, request as httpRequest } from "node:http";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { GenerationJobs } from "../server/generation-service.mjs";
-import { RigJobs, rigGeometry } from "../server/rig-service.mjs";
-import { generationMiddleware, generationStorageRoot } from "../server/generation-plugin.mjs";
-import { generateStructured } from "../server/codex-structured.mjs";
-import { generateNativeImage } from "../server/codex-rpc.mjs";
-import { RIG_PART_IMAGE_INSTRUCTIONS, RIG_APPEARANCE_IMAGE_INSTRUCTIONS } from "../server/rig-planning.mjs";
+import { GenerationJobs } from "../server/jobs/generation-service.mjs";
+import { RigJobs, rigGeometry } from "../server/jobs/rig-service.mjs";
+import { generationMiddleware } from "../server/http/generation-routes.mjs";
+import { generationStorageRoot } from "../server/bootstrap/environments.mjs";
+import { generateStructured } from "../server/providers/codex-planning.mjs";
+import { generateNativeImage } from "../server/infrastructure/codex-rpc.mjs";
+import { RIG_PART_IMAGE_INSTRUCTIONS, RIG_APPEARANCE_IMAGE_INSTRUCTIONS } from "../server/jobs/handlers/rig-prompts.mjs";
 
 const artwork = createCanvas(256, 256), paint = artwork.getContext("2d");
 paint.fillStyle = "#8d58ff"; paint.fillRect(100, 105, 56, 100); paint.fillRect(90, 30, 76, 80); paint.fillRect(20, 155, 40, 40);
@@ -746,14 +747,16 @@ test("cancellation before turn/start responds still interrupts the eventual turn
   const rpc = new PlanningRpc({ hold: true }), controller = new AbortController();
   const pending = generateStructured(rpc, { cwd: "/tmp", prompt: "analyze", schema, signal: controller.signal });
   while (!rpc.startTurn) await new Promise(setImmediate);
-  controller.abort(); await assert.rejects(pending, { name: "AbortError" });
-  rpc.startTurn({ turn: { id: "late-turn" } }); await new Promise(setImmediate);
+  controller.abort(); const rejected = assert.rejects(pending, { name: "AbortError" });
+  rpc.startTurn({ turn: { id: "late-turn" } }); await rejected;
   assert.ok(rpc.calls.some((call) => call.method === "turn/interrupt" && call.params.turnId === "late-turn")); assert.equal(rpc.listenerCount("notification"), 0);
 });
 test("planning timeout is a failure, and trusted rig image instructions reach only the native adapter", async () => {
   const planning = new PlanningRpc({ hold: true });
-  await assert.rejects(generateStructured(planning, { cwd: "/tmp", prompt: "analyze", schema, timeoutMs: 10 }), /超时/);
-  planning.startTurn({ turn: { id: "late-turn" } });
+  const timedOut = generateStructured(planning, { cwd: "/tmp", prompt: "analyze", schema, timeoutMs: 10 });
+  while (!planning.startTurn) await new Promise(setImmediate);
+  setTimeout(() => planning.startTurn({ turn: { id: "late-turn" } }), 20);
+  await assert.rejects(timedOut, /超时/);
   const rpc = new PlanningRpc(); rpc.request = async function (method, params) {
     if (method === "account/read") return { account: { type: "chatgpt" } };
     if (method === "thread/start") { this.thread = params; return { thread: { id: "image-thread" } }; }

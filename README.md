@@ -14,6 +14,8 @@ iSpine 是一个本地 Spine 角色动画创作工作台，使用浏览器界面
 - 选择资源即可查看大幅动画预览、动作列表、部件数量和替换状态。
 - 工程和自建模板保存在本机，可从资源库继续编辑；后续修改或删除原资源不会改变已保存的模板。自建模板可单独删除。
 - 从模板新建时先打开临时草稿；仅预览或打开 AI 创作后返回，不会新增资源。修改内容、填写创作描述、应用形象或部件后自动保存，也可主动保存或导出。
+- 保存按资源串行执行，连续编辑合并为最新待写内容；切页等待确认保存。版本冲突保留本地修改，可另存为新资源。
+- 原始图片按内容复用，改名、校准和关键帧编辑不重复上传未变素材；保存响应中断后使用原提交标识恢复。资源列表独立读取摘要，选中时再加载图片与工程。
 - 支持移入回收站、恢复、永久删除和清空回收站。永久删除前需要确认，删除后无法恢复。
 
 ### 部件替换与校准
@@ -77,7 +79,7 @@ iSpine 是一个本地 Spine 角色动画创作工作台，使用浏览器界面
 
 打开 [本机工作台](http://127.0.0.1:4175)，或双击项目中的 `启动工作台.command`。当前 Mac 登录后自动启动后台，关闭网页不会丢失资源。同机使用无需域名或额外服务器。运行与数据说明见 [本机网页工作台](docs/workbench.md)。
 
-![iSpine 桌面资源库](outputs/desktop/evidence/explorer/native-resources-current.png)
+![iSpine 资源库](outputs/desktop/evidence/explorer/native-resources-current.png)
 
 ## 创作流程
 
@@ -110,7 +112,7 @@ Unity 资源包解压后可导入已安装匹配版本 spine-unity 的 Unity 工
 
 ## 本地数据
 
-工程、回收站、骨架草稿和自建模板统一保存在 `~/Library/Application Support/AI Spine/workspace/workspace.sqlite`，生成记录保存在同目录下的 `generation/jobs`。不同浏览器共用同一个本机后台；自建模板和草稿保留独立的数据分区与生命周期。旧浏览器数据首次打开时迁入，冲突版本分别保留，可编辑 ZIP 仍可用于独立备份与跨电脑传递。
+工程、回收站、骨架草稿和自建模板统一保存在 `~/Library/Application Support/AI Spine/workspace/workspace.sqlite`，生成记录保存在同目录下的 `generation/jobs`。资源列表使用独立摘要索引和按需缩略图，打开具体资源时才读取完整工程；索引可由原记录检查和重建。不同浏览器共用同一个本机后台；自建模板和草稿保留独立的数据分区与生命周期。旧浏览器数据首次打开时迁入，冲突版本分别保留，可编辑 ZIP 仍可用于独立备份与跨电脑传递。
 
 点击顶部的「AI 连接」进行设置。Codex 方式识别本机已登录的 ChatGPT 账号，并提供安装与登录指引；API Key 方式提供密钥输入、模型选择和连接验证。Sub2API 另提供服务地址、图片接口与自定义模型设置，上游账号在网关后台授权。顶部显示当前 AI 服务的连接状态。
 
@@ -127,7 +129,7 @@ Codex 的账号认证和续期由 Codex 管理。本机后台使用系统安全�
 | 动画运行时 | Spine WebGL 4.3 |
 | 图片处理 | Canvas、@napi-rs/canvas |
 | 资源包处理 | fflate、Web Worker |
-| 工程存储 | 本机 SQLite，保留旧 IndexedDB 迁移来源 |
+| 工程存储 | 本机 SQLite、独立摘要与原始素材去重，保留旧 IndexedDB 迁移来源 |
 | 骨架与绑定 | 自有骨架数据、加权规则网格、双骨 IK 与动作采样烘焙 |
 | AI 生成 | 本地 Codex App Server、OpenAI Images、Sub2API 图片网关 |
 
@@ -135,20 +137,31 @@ Codex 的账号认证和续期由 Codex 管理。本机后台使用系统安全�
 
 | 目录 | 内容 |
 | --- | --- |
-| `src/components/` | 资源库、动画预览、部件校准与 AI 创作界面 |
-| `src/core/` | 资源包处理、图像处理、工程存储与生成适配 |
-| `src/spine/` | Spine 运行时加载、动画取景与部件拾取 |
-| `desktop/` | 历史桌面壳与兼容的本机 HTTP 服务 |
-| `server/` | 统一存储、密钥保护、Codex 连接、生成队列和结果校验 |
+| `src/app/` | 网页能力组装、根界面与导航接线 |
+| `src/features/` | 资源/模板库、编辑器视图、骨架五类面板、AI 创作与连接设置界面 |
+| `src/components/` | 共用动画预览、播放控制、资源缩略图与预览运行时 |
+| `shared/` | 工程保存政策、草稿/附件/候选规则、作者摘要、字节编码与指纹 |
+| `engine/` | 资源包解析与导出、Spine 数据解析、骨架/权重/IK/动作编译、Atlas 与图片计算 |
+| `src/workers/` | 资源包解析、导出与结果缓冲区转移 |
+| `src/application/` | 资源查询与失效、导入/模板/候选/导出/发布用例、编辑/骨架/校准会话、文档命令、历史、保存与导航保护 |
+| `src/infrastructure/` | 浏览器图片与文件、历史 IndexedDB、素材哈希与版本化 HTTP 仓储、生成请求和预览适配 |
+| `src/spine/` | WebGL 场景、贴图加载、播放时钟与相机 |
+| `server/workspace/` | 资源摘要、缩略图、版本化仓储、素材引用与一致性核查 |
+| `server/jobs/` | 原子任务记录、排队/取消/关闭排空，以及模板、骨架图片、规划和动作研究 handler |
+| `server/providers/` | Codex、OpenAI、Sub2API 图片协议与独立 Codex 规划能力 |
+| `server/application/` | 注入仓储的工作区命令与兼容协议分派 |
+| `server/ai/`、`server/infrastructure/` | AI 连接配置、Codex RPC 与系统密钥保护 |
+| `server/bootstrap/`、`server/http/` | 正式/开发/预览服务组装、网页启动器、回环 HTTP 与注入的 API 路由 |
 | `public/templates/` | 模板目录、骨架、图集与贴图 |
 | `scripts/` | 本地启动与构建工具 |
-| `tests/` | 资源、运行时、生成服务与桌面功能测试 |
+| `tests/` | 资源、运行时、生成服务、架构边界与隔离浏览器测试 |
 | `docs/` | 使用、构建与功能说明 |
 
 ## 相关文档
 
-- [架构调整方案（规划）](docs/architecture-plan.md)
-- [架构调整执行计划（尚未实施）](docs/architecture-execution-plan.md)
+- [架构调整方案](docs/architecture-plan.md)
+- [架构调整执行计划](docs/architecture-execution-plan.md)
+- [架构实施与验证记录](docs/architecture-progress.md)
 - [新骨架与动作](docs/rig-authoring.md)
 - [模板动作制作经验](docs/template-animation-lessons.md)
 

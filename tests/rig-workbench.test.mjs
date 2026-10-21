@@ -1,25 +1,27 @@
+import * as rigViews from "../src/application/rig-view.js";
+import { createCalibrationSession } from "../src/application/part-calibration.js";
+import { createRigOperations, basicMotionSlots } from "../src/application/rig-operations.js";
+import { createRigCommands } from "../src/application/rig-commands.js";
+import { createRigPanelBindings } from "./support/rig-panel-harness.mjs";
+import { createRigSession } from "../src/application/rig-session.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { transformWithEsbuild } from "vite";
-import * as authoring from "../src/core/rig-authoring.js";
-import * as rigClient from "../src/core/rig-client.js";
-import * as rigImages from "../src/core/rig-images.js";
-import * as rigRegistration from "../src/core/rig-registration.js";
-import * as motionStudyClient from "../src/core/motion-study-client.js";
-import * as motionStudyCore from "../src/core/rig-motion-studies.js";
-import * as rigPreviewTime from "../src/core/rig-preview-time.js";
-import * as rigPartAdjustment from "../src/core/rig-part-adjustment.js";
+import { authoring, rigClient, rigImages, rigRegistration, motionStudyCore } from "./support/rig-bindings.mjs";
+import * as motionStudyClient from "../src/application/motion-study.js";
+import * as rigPreviewTime from "../src/application/rig-preview-time.js";
+import * as rigPartAdjustment from "../engine/rig/part-adjustment.js";
 import { createCanvas } from "@napi-rs/canvas";
 import { Skeleton, AnimationState, AnimationStateData, Physics } from "@esotericsoftware/spine-webgl";
 import { pixelEnv } from "./helpers.mjs";
-import { parseBundle } from "../src/core/archive.js";
-import { parseSkeleton } from "../src/spine/runtime.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { parseSkeleton } from "../engine/spine/parse.js";
 
-const source = await readFile(new URL("../src/components/RigWorkbench.jsx", import.meta.url), "utf8");
+const source = await readFile(new URL("../src/features/rig/RigWorkbench.jsx", import.meta.url), "utf8");
 const names = [...source.matchAll(/^import \{ ([^}]+) \} from .+;$/gm)].flatMap((match) => match[1].split(",").map((name) => name.trim()));
 const { code } = await transformWithEsbuild(source.replace(/^import .*;\n/gm, "").replace("export function RigWorkbench", "function RigWorkbench"), "RigWorkbench.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
-const factory = new Function(...names, "jsx", "React", "setInterval", "clearInterval", "performance", `${code};return { RigWorkbench, GripControls };`);
+const factory = new Function(...names, "jsx", "React", "setInterval", "clearInterval", "performance", `${code};return { RigWorkbench };`);
 const descendants = (node) => node && typeof node === "object" ? [node, ...(node.children || []).flatMap(descendants)] : [];
 const text = (node) => typeof node === "string" || typeof node === "number" ? String(node) : node && typeof node === "object" ? (node.children || []).map(text).join("") : "";
 const same = (a, b) => a && b && a.length === b.length && a.every((value, index) => Object.is(value, b[index]));
@@ -32,7 +34,9 @@ function workbench({ initialDocument, initialManualAdjustment = false, initialPa
   const effect = (callback, dependencies) => { const i = cursor++, previous = cells[i]; if (!same(previous?.dependencies, dependencies)) scheduled.push(() => { previous?.cleanup?.(); cells[i] = { dependencies, cleanup: callback() }; }); };
   const memo = (callback, dependencies) => { const i = cursor++; if (!same(cells[i]?.dependencies, dependencies)) cells[i] = { dependencies, value: callback() }; return cells[i].value; };
   const ref = (initial) => { const i = cursor++; return cells[i] ||= { current: initial }; };
+  let panels;
   const jsx = (type, props, ...children) => {
+    if (panels?.transparent.has(type)) return type(props || {});
     const flat = children.flat(Infinity);
     for (const child of flat) if (child && typeof child === "object" && !("type" in child)) throw new Error("Object passed as a React child");
     return { type, props: props || {}, children: flat };
@@ -40,13 +44,14 @@ function workbench({ initialDocument, initialManualAdjustment = false, initialPa
   const client = { list: async () => history.map(({ result, ...item }) => item), get: get || (async (id) => history.find((item) => item.id === id)), image,
     retry: async (id, options) => { retries.push({ id, options }); return retry ? retry(id, options) : { id: "retry-job", parentJobId: id, kind: "parts", projectId: initialDocument.id, status: "queued", provider: { id: "codex-native", label: "Codex 账号" } }; },
     start: async (request) => { submissions.push(request); return { id: "new-job", projectId: request.projectId, kind: request.kind, status: "queued", provider: { id: "codex-native", label: "Codex 账号规划" } }; } };
-  const values = { ...authoring, ...rigClient, ...rigImages, ...rigRegistration, ...motionStudyClient, ...motionStudyCore, ...rigPreviewTime, ...rigPartAdjustment, useState: state, useEffect: effect, useMemo: memo, useRef: ref,
+  const values = { ...rigViews, basicMotionSlots, createRigCommands, createRigSession, ...authoring, ...rigClient, ...rigImages, ...rigRegistration, ...motionStudyClient, ...motionStudyCore, ...rigPreviewTime, ...rigPartAdjustment, useState: state, useEffect: effect, useMemo: memo, useRef: ref,
     createRigPartCalibration: createCalibration, bakeRigPartCalibration: bakeCalibration,
     readRigImage: readImage,
     readRigPartCandidate: readPartImage,
     createRigClient: () => client, createLocalGenerationProvider: () => ({ status: async () => ({ connected: true }) }), inspectRigMotion: inspect, ...bindings };
-  const component = factory(...names.map((name) => values[name] || "stub"), jsx, { Fragment: "fragment" }, (callback) => { timers.set(++timerId, callback); return timerId; }, (id) => timers.delete(id), { now }).RigWorkbench;
-  const props = { initialDocument, initialManualAdjustment, initialPartId, saveHint, draftSaveStatus, connectionStatus: { connected: true, label: "Codex 账号" }, onDraftChange: (document) => { drafts.push(document); return onDraftChange?.(document); }, onSave: (...args) => saved.push(args), onClose() {} };
+  panels = createRigPanelBindings(values, jsx);
+  const component = factory(...names.map((name) => panels.values[name] || "stub"), jsx, { Fragment: "fragment" }, (callback) => { timers.set(++timerId, callback); return timerId; }, (id) => timers.delete(id), { now }).RigWorkbench;
+  const props = { CalibrationEditor: "stub", editing: { createId: () => crypto.randomUUID(), images: values, operations: { ...createRigOperations({ images: values, buildFiles: values.buildRigFiles, inspectMotion: inspect, createId: () => crypto.randomUUID() }), ...bindings.operations } }, client, generationClient: { status: async () => ({ connected: true }) }, initialDocument, initialManualAdjustment, initialPartId, saveHint, draftSaveStatus, connectionStatus: { connected: true, label: "Codex 账号" }, onDraftChange: (document) => { drafts.push(document); return onDraftChange?.(document); }, onSave: (...args) => saved.push(args), onClose() {} };
   const render = () => { if (dirty) { dirty = false; cursor = 0; scheduled = []; tree = component(props); for (const callback of scheduled) callback(); } };
   const settle = async () => {
     for (let attempt = 0; attempt < 40; attempt++) {
@@ -69,6 +74,23 @@ function workbench({ initialDocument, initialManualAdjustment = false, initialPa
   };
 }
 const empty = () => ({ version: 1, id: "rig-test", name: "Test character", width: 768, height: 1024, sourceImage: "data:image/png;base64,AAAA", joints: [], parts: [], motions: [] });
+
+test("rig document commands notify the draft writer before another render or passive effect", async () => {
+  const ui = workbench({ initialDocument: empty() }); await ui.settle();
+  ui.find((node) => node.props["aria-label"] === "骨架资源名称").props.onChange({ target: { value: "Immediate draft" } });
+  assert.equal(ui.drafts.at(-1).name, "Immediate draft");
+  ui.unmount();
+});
+
+test("a view abandoned during motion validation cannot publish the old resource", async () => {
+  const document = authoring.createHumanoidDraft({ id: "abandoned-publication", width: 768, height: 1024 });
+  document.parts = document.parts.map((part) => ({ ...part, image: "data:image/png;base64,AAAA", imageSource: "uploaded", completion: "ready" }));
+  const gate = deferred(), ui = workbench({ initialDocument: document, inspect: () => gate.promise });
+  await ui.settle();
+  const saving = ui.find((node) => node.type === "button" && text(node) === "保存为角色资源").props.onClick();
+  ui.unmount(); gate.resolve({ finite: true, issues: [] }); await saving;
+  assert.equal(ui.saved.length, 0); assert.equal(ui.writesAfterUnmount, 0);
+});
 
 test("manual adjustment opens the selected part in setup pose and groups a drag into one undo", async () => {
   const document = authoring.createHumanoidDraft({ id: "rig-manual", width: 768, height: 1024 });
@@ -189,7 +211,7 @@ test("AI Wrist joints and unnamed non-root fallback joints support projected gri
     const cells = [], effects = []; let cursor = 0, tree, bound;
     const values = { useState(initial) { const i = cursor++; if (!(i in cells)) cells[i] = initial; return [cells[i], (value) => { cells[i] = value; }]; }, useEffect(callback) { effects.push(callback); } };
     const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
-    const Grip = factory(...names.map((name) => values[name] || "stub"), jsx, { Fragment: "fragment" }, () => {}, () => {}).GripControls;
+    const Grip = createRigPanelBindings(values, jsx).values.GripControls;
     tree = Grip({ document, part, onBind: (value) => { bound = value; } });
     for (const effect of effects) effect(); cursor = 0; effects.length = 0;
     tree = Grip({ document, part, onBind: (value) => { bound = value; } });
@@ -274,13 +296,13 @@ test("pending source crops do not expose independent-image calibration and activ
 });
 
 test("external calibration errors render inside the modal alert while existing callers remain unchanged", async () => {
-  const source = await readFile(new URL("../src/components/PartEditor.jsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../src/features/editor/PartEditor.jsx", import.meta.url), "utf8");
   const names = [...source.matchAll(/import \{([^}]+)\} from [^;]+;/g)].flatMap((match) => match[1].split(",").map((name) => name.trim()).filter(Boolean));
   const { code } = await transformWithEsbuild(source.replace(/import \{[^}]+\} from [^;]+;\n/g, "").replace("export function PartEditor", "function PartEditor"), "PartEditor.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
-  const values = { useState: (value) => [value, () => {}], useEffect: () => {}, useRef: (value) => ({ current: value }), partClipping: () => false };
+  const values = { createCalibrationSession, useState: (value) => [typeof value === "function" ? value() : value, () => {}], useEffect: () => {}, useRef: (value) => ({ current: value }), partClipping: () => false };
   const Component = new Function(...names, "jsx", `${code}; return PartEditor;`)(...names.map((name) => values[name] || "stub"), jsx);
-  const props = { part: { id: "foot", originalWidth: 42, originalHeight: 24 }, bundle: {}, edit: { image: new Uint8Array([1]), transform: {} }, onApply() {}, onClose() {} };
+  const props = { calibration: { partClipping: () => false }, part: { id: "foot", originalWidth: 42, originalHeight: 24 }, bundle: {}, edit: { image: new Uint8Array([1]), transform: {} }, onApply() {}, onClose() {} };
   const dialog = descendants(Component({ ...props, externalError: "Calibration failed. Adjust and retry." })).find((node) => node.props.role === "dialog");
   const alert = descendants(dialog).find((node) => node.props.role === "alert");
   assert.equal(text(alert), "Calibration failed. Adjust and retry.");
@@ -422,8 +444,9 @@ test("non-loop authoring playback holds the final pose and expression, pauses, a
   ] }];
   let now = 0;
   const ui = workbench({ initialDocument: document, now: () => now, bindings: {
-    buildRigFiles: async () => ({}), parseBundle: () => ({}),
-    parseSkeleton: () => ({ data: { animations: [{ name: "death", duration: 1.3000000715255737 }], skins: [{ name: "default" }], bones: [] } }),
+    operations: { preview: async (snapshot) => ({ document: snapshot, bundle: {
+      animations: ["death"], durations: { death: 1.3000000715255737 }, skins: ["default"], boneCount: 0,
+    } }) },
   } });
   await ui.settle(); await ui.click("4动作与关键帧");
   now = 1300; await ui.tick();
@@ -543,8 +566,9 @@ test("looping authoring playback still wraps without pausing and forwards its lo
   ] }];
   let now = 0;
   const ui = workbench({ initialDocument: document, now: () => now, bindings: {
-    buildRigFiles: async () => ({}), parseBundle: () => ({}),
-    parseSkeleton: () => ({ data: { animations: [{ name: "idle", duration: 1 }], skins: [{ name: "default" }], bones: [] } }),
+    operations: { preview: async (snapshot) => ({ document: snapshot, bundle: {
+      animations: ["idle"], durations: { idle: 1 }, skins: ["default"], boneCount: 0,
+    } }) },
   } });
   await ui.settle(); await ui.click("4动作与关键帧");
   now = 1500; await ui.tick();
@@ -605,7 +629,7 @@ test("foot lock reports identify contact sample counts and avoid treating unlock
 });
 
 test("RigCanvas renders one default or preview attachment per group while ordinary layers stay visible", async () => {
-  const source = await readFile(new URL("../src/components/RigCanvas.jsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../src/features/rig/RigCanvas.jsx", import.meta.url), "utf8");
   const { code } = await transformWithEsbuild(source.replace(/^import .*;\n/gm, "").replace("export function RigCanvas", "function RigCanvas"), "RigCanvas.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
   const Component = new Function("useRef", "useState", "useEffect", "rigDefaultVisiblePartIds", "jsx", "React", `${code};return RigCanvas;`)((value) => ({ current: value }), (value) => [typeof value === "function" ? value() : value, () => {}], () => {}, rigClient.rigDefaultVisiblePartIds, jsx, { Fragment: "fragment" });
@@ -700,7 +724,7 @@ test("registration detail controls follow the selected part without changing doc
 });
 
 test("focused RigCanvas keeps global polygon coordinates and grid labels while isolating the selected part", async () => {
-  const source = await readFile(new URL("../src/components/RigCanvas.jsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../src/features/rig/RigCanvas.jsx", import.meta.url), "utf8");
   const { code } = await transformWithEsbuild(source.replace(/^import .*;\n/gm, "").replace("export function RigCanvas", "function RigCanvas"), "RigCanvas.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
   const Component = new Function("useRef", "useState", "useEffect", "rigDefaultVisiblePartIds", "jsx", "React", `${code};return RigCanvas;`)((value) => ({ current: value }), (value) => [typeof value === "function" ? value() : value, () => {}], () => {}, rigClient.rigDefaultVisiblePartIds, jsx, { Fragment: "fragment" });
@@ -708,7 +732,7 @@ test("focused RigCanvas keeps global polygon coordinates and grid labels while i
     parts: [{ id: "eye", label: "左眼", bone: "root", influences: ["root"], x: 200, y: 180, width: 40, height: 60, z: 1 }, { id: "other", bone: "other-bone", x: 400, y: 400, width: 30, height: 30, z: 2 }] };
   const polygons = { eye: [{ x: 210, y: 190 }, { x: 230, y: 190 }, { x: 230, y: 220 }, { x: 210, y: 220 }], other: [{ x: 400, y: 400 }, { x: 430, y: 400 }, { x: 400, y: 430 }] };
   const before = structuredClone({ document, polygons }), moves = [];
-  const tree = Component({ document, selectedPart: "eye", selectedJoint: "root", registration: { focus: true, onlySelected: true, grid: true, mode: "source", polygons }, onMovePolygonVertex: (...args) => moves.push(args), onSelectPolygonVertex() {}, onSelectPart() {}, onSelectJoint() {} });
+  const tree = Component({ calibration: { partClipping: () => false }, document, selectedPart: "eye", selectedJoint: "root", registration: { focus: true, onlySelected: true, grid: true, mode: "source", polygons }, onMovePolygonVertex: (...args) => moves.push(args), onSelectPolygonVertex() {}, onSelectPart() {}, onSelectJoint() {} });
   const nodes = descendants(tree), svg = nodes.find((node) => node.type === "svg");
   assert.equal(svg.props.viewBox, "186 166 68 78");
   assert.deepEqual(nodes.filter((node) => node.props["data-rig-part"]).map((node) => node.props["data-rig-part"]), ["eye"]);
@@ -753,7 +777,7 @@ test("part annotation navigation keeps the requested time across motion changes 
 });
 
 test("the part grid labels the sampled world position and never shows a hidden variant at its setup rectangle", async () => {
-  const source = await readFile(new URL("../src/components/RigCanvas.jsx", import.meta.url), "utf8");
+  const source = await readFile(new URL("../src/features/rig/RigCanvas.jsx", import.meta.url), "utf8");
   const { code } = await transformWithEsbuild(source.replace(/^import .*;\n/gm, "").replace("export function RigCanvas", "function RigCanvas"), "RigCanvas.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx" });
   const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
   const Component = new Function("useRef", "useState", "useEffect", "rigDefaultVisiblePartIds", "jsx", "React", `${code};return RigCanvas;`)((value) => ({ current: value }), (value) => [typeof value === "function" ? value() : value, () => {}], () => {}, rigClient.rigDefaultVisiblePartIds, jsx, { Fragment: "fragment" });

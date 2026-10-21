@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { parseBundle } from "../src/core/archive.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
 export const pixelEnv = {
   createCanvas,
   loadImage: (bytes) => loadImage(Buffer.from(bytes)),

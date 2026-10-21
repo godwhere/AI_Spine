@@ -1,0 +1,41 @@
+{
+  "base": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "current": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "changed": [
+    "README.md",
+    "docs/ai-connections.md",
+    "docs/generation.md",
+    "package.json",
+    "server/ai-connections.mjs",
+    "server/generation-service.mjs",
+    "server/providers/codex-native.mjs",
+    "server/providers/openai-images.mjs",
+    "server/providers/sub2api-images.mjs",
+    "server/rig-motion-study.mjs",
+    "server/rig-service.mjs",
+    "tests/ai-connections.test.mjs",
+    "tests/generation.test.mjs",
+    "tests/sub2api.test.mjs"
+  ],
+  "added": [
+    "docs/evidence/architecture-p6/acceptance.json",
+    "docs/evidence/architecture-p6/content.json",
+    "docs/evidence/architecture-p6/dependencies.json",
+    "docs/evidence/architecture-p6/handler-equivalence.json",
+    "docs/evidence/architecture-p6/history-copy.json",
+    "docs/evidence/architecture-p6/live-preservation.json",
+    "docs/evidence/architecture-p6/verification.json",
+    "server/jobs/manifests.mjs",
+    "server/jobs/queue.mjs",
+    "server/jobs/rig-handlers.mjs",
+    "server/jobs/rig-images.mjs",
+    "server/jobs/rig-planning.mjs",
+    "server/jobs/rig-request.mjs",
+    "server/jobs/template-images.mjs",
+    "server/jobs/template-request.mjs",
+    "server/providers/capabilities.mjs",
+    "server/providers/codex-planning.mjs",
+    "tests/job-lifecycle.test.mjs"
+  ],
+  "protectedChanges": []
+}

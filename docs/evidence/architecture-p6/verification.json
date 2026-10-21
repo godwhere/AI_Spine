@@ -1,0 +1,51 @@
+{
+  "stage": "P6",
+  "status": "implementation and isolated acceptance complete; final installed-code verification in P7",
+  "capturedAt": "2026-10-20T20:36:14.059632+00:00",
+  "tests": {
+    "main": 570,
+    "providersJobsLifecycleFocused": 100,
+    "newLifecycle": 7,
+    "architectureIsolationSites": 10,
+    "browserFormat2CandidateAndTemplate": 2,
+    "logs": [
+      "/tmp/ispine-P6-main-final.log",
+      "/tmp/ispine-P6-focused-final.log",
+      "/tmp/ispine-P6-lifecycle.log",
+      "/tmp/ispine-P6-support.log",
+      "/tmp/ispine-P6-browser.log"
+    ]
+  },
+  "jobHistoryCopy": {
+    "template": 23,
+    "rig": 44,
+    "total": 67,
+    "allBytesPreserved": true,
+    "automaticResumption": false,
+    "AIRequests": 0
+  },
+  "concurrency": {
+    "queues": 2,
+    "oneActiveJobPerQueue": true,
+    "partTurnsPerQueueMax": 4,
+    "simultaneousImageTurnsProven": 8,
+    "motionFrameMax": 3,
+    "newSharedBudget": false
+  },
+  "runtimeChanges": [
+    "Manifest serialization, per-job writes, atomic rename, scoped loading and flush have one owner",
+    "Queue owns admission, durable enqueue, state transitions, cancellation and shutdown",
+    "Shutdown awaits both queues, in-flight admissions, pending manifests, then shared connection/RPC close",
+    "Failed initial manifest cannot leak into another project drain",
+    "Image and explicit Codex planning capabilities separated, credentials stay in connection service"
+  ],
+  "preserved": [
+    "provider, model, endpoint, protocol and retry mapping",
+    "original prompts and validation constants",
+    "manifest identity and file paths",
+    "project/candidate application policy"
+  ],
+  "realAIRequests": false,
+  "credentialsUnlocked": false,
+  "productionJobsResumed": false
+}

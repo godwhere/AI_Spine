@@ -4,7 +4,7 @@ import { IDBFactory } from "fake-indexeddb";
 
 async function fixture() {
   globalThis.indexedDB = new IDBFactory();
-  return import(`../src/core/storage.js?case=${crypto.randomUUID()}`);
+  return import(`../src/infrastructure/project-repository.js?case=${crypto.randomUUID()}`);
 }
 function project(id = "first") {
   return { id, name: `角色 ${id}`, files: { "skeleton.json": new Uint8Array([1, 2, 3]) },
@@ -114,19 +114,14 @@ test("invalid deletion and restoration do not remove or change other projects", 
   await assert.rejects(storage.restoreProject("missing"), /不存在/);
   assert.deepEqual(await storage.listProjects(), before);
 });
-test("desktop startup does not re-seed a sample when all existing projects are in trash", async (t) => {
+test("an intentionally emptied library retains trash and deletion markers across reload", async () => {
   const storage = await fixture(); await storage.saveProject(project()); await storage.trashProject("first");
-  const oldWindow = globalThis.window, oldFetch = globalThis.fetch;
-  globalThis.window = { aiSpineDesktop: {} };
-  globalThis.fetch = async () => { throw new Error("Unexpected sample download"); };
-  t.after(() => { globalThis.window = oldWindow; globalThis.fetch = oldFetch; });
-  const { desktopProjects } = await import(`../src/core/desktop.js?case=${crypto.randomUUID()}`);
-  assert.deepEqual(await desktopProjects(), []);
+  assert.deepEqual(await storage.listProjects(), []);
   assert.equal((await storage.listTrashedProjects()).length, 1);
   await storage.permanentlyDeleteProjects(["first"]);
-  const restarted = await import(`../src/core/desktop.js?case=${crypto.randomUUID()}`);
-  assert.deepEqual(await restarted.desktopProjects(), []);
-  assert.equal((await storage.listProjectLibrary()).hasDeletedProjects, true);
+  const restarted = await import(`../src/infrastructure/project-repository.js?case=${crypto.randomUUID()}`);
+  assert.deepEqual(await restarted.listProjects(), []);
+  assert.equal((await restarted.listProjectLibrary()).hasDeletedProjects, true);
 });
 test("permanent deletion removes character data and prevents stale saves from reviving it", async () => {
   const storage = await fixture(), source = project();

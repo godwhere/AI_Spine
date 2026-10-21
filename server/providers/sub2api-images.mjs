@@ -1,3 +1,4 @@
+import { IMAGE_CAPABILITIES } from "./capabilities.mjs";
 import { readFile } from "node:fs/promises";
 
 const IMAGE_MODELS = ["gpt-image-2.5-sunburst", "gpt-image-2.5-flare", "gpt-image-2", "gpt-image-1.5"];
@@ -85,7 +86,7 @@ function decodeImage(value) {
 
 export function sub2apiImagesProvider(fetcher = fetch) {
   return {
-    id: "sub2api", label: "Sub2API", auth: "api-key", models: IMAGE_MODELS,
+    id: "sub2api", label: "Sub2API", auth: "api-key", models: IMAGE_MODELS, capabilities: IMAGE_CAPABILITIES,
     configurableEndpoint: true, allowCustomModel: true,
     protocols: [{ id: "images", label: "OpenAI Images（GPT Image）" }, { id: "gemini", label: "Gemini 原生图片接口" }],
     modelsByProtocol: { images: IMAGE_MODELS, gemini: GEMINI_MODELS },

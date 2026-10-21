@@ -1,0 +1,63 @@
+{
+  "stage": "P3",
+  "status": "in_progress",
+  "batch": "editor and rig document sessions, navigation transaction, editor view and rig panels",
+  "capturedAt": "2026-10-20T17:16:59.618218+00:00",
+  "baselineCommit": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "tests": {
+    "main": 501,
+    "browser": 21,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "sessionAndPanelFocused": 51,
+    "newApplicationCases": 5,
+    "newBrowserCases": 3,
+    "logs": [
+      "/tmp/ispine-P3-sessions-main-final.log",
+      "/tmp/ispine-P3-sessions-browser-final.log",
+      "/tmp/ispine-P3-sessions-support-final.log",
+      "/tmp/ispine-P3-session-panel-final-focused.log"
+    ]
+  },
+  "architecture": {
+    "files": 145,
+    "imports": 543,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": []
+  },
+  "owners": {
+    "editorContentAndHistory": "src/application/editor-workspace.js",
+    "rigDocumentAndGestures": "src/application/rig-session.js",
+    "pendingNavigation": "src/application/navigation.js",
+    "editorLayout": "src/features/editor/EditorView.jsx",
+    "rigPanels": "src/features/rig"
+  },
+  "newProof": [
+    "image history preserves later names and generation briefs without copying PNG bytes",
+    "stale editor callbacks cannot update a later session",
+    "unconfirmed save-as retains its fork ID and blocks close until read-back confirmation",
+    "duplicate navigation remains frozen until persistence completes or fails",
+    "cancelled gestures preserve independent later edits when requested",
+    "real browser part drag changes only setup placement and joint drag changes only joint position",
+    "undo/redo, all five panels, explicit calibration modal navigation guard, draft refresh recovery",
+    "real WebGL camera scale and center remain after animation switches with manual pan and zoom",
+    "390px fixed three-column template pictures and list/preview navigation"
+  ],
+  "isolation": {
+    "productionServiceRestarted": false,
+    "productionDataMigratedOrDeleted": false,
+    "productionDistOverwritten": false,
+    "schemaChanged": false,
+    "realAIOrKeychainCalled": false,
+    "preview": "http://127.0.0.1:50119",
+    "provider": "fake-only"
+  },
+  "protectedChanges": [],
+  "pending": [
+    "rig command and pixel/job capability boundaries",
+    "PartEditor and RigCanvas feature ownership",
+    "full P3 real three-format download/import acceptance and delivery/data checks"
+  ]
+}

@@ -59,10 +59,11 @@ Sub2API 与其他 API 服务共用系统加密、按需解锁和会话存储规�
 | --- | --- |
 | `id` / `label` | 稳定服务 ID 与用户可见名称 |
 | `auth` / `models` / `links` | 认证方式、可用模型列表、设置文档与密钥创建链接 |
+| `capabilities` | 图片适配器明确声明 `["image"]`，规划适配器独立声明 `["planning"]`；注册时检查能力 |
 | `status(settings)` | 验证连接并返回 `connected`、`message`，不生成图片 |
 | `generate(settings, options)` | 接收提示词、参考图文件路径与取消信号；返回 `result`（PNG Base64）和 `model` |
 | `login()` | 账号认证方式的可选登录入口 |
 
-`server/ai-connections.mjs` 管理连接选择、受保护的凭据和公开配置；`server/generation-service.mjs` 管理独立任务、并行上限、取消、候选、透明 PNG 检查及部件映射。新适配器仍使用现有校准、预览与导出流程。当前界面提供 Codex、OpenAI 和 Sub2API 三种服务。可配置网关适配器通过 `normalizeSettings` 校验并保存服务地址及图片接口，通过 `allowCustomModel` 提供可填写的模型名称。
+`server/ai/connections.mjs` 管理图片服务选择、受保护的凭据、按需解锁和公开配置；provider 只处理自己的协议。`codex-planning.mjs` 是独立的结构化规划端口，只有明确的 Codex planning 身份可以调用，不会跟随图片 provider 切换。模板与骨架请求由两个服务验证，记录/取消/排空由 `server/jobs` 统一负责，各业务 handler 保留候选、透明 PNG 检查和部件映射。当前界面提供 Codex、OpenAI 和 Sub2API 三种图片服务。可配置网关适配器通过 `normalizeSettings` 校验并保存服务地址及图片接口，通过 `allowCustomModel` 提供可填写的模型名称。
 
 开发验证覆盖服务注册、模型与凭据校验、密钥保护及重启恢复、参考图上传、透明 PNG、完整部件应用与导出、并行取消、任务恢复、同源边界与失败处理。真实 Codex 连接已经检查；真实 API 生图需要用户自己的有效 Key 和模型权限，测试不声称已完成该项外部验证。

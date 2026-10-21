@@ -1,0 +1,3170 @@
+{
+  "files": 122,
+  "edges": [
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 1
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "node:fs",
+      "kind": "require",
+      "line": 2
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "node:path",
+      "kind": "require",
+      "line": 3
+    },
+    {
+      "from": "desktop/bootstrap.cjs",
+      "to": "desktop/main.mjs",
+      "kind": "dynamic",
+      "line": 19
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "electron",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "desktop/main.mjs",
+      "to": "desktop/key-protection.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "desktop/preload.cjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 1
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "server/generation-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "desktop/server.mjs",
+      "to": "server/generation-plugin.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/archive/bundle.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/bundle.js",
+      "to": "shared/codec/text.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/archive/bundle.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/archive/bundle.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/archive/bundle.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "shared/codec/text.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "engine/archive/bundle.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "engine/archive/unity-export.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/archive/package.js",
+      "to": "fflate",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/domain/rig-summary.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/domain/rig-summary.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "engine/images/rig-calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/archive/rig-project.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/archive/template-snapshot.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/template-snapshot.js",
+      "to": "engine/archive/bundle.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/archive/template-snapshot.js",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/archive/template-snapshot.js",
+      "to": "shared/domain/template.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "engine/archive/bundle.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/archive/template-variants.js",
+      "to": "shared/codec/sha256.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/archive/zip.js",
+      "to": "engine/archive/paths.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/archive/zip.js",
+      "to": "fflate",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/images/motion-ownership.js",
+      "to": "shared/domain/motion-ownership.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "engine/images/motion-ownership.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "engine/images/motion-ownership.js",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 14
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/codec/sha256.mjs",
+      "kind": "ImportDeclaration",
+      "line": 15
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "engine/images/motion-study.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 17
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "shared/codec/sha256.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/images/registration.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/images/rig-calibration.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/images/rig-images.js",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/rig/attachments.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/attachments.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/attachments.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/attachments.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/build-files.js",
+      "to": "engine/rig/compile.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/build-files.js",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/build-files.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/build-files.js",
+      "to": "engine/rig/atlas.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/build-files.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 14
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 15
+    },
+    {
+      "from": "engine/rig/compile.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "engine/rig/create-draft.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/geometry.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/geometry.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/geometry.js",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/geometry.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/rig/inspect.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/rig/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/motion-study.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/part-adjustment.js",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/part-adjustment.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "engine/rig/inspect.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/rig/part-annotations.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "engine/rig/sample.js",
+      "to": "engine/rig/math.js",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "engine/spine/geometry.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "engine/spine/parse.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "engine/spine/parse.js",
+      "to": "shared/codec/text.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "engine/spine/parse.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "engine/spine/parse.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "engine/spine/parse.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/architecture-baseline.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "@electron/packager",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/build-desktop.mjs",
+      "to": "scripts/desktop-assets.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "@babel/parser",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "@babel/traverse",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/check-architecture.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/desktop-assets.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/desktop-assets.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "tests/helpers.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/archive/package.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/spine/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/create-draft.js",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/build-files.js",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 14
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 15
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/inspect.js",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/rig/compile.js",
+      "kind": "ImportDeclaration",
+      "line": 17
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 18
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 19
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/archive/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 20
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 21
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 22
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 23
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "engine/archive/template-variants.js",
+      "kind": "ImportDeclaration",
+      "line": 24
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 25
+    },
+    {
+      "from": "scripts/measure-engine.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 26
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:os",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:perf_hooks",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:timers/promises",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "server/workspace-store.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "tests/helpers.mjs",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "engine/archive/package.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "scripts/measure-workspace.mjs",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/prepare-sites-build.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/preview-isolated.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/preview-isolated.mjs",
+      "to": "tests/support/isolated-workbench.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "node:module",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "scripts/desktop-assets.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/start-desktop.mjs",
+      "to": "electron",
+      "kind": "require",
+      "line": 10
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:url",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "server/workbench-server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "scripts/start-workbench.mjs",
+      "to": "server/workbench-proxy.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/codex-native.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/openai-images.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/ai-connections.mjs",
+      "to": "server/providers/sub2api-images.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:readline",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/codex-rpc.mjs",
+      "to": "node:events",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "server/generation-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/generation-plugin.mjs",
+      "to": "server/workbench-proxy.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/codex-rpc.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/ai-connections.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "server/rig-service.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/generation-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 222
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:child_process",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:util",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/key-protection.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/providers/openai-images.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/providers/sub2api-images.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/providers/sub2api-images.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 65
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "server/codex-structured.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 73
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 120
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 156
+    },
+    {
+      "from": "server/rig-motion-study.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 202
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ExportNamedDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:fs/promises",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/codex-structured.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/rig-planning.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "server/rig-motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 43
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 71
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 121
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 139
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 379
+    },
+    {
+      "from": "server/rig-service.mjs",
+      "to": "@napi-rs/canvas",
+      "kind": "dynamic",
+      "line": 429
+    },
+    {
+      "from": "server/workbench-proxy.mjs",
+      "to": "node:http",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "node:os",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/workspace-store.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/workspace-middleware.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "server/key-protection.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/workspace-middleware.mjs",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:sqlite",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:fs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:path",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:v8",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "node:crypto",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "shared/domain/project.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "shared/domain/draft.mjs",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "engine/archive/template-snapshot.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "server/workspace-store.mjs",
+      "to": "shared/domain/rig-summary.mjs",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "shared/codec/image-data.mjs",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "shared/codec/image-data.mjs",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "shared/domain/draft.mjs",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "shared/domain/draft.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "shared/domain/draft.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "shared/domain/generation.mjs",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "shared/domain/generation.mjs",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "shared/domain/generation.mjs",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "shared/domain/generation.mjs",
+      "to": "shared/codec/sha256.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "shared/domain/generation.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "shared/domain/motion-study.mjs",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "shared/domain/motion-study.mjs",
+      "to": "shared/domain/motion-ownership.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "shared/domain/motion-study.mjs",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "shared/domain/motion-study.mjs",
+      "to": "shared/codec/sha256.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "shared/domain/motion-study.mjs",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "shared/domain/rig-summary.mjs",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "shared/workspace-codec.mjs",
+      "to": "shared/codec/base64.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 34
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/PartEditor.jsx",
+      "kind": "ImportDeclaration",
+      "line": 35
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/GenerationPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 36
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/AIConnectionPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 37
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/CreationWorkflow.jsx",
+      "kind": "ImportDeclaration",
+      "line": 38
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/ResourceLibrary.jsx",
+      "kind": "ImportDeclaration",
+      "line": 39
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/TemplateLibrary.jsx",
+      "kind": "ImportDeclaration",
+      "line": 40
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/components/RigWorkbench.jsx",
+      "kind": "ImportDeclaration",
+      "line": 41
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/desktop.js",
+      "kind": "ImportDeclaration",
+      "line": 42
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 43
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 44
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/archive-worker.js",
+      "kind": "ImportDeclaration",
+      "line": 45
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 46
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/image-files.js",
+      "kind": "ImportDeclaration",
+      "line": 47
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 48
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 49
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 50
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 51
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/template-variants.js",
+      "kind": "ImportDeclaration",
+      "line": 52
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "engine/archive/template-variants.js",
+      "kind": "ImportDeclaration",
+      "line": 53
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/domain/project.mjs",
+      "kind": "ImportDeclaration",
+      "line": 54
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/template-preview.js",
+      "kind": "ImportDeclaration",
+      "line": 55
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/template-snapshot.js",
+      "kind": "ImportDeclaration",
+      "line": 56
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/custom-templates.js",
+      "kind": "ImportDeclaration",
+      "line": 57
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/rig-drafts.js",
+      "kind": "ImportDeclaration",
+      "line": 58
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/domain/draft.mjs",
+      "kind": "ImportDeclaration",
+      "line": 59
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/core/rig-draft-writer.js",
+      "kind": "ImportDeclaration",
+      "line": 60
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/application/save-coordinator.js",
+      "kind": "ImportDeclaration",
+      "line": 61
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/application/editor-session.js",
+      "kind": "ImportDeclaration",
+      "line": 62
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/application/exit-guards.js",
+      "kind": "ImportDeclaration",
+      "line": 63
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/domain/project.mjs",
+      "kind": "ImportDeclaration",
+      "line": 64
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "engine/archive/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 65
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/domain/rig-summary.mjs",
+      "kind": "ImportDeclaration",
+      "line": 66
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 67
+    },
+    {
+      "from": "src/App.jsx",
+      "to": "src/infrastructure/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 68
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/AIConnectionPanel.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "src/infrastructure/rig-registration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/CompleteOverlapPanel.jsx",
+      "to": "src/complete-overlap.css",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/infrastructure/image-files.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/GenerationPanel.jsx",
+      "to": "src/components/CreationWorkflow.jsx",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/infrastructure/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/core/motion-study-client.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "src/infrastructure/motion-study-images.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/MotionStudyPanel.jsx",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/components/PartAppearancePanel.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PartAppearancePanel.jsx",
+      "to": "engine/rig/part-annotations.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "src/infrastructure/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 17
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 18
+    },
+    {
+      "from": "src/components/PartEditor.jsx",
+      "to": "src/infrastructure/image-files.js",
+      "kind": "ImportDeclaration",
+      "line": 19
+    },
+    {
+      "from": "src/components/PoseTransformControls.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PoseTransformControls.jsx",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/PreviewTransport.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/PreviewTransport.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/infrastructure/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/PreviewTransport.jsx",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/components/ResourceThumbnail.jsx",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "shared/domain/rig-summary.mjs",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/components/ResourceLibrary.jsx",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "src/components/ResourceThumbnail.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/ResourceThumbnail.jsx",
+      "to": "src/core/thumbnail.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigCanvas.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/RigCanvas.jsx",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/rig-authoring.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/rig/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/rig/sample.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/rig/inspect.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/rig/attachments.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/rig-registration.js",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 12
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/generation.js",
+      "kind": "ImportDeclaration",
+      "line": 13
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/rig-client.js",
+      "kind": "ImportDeclaration",
+      "line": 14
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 15
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 16
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 17
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 18
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 19
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/RigCanvas.jsx",
+      "kind": "ImportDeclaration",
+      "line": 20
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PartEditor.jsx",
+      "kind": "ImportDeclaration",
+      "line": 21
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/MotionStudyPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 22
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/CompleteOverlapPanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 23
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PoseTransformControls.jsx",
+      "kind": "ImportDeclaration",
+      "line": 24
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/components/PartAppearancePanel.jsx",
+      "kind": "ImportDeclaration",
+      "line": 25
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/rig-preview-time.js",
+      "kind": "ImportDeclaration",
+      "line": 26
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/core/motion-study-client.js",
+      "kind": "ImportDeclaration",
+      "line": 27
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/infrastructure/motion-study-images.js",
+      "kind": "ImportDeclaration",
+      "line": 28
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "shared/domain/motion-study.mjs",
+      "kind": "ImportDeclaration",
+      "line": 29
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "engine/rig/part-adjustment.js",
+      "kind": "ImportDeclaration",
+      "line": 30
+    },
+    {
+      "from": "src/components/RigWorkbench.jsx",
+      "to": "src/rig-workbench.css",
+      "kind": "ImportDeclaration",
+      "line": 31
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/SpineViewer.jsx",
+      "to": "engine/spine/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "lucide-react",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/SpineViewer.jsx",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/PreviewTransport.jsx",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/components/TemplateLibrary.jsx",
+      "to": "src/components/ResourceThumbnail.jsx",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "shared/domain/template.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/infrastructure/template-snapshot.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/custom-templates.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/core/storage.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "src/core/archive-worker.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/desktop.js",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "src/infrastructure/image-files.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/generation.js",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "shared/domain/rig.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "shared/domain/generation.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "shared/codec/image-data.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "src/infrastructure/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/motion-study-client.js",
+      "to": "shared/rig-schema.mjs",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "src/infrastructure/archive-files.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "engine/archive/package.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/core/package.worker.js",
+      "to": "engine/archive/unity-export.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/core/rig-draft-writer.js",
+      "to": "src/application/save-coordinator.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-draft-writer.js",
+      "to": "src/application/exit-guards.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "shared/domain/draft.mjs",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/rig-drafts.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/core/rig-preview-time.js",
+      "to": "engine/rig/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/storage.js",
+      "to": "shared/domain/project.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/storage.js",
+      "to": "src/core/workspace.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/core/template-preview.js",
+      "to": "src/spine/runtime.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/core/workspace.js",
+      "to": "shared/workspace-codec.mjs",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/archive-files.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/archive-files.js",
+      "to": "engine/archive/zip.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/archive-files.js",
+      "to": "engine/archive/bundle.js",
+      "kind": "ImportDeclaration",
+      "line": 48
+    },
+    {
+      "from": "src/infrastructure/calibration.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/calibration.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/image-files.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/image-files.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/image-files.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/image-files.js",
+      "to": "engine/images/calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/infrastructure/motion-study-images.js",
+      "to": "engine/images/motion-study.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/infrastructure/rig-authoring.js",
+      "to": "src/infrastructure/rig-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/rig-authoring.js",
+      "to": "engine/rig/create-draft.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/rig-authoring.js",
+      "to": "engine/rig/build-files.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/infrastructure/rig-images.js",
+      "to": "engine/images/rig-images.js",
+      "kind": "ImportDeclaration",
+      "line": 18
+    },
+    {
+      "from": "src/infrastructure/rig-project.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/rig-project.js",
+      "to": "engine/images/rig-calibration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/rig-project.js",
+      "to": "engine/archive/rig-project.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/infrastructure/rig-registration.js",
+      "to": "engine/images/registration.js",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/infrastructure/template-snapshot.js",
+      "to": "engine/archive/template-snapshot.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/template-variants.js",
+      "to": "src/infrastructure/browser-pixels.js",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/infrastructure/template-variants.js",
+      "to": "engine/archive/template-variants.js",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "react",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "react-dom/client",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/App.jsx",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/styles.css",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/main.jsx",
+      "to": "src/explorer.css",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 1
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 2
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "engine/spine/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 3
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "shared/codec/text.mjs",
+      "kind": "ImportDeclaration",
+      "line": 4
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 5
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 6
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "engine/spine/geometry.js",
+      "kind": "ImportDeclaration",
+      "line": 7
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "engine/spine/parse.js",
+      "kind": "ImportDeclaration",
+      "line": 8
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 9
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-webgl",
+      "kind": "ImportDeclaration",
+      "line": 10
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 11
+    },
+    {
+      "from": "src/spine/runtime.js",
+      "to": "@esotericsoftware/spine-core",
+      "kind": "ImportDeclaration",
+      "line": 12
+    }
+  ],
+  "violations": [
+    {
+      "from": "server/workbench-server.mjs",
+      "to": "desktop/server.mjs",
+      "kind": "ImportDeclaration",
+      "line": 3,
+      "rule": "server-no-desktop"
+    }
+  ],
+  "unexpected": [],
+  "stale": [],
+  "invalid": [],
+  "unresolved": [],
+  "platform": [],
+  "cycles": []
+}

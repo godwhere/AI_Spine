@@ -1,0 +1,40 @@
+{
+  "plan": "docs/architecture-execution-plan.md#p5-\u5206\u79bb\u56fe\u7247\u6570\u636e\u4e0e\u7248\u672c\u5316\u4fdd\u5b58",
+  "step": 1,
+  "status": "isolated repository batch complete; full phase gates remain unproven",
+  "requirements": [
+    {
+      "requirement": "Versioned documents, independent references and original raw BLOBs",
+      "status": "proven-in-temporary-databases",
+      "evidence": [
+        "tests/workspace-v2.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Mutation receipts, mandatory version checks and explicit creation",
+      "status": "proven-in-temporary-databases",
+      "evidence": [
+        "tests/workspace-v2.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Upload leases and deduplication",
+      "status": "proven-in-temporary-databases",
+      "evidence": [
+        "tests/workspace-v2.test.mjs",
+        "verification.json"
+      ]
+    },
+    {
+      "requirement": "Atomic failure, lifecycle isolation and safe garbage collection",
+      "status": "proven-in-temporary-databases",
+      "evidence": [
+        "tests/workspace-v2.test.mjs",
+        "verification.json"
+      ]
+    }
+  ],
+  "fullPhaseComplete": false
+}

@@ -1,0 +1,44 @@
+{
+  "stage": "P5",
+  "step": 3,
+  "capturedAt": "2026-10-20T20:10:33.782804+00:00",
+  "status": "implemented; production copy and isolated browser acceptance passed",
+  "tests": {
+    "main": 563,
+    "migrationIncludingNestedCheckpoints": 14,
+    "focusedRepositoryClientCompositionMigration": 35,
+    "additionalClientMaintenanceTest": 1,
+    "browserDefault": 31,
+    "maintenanceAndSwitchingIncludedInDefault": 3,
+    "architectureIsolationSites": 10,
+    "logs": [
+      "/tmp/ispine-P5-migration-main-final.log",
+      "/tmp/ispine-P5-migration-focused.log",
+      "/tmp/ispine-P5-migration-client-maintenance.log",
+      "/tmp/ispine-P5-migration-browser-all.log",
+      "/tmp/ispine-P5-migration-support.log",
+      "/tmp/ispine-P5-migration-browser-v2.log"
+    ],
+    "browserAdditionalFormat2Run": 13,
+    "format2OverlapWithDefault": 4
+  },
+  "productionCopy": {
+    "records": 21,
+    "projects": 6,
+    "activeProjects": 4,
+    "trashedProjects": 2,
+    "exportComparisons": 18,
+    "zipByteIdentical": true,
+    "browserReimports": 18
+  },
+  "architecture": {
+    "modules": 162,
+    "imports": 606,
+    "violations": 0,
+    "cycles": 0
+  },
+  "productionActivated": false,
+  "realAIRequests": false,
+  "credentialsUnlocked": false,
+  "officialSpineEditorAcceptance": false
+}

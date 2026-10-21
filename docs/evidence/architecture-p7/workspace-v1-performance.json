@@ -1,0 +1,162 @@
+{
+  "measuredAt": "2026-10-20T20:39:58.960Z",
+  "node": "v24.19.0",
+  "cpu": "Apple M4",
+  "stage": "P4",
+  "synthetic": true,
+  "samples": [
+    {
+      "count": 10,
+      "assetMiB": 1,
+      "iterations": 30,
+      "indexBackfillMs": 20.327665999999965,
+      "reopenMs": 0.5412080000000401,
+      "coldMs": 0.35366700000002993,
+      "p50Ms": 0.05791700000003175,
+      "p95Ms": 0.20937500000002274,
+      "eventLoopP95Ms": 11.673599,
+      "eventLoopMaxMs": 11.673599,
+      "storageBytes": 10592256,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": false,
+      "summaryPayloadReads": 0
+    },
+    {
+      "count": 100,
+      "assetMiB": 1,
+      "iterations": 30,
+      "indexBackfillMs": 251.185792,
+      "reopenMs": 0.6207909999999401,
+      "coldMs": 1.1701659999999947,
+      "p50Ms": 0.18837500000017826,
+      "p95Ms": 0.40104199999996126,
+      "eventLoopP95Ms": 12.042239,
+      "eventLoopMaxMs": 12.042239,
+      "storageBytes": 105144320,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": false,
+      "summaryPayloadReads": 0
+    },
+    {
+      "count": 500,
+      "assetMiB": 1,
+      "iterations": 30,
+      "indexBackfillMs": 2302.20475,
+      "reopenMs": 1.536790999999539,
+      "coldMs": 1.9783750000005966,
+      "p50Ms": 1.1641659999995682,
+      "p95Ms": 2.4419580000003407,
+      "eventLoopP95Ms": 12.058623,
+      "eventLoopMaxMs": 12.075007,
+      "storageBytes": 525316096,
+      "renameRequestBytes": 1398364,
+      "summaryReadsPayload": false,
+      "summaryPayloadReads": 0
+    },
+    {
+      "count": 10,
+      "assetMiB": 10,
+      "iterations": 30,
+      "indexBackfillMs": 238.6682090000004,
+      "reopenMs": 0.6424999999999272,
+      "coldMs": 0.10583299999962037,
+      "p50Ms": 0.0797919999995429,
+      "p95Ms": 0.31545900000037363,
+      "eventLoopP95Ms": 12.066815,
+      "eventLoopMaxMs": 12.066815,
+      "storageBytes": 105070592,
+      "renameRequestBytes": 13981276,
+      "summaryReadsPayload": false,
+      "summaryPayloadReads": 0
+    },
+    {
+      "count": 1,
+      "assetMiB": 50,
+      "iterations": 30,
+      "indexBackfillMs": 63.93208299999969,
+      "reopenMs": 0.6742919999996957,
+      "coldMs": 0.06316599999991013,
+      "p50Ms": 0.053916999999273685,
+      "p95Ms": 0.10962500000005093,
+      "eventLoopP95Ms": 12.238847,
+      "eventLoopMaxMs": 12.238847,
+      "storageBytes": 52568064,
+      "renameRequestBytes": 69905328,
+      "summaryReadsPayload": false,
+      "summaryPayloadReads": 0
+    }
+  ],
+  "exports": [
+    {
+      "name": "runtime",
+      "templateId": "22",
+      "bytes": 498338,
+      "sha256": "3f0c19fc0ed44e776776164b4cd34b680de3c2cd7ab7443dd38b6445c7327c89",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P4-runtime.zip"
+    },
+    {
+      "name": "editable",
+      "templateId": "22",
+      "bytes": 996990,
+      "sha256": "9a4c0253830b06e8bdd6f526fccc12d601e941e5deedca453d604516f89281b1",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        ".ai-spine/original/skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        ".ai-spine/original/skeleton.atlas": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        ".ai-spine/original/skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        ".ai-spine/project.json": "2335e6689d31d12e730c973ab423106fda6ca28c096c332c96a96a2f29563d8f"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P4-editable.zip"
+    },
+    {
+      "name": "unity",
+      "templateId": "22",
+      "bytes": 499596,
+      "sha256": "896973bc504f88c86f598af798eadbeef9015b7a016fee7a5ba5f7bc99171646",
+      "animations": [
+        "attack",
+        "die",
+        "get_hurt",
+        "idle",
+        "reborn",
+        "skill",
+        "stun"
+      ],
+      "regions": 49,
+      "entries": {
+        "skeleton.json": "ada8075e99bf05b54faed3d2dcab5338b31ab36fc5e55bf3ee9a18223210d846",
+        "skeleton.atlas.txt": "588c1437c33f9adc79e06a822098e54b683b538e32295b5218c74b396d57d11f",
+        "skeleton.png": "b35ed59addc89db9f23d128d68ce3022c18211cb8d416a6b30e31aa0fa9c64d1",
+        "README-Unity.md": "f2910ef903ea57ffdfc1473756a22c58afe38775fc7dab82eafa4e9ff1ea836e"
+      },
+      "path": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P4-unity.zip"
+    }
+  ]
+}

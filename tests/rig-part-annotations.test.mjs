@@ -1,3 +1,4 @@
+import { rigPartAppearanceView } from "../src/application/rig-view.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -6,11 +7,15 @@ import { createCanvas } from "@napi-rs/canvas";
 import { transformWithEsbuild } from "vite";
 import { Skeleton, AnimationState, AnimationStateData, Physics } from "@esotericsoftware/spine-webgl";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
-import { deriveRigPartAnnotations } from "../src/core/rig-part-annotations.js";
-import { createHumanoidDraft, buildRigFiles, rigPartSlotName, sampleRigPose } from "../src/core/rig-authoring.js";
-import { getMotionStudyFingerprints, prepareMotionStudyFrames, applyMotionStudy } from "../src/core/rig-motion-studies.js";
-import { parseBundle } from "../src/core/archive.js";
-import { parseSkeleton, attachmentVertices } from "../src/spine/runtime.js";
+import { deriveRigPartAnnotations } from "../engine/rig/part-annotations.js";
+import { createHumanoidDraft, buildRigFiles } from "../src/infrastructure/rig-authoring.js";
+import { rigPartSlotName } from "../engine/rig/attachments.js";
+import { sampleRigPose } from "../engine/rig/sample.js";
+import { getMotionStudyFingerprints } from "../shared/domain/motion-study.mjs";
+import { prepareMotionStudyFrames, applyMotionStudy } from "../src/infrastructure/motion-study-images.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { parseSkeleton } from "../engine/spine/parse.js";
+import { attachmentVertices } from "../engine/spine/geometry.js";
 import { pixelEnv } from "./helpers.mjs";
 
 function character() {
@@ -116,10 +121,10 @@ test("unreachable and unsupported constraints are surfaced without presenting an
   assert.throws(() => deriveRigPartAnnotations(character(), "missing"), /找不到/); assert.throws(() => deriveRigPartAnnotations(character(), "head", { samples: 1 }), /采样数/);
 });
 
-const componentSource = await readFile(new URL("../src/components/PartAppearancePanel.jsx", import.meta.url), "utf8");
+const componentSource = await readFile(new URL("../src/features/rig/PartAppearancePanel.jsx", import.meta.url), "utf8");
 const { code } = await transformWithEsbuild(componentSource.replace(/^import[^\n]+\n/gm, "").replace("export function PartAppearancePanel", "function PartAppearancePanel"), "PartAppearancePanel.jsx", { loader: "jsx", jsx: "transform", jsxFactory: "jsx", jsxFragment: "Fragment" });
 const jsx = (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) });
-const Component = new Function("useMemo", "deriveRigPartAnnotations", "jsx", "Fragment", `${code}; return PartAppearancePanel;`)((callback) => callback(), deriveRigPartAnnotations, jsx, "fragment");
+const Component = new Function("useMemo", "rigPartAppearanceView", "jsx", "Fragment", `${code}; return PartAppearancePanel;`)((callback) => callback(), rigPartAppearanceView, jsx, "fragment");
 const descend = (node) => node && typeof node === "object" ? [node, ...(node.children || []).flatMap(descend)] : [];
 const text = (node) => typeof node === "string" || typeof node === "number" ? String(node) : node && typeof node === "object" ? (node.children || []).map(text).join("") : "";
 

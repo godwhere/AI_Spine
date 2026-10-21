@@ -1,0 +1,191 @@
+{
+  "sourceOpenedReadOnly": true,
+  "onlyCopyModified": true,
+  "source": "/Users/ethan/Library/Application Support/AI Spine/workspace/workspace.sqlite",
+  "root": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u",
+  "original": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/original",
+  "work": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P5-migration-live-kbb81r_u/working",
+  "identityPreserved": true,
+  "forwardRevisionPreserved": true,
+  "originalRecordBytesPreserved": true,
+  "forward": {
+    "consistent": true,
+    "sourceFormat": 1,
+    "targetFormat": 2,
+    "records": 21,
+    "counts": {
+      "ai-spine-local-workbench/removedProjects": 7,
+      "ai-spine-local-workbench/projects": 6,
+      "ispine-rig-drafts/metadata": 3,
+      "ispine-rig-drafts/documents": 3,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-custom-templates/files": 1
+    },
+    "identity": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+    "revision": "4",
+    "sourceDigest": "6e76081c4ed879ce0ba5d6ae6f0b9668b6138ceaeba5310588fb1276d6ceaeda",
+    "originalPayloadDigest": "8fd4300e935d37e18582ca9bb090bc21dd14effe1664195e7f5fb97cd1fab69c",
+    "browserMappingsPreserved": true,
+    "bytesAndUnknownFieldsPreserved": true
+  },
+  "reverse": {
+    "consistent": true,
+    "sourceFormat": 2,
+    "targetFormat": 1,
+    "records": 21,
+    "counts": {
+      "ai-spine-local-workbench/projects": 6,
+      "ispine-rig-drafts/metadata": 3,
+      "ispine-rig-drafts/documents": 3,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-local-workbench/removedProjects": 7
+    },
+    "identity": "71c0c8de-f084-4b7f-9851-5c7378ca81dc",
+    "revision": "5",
+    "sourceDigest": "0d2221e504e4efc433288a0a7986ec165094f3da00847c832740babf792dbcb3",
+    "originalPayloadDigest": "8fd4300e935d37e18582ca9bb090bc21dd14effe1664195e7f5fb97cd1fab69c",
+    "browserMappingsPreserved": true,
+    "bytesAndUnknownFieldsPreserved": true
+  },
+  "postActivationEditPreserved": true,
+  "forwardRows": 21,
+  "library": {
+    "projects": 4,
+    "trash": 2
+  },
+  "notices": [
+    {
+      "phase": "frozen",
+      "state": "frozen",
+      "checkpoint": 0,
+      "total": 21
+    },
+    {
+      "phase": "backed-up",
+      "state": "backed-up",
+      "checkpoint": 0,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 3,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 6,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 9,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 12,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 15,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 18,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 21,
+      "total": 21
+    },
+    {
+      "phase": "before-commit",
+      "state": "validated",
+      "checkpoint": 21,
+      "total": 21
+    },
+    {
+      "phase": "activated",
+      "state": "activated",
+      "checkpoint": 21,
+      "total": 21
+    },
+    {
+      "phase": "frozen",
+      "state": "frozen",
+      "checkpoint": 0,
+      "total": 21
+    },
+    {
+      "phase": "backed-up",
+      "state": "backed-up",
+      "checkpoint": 0,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 3,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 6,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 9,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 12,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 15,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 18,
+      "total": 21
+    },
+    {
+      "phase": "batch",
+      "state": "staging",
+      "checkpoint": 21,
+      "total": 21
+    },
+    {
+      "phase": "before-commit",
+      "state": "validated",
+      "checkpoint": 21,
+      "total": 21
+    },
+    {
+      "phase": "activated",
+      "state": "activated",
+      "checkpoint": 21,
+      "total": 21
+    }
+  ]
+}

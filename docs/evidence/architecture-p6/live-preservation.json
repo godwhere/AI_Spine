@@ -1,0 +1,45 @@
+{
+  "unchanged": true,
+  "productionPID": 94728,
+  "productionCode": "P5 backend; final P6 code install belongs to P7",
+  "before": "/tmp/ispine-P5-production-live-hash.json",
+  "after": "/tmp/ispine-P6-live-hash.json",
+  "scopes": {
+    "workspace": {
+      "files": 3,
+      "bytes": 307302400,
+      "sha256": "88a45c05d1f89674b4d8542dc19052c8d1621b7a3e4bc9a5454c91ea77894699",
+      "missing": []
+    },
+    "generation": {
+      "files": 867,
+      "bytes": 504804977,
+      "sha256": "b56d16c5e18f54dd88ba720968db12741f9ef2c0ece022c27b0e579a333c8c75",
+      "missing": []
+    },
+    "migration": {
+      "files": 2,
+      "bytes": 216017420,
+      "sha256": "381ddaa2938aa366f7bdfeeb5c624ab315c27ae94649a0d1595f5c58a750ede4",
+      "missing": []
+    },
+    "legacyIndexedDB": {
+      "files": 16,
+      "bytes": 173485419,
+      "sha256": "dc9aadf524230a834a852a882d602c43fb2e59746729bcd7049f7dcacfd87c87",
+      "missing": []
+    },
+    "legacyLocalStorage": {
+      "files": 6,
+      "bytes": 1232,
+      "sha256": "6698c62bbe3979d7d92c6b47f4d6034205ed0dc92048393e547ef56dce6f27c7",
+      "missing": []
+    },
+    "developmentJobs": {
+      "files": 472,
+      "bytes": 417680829,
+      "sha256": "682d1a8b2e7d0910da7e341509638f5efad33330dd0827fab9ceeeafc219176d",
+      "missing": []
+    }
+  }
+}

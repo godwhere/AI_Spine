@@ -6,9 +6,9 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createServer } from "node:http";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
-import { RigJobs, rigGeometry } from "../server/rig-service.mjs";
-import { generationMiddleware } from "../server/generation-plugin.mjs";
-import { MOTION_FRAME_IMAGE_INSTRUCTIONS } from "../server/rig-motion-study.mjs";
+import { RigJobs, rigGeometry } from "../server/jobs/rig-service.mjs";
+import { generationMiddleware } from "../server/http/generation-routes.mjs";
+import { MOTION_FRAME_IMAGE_INSTRUCTIONS } from "../server/jobs/handlers/motion-study.mjs";
 
 const sha = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const png = (size = 256, color = "#c84065", opaque = false, edge = false) => {

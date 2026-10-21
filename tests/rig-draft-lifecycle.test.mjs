@@ -4,16 +4,19 @@ import { readFile } from "node:fs/promises";
 import { IDBFactory, IDBObjectStore } from "fake-indexeddb";
 import forceCloseDatabase from "fake-indexeddb/lib/forceCloseDatabase";
 import { createCanvas } from "@napi-rs/canvas";
-import { createHumanoidDraft, buildRigFiles } from "../src/core/rig-authoring.js";
-import { parseBundle } from "../src/core/archive.js";
-import { attachRigAuthoring, readRigAuthoring, rigWithCalibratedParts } from "../src/core/rig-project.js";
+import { createHumanoidDraft, buildRigFiles } from "../src/infrastructure/rig-authoring.js";
+import { parseBundle } from "../src/infrastructure/archive-files.js";
+import { attachRigAuthoring, readRigAuthoring } from "../engine/archive/rig-project.js";
+import { rigWithCalibratedParts } from "../src/infrastructure/rig-project.js";
 import { pixelEnv } from "./helpers.mjs";
-import { createRigDraftWriter } from "../src/core/rig-draft-writer.js";
-import { getMotionStudyFingerprints } from "../src/core/rig-motion-studies.js";
+import { createRigDraftWriter } from "../src/application/rig-draft-writer.js";
+import { getMotionStudyFingerprints } from "../shared/domain/motion-study.mjs";
+import { rigDraftDestination } from "../shared/domain/draft.mjs";
+import { createRigResourceActions } from "../src/application/rig-resource.js";
 
-const appSource = await readFile(new URL("../src/App.jsx", import.meta.url), "utf8");
+const appSource = await readFile(new URL("../src/app/AppShell.jsx", import.meta.url), "utf8");
 const entrySource = appSource.slice(appSource.indexOf("  const editResourceRig ="), appSource.indexOf("  const saveRigResource ="));
-const entryNames = ["resourceBusy", "processing", "setResourceBusy", "setError", "flushRigDraft", "page", "persist", "getRigDraft", "rigDraftDestination", "readRigAuthoring", "parseBundle", "rigWithCalibratedParts", "showRigWorkbench", "saveRigDraft", "crypto", "notify"];
+const entryNames = ["resourceBusy", "processing", "setResourceBusy", "setError", "flushRigDraft", "page", "persist", "services", "showRigWorkbench", "notify"];
 const entryFactory = new Function(...entryNames, `${entrySource}; return editResourceRig;`);
 
 function resourceEntry(storage, { flush = async () => {}, page = "home", persisted, persist = async () => persisted, saveDraft = storage.saveRigDraft } = {}) {
@@ -21,10 +24,13 @@ function resourceEntry(storage, { flush = async () => {}, page = "home", persist
   const values = {
     resourceBusy: false, processing: false, setResourceBusy: (value) => busy.push(value), setError: (value) => { if (value) errors.push(value); },
     flushRigDraft: flush, page, persist,
-    getRigDraft: storage.getRigDraft, rigDraftDestination: storage.rigDraftDestination, readRigAuthoring, parseBundle,
+    getRigDraft: storage.getRigDraft, rigDraftDestination, readRigAuthoring, parseBundle,
     rigWithCalibratedParts: async (...args) => { calibrationCalls.push(args); return rigWithCalibratedParts(...args, pixelEnv); },
     showRigWorkbench: (document, options) => opened.push({ document, options }), saveRigDraft: saveDraft,
     crypto, notify: (value) => notices.push(value),
+    services: { rigs: createRigResourceActions({ projects: {}, drafts: { get: storage.getRigDraft, save: saveDraft },
+      pixels: { rigWithCalibratedParts: async (...args) => { calibrationCalls.push(args); return rigWithCalibratedParts(...args, pixelEnv); } },
+      createId: () => crypto.randomUUID() }) },
   };
   return { open: entryFactory(...entryNames.map((name) => values[name])), opened, errors, notices, calibrationCalls, busy };
 }
@@ -46,8 +52,18 @@ async function resourceRecord(updatedAt = revision) {
 
 async function fixture() {
   globalThis.indexedDB = new IDBFactory();
-  return import(`../src/core/rig-drafts.js?lifecycle=${crypto.randomUUID()}`);
+  return { ...await import(`../src/infrastructure/rig-draft-repository.js?lifecycle=${crypto.randomUUID()}`), rigDraftDestination };
 }
+
+test("legacy draft transactions reject stale session versions and keep timestamps monotonic", async () => {
+  const storage = await fixture(), doc = { version: 1, id: "source-only-cas", name: "Source", width: 32, height: 32,
+    joints: [], parts: [], motions: [] };
+  const first = await storage.saveRigDraft(doc);
+  const second = await storage.saveRigDraft({ ...doc, name: "Current" }, { expectedUpdatedAt: first.updatedAt });
+  assert.notEqual(second.updatedAt, first.updatedAt);
+  await assert.rejects(storage.saveRigDraft({ ...doc, name: "Stale" }, { expectedUpdatedAt: first.updatedAt }), { code: "DRAFT_CHANGED" });
+  assert.equal((await storage.getRigDraft(doc.id)).document.name, "Current");
+});
 async function connectionFixture() {
   const factory = new IDBFactory(), connections = [], hooks = {}, original = factory.open.bind(factory);
   factory.open = (...args) => {
@@ -56,7 +72,7 @@ async function connectionFixture() {
     return request;
   };
   globalThis.indexedDB = factory;
-  return { storage: await import(`../src/core/rig-drafts.js?connection=${crypto.randomUUID()}`), connections, hooks };
+  return { storage: await import(`../src/infrastructure/rig-draft-repository.js?connection=${crypto.randomUUID()}`), connections, hooks };
 }
 async function productionDraft() {
   const doc = document("Run and Death corrections", "draft-reconnection");
@@ -71,7 +87,7 @@ async function productionDraft() {
       ...(index < approved ? { segments: [{ partId: doc.parts[0].id, image: doc.parts[0].image, x: 0, y: 0, width: 12, height: 12, z: 0, visibleOnly: true, origin: "source-visible" }] } : {}) })),
   }]));
   // Save/load compares the normalized document, while preserving all art and review fields.
-  const { validateRigDocument } = await import("../src/core/rig-authoring.js");
+  const { validateRigDocument } = await import("../shared/rig-schema.mjs");
   return validateRigDocument(doc);
 }
 const document = (name = "Shared authoring package", id = "shared-document") =>
@@ -275,11 +291,12 @@ test("the actual resource entry restores flushed authored changes after reload w
   await entry.open(record);
   assert.equal(flushed, true); assert.deepEqual(entry.errors, []); assert.equal(entry.calibrationCalls.length, 0);
   assert.deepEqual(entry.opened[0].document, edited, "draft motion, joints and newly calibrated independent art all win over the archive");
-  assert.deepEqual(entry.opened[0].options, { resourceId: "R1", resourceUpdatedAt: revision, draftId: "resource-R1" });
+  assert.deepEqual(entry.opened[0].options, { resourceId: "R1", resourceUpdatedAt: revision, draftId: "resource-R1",
+    draftUpdatedAt: (await storage.getRigDraft("resource-R1")).updatedAt });
   // The workbench's initial onDraftChange must write back what was restored,
   // rather than persisting a stale archive snapshot over these authored edits.
   await storage.saveRigDraft(entry.opened[0].document, entry.opened[0].options);
-  const reloaded = await import(`../src/core/rig-drafts.js?reload=${crypto.randomUUID()}`), reopened = resourceEntry(reloaded);
+  const reloaded = await import(`../src/infrastructure/rig-draft-repository.js?reload=${crypto.randomUUID()}`), reopened = resourceEntry(reloaded);
   await reopened.open(record);
   assert.deepEqual(reopened.opened[0].document, edited); assert.equal(reopened.calibrationCalls.length, 0);
   assert.equal(readRigAuthoring(record.files).motions[0].poses[1].angles.leftThigh, 49, "opening does not mutate the saved archive");
@@ -288,7 +305,7 @@ test("the actual resource entry restores flushed authored changes after reload w
 });
 
 test("editor-to-rig entry preserves all pending action plans when only the preview thumbnail changed", async () => {
-  const drafts = await fixture(), resources = await import(`../src/core/storage.js?entry=${crypto.randomUUID()}`);
+  const drafts = await fixture(), resources = await import(`../src/infrastructure/project-repository.js?entry=${crypto.randomUUID()}`);
   const record = await resources.saveProject(await resourceRecord()), edited = readRigAuthoring(record.files);
   edited.motions = ["attack", "hit", "skill", "run", "death", "stun"].map((id) => ({ id, name: id, duration: 1, loop: false, poses: [{ time: 0 }, { time: 1 }] }));
   edited.motionStudies = Object.fromEntries(edited.motions.map((motion) => [motion.id, {
@@ -308,7 +325,7 @@ test("editor-to-rig entry preserves all pending action plans when only the previ
   assert.deepEqual(await resources.getProject(record.id), before, "preview recapture is not an authored resource revision");
   assert.deepEqual((await drafts.listRigDrafts()).map((draft) => draft.id), ["resource-R1"], "no independent fork or replacement archive is created");
   await drafts.saveRigDraft(entry.opened[0].document, entry.opened[0].options);
-  const reloaded = await import(`../src/core/rig-drafts.js?reload=${crypto.randomUUID()}`);
+  const reloaded = await import(`../src/infrastructure/rig-draft-repository.js?reload=${crypto.randomUUID()}`);
   assert.deepEqual((await reloaded.getRigDraft("resource-R1")).document.motionStudies, edited.motionStudies);
 });
 

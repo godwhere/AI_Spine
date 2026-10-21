@@ -1,0 +1,81 @@
+{
+  "stage": "P3",
+  "status": "complete",
+  "capturedAt": "2026-10-20T17:49:34.425943+00:00",
+  "baselineCommit": "961b7cf02f5163e5c7a891df3e70b25ba45f5bbb",
+  "tests": {
+    "main": 509,
+    "browser": 23,
+    "architecture": 4,
+    "isolation": 2,
+    "sites": 4,
+    "publicationAfterFix": 1,
+    "logs": [
+      "/tmp/ispine-P3-final-main.log",
+      "/tmp/ispine-P3-final-browser-verified.log",
+      "/tmp/ispine-P3-final-support.log",
+      "/tmp/ispine-P3-publication-fix.log"
+    ]
+  },
+  "architecture": {
+    "files": 151,
+    "imports": 557,
+    "exceptions": 0,
+    "cycles": [],
+    "platformReferences": [],
+    "undeclaredUIIdentifiers": [],
+    "retiredDesktopPackages": [],
+    "dependencyTreeEdges": 183,
+    "frontendModulesAudited": 77
+  },
+  "owners": {
+    "documentCommands": "src/application/rig-commands.js",
+    "rigCandidatePreviewAndPublicationChecks": "src/application/rig-operations.js",
+    "rigViewDerivation": "src/application/rig-view.js",
+    "calibrationSessionAndPixelPorts": "src/application/part-calibration.js",
+    "libraryQueryAndInvalidation": "src/application/library-controller.js",
+    "previewPreparationLifecycle": "src/features/editor/use-calibrated-preview.js",
+    "draftWriter": "src/application/rig-draft-writer.js",
+    "allEditingUI": "src/features/editor and src/features/rig"
+  },
+  "newReliabilityEvidence": [
+    "editor authored mutations synchronously enqueue a tagged snapshot",
+    "undo before first commit replaces a pending edit with the latest current content",
+    "rig document commands notify the draft writer before a later React render/effect",
+    "abandoning a view during asynchronous validation cannot publish the old resource",
+    "late library reads cannot overwrite a saved receipt or lose other-client changes",
+    "cancelled calibration initialization cannot replace a user-selected image"
+  ],
+  "downloadAcceptance": {
+    "archives": 6,
+    "formats": [
+      "runtime",
+      "project",
+      "unity"
+    ],
+    "sources": [
+      "original template",
+      "authored weighted rig with attachment variant and foot-release timeline"
+    ],
+    "scope": "real download, ZIP inspection, file-input reimport, shared persistence, independent resource IDs, exact source skeleton/PNG preservation and restored editable calibration"
+  },
+  "isolation": {
+    "preview": "http://127.0.0.1:51922",
+    "provider": "fake-only",
+    "productionServicePID": 71292,
+    "productionRestarted": false,
+    "productionStaticBuildOverwritten": false,
+    "dataSchemaChanged": false,
+    "realAIOrKeyProtectionInvoked": false,
+    "protectedChanges": [],
+    "cssChanges": [],
+    "changedLiveScopesDuringFinalVerification": [],
+    "liveFilesVerified": 1366
+  },
+  "pendingStages": [
+    "P4",
+    "P5",
+    "P6",
+    "P7"
+  ]
+}

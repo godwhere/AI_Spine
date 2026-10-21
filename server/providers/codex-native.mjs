@@ -1,6 +1,7 @@
+import { IMAGE_CAPABILITIES } from "./capabilities.mjs";
 export function codexNativeProvider(rpc, generate) {
   return {
-    id: "codex-native", label: "Codex 账号", auth: "chatgpt", models: [],
+    id: "codex-native", label: "Codex 账号", auth: "chatgpt", models: [], capabilities: IMAGE_CAPABILITIES,
     links: { docs: "https://learn.chatgpt.com/docs/codex" },
     async status() {
       await rpc.start();

@@ -1,0 +1,53 @@
+{
+  "capturedAt": "2026-10-20T18:20:54.278Z",
+  "sourceOpenedReadOnly": true,
+  "onlyCopyModified": true,
+  "copy": "/var/folders/d4/vlsfy7fd51vgb9ymqtc_zs8m0000gn/T/ispine-P4-live-copy-0og_v26a",
+  "backfillMs": 252.29954199999997,
+  "projects": 4,
+  "trash": 2,
+  "check": {
+    "version": 1,
+    "deletionCleanup": true,
+    "checked": 6,
+    "missing": [],
+    "stale": [],
+    "orphaned": [],
+    "dirty": [],
+    "invalid": [],
+    "consistent": true
+  },
+  "rebuild1": {
+    "version": 1,
+    "projects": 6
+  },
+  "rebuild2": {
+    "version": 1,
+    "projects": 6
+  },
+  "sourceRecordBytesUnchanged": true,
+  "before": {
+    "sha256": "823ad20bbef69fec62017f8dc98682ab555cba91e93dd56eccb57a0b3ae96c10",
+    "counts": {
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-local-workbench/projects": 6,
+      "ai-spine-local-workbench/removedProjects": 7,
+      "ispine-rig-drafts/documents": 3,
+      "ispine-rig-drafts/metadata": 3
+    }
+  },
+  "after": {
+    "sha256": "823ad20bbef69fec62017f8dc98682ab555cba91e93dd56eccb57a0b3ae96c10",
+    "counts": {
+      "ai-spine-custom-templates/files": 1,
+      "ai-spine-custom-templates/metadata": 1,
+      "ai-spine-local-workbench/projects": 6,
+      "ai-spine-local-workbench/removedProjects": 7,
+      "ispine-rig-drafts/documents": 3,
+      "ispine-rig-drafts/metadata": 3
+    }
+  },
+  "identityPreserved": true,
+  "revisionPreserved": true
+}

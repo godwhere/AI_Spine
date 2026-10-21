@@ -1,3 +1,4 @@
+import { IMAGE_CAPABILITIES } from "./capabilities.mjs";
 import { readFile } from "node:fs/promises";
 
 const BASE = "https://api.openai.com/v1";
@@ -10,7 +11,7 @@ function apiError(status) {
 export function openAIImagesProvider(fetcher = fetch) {
   const models = ["gpt-image-2.5-sunburst", "gpt-image-2.5-flare", "gpt-image-1.5"];
   return {
-    id: "openai", label: "OpenAI API", auth: "api-key", models,
+    id: "openai", label: "OpenAI API", auth: "api-key", models, capabilities: IMAGE_CAPABILITIES,
     links: { keys: "https://platform.openai.com/api-keys", docs: "https://developers.openai.com/api/docs/guides/image-generation" },
     notice: "API 用量由你的 OpenAI API 账户结算。保存并验证只检查连接，点击生成后才提交生图请求。",
     async status({ key, model }) {
