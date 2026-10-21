@@ -37,7 +37,34 @@ function frameImage(study, frame) {
 const approved = (value) => value === true || value?.approved === true;
 
 function contentFingerprint(study) {
-  return sha256(JSON.stringify(canonical(study.frames.map(({ id,time,image,imageRef,sourceFingerprint,mapping,segments,review,mappingReview }) => ({ id,time,image,imageRef,sourceFingerprint,mapping,segments,review,mappingReview })))));
+  return sha256(JSON.stringify(canonical(study.frames.map(({ id,time,image,imageRef,sourceFingerprint,mapping,segments,review,mappingReview,playbackTransform }) => ({ id,time,image,imageRef,sourceFingerprint,mapping,segments,review,mappingReview,playbackTransform })))));
+}
+
+export function motionStudyFrameAnchor(frame) {
+  if (frame.playbackTransform) return { ...frame.playbackTransform.anchor };
+  const joints = frame.mapping?.joints || [];
+  const contact = joints.filter((joint) => /(?:foot|toe)$/i.test(joint.id)).sort((a, b) => b.y - a.y)[0]
+    || joints.find((joint) => joint.id === "root") || joints[0];
+  return { x: contact?.x || 0, y: contact?.y || 0 };
+}
+
+export function setMotionStudyFrameScale(study, frameId, scale, anchor) {
+  if (!Number.isFinite(scale) || scale < .1 || scale > 2) throw new Error("整帧缩放须在 10% 至 200% 之间。");
+  const frame = study?.frames?.find((item) => item.id === frameId);
+  if (!frame?.mapping) throw new Error("请先完成当前动作画面的关节与部件对应。");
+  anchor ||= motionStudyFrameAnchor(frame);
+  if (!anchor || !Number.isFinite(anchor.x) || !Number.isFinite(anchor.y)) throw new Error("整帧缩放基准坐标无效。");
+  if (study.applied && (study.applied.kind !== "stepped-parts" || study.applied.outOfDate
+    || study.applied.contentFingerprint !== contentFingerprint(study))) throw new Error("逐帧内容已改变，请重新检查并应用后再调整播放缩放。");
+  const next = { ...study, frames: study.frames.map((item) => {
+    if (item.id !== frameId) return item;
+    const value = { ...item };
+    if (scale === 1) delete value.playbackTransform;
+    else value.playbackTransform = { scale, anchor: { x: anchor.x, y: anchor.y } };
+    return value;
+  }) };
+  if (study.applied) next.applied = { ...study.applied, contentFingerprint: contentFingerprint(next) };
+  return next;
 }
 
 function requireComplete(document, motionId, study, reviews) {

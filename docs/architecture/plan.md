@@ -2,29 +2,29 @@
 
 状态：P0–P7 实施与本地验收已完成。日期：2026-10-21。
 
-最终记录见 [P7 验收](evidence/architecture-p7/acceptance.md)。后文保留各阶段原实施边界和当时批次进度；当前实现以最终记录及 README 为准。真实 AI、官方编辑器与人工美术检查的外部边界单列，不计为通过。
+最终记录见 [P7 验收](../evidence/architecture-p7/acceptance.md)。后文保留各阶段原实施边界和当时批次进度；当前实现以最终记录及 README 为准。真实 AI、官方编辑器与人工美术检查的外部边界单列，不计为通过。
 
 保留 React、Vite、Spine 4.3、本机 Node 服务和 SQLite 的技术组合，按业务职责整理模块。优先统一保存机制，再建立共享规则与计算引擎边界，随后优化资源查询和二进制存储。每一步均保持现有创作流程可用。
 
 产品入口已明确为纯网页：浏览器承载全部创作界面，自动启动的本机 Node 服务继续负责共享数据、任务和系统密钥保护。桌面 App 已放弃，不再列入目标架构、兼容目标或交付验收；旧桌面数据只保留为迁移来源。P2 已抽出共享规则和计算引擎；P3 已完成通用后台、网页功能/会话/应用命令边界与桌面源码退役，并通过三格式实际下载回导和整体网页验收。P4 已完成独立摘要、按需缩略图、事务同步与回填核查。P5 的仓储、传输、前端回执与检查点迁移通过隔离/生产副本验收，反向转换保留新编辑；正式维护、完整备份、21 条记录激活与完整构建替换已完成，原地址的资源与动画读取通过，身份及 revision 保持。
 
-P5 详情见[激活证据](evidence/architecture-p5-production/verification.json)。
+P5 详情见[激活证据](../evidence/architecture-p5-production/verification.json)。
 
-用户已授权按本方案和[执行计划](architecture-execution-plan.md)开始实施。以下目录、接口和数据库结构仍是目标设计；实际完成状态和验证证据按阶段记录，不能视为已全部实现。
+用户已授权按本方案和[执行计划](execution-plan.md)开始实施。以下目录、接口和数据库结构仍是目标设计；实际完成状态和验证证据按阶段记录，不能视为已全部实现。
 
 ## 调整前基线与目标
 
-下表记录最初评估时的问题，行数和保存方式不是当前实施进度。P0、P1 的实际变更见[实施记录](architecture-progress.md)，后续阶段沿用本表中的职责目标。
+下表记录最初评估时的问题，行数和保存方式不是当前实施进度。P0、P1 的实际变更见[实施记录](progress.md)，后续阶段沿用本表中的职责目标。
 
 | 调整前实现 | 可核查的位置 | 调整目标 |
 | --- | --- | --- |
-| `App.jsx` 有 1,563 行、50 个 `useState` 和 12 个 `useEffect`，同时编排资源、编辑、草稿、保存和导出 | 当前为[AppShell](../src/app/AppShell.jsx) | 用编辑会话和应用服务管理业务，根组件只组装页面 |
-| 普通工程采用 850ms 防抖保存；骨架草稿另有串行写入和离页保护 | [普通工程保存用例](../src/application/editor-persistence.js)、[草稿写入器](../src/application/rig-draft-writer.js) | 共享保存调度机制，保留两类数据各自的持久化规则 |
-| 保存携带完整 `files`；列表摘要查询仍反序列化全部资源 payload | [工作区客户端](../src/infrastructure/workspace-client.js)、[存储](../server/workspace/repository.mjs) | 摘要独立查询；图片按内容保存，普通编辑只提交文档变化 |
-| 后台依赖 `src/core` 中的工程、草稿、模板模块 | [WorkspaceStore](../server/workspace/repository.mjs) | 后台只依赖共享规则和平台无关的引擎 |
-| `rig-client.js` 同时包含网络请求、几何投影和文档修改 | P2 后为[骨架 HTTP 适配器](../src/infrastructure/rig-client.js)与[数据规则](../shared/domain/rig.mjs) | 将数据规则、计算与传输分开 |
-| 浏览器后台入口复用 `desktop/server.mjs`；开发代理默认连接正式后台 | P3 迁出后为[后台组装](../server/bootstrap/workbench.mjs)、[开发插件](../server/generation-plugin.mjs) | 平台中立的服务入口，显式选择运行模式和数据目录 |
-| 部分界面测试改写组件源码并模拟 Hooks | [骨架界面测试](../tests/rig-workbench.test.mjs) | 保留核心测试，增加真实 React 和浏览器的关键流程测试 |
+| `App.jsx` 有 1,563 行、50 个 `useState` 和 12 个 `useEffect`，同时编排资源、编辑、草稿、保存和导出 | 当前为[AppShell](../../src/app/AppShell.jsx) | 用编辑会话和应用服务管理业务，根组件只组装页面 |
+| 普通工程采用 850ms 防抖保存；骨架草稿另有串行写入和离页保护 | [普通工程保存用例](../../src/application/editor-persistence.js)、[草稿写入器](../../src/application/rig-draft-writer.js) | 共享保存调度机制，保留两类数据各自的持久化规则 |
+| 保存携带完整 `files`；列表摘要查询仍反序列化全部资源 payload | [工作区客户端](../../src/infrastructure/workspace-client.js)、[存储](../../server/workspace/repository.mjs) | 摘要独立查询；图片按内容保存，普通编辑只提交文档变化 |
+| 后台依赖 `src/core` 中的工程、草稿、模板模块 | [WorkspaceStore](../../server/workspace/repository.mjs) | 后台只依赖共享规则和平台无关的引擎 |
+| `rig-client.js` 同时包含网络请求、几何投影和文档修改 | P2 后为[骨架 HTTP 适配器](../../src/infrastructure/rig-client.js)与[数据规则](../../shared/domain/rig.mjs) | 将数据规则、计算与传输分开 |
+| 浏览器后台入口复用 `desktop/server.mjs`；开发代理默认连接正式后台 | P3 迁出后为[后台组装](../../server/bootstrap/workbench.mjs)、[开发插件](../../server/generation-plugin.mjs) | 平台中立的服务入口，显式选择运行模式和数据目录 |
+| 部分界面测试改写组件源码并模拟 Hooks | [骨架界面测试](../../tests/rig-workbench.test.mjs) | 保留核心测试，增加真实 React 和浏览器的关键流程测试 |
 
 文件大小是职责集中的提示，不作为单独的重构验收标准。真正的验收标准是业务所有者明确、依赖方向可检查、状态变化可测试。
 
@@ -165,7 +165,7 @@ P3 完成后，前端、后台和启动脚本均不得依赖 Electron、`desktop
 
 ### 桌面代码退役边界
 
-以下是 P3 的处理边界；后台迁出、测试归属和桌面专属入口/依赖删除已经执行，前端功能、文档会话与应用命令已完成重组及网页验收，详见[实施记录](architecture-progress.md#p3-网页边界与桌面源码退役已完成)。
+以下是 P3 的处理边界；后台迁出、测试归属和桌面专属入口/依赖删除已经执行，前端功能、文档会话与应用命令已完成重组及网页验收，详见[实施记录](progress.md#p3-网页边界与桌面源码退役已完成)。
 
 | 当前文件或内容 | 处理与验收边界 |
 | --- | --- |
@@ -329,6 +329,6 @@ V1 接口在过渡期通过适配器读写新仓储。现有版本条件必须�
 
 图片和骨架验收继续覆盖旋转 Atlas、裁切偏移、PMA、多页、binary、mesh、附件变体、脚锁释放边界及动作循环。抽取算法阶段先保证既有输出与采样结果一致，再单独安排算法改进。
 
-性能验收先建立基线，再测摘要查询、单次校准保存字节量和 Node 事件循环延迟。硬性要求是列表不解码大素材、校准不重复传输未变化素材；具体耗时预算和样本规模见[执行计划](architecture-execution-plan.md)。
+性能验收先建立基线，再测摘要查询、单次校准保存字节量和 Node 事件循环延迟。硬性要求是列表不解码大素材、校准不重复传输未变化素材；具体耗时预算和样本规模见[执行计划](execution-plan.md)。
 
 README 的目录说明只随对应阶段已经实现的结构更新。使用方法、协议、迁移操作和验证结论随对应实现提交更新，不提前将目标结构写成现状。

@@ -1,7 +1,7 @@
 export function CreationWorkflow({ hasAppearance, replaced, total, animations, active, onStep, disabled, authored = false, rigSummary }) {
   const steps = [
     ["角色形象", hasAppearance ? "已有形象参考" : "生成或导入形象"],
-    [authored ? "角色部件" : "模板部件", authored ? rigSummary ? `${rigSummary.baseParts} 个基础部件${rigSummary.poseRegions ? ` · ${rigSummary.poseRegions} 个动作区域` : ""}` : `${total} 个纹理区域` : `已替换 ${replaced} / ${total}`],
+    [authored ? "角色部件" : "模板部件", authored ? rigSummary ? `${Number.isFinite(rigSummary.logicalParts) ? `${rigSummary.logicalParts} 个逻辑部件 · ${rigSummary.additionalAttachments} 个附件变体` : `${rigSummary.baseParts} 个常规纹理区域`}${rigSummary.effectLayers ? ` · ${rigSummary.effectLayers} 个特效层` : ""}${rigSummary.poseRegions ? ` · ${rigSummary.poseRegions} 个动作区域` : ""}` : `${total} 个纹理区域` : `已替换 ${replaced} / ${total}`],
     ["校准与预览", `检查部件与 ${animations} 个动作`],
     ["导出资源", "运行时包 / 可编辑工程"],
   ];

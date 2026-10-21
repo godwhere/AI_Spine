@@ -2,6 +2,7 @@ import { rigGeometry, rigDefaultVisiblePartIds } from "../../shared/domain/rig.m
 import { rigSourceRequest, rigSourceFingerprint } from "../../shared/domain/generation.mjs";
 import { bytesToImageDataURL } from "../../shared/codec/image-data.mjs";
 import { validateRigSourcePolygon } from "../../shared/rig-schema.mjs";
+export { motionStudyFrameAnchor, setMotionStudyFrameScale } from "../../shared/domain/motion-study.mjs";
 
 export const motionFrameChecks = { identity: "角色形象一致", expression: "表情符合动作", limbs: "肢体与服装完整", scale: "尺寸与画布一致", grip: "握持与武器合理" };
 export const isMotionStudyJob = (job) => ["motion-frames", "pose-mapping"].includes(job?.kind);

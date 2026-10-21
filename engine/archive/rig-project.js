@@ -34,6 +34,10 @@ function attachRigAuthoring(inputFiles, document) {
     delete reference.image;
     rig.appearanceReference = reference;
   }
+  if (rig.production) for (const board of rig.production.boards) for (const field of ["image", "nativeImage"]) if (board[field]) {
+    board[`${field}File`] = storeImage(board[field], `.ispine/rig/production/${board.id}-${field}`);
+    delete board[field];
+  }
   rig.parts = rig.parts.map((part) => {
     const saved = { ...part };
     if (part.image) { saved.imageFile = storeImage(part.image, `.ispine/rig/parts/${part.id}`); delete saved.image; }
@@ -90,6 +94,10 @@ function readRigAuthoring(files) {
     reference.image = restoreImage(reference.imageFile);
     delete reference.imageFile;
     document.appearanceReference = reference;
+  }
+  if (document.production) for (const board of document.production.boards || []) for (const field of ["image", "nativeImage"]) if (board[`${field}File`]) {
+    board[field] = restoreImage(board[`${field}File`]);
+    delete board[`${field}File`];
   }
   if (Array.isArray(document.parts)) document.parts = document.parts.map((part) => {
     const restored = { ...part };

@@ -13,12 +13,18 @@ function rigAuthoringSummary(files) {
   let result = null;
   try {
     const document = JSON.parse(new TextDecoder().decode(data));
-    if (Array.isArray(document.parts) && Array.isArray(document.joints)) result = Object.freeze({
-      baseParts: document.parts.length, bones: document.joints.length,
-      expressionVariants: document.parts.filter((part) => part.attachmentGroup).length,
-      poseRegions: Object.values(document.motionStudies || {}).filter(isMotionStudyPlaybackActive)
-        .reduce((sum, study) => sum + (study.frames || []).reduce((count, frame) => count + (frame.segments?.length || 0), 0), 0),
-    });
+    if (Array.isArray(document.parts) && Array.isArray(document.joints)) {
+      const bodyParts = document.parts.filter((part) => part.role !== "effect"), effects = document.parts.filter((part) => part.role === "effect");
+      const logicalParts = new Set(bodyParts.map((part) => part.attachmentGroup ? `group:${part.attachmentGroup}` : `part:${part.id}`)).size;
+      result = Object.freeze({
+        baseParts: bodyParts.length, bones: document.joints.length,
+        logicalParts, additionalAttachments: bodyParts.length - logicalParts,
+        expressionVariants: bodyParts.filter((part) => part.attachmentGroup).length,
+        ...(effects.length ? { effectLayers: new Set(effects.map((part) => part.attachmentGroup)).size, effectRegions: effects.length } : {}),
+        poseRegions: Object.values(document.motionStudies || {}).filter(isMotionStudyPlaybackActive)
+          .reduce((sum, study) => sum + (study.frames || []).reduce((count, frame) => count + (frame.segments?.length || 0), 0), 0),
+      });
+    }
   } catch { /* Ordinary resources remain browseable when author data is invalid. */ }
   summaryCache.set(data, result);
   return result;

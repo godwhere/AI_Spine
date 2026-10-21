@@ -157,15 +157,16 @@ export function SpineViewer({
           };
         }}
         onPointerMove={(e) => {
-          if (!drag.current) return;
-          const dx = e.clientX - drag.current.x,
-            dy = e.clientY - drag.current.y;
-          if (Math.abs(dx) + Math.abs(dy) > 5) drag.current.moved = true;
-          if (drag.current.moved)
-            setView((v) => ({
-              ...v,
-              pan: { x: drag.current.pan.x + dx, y: drag.current.pan.y + dy },
-            }));
+          const start = drag.current;
+          if (!start) return;
+          const dx = e.clientX - start.x,
+            dy = e.clientY - start.y;
+          if (Math.abs(dx) + Math.abs(dy) > 5) start.moved = true;
+          if (start.moved) {
+            // React may apply this update after pointerup/cancel clears the drag.
+            const pan = { x: start.pan.x + dx, y: start.pan.y + dy };
+            setView((v) => ({ ...v, pan }));
+          }
         }}
         onPointerUp={(e) => {
           const start = drag.current;

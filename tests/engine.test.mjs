@@ -28,8 +28,12 @@ test("portable base64 retains browser padding, subarrays, whitespace and rejecti
   }
 });
 
-test("all 38 templates, native pixels, weighted rig sampling, attachment switches and exports equal the pre-P2 snapshot", async () => {
+test("all 38 templates, pixels, rig sampling and exports preserve the baseline with reviewed adaptive bake output", async () => {
   const baseline = JSON.parse(await readFile(new URL("../docs/evidence/architecture-p2/engine-before.json", import.meta.url), "utf8"));
+  // Keep the historical snapshot intact. Only the intentionally denser rig
+  // timeline changes; source art, FK samples, metadata and exports stay pinned.
+  baseline.rig.skeleton = "ba79f29bb802add307210736aa39d9e069dc27ffb395a4f16f6616a8678fe309";
+  baseline.rig.files["rig.json"] = baseline.rig.skeleton;
   assert.deepEqual(await measureEngine(), baseline);
 });
 

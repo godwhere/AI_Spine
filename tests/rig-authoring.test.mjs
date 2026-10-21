@@ -178,6 +178,34 @@ test("smooth interpolation and motion IDs have deterministic semantics independe
   assert.deepEqual(Object.keys(compileRigSkeleton(doc).animations), ["pose_test"]);
 });
 
+test("rapid smooth arm motion preserves exported subframe vertices on large rigid artwork", async () => {
+  const doc = createHumanoidDraft({ id: "rapid-arm", width: 1024, height: 1024 });
+  const part = doc.parts.find((item) => item.id === "rightForearm");
+  Object.assign(part, { x: 0, y: 0, width: 900, height: 900, binding: "rigid", influences: [part.bone] });
+  delete part.mesh;
+  doc.motions = [{ id: "cast", name: "Cast", duration: 1, loop: false, poses: [
+    { time: 0, angles: {}, ease: "smooth" },
+    { time: .25, angles: { rightUpperArm: 6, rightForearm: 10 }, ease: "smooth" },
+    { time: .55, angles: { rightUpperArm: -15, rightForearm: -25 }, ease: "smooth" },
+    { time: 1, angles: {} },
+  ] }];
+  const before = structuredClone(doc), bundle = parseBundle(await buildRigFiles(doc, pixelEnv));
+  const player = runtime(parseSkeleton(bundle).data, "cast");
+  let maximumError = 0;
+  for (let i = 0; i <= 241; i++) {
+    const time = i / 241, skeleton = player.sample(time), expected = sampleRigPose(doc, "cast", time).parts[part.id].vertices;
+    const actual = attachmentVertices(skeleton, skeleton.findSlot(`slot_${part.id}`)).vertices;
+    for (let vertex = 0; vertex < actual.length; vertex += 2) {
+      let error = Infinity;
+      for (let target = 0; target < expected.length; target += 2) error = Math.min(error,
+        Math.hypot(actual[vertex] - expected[target], doc.height - actual[vertex + 1] - expected[target + 1]));
+      maximumError = Math.max(maximumError, error);
+    }
+  }
+  assert.ok(maximumError < .5, `exported subframe artwork error ${maximumError}px`);
+  assert.deepEqual(doc, before);
+});
+
 test("two hands hold the same staff through a sampled swing in actual exported Spine animation", async () => {
   const doc = staffDraft(), report = inspectRigMotion(doc, "staff_swing", { samples: 121 });
   assert.deepEqual(report.issues, []); assert.equal(report.weaponGrips[0].mode, "dual-hand-ik");

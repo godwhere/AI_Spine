@@ -9,6 +9,7 @@ import { inspectRigMotion } from "../../engine/rig/inspect.js";
 import { inspectRegistrationBounds } from "../../engine/images/registration.js";
 import { rigRegistrationPolygons, rigSourceFingerprint } from "../../shared/domain/generation.mjs";
 import { bytesToImageDataURL } from "../../shared/codec/image-data.mjs";
+import { assertProductionGate, plannedMotionSlots, productionRequestFingerprint } from "../../shared/domain/production.mjs";
 
 export function basicMotionSlots() {
   return [{ id: "idle", name: "待机", duration: 2, loop: true, description: "自然呼吸与轻微重心变化，双脚稳定着地，首尾连续。" }, { id: "attack", name: "攻击", duration: 1.1, loop: false, description: "明确准备、挥击与收势，按当前武器握点设计动作，双脚稳定。" }, { id: "hit", name: "受击", duration: 0.6, loop: false, description: "受击后身体短暂后仰并恢复，保持脚部和握持稳定。" }].map((motion) => ({ ...motion, origin: "manual-placeholder", poses: [{ time: 0, angles: {}, root: { x: 0, y: 0 }, ease: "smooth" }, { time: motion.duration, angles: {}, root: { x: 0, y: 0 }, ease: "smooth" }] }));
@@ -23,11 +24,14 @@ export function createRigOperations({ images, buildFiles, createId, inspectMotio
     async sourceDraft(current, file) {
       const image = await images.readRigReference(file);
       return { document: { ...emptyDocument(), name: current.name === "新角色" ? file.name.replace(/\.[^.]+$/, "") : current.name,
-        width: image.width, height: image.height, sourceImage: image.dataURL, appearanceReference: image.reference, prompts: current.prompts }, resized: image.resized };
+        width: image.width, height: image.height, sourceImage: image.dataURL, appearanceReference: image.reference, prompts: current.prompts,
+        ...(current.production ? { production: current.production } : {}) }, resized: image.resized };
     },
     programDraft(current) {
+      assertProductionGate(current, "structure");
       const next = createHumanoidDraft({ id: current.id, name: current.name, width: current.width, height: current.height, sourceImage: current.sourceImage });
       next.prompts = current.prompts; next.structureDetail = current.structureDetail; next.appearanceReference = current.appearanceReference; next.appearance = current.appearance;
+      if (current.production) { next.production = current.production; next.motions = plannedMotionSlots(current); }
       next.parts = next.parts.map((item) => ({ ...item, x: Math.round(item.x), y: Math.round(item.y), width: Math.round(item.width), height: Math.round(item.height) }));
       return validateRigDocument(next);
     },
@@ -62,7 +66,8 @@ export function createRigOperations({ images, buildFiles, createId, inspectMotio
       const result = await images.applyMotionStudy(document, id), rendered = await operations.preview(result.document);
       return { ...result, bundle: rendered.bundle };
     },
-    async validateForSave(current) {
+    async validateForSave(current, { requireDelivery = true } = {}) {
+      assertProductionGate(current, requireDelivery ? "save" : "export");
       const state = rigReadiness(current);
       const pending = Object.entries(current.motionStudies || {}).filter(([, study]) => study.frames?.length && study.playback !== "reference" && !study.applied);
       if (pending.length) throw new Error(`动作画面计划尚未应用：${pending.map(([id]) => current.motions.find((motion) => motion.id === id)?.name || id).join("、")}。请完成画面审阅、坐标对应和逐帧应用，再正式保存；候选与草稿仍保留。`);
@@ -75,6 +80,9 @@ export function createRigOperations({ images, buildFiles, createId, inspectMotio
       }
     },
     async prepareCandidate(current, job, loadImage) {
+      if (job.referenceTarget) throw new Error("请在对应分镜中应用这张关键图，设定图保持不变。");
+      assertProductionGate(current, job.kind);
+      if (current.production && job.productionFingerprint !== productionRequestFingerprint(current, job.kind, job.motionId || job.result?.motion?.id)) throw new Error("制作计划或任务输入已改变，旧候选未应用。");
       if (job.kind === "registration") return { kind: job.kind, polygons: await assertRigRegistrationMatches(current, job) };
       if (job.kind === "appearance") {
         const candidate = await assertRigAppearanceMatches(current, job), bytes = await loadImage(job.id, candidate);
@@ -85,7 +93,9 @@ export function createRigOperations({ images, buildFiles, createId, inspectMotio
       if (job.kind === "structure") {
         if (!job.result?.rig) throw new Error("这项记录还没有可应用的结构结果。");
         const document = validateRigDocument({ ...job.result.rig, id: current.id, name: current.name, sourceImage: current.sourceImage, prompts: current.prompts,
-          structureDetail: current.structureDetail, appearanceReference: current.appearanceReference, appearance: current.appearance, origin: "ai-analysis" });
+          structureDetail: current.structureDetail, appearanceReference: current.appearanceReference, appearance: current.appearance, origin: "ai-analysis",
+          ...(current.production ? { production: current.production } : {}) });
+        if (current.production) document.motions = plannedMotionSlots(current);
         if (!document.motions.length) document.motions = basicMotionSlots();
         if (document.width !== current.width || document.height !== current.height || (job.result.rig.sourceImage && job.result.rig.sourceImage !== current.sourceImage)) throw new Error("立绘已改变，请重新分析当前立绘。");
         return { kind: job.kind, document, needsConfirmation: Boolean(current.joints.length) };

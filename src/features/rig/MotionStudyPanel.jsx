@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { isRigJobActive } from "../../../shared/domain/generation.mjs";
 import { motionFrameChecks, isMotionStudyJob, motionStudyPlan, motionStudySources, motionStudyFrameImage, patchMotionStudyFrame,
-  assertMotionStudyCurrent, assertMotionStudyJob, motionStudyLinkedJobIds, loadMotionStudyHistory, motionStudyRequest, restoreMotionStudyPlan, loadMotionStudyImages, loadMotionStudyMappings, setMotionStudyPlayback } from "../../application/motion-study.js";
+  assertMotionStudyCurrent, assertMotionStudyJob, motionStudyLinkedJobIds, loadMotionStudyHistory, motionStudyRequest, restoreMotionStudyPlan, loadMotionStudyImages, loadMotionStudyMappings, setMotionStudyPlayback, motionStudyFrameAnchor, setMotionStudyFrameScale } from "../../application/motion-study.js";
 import { getMotionStudyFingerprints } from "../../../shared/domain/motion-study.mjs";
 import { validateMotionStudyMapping } from "../../../shared/rig-schema.mjs";
 
@@ -40,6 +40,12 @@ export function MotionStudyPanel({ imageTools, client, document, motion, disable
   const prepared = Boolean(study?.frames.length && study.frames.every((item) => item.compositionMetrics && item.segments?.length));
   const change = (updater, checkpoint = false) => current.current.onStudyChange(motion.id, updater, { checkpoint });
   const updateFrame = (fields, invalidate = false) => change((value) => patchMotionStudyFrame(value, frame.id, fields, { invalidate }));
+  const resizeFrame = (scale, anchor) => {
+    try {
+      change((value) => setMotionStudyFrameScale(value, frame.id, scale, anchor), true);
+      setError(""); setNotice(`当前帧播放尺寸为 ${Math.round(scale * 100)}%，全部部件共用同一缩放基准。原画和其他帧保持。关闭窗口后更新动画预览。`);
+    } catch (failure) { setError(failure.message); }
+  };
   const run = async (label, callback) => {
     if (operationRef.current || disabled) return;
     operationRef.current = true;
@@ -194,6 +200,12 @@ export function MotionStudyPanel({ imageTools, client, document, motion, disable
       <aside className="motion-study-controls">
         {study && <>
           <section className="rig-control-group"><h3>动作画面的用途</h3><label className="rig-field">播放方式<select aria-label="动作画面用途" disabled={locked} value={referenceOnly ? "reference" : "stepped-parts"} onChange={(event) => { const value = event.target.value; change((study) => setMotionStudyPlayback(study, value), true); setCoverage(null); setNotice(value === "reference" ? "已保留原画、坐标与审阅作为关键姿势参考。当前动作改用连续骨骼与网格；原画切片可重新检查生成。" : "已切回逐帧部件制作，请重新检查拆分并明确应用。"); }}><option value="reference">关键姿势参考 · 连续骨骼动画</option><option value="stepped-parts">原画切片 · 逐帧附件切换</option></select></label><p className="rig-hint">参考画面用于姿势与节奏设计。动作的平移、旋转、缩放及变形在骨架关键帧中编辑。</p></section>
+          {!referenceOnly && frame?.mapping && <section className="rig-control-group"><h3>当前帧播放尺寸</h3>
+            <label className="rig-field">整帧等比缩放（%）<input aria-label="当前帧播放缩放百分比" type="number" min="10" max="200" step="1" disabled={locked} value={Math.round((frame.playbackTransform?.scale || 1) * 100)} onChange={(event) => resizeFrame(Number(event.target.value) / 100)} /></label>
+            <div className="rig-field-grid">{["x", "y"].map((axis) => <label className="rig-number-field" key={axis}>基准 {axis.toUpperCase()}<input aria-label={`当前帧缩放基准 ${axis.toUpperCase()}`} type="number" min="0" max={axis === "x" ? document.width : document.height} step="0.1" disabled={locked} value={motionStudyFrameAnchor(frame)[axis]} onChange={(event) => { const value = Number(event.target.value); if (Number.isFinite(value) && value >= 0 && value <= (axis === "x" ? document.width : document.height)) resizeFrame(frame.playbackTransform?.scale || 1, { ...motionStudyFrameAnchor(frame), [axis]: value }); }} /></label>)}</div>
+            <button className="button subtle" disabled={locked || !frame.playbackTransform} onClick={() => resizeFrame(1)}>恢复当前帧原始尺寸</button>
+            <p className="rig-hint">全部动作区域和关节围绕同一基准等比缩放，默认使用最低的脚部关节。原始 PNG、拆分坐标与其他时间点保持；动画预览和导出使用此尺寸。</p>
+          </section>}
           <section className="rig-control-group"><h3>1 · 动作原画</h3><p className="rig-hint">{sources.filter((item) => !item.reuseBase).length} 张新图{motion.id === "run" ? "；跑步循环回到首张跑姿，不穿插站姿" : motion.id === "death" ? " + 共享基准；末尾保持死亡终态" : " + 起终共享基准"}。倒地画面保持同一画布和人物尺度。</p><label className="rig-field">整组画面要求<textarea aria-label="动作画面整体说明" maxLength={4000} rows={3} disabled={locked} value={study.prompt || ""} onChange={(event) => change((value) => ({ ...value, prompt: event.target.value }))} /></label><div className="button-row"><button className="button primary" disabled={locked} onClick={() => start("motion-frames", sources.filter((item) => !item.reuseBase).map((item) => item.id))}>生成全部新画面</button><button className="button" disabled={locked || !repairFrameIds.length} onClick={() => start("motion-frames", repairFrameIds)}>生成缺失或已拒绝画面</button></div><p className="rig-hint">最多 3 张并发；补生成只处理没有图片或已明确拒绝的画面，已有待审阅图片与已确认画面保留。</p></section>
           {frame && <section className="rig-control-group"><h3>{frame.label} · {frame.time.toFixed(2)}s</h3><label className="rig-field">画面名称<input aria-label="当前动作画面名称" maxLength={120} disabled={locked || Boolean(frame.imageRef)} value={frame.label} onChange={(event) => updateFrame({ label: event.target.value })} /></label><label className="rig-field">画面时间（秒）<input aria-label="当前动作画面时间" type="number" min="0" max={motion.duration} step="0.01" disabled={locked || Boolean(frame.imageRef) || frame.reuseBase} value={frame.time} onChange={(event) => { const time = Number(event.target.value); if (!Number.isFinite(time) || time < 0 || time >= motion.duration || study.frames.some((item) => item.id !== frame.id && Math.abs(item.time - time) < .0001)) { setError("画面时间应在动作范围内，且不能与其他帧重复。"); return; } updateFrame({ time }); }} /></label><label className="rig-field">这张画面的要求<textarea aria-label="当前动作画面说明" maxLength={4000} rows={3} disabled={locked || frame.reuseBase || Boolean(frame.imageRef)} value={frame.prompt || ""} onChange={(event) => updateFrame({ prompt: event.target.value })} /></label>
             {!frame.reuseBase && !frame.imageRef && <button className="button" disabled={locked} onClick={() => start("motion-frames", [frame.id])}>{frame.image ? "重新生成所选画面" : "生成所选画面"}</button>}

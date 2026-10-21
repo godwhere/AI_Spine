@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
-    "test": "node --test tests/core.test.mjs tests/pixels.test.mjs tests/runtime.test.mjs tests/generation.test.mjs tests/generation-application-scope.test.mjs tests/template-variants.test.mjs tests/ai-connections.test.mjs tests/sub2api.test.mjs tests/ai-connection-panel.test.mjs tests/storage.test.mjs tests/project-draft.test.mjs tests/thumbnail.test.mjs tests/template-preview.test.mjs tests/unity-export.test.mjs tests/custom-templates.test.mjs tests/rig-authoring.test.mjs tests/rig-attachments.test.mjs tests/rig-registration.test.mjs tests/rig-complete-overlap-prompt.test.mjs tests/rig-project.test.mjs tests/rig-part-annotations.test.mjs tests/rig-draft-lifecycle.test.mjs tests/rig-draft-writer.test.mjs tests/rig-service.test.mjs tests/rig-client.test.mjs tests/rig-workbench.test.mjs tests/rig-motion-study-service.test.mjs tests/rig-motion-studies.test.mjs tests/rig-motion-ownership.test.mjs tests/motion-study-client.test.mjs tests/motion-study-panel.test.mjs tests/rig-part-adjustment.test.mjs tests/rig-canvas-adjustment.test.mjs tests/workspace.test.mjs tests/save-coordinator.test.mjs tests/engine.test.mjs tests/backend.test.mjs tests/archive-fixtures.test.mjs tests/bootstrap.test.mjs tests/application.test.mjs tests/browser-services.test.mjs tests/editor-workspace.test.mjs tests/rig-application.test.mjs tests/library-controller.test.mjs tests/project-index.test.mjs tests/workspace-v2.test.mjs tests/workspace-v2-http.test.mjs tests/workspace-v2-client.test.mjs tests/workspace-v2-composition.test.mjs tests/workspace-migration.test.mjs tests/job-lifecycle.test.mjs",
+    "test": "node --test tests/*.test.mjs",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "test:egg": "node --test tests/egg-character.test.mjs",
     "workbench": "node scripts/start-workbench.mjs --open",

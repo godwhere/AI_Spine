@@ -31,7 +31,10 @@ function cleanAttachmentReferences(document) {
   const groups = rigAttachmentGroups(document), byGroup = new Map(groups.map((group) => [group.id, new Set(group.parts.map((part) => part.id))]));
   const defaults = Object.fromEntries(groups.map((group) => [group.id,
     group.defaultPartId === null || byGroup.get(group.id).has(group.defaultPartId) ? group.defaultPartId : group.parts[0].id]));
-  const motions = document.motions.map((motion) => ({ ...motion, poses: motion.poses.map((pose) => {
+  const motions = document.motions.map((motion) => ({ ...motion,
+    ...(motion.effectTracks ? { effectTracks: motion.effectTracks.filter((track) => byGroup.has(track.groupId)).map((track) => ({ ...track,
+      keys: track.keys.map((key) => key.name === null || byGroup.get(track.groupId).has(key.name) ? key : { ...key, name: null }) })) } : {}),
+    poses: motion.poses.map((pose) => {
     if (!pose.attachments) return pose;
     return { ...pose, attachments: Object.fromEntries(Object.entries(pose.attachments).filter(([id, value]) => byGroup.has(id) && (value === null || byGroup.get(id).has(value)))) };
   }) }));
@@ -58,6 +61,8 @@ function rigWithPartFields(document, partId, fields) {
   const shared = {};
   if (part.attachmentGroup) {
     if (Object.hasOwn(fields, "z")) shared.z = fields.z;
+    if (Object.hasOwn(fields, "blendMode")) shared.blendMode = fields.blendMode;
+    if (part.role === "effect") for (const key of ["x", "y", "width", "height"]) if (Object.hasOwn(fields, key)) shared[key] = fields[key];
     if (Object.hasOwn(fields, "bone")) Object.assign(shared, { bone: fields.bone, influences: [fields.bone], mesh: undefined, grip: undefined });
   }
   return { ...document, parts: document.parts.map((item) => item.id === partId ? { ...item, ...fields }
@@ -77,7 +82,8 @@ function rigWithDefaultAttachment(document, groupId, partId) {
 
 function rigReadiness(document) {
   const parts = document.parts || [];
-  const pending = parts.filter((part) => !part.image || part.completion !== "ready" || !["uploaded", "ai", "calibrated"].includes(part.imageSource));
+  const pending = parts.filter((part) => !part.image || part.completion !== "ready" ||
+    !["uploaded", "ai", "calibrated"].includes(part.imageSource) && !(part.role === "effect" && part.imageSource === "procedural" && part.effect?.generator));
   return { ready: parts.length > 0 && pending.length === 0, total: parts.length, completed: parts.length - pending.length, pending };
 }
 

@@ -17,6 +17,7 @@ import { RigWorkbench } from "../features/rig/RigWorkbench.jsx";
 import { attachSaveExitGuards } from "../application/exit-guards.js";
 
 import { hasRigAuthoring } from "../../shared/domain/rig-summary.mjs";
+import { hasAuthoredProduction } from "../../shared/domain/production.mjs";
 
 const EMPTY = Object.freeze(Object.create(null));
 function makeClock() {
@@ -126,7 +127,7 @@ export function AppShell({ services }) {
   const updateRigDraft = useCallback((document, sessionKey) => {
     const session = rigSessionRef.current;
     if (!session || session.key !== sessionKey) return;
-    if (!document.sourceImage && !document.joints.length && !document.parts.length && document.name === "新角色") return;
+    if (!document.sourceImage && !document.joints.length && !document.parts.length && document.name === "新角色" && !hasAuthoredProduction(document)) return;
     const current = session?.authoringId ? { ...document, id: session.authoringId, ownerResourceId: session.resourceId } : document;
     rigDraftWriter.current.enqueue({ document: current, resourceId: session.resourceId, resourceUpdatedAt: session.resourceUpdatedAt, sessionKey });
   }, []);

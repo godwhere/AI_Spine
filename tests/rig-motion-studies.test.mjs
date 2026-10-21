@@ -4,7 +4,7 @@ import { createHash } from "node:crypto";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { Skeleton, AnimationState, AnimationStateData, Physics, RegionAttachment } from "@esotericsoftware/spine-webgl";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
-import { getMotionStudyFingerprints, motionStudyRegionName, motionStudySlotName } from "../shared/domain/motion-study.mjs";
+import { getMotionStudyFingerprints, motionStudyRegionName, motionStudySlotName, motionStudyFrameAnchor, setMotionStudyFrameScale } from "../shared/domain/motion-study.mjs";
 import { prepareMotionStudyFrames, applyMotionStudy, diagnoseMotionStudyFrame, proposeMotionStudyGapOwnership, proposeCalibratedBaseMotionMapping, acceptMotionStudyOwnershipCandidate } from "../src/infrastructure/motion-study-images.js";
 import { motionStudyKeyTime } from "../engine/rig/motion-study.js";
 import { buildRigFiles } from "../src/infrastructure/rig-authoring.js";
@@ -155,6 +155,42 @@ test("real source ownership creates separate alpha PNGs and application preserve
   assert.deepEqual(doc.parts,before.parts);assert.deepEqual(doc.joints,before.joints);assert.deepEqual(doc.motions,before.motions);assert.equal(doc.sourceImage,before.sourceImage);
   assert.equal(sampleRigPose(doc,"attack",.3699).frameId,"base");assert.equal(sampleRigPose(doc,"attack",motionStudyKeyTime(.37)).frameId,"strike");assert.equal(sampleRigPose(doc,"attack",1).frameId,"end");
   const inspection=inspectRigMotion(doc,"attack");assert.equal(inspection.kind,"motion-study");assert.equal(inspection.maxFootSlide.left,null);assert.equal(inspection.solver.feet,"not-evaluated");assert.equal(inspection.hiddenSurfaces,"not-inpainted");
+});
+
+test("one-frame uniform playback scaling preserves source art, ownership, other frames and exact reset",async()=>{
+  const doc=await appliedFixture(),before=structuredClone(doc),study=doc.motionStudies.attack;
+  const anchor=motionStudyFrameAnchor(study.frames[1]);assert.deepEqual(anchor,{x:30,y:40});
+  const scaled={...doc,motionStudies:{...doc.motionStudies,attack:setMotionStudyFrameScale(study,"strike",.95)}};
+  assert.deepEqual(doc,before);assert.deepEqual(scaled.motionStudies.attack.frames[0],study.frames[0]);assert.deepEqual(scaled.motionStudies.attack.frames[2],study.frames[2]);
+  const {playbackTransform,...original}=scaled.motionStudies.attack.frames[1];assert.deepEqual(original,study.frames[1]);
+  assert.deepEqual(playbackTransform,{scale:.95,anchor});
+  for(const time of [0,.3699,1])assert.deepEqual(sampleRigPose(scaled,"attack",time),sampleRigPose(doc,"attack",time));
+  const originalPose=sampleRigPose(doc,"attack",.5),pose=sampleRigPose(scaled,"attack",.5);
+  assert.deepEqual(pose.joints.root,originalPose.joints.root);
+  for(const [id,joint] of Object.entries(originalPose.joints)){assert.ok(Math.abs(pose.joints[id].x-(anchor.x+(joint.x-anchor.x)*.95))<1e-10);assert.ok(Math.abs(pose.joints[id].y-(anchor.y+(joint.y-anchor.y)*.95))<1e-10);}
+  assert.deepEqual(setMotionStudyFrameScale(scaled.motionStudies.attack,"strike",1),study);
+  const restored=readRigAuthoring(attachRigAuthoring({},scaled));assert.deepEqual(restored.motionStudies.attack.frames[1].playbackTransform,playbackTransform);
+  for(const scale of [0,.09,2.1,NaN,Infinity])assert.throws(()=>setMotionStudyFrameScale(study,"strike",scale),/10%/);
+  const stale=structuredClone(study);stale.frames[1].time=.38;assert.throws(()=>setMotionStudyFrameScale(stale,"strike",.95),/已改变/);
+  const tampered=structuredClone(scaled);tampered.motionStudies.attack.frames[1].playbackTransform.scale=0;assert.throws(()=>validateRigDocument(tampered),/播放缩放/);
+  const outside=structuredClone(scaled);outside.motionStudies.attack.frames[1].playbackTransform.anchor.y=65;assert.throws(()=>validateRigDocument(outside),/缩放基准/);
+});
+
+test("official runtime scales every selected-frame quad uniformly and restores the following frame",async()=>{
+  const doc=await appliedFixture(),study=doc.motionStudies.attack,anchor={x:30,y:40};
+  const scaled={...doc,motionStudies:{...doc.motionStudies,attack:setMotionStudyFrameScale(study,"strike",.95,anchor)}};
+  const files=await buildRigFiles(doc,pixelEnv),nextFiles=await buildRigFiles(scaled,pixelEnv),bundle=parseBundle(files),nextBundle=parseBundle(nextFiles);
+  assert.equal(nextBundle.parts.length,bundle.parts.length);for(const page of bundle.pages)assert.deepEqual(nextBundle.files[page.file],bundle.files[page.file]);
+  assert.deepEqual(nextBundle.json.bones,bundle.json.bones);assert.deepEqual(nextBundle.json.animations.idle,bundle.json.animations.idle);assert.deepEqual(nextBundle.json.animations.hit,bundle.json.animations.hit);
+  const value=runtime(bundle),next=runtime(nextBundle),key=motionStudyKeyTime(.37);
+  for(const time of [0,key-1e-6,key,.5,1-1e-6,1]){
+    at(value,"attack",time);at(next,"attack",time);const slots=visible(value.skeleton),nextSlots=visible(next.skeleton),scale=time>=key&&time<1?.95:1;
+    assert.deepEqual(nextSlots.map(s=>s.data.name),slots.map(s=>s.data.name));
+    for(const [i,slot] of slots.entries()){
+      const vertices=attachmentVertices(value.skeleton,slot).vertices,nextVertices=attachmentVertices(next.skeleton,nextSlots[i]).vertices;
+      for(let j=0;j<vertices.length;j+=2){assert.ok(Math.abs(nextVertices[j]-(anchor.x+(vertices[j]-anchor.x)*scale))<.005,`${time} ${slot.data.name} x`);const ground=doc.height-anchor.y;assert.ok(Math.abs(nextVertices[j+1]-(ground+(vertices[j+1]-ground)*scale))<.005,`${time} ${slot.data.name} y`);}
+    }
+  }
 });
 
 test("official Spine runtime matches source pixels at every stepped pose and restores idle after the final frame",async()=>{

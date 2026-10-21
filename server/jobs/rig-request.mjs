@@ -147,6 +147,9 @@ export function publicJob(job, includeResult = true) {
   const study = MOTION_STUDY_KINDS.has(job.request.kind);
   return { id: job.id, projectId: job.request.projectId, kind: job.request.kind, name: job.request.name,
     prompt: job.request.prompt, provider: job.request.provider, model: job.model, status: job.status, stage: job.stage,
+    ...(job.request.referenceTarget ? { referenceTarget: job.request.referenceTarget, referenceFingerprint: job.request.referenceFingerprint } : {}),
+    ...(job.request.productionFingerprint ? { productionFingerprint: job.request.productionFingerprint } : {}),
+    ...(job.request.productionReferences ? { productionReferences: job.request.productionReferences.map(({ file, ...reference }) => reference) } : {}),
     createdAt: job.createdAt, updatedAt: job.updatedAt, error: job.error,
     total: study ? job.request.frames.length : job.request.kind === "parts" ? job.request.partIds.length : 1,
     completed: study ? job.request.kind === "motion-frames" ? job.images.length : job.mappings?.length || 0 : job.request.kind === "parts" ? job.images.length : job.status === "completed" ? 1 : 0,

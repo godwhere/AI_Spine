@@ -35,7 +35,7 @@ test("architecture rejects forbidden directions and allows injected application 
 
 test("checkout has no new architectural exceptions, missing modules or cycles", async () => {
   const root = fileURLToPath(new URL("../", import.meta.url));
-  const exceptions = JSON.parse(await readFile(new URL("../docs/architecture-exceptions.json", import.meta.url), "utf8"));
+  const exceptions = JSON.parse(await readFile(new URL("../docs/architecture/exceptions.json", import.meta.url), "utf8"));
   const report = await inspectArchitecture(root, exceptions);
   for (const key of ["unexpected", "stale", "invalid", "unresolved", "platform", "desktopBridges", "retiredDependencies", "cycles"]) assert.deepEqual(report[key], [], key);
 });

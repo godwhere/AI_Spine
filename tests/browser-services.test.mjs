@@ -2,6 +2,13 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createBrowserServices } from "../src/app/browser-services.js";
 import { configureWorkspace, usesSharedWorkspace } from "../src/infrastructure/workspace-client.js";
+import { productionFixture } from "./support/production-fixture.mjs";
+import { buildRigFiles } from "../engine/rig/build-files.js";
+import { productionExportBundle } from "../src/application/rig-production.js";
+import { parseBundle } from "../engine/archive/bundle.js";
+import { exportPackage } from "../engine/archive/package.js";
+import { unpackZip } from "../engine/archive/zip.js";
+import { pixelEnv } from "./helpers.mjs";
 
 test("the browser composition root pins explicit storage/API/worker/preview ports through service failure", async (t) => {
   const descriptors = Object.fromEntries(["localStorage", "indexedDB"].map((key) => [key, Object.getOwnPropertyDescriptor(globalThis, key)]));
@@ -23,10 +30,15 @@ test("the browser composition root pins explicit storage/API/worker/preview port
     }
     return new Response(JSON.stringify(value), { status, headers: { "Content-Type": "application/json" } });
   };
-  const preview = { createScene() {}, capture() {} }, workers = { unpack() {}, export() {} };
-  const services = createBrowserServices({ storageMode: "shared", apiBase: "/fixture-api", fetcher, preview, workers });
+  const preview = { createScene() {}, capture() {} }, workers = { unpack() {}, export: exportPackage }, downloaded = [];
+  const services = createBrowserServices({ storageMode: "shared", apiBase: "/fixture-api", fetcher, preview, workers, downloads: { save: async (bytes) => downloaded.push(bytes) } });
   assert.equal(services.preview.createScene, preview.createScene); assert.equal(services.preview.capture, preview.capture);
   assert.equal(services.archive.unpack, workers.unpack);
+  const doc = productionFixture(), raw = parseBundle(await buildRigFiles(doc, pixelEnv)), compiled = productionExportBundle(doc, raw);
+  await services.rigEditing.exportProject({ bundle: compiled, edits: {}, mode: "runtime", name: doc.name });
+  const actual = unpackZip(downloaded[0]);
+  for (const [path, bytes] of Object.entries(raw.files)) assert.deepEqual(actual[path], bytes, `Prepared rig export preserves ${path}`);
+  await assert.rejects(services.rigEditing.exportProject({ bundle: compiled, edits: { body: {} }, mode: "runtime", name: doc.name }), /先将校准应用/);
   assert.equal((await services.connection.status()).connected, true); assert.deepEqual(await services.rigJobs.list("fixture"), []);
   await assert.rejects(services.repositories.projects.save({ id: "resource", name: "Name", files: {}, edits: {} }), /unavailable/);
   const library = await services.repositories.projects.library();

@@ -48,7 +48,7 @@
 
 V1 列表、读取和旧浏览器迁入通过同一仓储适配。项目/草稿保存只有在带现有时间戳条件且不涉及草稿移动时才接受；其他旧写请求明确返回 `WORKSPACE_REFRESH_REQUIRED`，不把缺失版本解释成无条件覆盖。迁入继续执行原有去重、冲突保留和墓碑优先政策。
 
-目前新后台提交会复用完整领域校验并还原必要的记录；网络图片分离已验证，未宣称服务端保存完全免读 BLOB。迁移后实际数据的三种导出与回导已核对；10/100/500 规模的最终测量已完成，500 条摘要 p95 为 1.11 ms，校准/改名提交 812–819 字节，未变素材上传为 0。50 MiB 校准保存约 332 ms，大素材同步入库仍有短暂阻塞，详见 [P7 性能及限制](evidence/architecture-p7/acceptance.md#性能)。
+目前新后台提交会复用完整领域校验并还原必要的记录；网络图片分离已验证，未宣称服务端保存完全免读 BLOB。迁移后实际数据的三种导出与回导已核对；10/100/500 规模的最终测量已完成，500 条摘要 p95 为 1.11 ms，校准/改名提交 812–819 字节，未变素材上传为 0。50 MiB 校准保存约 332 ms，大素材同步入库仍有短暂阻塞，详见 [P7 性能及限制](../evidence/architecture-p7/acceptance.md#性能)。
 
 ## 前端会话与回执
 
@@ -77,8 +77,8 @@ node scripts/migrate-workspace.mjs /absolute/workspace --activate
 
 激活前可用 `--abort` 删除暂存目标并释放维护，保留原记录、身份、revision 和原摘要脏标记。激活后必须先冻结并备份**当前**数据，再用相同流程 `--to=1` 反向转换；它保留激活后的新编辑，不能用旧备份替代。反向转换留下的 V2 副本受写保护；V1 永久删除也清理对应退役文档和引用、失效旧回执，不能形成独立旧写分支。无引用 BLOB 的回收另行显式执行，备份不随回收站清空。
 
-测试实际退出子进程覆盖冻结、备份、批次、验证、激活提交前与提交后；反向激活提交前退出也能恢复。正式任务/编辑协调和生产激活已完成，详见[正式激活](evidence/architecture-p5-production/verification.json)。完整备份在 `~/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2`；后续已有新写入时，仍须使用当前数据反向转换，不能直接覆盖为该旧备份。
+测试实际退出子进程覆盖冻结、备份、批次、验证、激活提交前与提交后；反向激活提交前退出也能恢复。正式任务/编辑协调和生产激活已完成，详见[正式激活](../evidence/architecture-p5-production/verification.json)。完整备份在 `~/Library/Application Support/iSpine Backups/20261021-041242-before-workspace-v2`；后续已有新写入时，仍须使用当前数据反向转换，不能直接覆盖为该旧备份。
 
 ## 当前证据
 
-见 [HTTP 批次](evidence/architecture-p5-http/verification.json)、[前端批次](evidence/architecture-p5-client/verification.json)、[副本迁移批次](evidence/architecture-p5-migration/verification.json)与 [实施记录](architecture-progress.md#p5-图片分离与版本化保存执行中)。正式迁移及激活不得以隔离验收代替。
+见 [HTTP 批次](../evidence/architecture-p5-http/verification.json)、[前端批次](../evidence/architecture-p5-client/verification.json)、[副本迁移批次](../evidence/architecture-p5-migration/verification.json)与 [实施记录](progress.md#p5-图片分离与版本化保存执行中)。正式迁移及激活不得以隔离验收代替。

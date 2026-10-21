@@ -6,6 +6,7 @@ import { geometry } from "./geometry.js";
 import { isMotionStudyPlaybackActive } from "../../shared/domain/motion-study.mjs";
 import { motionDrawOrder } from "./sample.js";
 import { motionStudyFramePose } from "./motion-study.js";
+import { motionStudyFrameRegion } from "./motion-study.js";
 import { motionStudyKeyTime } from "./motion-study.js";
 import { motionStudyRegionName } from "../../shared/domain/motion-study.mjs";
 import { motionStudySlotName } from "../../shared/domain/motion-study.mjs";
@@ -14,6 +15,34 @@ import { rotate } from "./math.js";
 import { round } from "./math.js";
 import { sampled } from "./sample.js";
 import { turn } from "./math.js";
+
+function refineBakeFrames(g, motion, frames) {
+  const cache = new Map(), poseAt = (time) => {
+    if (!cache.has(time)) cache.set(time, sampled(g, motion, time, false));
+    return cache.get(time);
+  };
+  const differs = (a, b, actual, mix) => {
+    for (const joint of g.ordered) {
+      if (Math.abs(turn(actual.angles[joint.id] - a.angles[joint.id]) - turn(b.angles[joint.id] - a.angles[joint.id]) * mix) > .002) return true;
+      for (const [field, tolerance] of [["translations", .005], ["scales", .00001]]) for (const axis of ["x", "y"]) {
+        const fallback = field === "scales" ? 1 : 0, value = (pose) => pose[field][joint.id]?.[axis] ?? fallback;
+        if (Math.abs(value(actual) - (value(a) * (1 - mix) + value(b) * mix)) > tolerance) return true;
+      }
+    }
+    return ["x", "y"].some((axis) => Math.abs(actual.root[axis] - (a.root[axis] * (1 - mix) + b.root[axis] * mix)) > .01);
+  };
+  const refine = (a, b, depth = 0) => {
+    // A contact boundary must remain stepped, including its Float32 guard.
+    if (a.stepped || depth >= 10 || b.time - a.time < 1e-6) return [a];
+    const left = poseAt(a.sampleTime), right = poseAt(b.sampleTime);
+    if (![.25, .5, .75].some((mix) => differs(left, right, poseAt(a.time + (b.time - a.time) * mix), mix))) return [a];
+    const time = Math.fround((a.time + b.time) / 2);
+    if (time <= a.time || time >= b.time) return [a];
+    const middle = { time, sampleTime: time };
+    return [...refine(a, middle, depth + 1), ...refine(middle, b, depth + 1)];
+  };
+  return frames.flatMap((frame, index) => index === frames.length - 1 ? [frame] : refine(frame, frames[index + 1]));
+}
 
 function compileRigSkeleton(document, { sampleRate = 30 } = {}) {
   if (!Number.isFinite(sampleRate) || sampleRate < 5 || sampleRate > 120) throw new Error("动作烘焙帧率必须在 5 至 120 之间。");
@@ -47,7 +76,7 @@ function compileRigSkeleton(document, { sampleRate = 30 } = {}) {
     if (!attachments[slot]) {
       attachments[slot] = {};
       const selected = part.attachmentGroup ? setupAttachments[part.attachmentGroup] : part.id;
-      slots.push({ name: slot, bone: part.bone, ...(selected === null ? {} : { attachment: selected }) });
+      slots.push({ name: slot, bone: part.bone, ...(selected === null ? {} : { attachment: selected }), ...(part.blendMode && part.blendMode !== "normal" ? { blend: part.blendMode } : {}) });
       if (part.attachmentGroup) slotGroups.set(part.attachmentGroup, slot);
     }
     attachments[slot][part.id] = attachment;
@@ -80,7 +109,7 @@ function compileRigSkeleton(document, { sampleRate = 30 } = {}) {
       timeMap.set(before, { time: before, sampleTime: before, stepped: true });
       timeMap.set(transition, { time: transition, sampleTime: pose.time });
     }
-    const baked = [...timeMap.values()].sort((a, b) => a.time - b.time), times = baked.map((frame) => frame.time);
+    const baked = refineBakeFrames(g, motion, [...timeMap.values()].sort((a, b) => a.time - b.time)), times = baked.map((frame) => frame.time);
     const poses = baked.map((frame) => sampled(g, motion, frame.sampleTime, false)), timelines = {};
     for (const joint of g.ordered) {
       let previous;
@@ -103,6 +132,9 @@ function compileRigSkeleton(document, { sampleRate = 30 } = {}) {
       for (const pose of motion.poses) if (Object.hasOwn(pose.attachments || {}, groupId)) {
         const time = attachmentTimelineTime(pose.time);
         keys.set(time, { time, name: pose.attachments[groupId] });
+      }
+      for (const track of motion.effectTracks || []) if (track.groupId === groupId) for (const key of track.keys) {
+        const time = attachmentTimelineTime(key.time); keys.set(time, { time, name: key.name });
       }
       slotTimelines[slot] = { attachment: [...keys.values()].sort((a, b) => a.time - b.time) };
     }
@@ -151,9 +183,9 @@ function compileMotionStudies(skeleton, g) {
         const name = segment ? motionStudyRegionName(motionId, frame.id, partId) : null;
         slotTimelines[slot].attachment.push({ time, name });
         if (!segment) continue;
-        const part = doc.parts.find((value) => value.id === partId), joint = joints[part.bone];
-        const center = rotate(segment.x + segment.width / 2 - joint.x, segment.y + segment.height / 2 - joint.y, -joint.angle);
-        skeleton.skins[0].attachments[slot][name] = { type: "region", path: name, x: round(center.x), y: round(-center.y), rotation: round(joint.angle), width: segment.width, height: segment.height };
+        const part = doc.parts.find((value) => value.id === partId), joint = joints[part.bone], region = motionStudyFrameRegion(frame, segment);
+        const center = rotate(region.x + region.width / 2 - joint.x, region.y + region.height / 2 - joint.y, -joint.angle);
+        skeleton.skins[0].attachments[slot][name] = { type: "region", path: name, x: round(center.x), y: round(-center.y), rotation: round(joint.angle), width: region.width, height: region.height };
       }
       drawOrders.push({ time, active: [...frame.segments].sort((a, b) => a.z - b.z).map((part) => motionStudySlotName(motionId, part.partId)) });
     }

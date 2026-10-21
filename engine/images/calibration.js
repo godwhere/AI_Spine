@@ -99,7 +99,7 @@ function drawReplacement(
   transform = identityTransform(),
 ) {
   const t = { ...identityTransform(), ...transform };
-  const fit = Math.min(
+  const fit = part.nativePixels ? 1 : Math.min(
     part.originalWidth / image.width,
     part.originalHeight / image.height,
   );

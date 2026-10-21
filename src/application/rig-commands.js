@@ -2,6 +2,7 @@ import { bindRigWeapon, getRigPartMesh, setRigPartWeights } from "../../engine/r
 import { moveRigPart, resizeRigPart } from "../../engine/rig/part-adjustment.js";
 import { rigWithPartAttachmentGroup, rigWithPartFields, rigWithDefaultAttachment, rigWithoutPart } from "../../shared/domain/rig.mjs";
 import { isMotionStudyPlaybackActive } from "../../shared/domain/motion-study.mjs";
+import { withoutRigMagicEffects, retimeMotionEffects } from "../../shared/domain/rig-effects.mjs";
 
 // Commands always read the current document. Views pass target IDs and fields,
 // never a second mutable document or their own history stack.
@@ -18,7 +19,7 @@ export function createRigCommands(session, { createId, onChanged = () => {} }) {
     if (isMotionStudyPlaybackActive(current().motionStudies?.[id]) && ["poses", "duration", "loop"].some((key) => Object.hasOwn(fields, key)))
       throw new Error("此动作使用逐帧部件画面，请打开动作画面重制调整；原连续骨骼关键帧保持。");
     return commit((document) => ({ ...document, motions: document.motions.map((motion) => motion.id === id
-      ? { ...motion, ...fields, ...(fields.poses ? { origin: "manual" } : {}) } : motion) }));
+      ? { ...motion, ...(fields.duration !== undefined ? retimeMotionEffects(motion, fields.duration) : {}), ...fields, ...(fields.poses ? { origin: "manual" } : {}) } : motion) }));
   }
   function patchPose(id, index, fields) {
     const motion = current().motions.find((item) => item.id === id);
@@ -36,6 +37,16 @@ export function createRigCommands(session, { createId, onChanged = () => {} }) {
     setPartGroup(id, group) { return commit(rigWithPartAttachmentGroup(current(), id, group)); },
     setDefaultAttachment(group, id) { return commit(rigWithDefaultAttachment(current(), group, id)); },
     removePart(id) { return commit(rigWithoutPart(current(), id)); },
+    removeMotion(id) {
+      return commit((document) => {
+        if (!document.motions.some((motion) => motion.id === id)) return document;
+        document = withoutRigMagicEffects(document, id);
+        const motionStudies = { ...document.motionStudies };
+        delete motionStudies[id];
+        return { ...document, motions: document.motions.filter((motion) => motion.id !== id),
+          ...(document.motionStudies ? { motionStudies } : {}) };
+      });
+    },
     addPart({ duplicateId, boneId, group: selectedGroup }) {
       const document = current(), id = `part-${createId()}`, part = document.parts.find((item) => item.id === duplicateId);
       const bone = boneId || document.joints[0].id;

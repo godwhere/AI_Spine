@@ -18,6 +18,8 @@ async function generatedPrompt(t, { features = false, selected = "head" } = {}) 
     { id: "head", label: "头部脸底", bone: "head", x: 8, y: 4, width: 48, height: 56, z: 1, binding: "rigid", influences: ["head"] },
     { id: "sleeve", label: "袖口", bone: "forearm", x: 20, y: 20, width: 20, height: 30, z: 2, binding: "rigid", influences: ["forearm"] },
     { id: "frontHair", label: "头发cap", bone: "head", x: 8, y: 4, width: 48, height: 32, z: 4, binding: "rigid", influences: ["head"] },
+    { id: "staff", label: "法杖", bone: "hand", x: 8, y: 4, width: 16, height: 56, z: 4, binding: "rigid", influences: ["hand"], attachmentGroup: "staffHeld" },
+    { id: "relaxed_hand", label: "失力手掌", bone: "hand", x: 20, y: 20, width: 20, height: 30, z: 5, binding: "rigid", influences: ["hand"], attachmentGroup: "handShape" },
     ...(features ? [{ id: "eye_open", label: "睁眼", bone: "head", x: 22, y: 16, width: 16, height: 12, z: 3, binding: "rigid", influences: ["head"], attachmentGroup: "eyeLeft" }] : []),
   ];
   const provider = { id: "codex-native", model: "managed-native" }, job = { id, request: { rig: { width: 64, height: 64, parts }, provider,
@@ -62,4 +64,12 @@ test("expression parts stay isolated while a head without separate facial groups
   assert.doesNotMatch(expression, /BLANK FACE BASE/);
   assert.doesNotMatch(await generatedPrompt(t), /BLANK FACE BASE/);
   assert.doesNotMatch(await generatedPrompt(t, { features: true, selected: "frontHair" }), /BLANK FACE BASE/, "head-bound hair must keep its strands, not be regenerated as blank skin");
+});
+
+test("hand and staff variants retain filled material instead of receiving facial-stroke instructions", async (t) => {
+  for (const selected of ["staff", "relaxed_hand"]) {
+    const prompt = await generatedPrompt(t, { selected });
+    assert.match(prompt, /complete filled support shape and material/);
+    assert.doesNotMatch(prompt, /one isolated expression attachment|skin-colored background patch/);
+  }
 });

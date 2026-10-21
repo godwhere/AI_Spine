@@ -51,13 +51,20 @@ export function createBrowserServices({ storageMode, apiBase, fetcher = fetch,
   const resources = createResourceActions({ ...repositories, archive, pixels, catalog, createId, now });
   const library = createLibraryController({ ...repositories, resources, watch: watchWorkspace });
   const rigImages = { ...rigImagePorts, ...registrationPorts, ...motionStudyPorts };
-  const rigEditing = { createId, images: rigImages, operations: createRigOperations({ images: rigImages, buildFiles: buildRigFiles, createId }) };
+  const exportProject = createProjectExporter({ archive, pixels, downloads });
+  // Authoring exports are freshly compiled from the current document. Ordinary
+  // replacement synchronization would rewrite their individual runtime PNGs.
+  const exportCompiledRig = createProjectExporter({ archive, downloads, pixels: {
+    async compilePages(_bundle, edits) { if (Object.keys(edits || {}).length) throw new Error("请先将校准应用到骨架草稿，再导出制作验收包。"); return {}; },
+    async synchronizeRigAuthoring(bundle) { return bundle.files; },
+  } });
+  const rigEditing = { createId, images: rigImages, operations: createRigOperations({ images: rigImages, buildFiles: buildRigFiles, createId }), exportProject: exportCompiledRig };
   const previewRuntime = { ...preview, capture: preview.capture || ((bundle, options) => captureTemplatePreview(bundle, options, { createScene: preview.createScene })) };
   return { calibration: createCalibration({ pixels: browserPixels, readReplacement }), rigEditing, storageMode, apiBase, repositories, archive, pixels, preview: previewRuntime, createId, now, downloads,
     connection: createLocalGenerationProvider(apiFetch), rigJobs: createRigClient(apiFetch), watchWorkspace,
     resources, library,
     rigs: createRigResourceActions({ ...repositories, pixels, createId }),
-    exportProject: createProjectExporter({ archive, pixels, downloads }),
+    exportProject,
     applyCandidate: createCandidateApplication({ images: { applyGeneratedParts }, variants: { add: addTemplateVariant } }),
     prepareGenerationRequest,
     createEditorWriter: (callbacks) => createEditorPersistence({ repository: repositories.projects, createMutationId: createId, ...callbacks }),

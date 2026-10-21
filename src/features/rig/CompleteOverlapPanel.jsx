@@ -70,13 +70,15 @@ function CandidateMetrics({ metrics }) {
       <div><dt>实际锁定源像素覆盖率</dt><dd>{percent(overlap.sourceLockCoverage)}</dd></div>
       <div><dt>未按已审轮廓锁定的源像素</dt><dd>{number(overlap.unassignedSourcePixels)}</dd></div>
       <div><dt>保留空白脸底像素</dt><dd>{number(overlap.protectedFacePixels)}</dd></div>
+      {overlap.boundaryPolicy === "source-occlusion" && <><div><dt>遮挡边界校正像素</dt><dd>{number(overlap.boundarySuppressedPixels)}</dd></div><div><dt>补充分配源像素</dt><dd>{number(overlap.fallbackLockedPixels)}</dd></div></>}
     </dl>
     <p>误差以 0–255 颜色值计。重叠底图会改变半透明叠色及轮廓；交并比不代表接头、表情和动作已验证。</p>
   </div>;
 }
 
 export function CompleteOverlapPanel({ imageTools, document, disabled = false, onApply, onClose }) {
-  const { prepareCompleteOverlapReview, registerRigSourcePixels } = imageTools;
+  const { prepareCompleteOverlapReview, restoreCompleteOverlapReview, registerRigSourcePixels } = imageTools;
+  const [boundaryPolicy, setBoundaryPolicy] = useState("full-underlay");
   const [prepared, setPrepared] = useState(null), [review, setReview] = useState({}), [selectedId, setSelectedId] = useState("");
   const [candidate, setCandidate] = useState(null), [candidateURL, setCandidateURL] = useState(""), [visualReviewed, setVisualReviewed] = useState(false);
   const [operation, setOperation] = useState(""), [error, setError] = useState(""), [notice, setNotice] = useState(""), [fullCanvas, setFullCanvas] = useState(false);
@@ -104,7 +106,9 @@ export function CompleteOverlapPanel({ imageTools, document, disabled = false, o
       try {
         const value = await prepareCompleteOverlapReview(snapshot);
         if (cancelled || !alive.current || ticket !== epoch.current || current.current.document !== snapshot) return;
-        setPrepared({ value, snapshot }); setSelectedId(value.parts[0]?.partId || "");
+        const restored = restoreCompleteOverlapReview?.(value, snapshot.registration?.completeOverlapReview) || {};
+        setPrepared({ value, snapshot }); setSelectedId(value.parts[0]?.partId || ""); setReview(restored);
+        setBoundaryPolicy(Object.keys(restored).length ? snapshot.registration.completeOverlapReview.boundaryPolicy || "full-underlay" : "full-underlay");
       } catch (failure) {
         if (!cancelled && alive.current && ticket === epoch.current) setError(failure.message || "无法读取完整部件。");
       } finally {
@@ -165,6 +169,7 @@ export function CompleteOverlapPanel({ imageTools, document, disabled = false, o
     try {
       const value = await registerRigSourcePixels(snapshot, { mode: "complete-overlap", review: {
         sourceFingerprint: active.value.sourceFingerprint, geometryFingerprint: active.value.geometryFingerprint,
+        ...(boundaryPolicy !== "full-underlay" ? { boundaryPolicy } : {}),
         parts: parts.map((item) => ({ partId: item.partId, imageSHA256: item.imageSHA256, sourceLock: sourceLockFor(item, review[item.partId]), ...Object.fromEntries(
           ["approved", "hiddenReviewed", "isolationReviewed", "sourceMaskReviewed", ...(item.requiresBlankFace ? ["blankFace"] : [])].map((key) => [key, review[item.partId][key] === true])) })),
       } });
@@ -259,6 +264,8 @@ export function CompleteOverlapPanel({ imageTools, document, disabled = false, o
           </>}
           <div className="complete-overlap-control-section"><h3>计算与应用</h3>
             <p className="complete-overlap-caption">全部 {parts.length} 件逐件确认后，才会在临时副本计算候选。应用前仍需查看重组画面。</p>
+            <label><input type="checkbox" aria-label="按原图遮挡校正可见边界" checked={boundaryPolicy === "source-occlusion"} disabled={locked} onChange={(event) => { setBoundaryPolicy(event.target.checked ? "source-occlusion" : "full-underlay"); setCandidate(null); setVisualReviewed(false); }} />按原图遮挡校正可见边界</label>
+            <p className="complete-overlap-caption">启用后，普通默认部件锁定原图归属像素，补充分配数量单独报告；隐藏面保留在前景遮挡区。完整原生底图、空白脸底、五官和隐藏变体保留。仍需检查极限姿势及接头。</p>
             {active?.value.issues.length > 0 && <details className="complete-overlap-issues"><summary>{active.value.issues.length} 项待修复</summary><ul>{active.value.issues.map((issue, index) => <li key={index}>{issueText(issue)}</li>)}</ul></details>}
             <button type="button" className="button" disabled={locked || !active?.value.ready || !parts.length || approved !== parts.length} onClick={computeCandidate}>{candidate ? "重新计算重叠候选" : "计算完整重叠候选"}</button>
             {candidate && candidate.snapshot === document && <>

@@ -170,7 +170,7 @@ export async function inspectArchitecture(root, exceptions = []) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-  const exceptions = JSON.parse(await readFile(resolve(root, "docs/architecture-exceptions.json"), "utf8"));
+  const exceptions = JSON.parse(await readFile(resolve(root, "docs/architecture/exceptions.json"), "utf8"));
   const report = await inspectArchitecture(root, exceptions);
   if (process.argv.includes("--json")) console.log(JSON.stringify(report, null, 2));
   else console.log(JSON.stringify({ files: report.files, imports: report.edges.length, exceptions: report.violations.length,

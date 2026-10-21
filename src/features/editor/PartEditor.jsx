@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { createCalibrationSession } from "../../application/part-calibration.js";
 
-export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, externalError = "", displayName }) {
+export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, externalError = "", displayName, referenceLabel = "模板参考", instruction = "" }) {
   const sessionRef = useRef(null);
   if (!sessionRef.current) sessionRef.current = createCalibrationSession(edit);
   const session = sessionRef.current;
@@ -66,7 +66,7 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
       .then((value) => {
         loaded = value;
         if (cancelled) value.close();
-        else setImage(value);
+        else setImage({ bitmap: value, source: draft.image });
       })
       .catch((e) => { if (!cancelled) setError(e.message); });
     return () => {
@@ -77,7 +77,7 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
   const { remember, undo, redo } = session;
   const change = (values, saveHistory = true) => session.patch(values, saveHistory);
   useEffect(() => {
-    if (!reference || !image || !draft) return;
+    if (!reference || !image || !draft || image.source !== draft.image) return;
     const target = canvas.current,
       width = target.clientWidth,
       height = target.clientHeight,
@@ -98,7 +98,7 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
     ctx.globalAlpha = ghost / 100;
     ctx.drawImage(reference, 0, 0);
     ctx.globalAlpha = 1;
-    drawReplacement(ctx, image, part, draft.transform);
+    drawReplacement(ctx, image.bitmap, part, draft.transform);
     ctx.lineWidth = 1 / scale;
     ctx.strokeStyle = "#5a7186";
     ctx.setLineDash([5 / scale, 4 / scale]);
@@ -204,6 +204,7 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
           <div>
             <h2 id="part-editor-title">调整细节</h2>
             <p>{displayName || part.name || part.id}</p>
+            {instruction && <p className="rig-hint">{instruction}</p>}
           </div>
           <button
             className="icon-button"
@@ -220,9 +221,9 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
                 <Move size={14} /> 拖动部件调整位置
               </span>
               <label>
-                模板参考{" "}
+                {referenceLabel}{" "}
                 <input
-                  aria-label="模板参考透明度"
+                  aria-label={`${referenceLabel}透明度`}
                   type="range"
                   min="0"
                   max="100"
@@ -361,7 +362,7 @@ export function PartEditor({ calibration, bundle, part, edit, onApply, onClose, 
               <button
                 className="button full accent"
                 onClick={fit}
-                disabled={busy || !draft}
+                disabled={busy || !draft || part.nativePixels}
               >
                 {busy ? (
                   <LoaderCircle size={15} className="spin" />

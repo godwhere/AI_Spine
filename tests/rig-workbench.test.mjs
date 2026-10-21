@@ -13,6 +13,8 @@ import * as motionStudyClient from "../src/application/motion-study.js";
 import * as rigPreviewTime from "../src/application/rig-preview-time.js";
 import * as rigPartAdjustment from "../engine/rig/part-adjustment.js";
 import { createCanvas } from "@napi-rs/canvas";
+import * as production from "../shared/domain/production.mjs";
+import * as rigProduction from "../src/application/rig-production.js";
 import { Skeleton, AnimationState, AnimationStateData, Physics } from "@esotericsoftware/spine-webgl";
 import { pixelEnv } from "./helpers.mjs";
 import { parseBundle } from "../src/infrastructure/archive-files.js";
@@ -44,7 +46,7 @@ function workbench({ initialDocument, initialManualAdjustment = false, initialPa
   const client = { list: async () => history.map(({ result, ...item }) => item), get: get || (async (id) => history.find((item) => item.id === id)), image,
     retry: async (id, options) => { retries.push({ id, options }); return retry ? retry(id, options) : { id: "retry-job", parentJobId: id, kind: "parts", projectId: initialDocument.id, status: "queued", provider: { id: "codex-native", label: "Codex 账号" } }; },
     start: async (request) => { submissions.push(request); return { id: "new-job", projectId: request.projectId, kind: request.kind, status: "queued", provider: { id: "codex-native", label: "Codex 账号规划" } }; } };
-  const values = { ...rigViews, basicMotionSlots, createRigCommands, createRigSession, ...authoring, ...rigClient, ...rigImages, ...rigRegistration, ...motionStudyClient, ...motionStudyCore, ...rigPreviewTime, ...rigPartAdjustment, useState: state, useEffect: effect, useMemo: memo, useRef: ref,
+  const values = { ...rigViews, basicMotionSlots, createRigCommands, createRigSession, ...authoring, ...rigClient, ...rigImages, ...rigRegistration, ...motionStudyClient, ...motionStudyCore, ...rigPreviewTime, ...rigPartAdjustment, ...production, ...rigProduction, useState: state, useEffect: effect, useMemo: memo, useRef: ref,
     createRigPartCalibration: createCalibration, bakeRigPartCalibration: bakeCalibration,
     readRigImage: readImage,
     readRigPartCandidate: readPartImage,

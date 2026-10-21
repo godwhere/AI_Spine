@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { createCanvas, loadImage } from "@napi-rs/canvas";
 import { validateRigDocument } from "../shared/rig-schema.mjs";
-import { inspectRegistrationBounds } from "../engine/images/registration.js";
+import { inspectRegistrationBounds, restoreCompleteOverlapReview } from "../engine/images/registration.js";
 import { inspectRigSourceCoverage, expandRigRegistrationBounds, registerRigSourcePixels, measureRigSourceRegistration, prepareCompleteOverlapReview } from "../src/infrastructure/rig-registration.js";
 import { buildRigFiles } from "../src/infrastructure/rig-authoring.js";
 import { compileRigSkeleton } from "../engine/rig/compile.js";
@@ -317,6 +317,33 @@ function approveComplete(prepared) {
     parts: prepared.parts.map((part) => ({ partId: part.partId, imageSHA256: part.imageSHA256, approved: true,
       hiddenReviewed: true, isolationReviewed: true, sourceMaskReviewed: true, sourceLock: part.sourceLock, ...(part.requiresBlankFace ? { blankFace: true } : {}) })) };
 }
+
+test("explicit source-occlusion boundaries remove visible double edges while preserving hidden support, blank skin and native variants", async () => {
+  const doc = completeFixture(), arm = doc.parts.find((part) => part.id === "arm"), canvas = createCanvas(12, 19), context = canvas.getContext("2d");
+  context.fillStyle = "#dd5566"; context.fillRect(0, 0, 12, 19); context.clearRect(11, 18, 1, 1);
+  Object.assign(arm, { x: 4, y: 14, width: 12, height: 19, image: canvas.toDataURL("image/png"), sourcePolygon: polygon(5, 15, 10, 10) });
+  const snapshot = structuredClone(doc), prepared = await prepareCompleteOverlapReview(doc, pixelEnv), review = { ...approveComplete(prepared), boundaryPolicy: "source-occlusion" };
+  const result = await registerRigSourcePixels(doc, { mode: "complete-overlap", review }, pixelEnv), nextArm = result.document.parts.find((part) => part.id === "arm");
+  assert.deepEqual(doc, snapshot);
+  assert.equal((await worldPixel(nextArm, 4, 14))[3], 0, "remove visible native spill outside the setup silhouette");
+  const source = await rgba(doc.sourceImage), offset = (29 * 40 + 6) * 4;
+  assert.deepEqual(await worldPixel(nextArm, 6, 29), [...source.data.subarray(offset, offset + 4)], "explicit policy locks and reports supplemental ownership");
+  assert.deepEqual(await worldPixel(result.document.parts.find((part) => part.id === "torso"), 10, 23), await worldPixel(doc.parts.find((part) => part.id === "torso"), 10, 23), "retain the real hidden shoulder under the foreground arm");
+  for (const id of ["head", "eyesOpen", "eyesClosed", "mouthNeutral", "mouthOpen"]) assert.deepEqual(await worldPixels(result.document.parts.find((part) => part.id === id)), await worldPixels(doc.parts.find((part) => part.id === id)), `${id}: preserve full facial support and native expression pixels`);
+  assert.equal(nextArm.registrationBase.image, arm.image, "immutable complete native art remains available");
+  assert.ok(result.metrics.completeOverlap.boundarySuppressedPixels > 0); assert.ok(result.metrics.completeOverlap.fallbackLockedPixels > 0); assert.ok(result.metrics.hiddenPixels > 0);
+  assert.equal(result.ownerMap.policy, "source-occlusion-reported-fallback"); assert.equal(result.metrics.completeOverlap.runtimeMotionVerification, "not-evaluated");
+  const restored = readRigAuthoring(parseBundle(attachRigAuthoring(await buildRigFiles(result.document, pixelEnv), result.document)).files);
+  assert.equal(restored.registration.completeOverlapReview.boundaryPolicy, "source-occlusion");
+  await assert.rejects(registerRigSourcePixels(doc, { mode: "complete-overlap", review: { ...review, boundaryPolicy: "unknown" } }, pixelEnv), /边界策略/);
+});
+
+test("completed native-art review resumes only for the identical source, geometry and every underlay hash", async () => {
+  const doc = completeFixture(), prepared = await prepareCompleteOverlapReview(doc, pixelEnv), review = approveComplete(prepared), snapshot = structuredClone(review);
+  assert.equal(Object.keys(restoreCompleteOverlapReview(prepared, review)).length, doc.parts.length);
+  for (const changed of [{ ...review, sourceFingerprint: "0".repeat(64) }, { ...review, geometryFingerprint: "0".repeat(64) }, { ...review, parts: review.parts.map((p, i) => i ? p : { ...p, imageSHA256: "0".repeat(64) }) }, { ...review, parts: review.parts.map((p, i) => i ? p : { ...p, approved: false }) }]) assert.deepEqual(restoreCompleteOverlapReview(prepared, changed), {});
+  assert.deepEqual(review, snapshot); assert.deepEqual(restoreCompleteOverlapReview(prepared, undefined), {});
+});
 async function worldPixels(part) {
   const bitmap = await loadImage(Buffer.from(imageDataBytes(part.image).bytes)), canvas = createCanvas(40, 40);
   canvas.getContext("2d").drawImage(bitmap, part.x, part.y, part.width, part.height);

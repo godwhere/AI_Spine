@@ -1,8 +1,8 @@
 # iSpine 架构实施记录
 
-当前进度（2026-10-21）：P0–P7 实施与本地验收已完成，最终版本已安装。各节保留阶段当时的范围与证据；当前结论见 [P7 验收](evidence/architecture-p7/acceptance.md)。
+当前进度（2026-10-21）：P0–P7 实施与本地验收已完成，最终版本已安装。各节保留阶段当时的范围与证据；当前结论见 [P7 验收](../evidence/architecture-p7/acceptance.md)。
 
-2026-10-20 范围修订（历史记录）：用户明确放弃桌面 App，后续交付只包含浏览器界面与本机后台。P0、P1 下方保留当时的实际实施和验证记录；其中桌面关闭接线与 desktop 测试结果属于历史范围，不代表继续维护 App。P3 将迁出通用服务与有效测试，退役桌面代码，详见[修订后的执行计划](architecture-execution-plan.md#p3-整理网页边界并退役桌面代码)。该次仅更新文档；随后实施结果记录在 P3。
+2026-10-20 范围修订（历史记录）：用户明确放弃桌面 App，后续交付只包含浏览器界面与本机后台。P0、P1 下方保留当时的实际实施和验证记录；其中桌面关闭接线与 desktop 测试结果属于历史范围，不代表继续维护 App。P3 将迁出通用服务与有效测试，退役桌面代码，详见[修订后的执行计划](execution-plan.md#p3-整理网页边界并退役桌面代码)。该次仅更新文档；随后实施结果记录在 P3。
 
 ## P0 建立基线与隔离环境
 
@@ -12,7 +12,7 @@
 
 - 隔离启动器强制使用新临时目录与系统分配端口，不接受正式数据目录参数。真实任务队列接入确定性假图像服务；账户 RPC、密钥保护与外部请求均禁止。两个实例同时运行并关闭其中一个，另一个的在途任务和 manifest 保持活跃。
 - 浏览器测试构建到临时目录，绕开 Vite 开发代理。使用本机 Google Chrome 和真实 React；每个用例使用独立后台与浏览器上下文。预览入口 `pnpm preview:isolated` 同样不连接正式工作台，退出后清理自身目录。
-- 依赖检查解析静态导入、再导出、可解析的动态导入及 require，检查缺失模块和循环。[例外清单](architecture-exceptions.json) 逐条登记 4 条 P2 `server → src` 与 1 条 P3 `server → desktop`；不允许新违规，已经消除的例外必须删除。
+- 依赖检查解析静态导入、再导出、可解析的动态导入及 require，检查缺失模块和循环。[例外清单](exceptions.json) 逐条登记 4 条 P2 `server → src` 与 1 条 P3 `server → desktop`；不允许新违规，已经消除的例外必须删除。
 
 验证结果：
 
@@ -37,7 +37,7 @@
 | 10 × 10 MiB | 135.07 ms | 1,192.86 ms | 13,981,276 |
 | 1 × 50 MiB | 15.84 ms | 17.88 ms | 69,905,328 |
 
-证据：[内容基线](evidence/architecture-p0/baseline.json)、[依赖图](evidence/architecture-p0/dependencies.json)、[性能与导出 hash](evidence/architecture-p0/performance.json)、[资源库截图](evidence/architecture-p0/resource-library.png)、[模板动作截图](evidence/architecture-p0/template-preview.png)。完整执行日志在 `/tmp/ispine-P0-*.log`，临时导出包在 `/tmp/ispine-P0-{runtime,editable,unity}.zip`。日志和临时包不作为长期唯一证据；持久记录保留条目 hash、动作和采样数据，不包含用户数据库或账户信息。
+证据：[内容基线](../evidence/architecture-p0/baseline.json)、[依赖图](../evidence/architecture-p0/dependencies.json)、[性能与导出 hash](../evidence/architecture-p0/performance.json)、[资源库截图](../evidence/architecture-p0/resource-library.png)、[模板动作截图](../evidence/architecture-p0/template-preview.png)。完整执行日志在 `/tmp/ispine-P0-*.log`，临时导出包在 `/tmp/ispine-P0-{runtime,editable,unity}.zip`。日志和临时包不作为长期唯一证据；持久记录保留条目 hash、动作和采样数据，不包含用户数据库或账户信息。
 
 复核入口：`pnpm test:architecture`、`pnpm test:isolation`、`pnpm test:e2e`、`pnpm test:performance`。真实 Node 的路径由 `启动工作台.command` 给出；运行 pnpm 时确保该 Node 在 PATH 前部。`pnpm baseline:architecture --compare docs/evidence/architecture-p0/baseline.json` 对照本次基线列出变化并拒绝原素材/受保护文件变化。
 
@@ -79,7 +79,7 @@
 
 单元/集成另覆盖同一实体的两会话独立基础版本、失败跨会话恢复、旧回调身份、未知创建不无条件重发、未知结果重试前重新核对、历史 IndexedDB 版本冲突，以及已关联旧草稿的保留/另存规则。
 
-证据：[校准重新打开](evidence/architecture-p1/calibration-reopened.png)、[冲突另存](evidence/architecture-p1/conflict-saved-as-new.png)、[阶段检查摘要](evidence/architecture-p1/verification.json)。完整日志在 `/tmp/ispine-P1-*-final.log`。浏览器合成骨架仅验证保存合同，不是完整角色美术或正式 Spine 编辑器验收；真实 AI 服务没有调用。
+证据：[校准重新打开](../evidence/architecture-p1/calibration-reopened.png)、[冲突另存](../evidence/architecture-p1/conflict-saved-as-new.png)、[阶段检查摘要](../evidence/architecture-p1/verification.json)。完整日志在 `/tmp/ispine-P1-*-final.log`。浏览器合成骨架仅验证保存合同，不是完整角色美术或正式 Spine 编辑器验收；真实 AI 服务没有调用。
 
 当前限制：未确认的浏览器强制退出不能保证保存。稳定 mutation 回执、无素材重复传输、摘要独立查询及模块全面迁移分别仍由 P2 至 P7 负责。正式 App 已由既有方案退役，本阶段没有重建或安装该 App。
 
@@ -94,7 +94,7 @@
 - `shared/domain/` 管理作者内容比较、临时保存政策、source-only 草稿、资源归属、附件组/文档命令、候选匹配、模板元数据和作者摘要。后台与前端引用同一几何投影；摘要读取不再加载浏览器存储或 WebGL。
 - `shared/codec/` 统一 SHA-256、Base64、图像 data URL 和 UTF-8。既有 JSON 属性顺序、源图片字节和模板路径排序保留；未新增必填指纹版本字段，已有 V1 任务/候选继续使用相同输入校验。工作区 JSON 的二进制标记和 wire 格式保留。
 - `engine/rig/` 分开创建草稿、几何/权重、附件、FK/IK/动作采样、检查、编译、Atlas 和文件装配。`engine/images/` 管理校准、原图注册、动作图像归属与像素计算；`engine/archive/` 管理路径/ZIP/资源解析、作者数据、模板快照与 Unity/附件变体导出；`engine/spine/` 只使用 `spine-core` 解析数据和测量几何。
-- 浏览器 File/fetch、图片解码/编码、Canvas、UUID 和当前时钟由 `src/infrastructure/` 提供。像素计算显式接收 [PixelPort](../shared/contracts/pixels.mjs)；保留原有 bitmap 与 DOM-image 两套图片适配器。`src/spine/runtime.js` 保留 WebGL 场景、播放时钟和相机。
+- 浏览器 File/fetch、图片解码/编码、Canvas、UUID 和当前时钟由 `src/infrastructure/` 提供。像素计算显式接收 [PixelPort](../../shared/contracts/pixels.mjs)；保留原有 bitmap 与 DOM-image 两套图片适配器。`src/spine/runtime.js` 保留 WebGL 场景、播放时钟和相机。
 - 消费者全部改用实际责任模块，删除 16 个已无消费者的旧 `src/core` 文件及迁移转发；剩余存储和生成编排留待 P3。`server/workspace-store.mjs` 直接使用 shared/engine，四条 `server → src` 例外已清除。
 - 架构检查新增按词法作用域识别平台 API 的检查，允许作者文档参数和注入端口，拒绝 shared/engine 中的全局 DOM、网络、存储、Node Buffer、平台加密和当前时钟。唯一剩余例外是 P3 待处理的 `server/workbench-server.mjs → desktop/server.mjs`，无循环或缺失模块。
 
@@ -111,7 +111,7 @@
 | 浏览器引擎端口 | 真实图片解码/编码、骨架构建与运行库采样、200 个脚锁区间样本、释放状态、校准/可编辑 ZIP 回导、逐部件 PNG 和作者数据通过 |
 | 素材与 Sites 保护 | 相对 P2 起点的 `public/`、`outputs/` 与四个受保护 Sites 文件 hash 均保持 |
 
-证据：[迁移前](evidence/architecture-p2/engine-before.json)、[迁移后](evidence/architecture-p2/engine-after.json)、[依赖图](evidence/architecture-p2/dependencies.json)、[验证摘要](evidence/architecture-p2/verification.json)。`scripts/measure-engine.mjs` 可重测，主测试会持续比较迁移前样本。完整日志在 `/tmp/ispine-P2-main-final.log`、`/tmp/ispine-P2-browser-final.log`、`/tmp/ispine-P2-support.log` 和两份 Python 日志。构建在临时目录完成；更新后的隔离预览已在浏览器打开，服务实例和假 AI 均与正式数据隔离。
+证据：[迁移前](../evidence/architecture-p2/engine-before.json)、[迁移后](../evidence/architecture-p2/engine-after.json)、[依赖图](../evidence/architecture-p2/dependencies.json)、[验证摘要](../evidence/architecture-p2/verification.json)。`scripts/measure-engine.mjs` 可重测，主测试会持续比较迁移前样本。完整日志在 `/tmp/ispine-P2-main-final.log`、`/tmp/ispine-P2-browser-final.log`、`/tmp/ispine-P2-support.log` 和两份 Python 日志。构建在临时目录完成；更新后的隔离预览已在浏览器打开，服务实例和假 AI 均与正式数据隔离。
 
 固定 ZIP 时间使本次三格式样本连打包字节也一致。模板创建/校验的当前时间改由适配器传入，动作图应用的时钟由适配器注入、仍在完成计算后读取；它们的真实时间值不作为固定 hash。未改变角色美术、动作语义、图片像素、存储/归档身份、HTTP 协议或 UI 布局。
 
@@ -134,7 +134,7 @@
 
 验证：主测试 **489/489**；真实浏览器 **16/16**；架构/隔离/Sites **10/10**。主测试继续覆盖 P2 固定语义样本、旧数据迁移幂等/冲突/墓碑、资源和草稿 CAS、密文保留与按需解锁；浏览器继续实际下载并解析可编辑 ZIP。构建和新版预览均在临时目录完成，已打开新版预览；正式静态目录未覆盖，真实 AI 未调用。`public/`、`outputs/` 和四个 Sites 保护文件相对 P3 起点均无 hash 变化。
 
-证据：[后台阶段摘要](evidence/architecture-p3-backend/verification.json)、[依赖图](evidence/architecture-p3-backend/dependencies.json)。日志：`/tmp/ispine-P3-main-final.log`、`/tmp/ispine-P3-browser-final.log`、`/tmp/ispine-P3-support.log`。完整依赖树核对位于 `/tmp/ispine-P3-tree.json`。当前只更新选定的 `pnpm-lock.yaml`。
+证据：[后台阶段摘要](../evidence/architecture-p3-backend/verification.json)、[依赖图](../evidence/architecture-p3-backend/dependencies.json)。日志：`/tmp/ispine-P3-main-final.log`、`/tmp/ispine-P3-browser-final.log`、`/tmp/ispine-P3-support.log`。完整依赖树核对位于 `/tmp/ispine-P3-tree.json`。当前只更新选定的 `pnpm-lock.yaml`。
 
 后台批次结束时的剩余范围为前端组装、功能/用例与会话重组；后续完成情况见下一批记录。不能将无依赖例外解释为这些职责已经拆分。
 
@@ -158,7 +158,7 @@
 
 新增浏览器流程在隔离假 AI 下通过：模板取消、保存、更新相同 ID、刷新复用；可见生成提交、按任务映射应用单个候选、校准、保存后刷新恢复。核对了原资源文件与后台原生候选均保持，未将这类单部件材料测试解释为完成角色美术验收。其余保存、版本冲突、墓碑、空库和实际下载回导继续通过。
 
-证据：[前端批次摘要](evidence/architecture-p3-frontend/verification.json)、[依赖图](evidence/architecture-p3-frontend/dependencies.json)。日志：`/tmp/ispine-P3-front-main-final.log`、`/tmp/ispine-P3-front-browser-final.log`、`/tmp/ispine-P3-front-support.log`、`/tmp/ispine-P3-front-final-focused.log`。构建与预览仍在临时目录，新版网页已打开；素材、正式静态目录、真实用户数据与受保护 Sites 文件均未切换。
+证据：[前端批次摘要](../evidence/architecture-p3-frontend/verification.json)、[依赖图](../evidence/architecture-p3-frontend/dependencies.json)。日志：`/tmp/ispine-P3-front-main-final.log`、`/tmp/ispine-P3-front-browser-final.log`、`/tmp/ispine-P3-front-support.log`、`/tmp/ispine-P3-front-final-focused.log`。构建与预览仍在临时目录，新版网页已打开；素材、正式静态目录、真实用户数据与受保护 Sites 文件均未切换。
 
 该批次结束时 P3 剩余：编辑器内容/历史/另存与导航的会话所有权；编辑器功能边界；rig 会话与结构、部件、绑定、动作、验证面板；整阶段的窄屏、拖动/相机与下载回导验收。后续修改继续验证 P1 保存边界与 P2 内容样本。回退本批仅恢复同版本的前端入口、用例/能力接线与消费者，保留已有保存数据和独立模板，不改数据库或退回桌面壳。
 
@@ -176,14 +176,14 @@
 
 新增浏览器检查实际拖动部件和关节、撤销/重做、经过五类面板、校准弹窗期间键盘导航保护、草稿离页保存及刷新恢复；确认未将草稿写入普通资源。真实 WebGL 相机参数在手动缩放/平移和切换动作后保持，资源内容不变。390px 窄屏保留三列模板图片、列表/预览返回和资源库独立视图状态。浏览器截图仅为合成流程夹具或既有模板，不代表新角色美术验收。
 
-证据：[会话批次摘要](evidence/architecture-p3-sessions/verification.json)、[依赖图](evidence/architecture-p3-sessions/dependencies.json)、[内容保护核对](evidence/architecture-p3-sessions/content.json)、[骨架面板截图](evidence/architecture-p3-sessions/rig-panels.png)、[窄屏预览截图](evidence/architecture-p3-sessions/narrow-template-preview.png)。完整日志在 `/tmp/ispine-P3-sessions-main-final.log`、`/tmp/ispine-P3-sessions-browser-final.log`、`/tmp/ispine-P3-sessions-support-final.log`、`/tmp/ispine-P3-session-panel-final-focused.log`。网页构建在临时目录完成，新版隔离预览已打开；正式服务、正式静态目录、数据库 schema、素材、旧迁移来源和真实 AI 均未切换。
+证据：[会话批次摘要](../evidence/architecture-p3-sessions/verification.json)、[依赖图](../evidence/architecture-p3-sessions/dependencies.json)、[内容保护核对](../evidence/architecture-p3-sessions/content.json)、[骨架面板截图](../evidence/architecture-p3-sessions/rig-panels.png)、[窄屏预览截图](../evidence/architecture-p3-sessions/narrow-template-preview.png)。完整日志在 `/tmp/ispine-P3-sessions-main-final.log`、`/tmp/ispine-P3-sessions-browser-final.log`、`/tmp/ispine-P3-sessions-support-final.log`、`/tmp/ispine-P3-session-panel-final-focused.log`。网页构建在临时目录完成，新版隔离预览已打开；正式服务、正式静态目录、数据库 schema、素材、旧迁移来源和真实 AI 均未切换。
 
 该批次结束时 P3 剩余：骨架命令/图片/任务能力的应用端口与功能边界，`PartEditor`/`RigCanvas` 等消费者归属；整阶段三格式实际下载/文件导入回导、网页启动及数据/任务保护核查。P4–P7 未开始。本批回退恢复同版本会话与消费者接线，不回退已保存工程或草稿，不恢复桌面壳。
 
 
 ### P3 应用命令与网页交付收口
 
-2026-10-21 完成全部 P3。逐项核对执行计划的 11 步和 10 个验收门槛，结果见[验收审计](evidence/architecture-p3-final/acceptance.json)。
+2026-10-21 完成全部 P3。逐项核对执行计划的 11 步和 10 个验收门槛，结果见[验收审计](../evidence/architecture-p3-final/acceptance.json)。
 
 - `rig-commands.js` 从唯一会话读取当前文档，接管关节/部件修改、缩放/移动、握持、网格权重、影响骨骼、显示组/默认附件、部件增删和关键帧命令。`rig-operations.js` 接管程序初稿、来源/映射校验、候选准备、原图坐标对齐、逐帧处理、真实 Spine 预览编译和发布前全部动作检查。`rig-view.js` 从现有引擎派生网格、姿势、可见附件、父级候选和部件标注；未复制或重写计算算法。
 - `part-calibration.js` 接管临时校准及撤销历史，PNG 字节保持不可变引用，应用前不改主工程。默认图片初始化不能覆盖后来选择的替换图，关闭或修改后的异步适配结果不能回写旧会话。图片解码、Canvas、文件读取和部件/动作处理能力由 `browser-services.js` 注入。
@@ -193,11 +193,11 @@
 
 最终验证：主测试 **509/509**；真实隔离浏览器 **23/23**；架构/隔离/Sites **10/10**。完整浏览器回归修正了发布回调的一处旧缓存引用，随后全部通过；另对 77 个前端模块做词法引用核查，没有未声明标识符。依赖图为 151 个模块、557 条导入，例外/循环/平台引用均为 0；完整依赖树不包含 Electron 或 `@electron/*`。
 
-三格式验收使用真实模板和带权重、互斥附件、脚锁释放时间线的合成骨架。六个 ZIP 均由可见导出控件下载，通过文件选择再次导入并保存为独立资源；核对骨架原字节、骨骼/约束/皮肤/动作、实际 PNG、作者关节/网格/附件/时间线、可编辑校准和原资源不变。合成附件只验证数据切换，不代表表情或角色美术验收；未声称运行官方 Spine 编辑器。包的实际字节数和 SHA256 记录在[下载证据](evidence/architecture-p3-final/downloads.json)。
+三格式验收使用真实模板和带权重、互斥附件、脚锁释放时间线的合成骨架。六个 ZIP 均由可见导出控件下载，通过文件选择再次导入并保存为独立资源；核对骨架原字节、骨骼/约束/皮肤/动作、实际 PNG、作者关节/网格/附件/时间线、可编辑校准和原资源不变。合成附件只验证数据切换，不代表表情或角色美术验收；未声称运行官方 Spine 编辑器。包的实际字节数和 SHA256 记录在[下载证据](../evidence/architecture-p3-final/downloads.json)。
 
 浏览器夹具通过正式使用的 `launchWorkbench` 启动隔离服务，并验证交给浏览器的 URL；真实 Chrome 打开同一地址。端口/数据根/假 AI 能力仍独立，不触达正式实例。新版预览已在本轮浏览器打开。生产 PID 71292 未重启，正式静态目录未覆盖；素材、CSS 和四个 Sites 保护文件相对 P0 基线没有变化。最终验证窗口对生产工作区、生成目录、迁移备份、旧 IndexedDB/Local Storage 及开发任务历史的 **1366 个文件**核对 SHA256，六个目录的内容均不变；该窗口的时间范围单独记录，不将其解释为更早全时段的外部状态证明。
 
-证据：[阶段摘要](evidence/architecture-p3-final/verification.json)、[逐项审计](evidence/architecture-p3-final/acceptance.json)、[依赖图](evidence/architecture-p3-final/dependencies.json)、[内容核对](evidence/architecture-p3-final/content.json)、[真实数据保护](evidence/architecture-p3-final/live-preservation.json)。日志：`/tmp/ispine-P3-final-main.log`、`/tmp/ispine-P3-final-browser-verified.log`、`/tmp/ispine-P3-final-support.log`，依赖树位于 `/tmp/ispine-P3-final-dependency-tree.json`。
+证据：[阶段摘要](../evidence/architecture-p3-final/verification.json)、[逐项审计](../evidence/architecture-p3-final/acceptance.json)、[依赖图](../evidence/architecture-p3-final/dependencies.json)、[内容核对](../evidence/architecture-p3-final/content.json)、[真实数据保护](../evidence/architecture-p3-final/live-preservation.json)。日志：`/tmp/ispine-P3-final-main.log`、`/tmp/ispine-P3-final-browser-verified.log`、`/tmp/ispine-P3-final-support.log`，依赖树位于 `/tmp/ispine-P3-final-dependency-tree.json`。
 
 P4–P7 尚未执行。下一阶段仅建立不读大图片的资源摘要查询；正式数据切换、图片分离和任务能力重组仍按后续阶段边界执行。P3 回退应成组恢复前端会话/用例/消费者和通用后台接线，保留已保存数据及浏览器入口，不恢复桌面壳。
 
@@ -226,7 +226,7 @@ P0 同机 500 × 1 MiB 列表 p95 为 2384.467ms，本阶段为 0.887ms；原先
 
 通过 SQLite 只读一致性备份复制正在运行的生产数据库，只修改临时副本。实际 4 个正常资源、2 个回收站资源回填、检查及两次重建全部通过；所有分区原记录合并 SHA-256、ID、数据库身份与 revision 保持。生产进程 71292、正式静态目录和生产 schema 未切换；核对窗口内 6 个范围、1366 个文件内容一致。未调用真实 AI 或解锁密钥。
 
-证据见[逐项验收](evidence/architecture-p4/acceptance.json)、[阶段验证](evidence/architecture-p4/verification.json)、[性能](evidence/architecture-p4/performance.json)、[实际副本](evidence/architecture-p4/live-copy.json)与[生产内容保持](evidence/architecture-p4/live-preservation.json)。最新隔离预览为 `http://127.0.0.1:53961`，独立数据与 fake provider。P5–P7 待执行。
+证据见[逐项验收](../evidence/architecture-p4/acceptance.json)、[阶段验证](../evidence/architecture-p4/verification.json)、[性能](../evidence/architecture-p4/performance.json)、[实际副本](../evidence/architecture-p4/live-copy.json)与[生产内容保持](../evidence/architecture-p4/live-preservation.json)。最新隔离预览为 `http://127.0.0.1:53961`，独立数据与 fake provider。P5–P7 待执行。
 
 本阶段回退可恢复旧查询，保留或重建索引；原 payload、图片、作者文档与 ZIP 不需要转换。正式激活和存储格式变更严格留在 P5。
 
@@ -252,7 +252,7 @@ P0 同机 500 × 1 MiB 列表 p95 为 2384.467ms，本阶段为 0.887ms；原先
 
 实际库的一致性临时副本仅以只读方式检查了 21 条记录与 423 处 Uint8Array 的类型分布，没有执行 V2 副本迁移。生产服务仍为进程 71292，原服务及 schema 未切换。沿用核对文件集的 6 个范围、1366 个文件内容保持，未发起真实 AI 或解锁密钥。浏览器界面与当前服务没有接入本批模块，沿用 P4 的实际浏览器证据，本批没有重复声明新的浏览器验收。
 
-证据见[批次范围](evidence/architecture-p5-repository/acceptance.json)、[验证](evidence/architecture-p5-repository/verification.json)、[依赖](evidence/architecture-p5-repository/dependencies.json)与[生产文件保持](evidence/architecture-p5-repository/live-preservation.json)。现行 README 使用流程和工作台操作未变，本批无需修改。回退可移除未接入的新模块与临时测试库，正式数据无需转换。
+证据见[批次范围](../evidence/architecture-p5-repository/acceptance.json)、[验证](../evidence/architecture-p5-repository/verification.json)、[依赖](../evidence/architecture-p5-repository/dependencies.json)与[生产文件保持](../evidence/architecture-p5-repository/live-preservation.json)。现行 README 使用流程和工作台操作未变，本批无需修改。回退可移除未接入的新模块与临时测试库，正式数据无需转换。
 
 P5 尚待：能力协商、V2 HTTP 路由、前端仓储和保存回执接线；统一资源/草稿/模板事务与 V1 兼容读写；一致性副本的检查点迁移、导出回导、反向转换；维护、备份、任务/编辑协调及正式激活。当前不能宣称完整 P5 通过。
 
@@ -275,7 +275,7 @@ P5 尚待：能力协商、V2 HTTP 路由、前端仓储和保存回执接线；
 
 这是临时库的实际 HTTP 传输证据，不代表完整 V2 浏览器验收。后台目前复用完整领域校验，会还原记录并读取素材；本批不宣称集成保存已经完全免读 BLOB。新前端协议适配与保存调度重试仍待接线，当前 24 个浏览器场景验证原格式路径保持。
 
-生产仍为进程 71292，正式服务、静态目录、数据格式和任务未切换；核对的 6 个范围、1366 个文件内容保持。没有真实 AI 或密钥解锁。最新隔离预览为 `http://127.0.0.1:55647`，使用原格式、独立数据和 fake provider。证据见[后台验收范围](evidence/architecture-p5-http/acceptance.json)、[验证](evidence/architecture-p5-http/verification.json)、[实际传输](evidence/architecture-p5-http/transfer.json)与[生产文件保持](evidence/architecture-p5-http/live-preservation.json)。本批回退恢复同批仓储、路由与测试接线即可，生产无需反向转换。
+生产仍为进程 71292，正式服务、静态目录、数据格式和任务未切换；核对的 6 个范围、1366 个文件内容保持。没有真实 AI 或密钥解锁。最新隔离预览为 `http://127.0.0.1:55647`，使用原格式、独立数据和 fake provider。证据见[后台验收范围](../evidence/architecture-p5-http/acceptance.json)、[验证](../evidence/architecture-p5-http/verification.json)、[实际传输](../evidence/architecture-p5-http/transfer.json)与[生产文件保持](../evidence/architecture-p5-http/live-preservation.json)。本批回退恢复同批仓储、路由与测试接线即可，生产无需反向转换。
 
 P5 剩余：前端能力/素材/保存回执适配与实际 V2 浏览器验收；一致性副本的检查点迁移、下载回导和反向转换；维护、备份、任务与编辑协调、正式激活。P6–P7 未开始，整阶段验收仍未完成。
 
@@ -298,7 +298,7 @@ P5 剩余：前端能力/素材/保存回执适配与实际 V2 浏览器验收�
 
 已实际打开格式 2 的独立预览 `http://127.0.0.1:56585` 并检查动画编辑器；测试截图中原始与当前角色均正常渲染，界面布局未更换。正式服务仍为进程 71292，未重启、覆盖静态构建或切换格式；核对的 6 个范围、1366 个文件内容保持。没有真实 AI、账号路由核对或密钥解锁。新导出证明格式与资料往返，不代表新角色美术、全部动作观感或官方 Spine 编辑器验收。
 
-证据见[阶段验证](evidence/architecture-p5-client/verification.json)、[逐项范围](evidence/architecture-p5-client/acceptance.json)、[六个实际下载包清单](evidence/architecture-p5-client/downloads.json)、[依赖](evidence/architecture-p5-client/dependencies.json)与[生产内容保持](evidence/architecture-p5-client/live-preservation.json)。后台依然复用完整领域校验，本批不宣称保存已完全免读 BLOB。旧浏览器迁入、缓存页面切换和大数据规模矩阵仍需随第 3 步实际副本迁移验证。
+证据见[阶段验证](../evidence/architecture-p5-client/verification.json)、[逐项范围](../evidence/architecture-p5-client/acceptance.json)、[六个实际下载包清单](../evidence/architecture-p5-client/downloads.json)、[依赖](../evidence/architecture-p5-client/dependencies.json)与[生产内容保持](../evidence/architecture-p5-client/live-preservation.json)。后台依然复用完整领域校验，本批不宣称保存已完全免读 BLOB。旧浏览器迁入、缓存页面切换和大数据规模矩阵仍需随第 3 步实际副本迁移验证。
 
 P5 第 1、2 步已实现并通过隔离验收。下一步为第 3 步一致性副本的检查点迁移、全部 namespace/删除标记/hash、下载回导与反向转换；再进入第 4 步维护、备份、任务/编辑协调与正式激活。P5 整阶段及 P6–P7 尚未完成。当前可成组回退前端协议/调度/对应测试接线，生产数据无需转换。
 
@@ -312,7 +312,7 @@ P5 第 1、2 步已实现并通过隔离验收。下一步为第 3 步一致性�
 
 主回归 **563/563**、迁移含嵌套退出点 **14** 项、仓储/前端/迁移集中 **35/35** 加新增维护重试检查通过；默认浏览器 **31/31**、架构/隔离/Sites **10/10**。浏览器覆盖维护中重启与本地编辑保留、全新 profile 只读浏览/延后旧库迁入、取消后重试、已缓存页面 V1→V2 与 V2→V1。架构 162 模块、606 import，违规与循环为 0。生产 PID 71292 未重启、静态构建未替换；原核对 6 范围 1366 文件内容保持。没有真实 AI 请求或密钥解锁。
 
-证据见[迁移验证](evidence/architecture-p5-migration/verification.json)、[逐项范围](evidence/architecture-p5-migration/acceptance.json)、[生产副本](evidence/architecture-p5-migration/production-copy.json)、[导出](evidence/architecture-p5-migration/exports.json)、[浏览器回导](evidence/architecture-p5-migration/reimports.json)和[维护操作](workspace-v2-protocol.md#检查点迁移与维护)。第 4 步正式任务/编辑协调、当前完整备份、激活与交付构建核查尚未完成，不能据副本演练宣称生产切换；P5 整阶段及 P6–P7 仍未完成。
+证据见[迁移验证](../evidence/architecture-p5-migration/verification.json)、[逐项范围](../evidence/architecture-p5-migration/acceptance.json)、[生产副本](../evidence/architecture-p5-migration/production-copy.json)、[导出](../evidence/architecture-p5-migration/exports.json)、[浏览器回导](../evidence/architecture-p5-migration/reimports.json)和[维护操作](workspace-v2-protocol.md#检查点迁移与维护)。第 4 步正式任务/编辑协调、当前完整备份、激活与交付构建核查尚未完成，不能据副本演练宣称生产切换；P5 整阶段及 P6–P7 仍未完成。
 
 ### 正式维护与激活完成
 
@@ -322,7 +322,7 @@ P5 第 1、2 步已实现并通过隔离验收。下一步为第 3 步一致性�
 
 生成、migration、旧 IndexedDB/Local Storage 及开发任务内容保持。当前 Sub2API 选择与密文未改；按既有规则重启后保持锁定，不自动解锁、审核上游或发起生成。真实 AI、角色美术和官方 Spine 编辑器不是本次结构调整验收。激活后如需回退，先停写并备份当前数据，执行已验证的反向转换，不能直接恢复维护前旧库而丢失新编辑。
 
-证据见[正式验证](evidence/architecture-p5-production/verification.json)、[激活/备份](evidence/architecture-p5-production/activation.json)、[内容保持](evidence/architecture-p5-production/preservation.json)与[实际 Chrome 预览](evidence/architecture-p5-production/editor.png)。P5 第 1–4 步及阶段验收项全部完成，P6–P7 尚未完成。
+证据见[正式验证](../evidence/architecture-p5-production/verification.json)、[激活/备份](../evidence/architecture-p5-production/activation.json)、[内容保持](../evidence/architecture-p5-production/preservation.json)与[实际 Chrome 预览](../evidence/architecture-p5-production/editor.png)。P5 第 1–4 步及阶段验收项全部完成，P6–P7 尚未完成。
 
 ## P6 任务调度与 AI 能力边界（已完成）
 
@@ -332,7 +332,7 @@ P5 第 1、2 步已实现并通过隔离验收。下一步为第 3 步一致性�
 
 主测试 **570/570**、provider/任务/生命周期集中 **100/100**、架构/隔离/Sites **10/10**，格式 2 浏览器模板和假生成/应用/校准 **2/2**。新增 7 项覆盖在途关闭、手动排空的所有权、创建竞争/关闭、初始记录失败、原子写失败与恢复、能力隔离，以及三个 native turn/start 尚未返回时取消并在迟到 turn ID 后逐个 interrupt/释放监听。6 个 handler/提示函数的字面文本、数值、模板片段和校验模式与原基线 AST 相等。
 
-正式 23 条模板任务与 44 条骨架任务从完整备份复制到临时目录，使用禁止账号/生成的端口完成新恢复和关闭流程，67 条历史与所有文件字节相同、无自动续做。正式 PID 94728 仍运行 P5 代码，当前正式数据 6 个核对范围保持；最终安装和全阶段性能/浏览器收口在 P7。见[P6 验证](evidence/architecture-p6/verification.json)、[验收](evidence/architecture-p6/acceptance.json)、[handler 等价](evidence/architecture-p6/handler-equivalence.json)及[历史副本](evidence/architecture-p6/history-copy.json)。
+正式 23 条模板任务与 44 条骨架任务从完整备份复制到临时目录，使用禁止账号/生成的端口完成新恢复和关闭流程，67 条历史与所有文件字节相同、无自动续做。正式 PID 94728 仍运行 P5 代码，当前正式数据 6 个核对范围保持；最终安装和全阶段性能/浏览器收口在 P7。见[P6 验证](../evidence/architecture-p6/verification.json)、[验收](../evidence/architecture-p6/acceptance.json)、[handler 等价](../evidence/architecture-p6/handler-equivalence.json)及[历史副本](../evidence/architecture-p6/history-copy.json)。
 
 
 ## P7 最终验收与目录收口（已完成）
@@ -341,4 +341,4 @@ P7 完成了剩余存储与后台入口的职责迁移：浏览器仓储和历�
 
 最终验收修复了跨资源候选应用保护、取消时迟到的原生 turn 控制请求等待，并让 Worker 转移其拥有的输出缓冲区。输入原始图片仍保留，编辑规则、提示词和既有骨架导出内容保持。新增服务器应用层禁止直接依赖具体仓储和 Node I/O 的检查，临时架构例外为零。
 
-详细测试、生产替换和外部验收边界见 [P7 验收](evidence/architecture-p7/acceptance.md)。此前各阶段记录保留其当时状态；本节及最终验收为当前结论。
+详细测试、生产替换和外部验收边界见 [P7 验收](../evidence/architecture-p7/acceptance.md)。此前各阶段记录保留其当时状态；本节及最终验收为当前结论。

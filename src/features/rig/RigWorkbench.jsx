@@ -1,6 +1,7 @@
 import { rigGeometryView, rigMeshView, rigPoseView, rigVisiblePartsView, rigRegistrationView, rigParentCandidates } from "../../application/rig-view.js";
 import { basicMotionSlots } from "../../application/rig-operations.js";
 import { createRigCommands } from "../../application/rig-commands.js";
+import { prepareRigMagicEffects, removeRigMagicEffects } from "../../application/rig-effects.js";
 import { RigRegistrationPanel } from "./RigRegistrationPanel.jsx";
 import { RigRegistrationToolbar } from "./RigRegistrationToolbar.jsx";
 import { RigPartDetails } from "./RigPartDetails.jsx";
@@ -11,6 +12,10 @@ import { RigMotionPanel } from "./RigMotionPanel.jsx";
 
 import { RigPartsOverview } from "./RigPartsOverview.jsx";
 import { RigStructurePanel } from "./RigStructurePanel.jsx";
+import { RigProductionPanel, ProductionReview, ProductionDelivery, ProductionMotionTargets } from "./RigProductionPanel.jsx";
+import { createProductionPlan, assertProductionGate, productionPrompt, productionStageIssues } from "../../../shared/domain/production.mjs";
+import { includeMotionInProduction, confirmProduction, productionReferenceRequest, recordProductionRequest, prepareProductionReference, prepareStoredProductionReference, withProductionReference, verifyProductionPackage, productionExportBundle } from "../../application/rig-production.js";
+import "./production.css";
 
 import { createRigSession } from "../../application/rig-session.js";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -47,8 +52,8 @@ const motionPresets = {
   death: { name: "死亡", duration: 1.3, loop: false, description: "角色受击后失去平衡并倒下，最终停留在死亡姿态，部件保持连接，避免地面穿插。" },
   victory: { name: "胜利", duration: 1.8, loop: false, description: "角色完成轻快明确的胜利庆祝，保留角色性格与武器握持，最终稳定站立。" },
 };
-function makeClock() {
-  return { position: 0, anchor: performance.now(), playing: true, speed: 1,
+function makeClock(playing = true) {
+  return { position: 0, anchor: performance.now(), playing, speed: 1,
     read(now = performance.now()) { return this.position + (this.playing ? (now - this.anchor) / 1000 * this.speed : 0); },
     seek(value) { this.position = value; this.anchor = performance.now(); },
     set(values) { this.position = this.read(); this.anchor = performance.now(); Object.assign(this, values); } };
@@ -59,9 +64,9 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   const makeId = (prefix) => `${prefix}-${editing.createId()}`;
   const emptyDocument = operations.emptyDocument;
   const { readRigImage, readRigReference, readRigPartCandidate, composeRigSourceView, inspectRigPartAlpha, createRigPartCalibration, bakeRigPartCalibration,
-    registerRigSourcePixels, expandRigRegistrationBounds, prepareMotionStudyFrames, applyMotionStudy } = images;
+    registerRigSourcePixels, expandRigRegistrationBounds, prepareMotionStudyFrames, applyMotionStudy, createRigReferenceCalibration, bakeRigReferenceCalibration } = images;
   const sessionRef = useRef(null);
-  if (!sessionRef.current) sessionRef.current = createRigSession(initialDocument || emptyDocument());
+  if (!sessionRef.current) sessionRef.current = createRigSession(initialDocument || { ...emptyDocument(), production: createProductionPlan() });
   const session = sessionRef.current;
   const [sessionState, setSessionState] = useState(() => session.getSnapshot());
   const { document } = sessionState;
@@ -77,7 +82,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   }, [session]);
   const documentRef = session.documentRef, callbacks = useRef({}); callbacks.current = { onDraftChange, onSave, onClose };
   const previewPort = useRef(null);
-  const [step, setStep] = useState(initialManualAdjustment ? "binding" : "structure"), [canvasMode, setCanvasMode] = useState("overlay");
+  const [step, setStep] = useState(initialManualAdjustment ? "binding" : !initialDocument || initialDocument.production ? "plan" : "structure"), [canvasMode, setCanvasMode] = useState("overlay");
   const [manualAdjustment, setManualAdjustment] = useState(initialManualAdjustment);
   const [jointId, setJointId] = useState(initialDocument?.joints?.[0]?.id || ""), [partId, setPartId] = useState(initialPartId || initialDocument?.parts?.[0]?.id || "");
   const [motionId, setMotionId] = useState(initialDocument?.motions?.[0]?.id || ""), [poseIndex, setPoseIndex] = useState(0), [vertexIndex, setVertexIndex] = useState(0);
@@ -91,7 +96,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   const [registrationFocus, setRegistrationFocus] = useState(false), [registrationOnlySelected, setRegistrationOnlySelected] = useState(true);
   const [registrationAssembly, setRegistrationAssembly] = useState(""), [registrationAlpha, setRegistrationAlpha] = useState(null), [registrationVertex, setRegistrationVertex] = useState(0);
   const [registrationMeasurement, setRegistrationMeasurement] = useState(null);
-  const appearancePrompt = document.prompts?.appearance ?? defaultPrompts.appearance, structurePrompt = document.prompts?.structure ?? defaultPrompts.structure, partsPrompt = document.prompts?.parts ?? defaultPrompts.parts;
+  const appearancePrompt = document.prompts?.appearance ?? (document.production ? "" : defaultPrompts.appearance), structurePrompt = document.prompts?.structure ?? (document.production ? "" : defaultPrompts.structure), partsPrompt = document.prompts?.parts ?? (document.production ? "" : defaultPrompts.parts);
   const structureDetail = document.structureDetail === "standard" ? "standard" : "detailed";
   const setAppearancePrompt = (value) => commit((current) => ({ ...current, prompts: { ...current.prompts, appearance: value } }), false);
   const setStructurePrompt = (value) => commit((current) => ({ ...current, prompts: { ...current.prompts, structure: value } }), false);
@@ -102,13 +107,14 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   const [preview, setPreview] = useState(null), [previewDocument, setPreviewDocument] = useState(null), [testReport, setTestReport] = useState(null);
   const [calibration, setCalibration] = useState(null), [calibrationError, setCalibrationError] = useState("");
   const commands = useMemo(() => createRigCommands(session, { createId: editing.createId, onChanged: () => setTestReport(null) }), [session]);
-  const [playing, setPlaying] = useState(!initialManualAdjustment), [position, setPosition] = useState(0), [showImage, setShowImage] = useState(!initialManualAdjustment), [showParts, setShowParts] = useState(true);
+  const [playing, setPlaying] = useState(Boolean(initialDocument && !initialDocument.production && !initialManualAdjustment)), [position, setPosition] = useState(0), [showImage, setShowImage] = useState(!initialManualAdjustment), [showParts, setShowParts] = useState(true);
   const [partGrid, setPartGrid] = useState(false), annotationSeek = useRef(null);
   const alive = useRef(true), busyRef = useRef(false);
   const sourceInput = useRef(), partInput = useRef(), partUploadTarget = useRef(""), jobSection = useRef(), calibrationContainer = useRef();
   const registrationPanel = useRef(), contourUndo = useRef([]);
-  const clock = useRef(makeClock()).current;
+  const clock = useRef(makeClock(playing)).current;
   const running = jobs.find(isRigJobActive), locked = Boolean(busy || running || calibration || motionStudyBusy);
+  const visibleSteps = document.production ? [{ id: "plan", label: "计划与约束", icon: Check }, { id: "targets", label: "造型与分镜", icon: ImagePlus }, ...steps] : steps;
   const joint = document.joints.find((item) => item.id === jointId) || document.joints[0];
   const part = document.parts.find((item) => item.id === partId) || document.parts[0];
   const attachmentGroups = useMemo(() => rigAttachmentGroups(document), [document.parts, document.defaultAttachments]);
@@ -232,6 +238,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
     return () => { cancelled = true; clearInterval(timer); };
   }, [client, running?.id]);
   useEffect(() => {
+    if (["plan", "targets"].includes(step)) return;
     const timer = setInterval(() => {
       const time = clock.read();
       if (motion && !motion.loop && time >= duration) {
@@ -239,7 +246,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
       } else setPosition(time);
     }, 100);
     return () => clearInterval(timer);
-  }, [clock, motion?.id, motion?.loop, duration]);
+  }, [clock, motion?.id, motion?.loop, duration, step]);
   useEffect(() => {
     const target = annotationSeek.current?.motionId === motion?.id ? annotationSeek.current : null;
     annotationSeek.current = null;
@@ -349,10 +356,11 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   });
   const startJob = (kind) => perform(kindLabels[kind], async () => {
     const current = documentRef.current;
+    assertProductionGate(current, kind);
     if (running) throw new Error("已有骨架 AI 任务运行，请等待完成或取消。");
     const request = { version: 1, kind, projectId: current.id, name: current.name };
     if (kind === "appearance") {
-      if (!appearancePrompt.trim()) throw new Error("请填写 Q 版形象说明。");
+      if (!current.production && !appearancePrompt.trim()) throw new Error("请填写 Q 版形象说明。");
       Object.assign(request, { image: rigSourceRequest(current), prompt: appearancePrompt });
     } else if (kind === "structure") Object.assign(request, { planner: "codex-native", image: rigSourceRequest(current), prompt: structurePrompt, detail: structureDetail });
     else if (kind === "registration") Object.assign(request, { planner: "codex-native", rig: validateRigDocument(current), gridSize: 32, prompt: current.prompts?.registration || registrationDefaultPrompt });
@@ -369,12 +377,67 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
         Object.assign(request, { partIds: ids, concurrency, prompt: partsPrompt });
       }
     }
+    if (current.production) {
+      request.rig = current;
+      const instruction = productionPrompt(current, kind, kind === "motion" ? motion?.id : undefined);
+      if (kind === "motion") request.motion.description = `${instruction}\n当前调整：${request.motion.description}`;
+      else request.prompt = `${instruction}\n当前要求：${request.prompt || ""}`;
+      if ((request.prompt || request.motion?.description || "").length > 4000) throw new Error("本次说明过长，请精简制作计划或当前调整；约束不会被截断。");
+    }
     const value = await client.start(request); if (alive.current) mergeJob(value, true);
+  });
+  const commitProductionMetadata = (next, checkpoint = true) => {
+    const current = documentRef.current, report = testReport;
+    commit(next, checkpoint);
+    if (previewDocument === current) setPreviewDocument(documentRef.current);
+    if (report) setTestReport(report);
+  };
+  const updateProduction = (production) => commitProductionMetadata((current) => ({ ...current, production }), false);
+  const confirmProductionStage = (stage, id, checks) => perform("确认制作阶段", async () => {
+    commitProductionMetadata(confirmProduction(documentRef.current, stage, id, checks, new Date().toISOString())); setNotice("已记录当前内容的审阅；后续变更会重新检查相关阶段。");
+  });
+  const revokeProductionStage = (stage, id) => {
+    const current = documentRef.current, reviews = { ...current.production.reviews };
+    if (stage === "board" || stage === "motion") { const key = stage === "board" ? "boards" : "motions"; reviews[key] = { ...reviews[key] }; delete reviews[key][id]; }
+    else delete reviews[stage];
+    commitProductionMetadata({ ...current, production: { ...current.production, reviews } }); setNotice("已退回审阅，图片和已制作内容保留。");
+  };
+  const uploadProductionBoard = (id, file) => perform("读取关键姿势图", async () => {
+    const current = documentRef.current, image = await readRigImage(file, { maxDimension: 2048, expectedWidth: documentRef.current.width, expectedHeight: documentRef.current.height });
+    if (!alive.current || documentRef.current !== current) return;
+    commitProductionMetadata({ ...current, production: { ...current.production, boards: current.production.boards.map((b) => {
+      if (b.id !== id) return b;
+      const next = { ...b, image: image.dataURL, reuseBase: false, origin: "uploaded-reference" }; delete next.pending; delete next.jobId; delete next.imageId; delete next.nativeImage; delete next.calibration; return next;
+    }) } }); setNotice("已载入独立关键图，尚未确认或用于拆件。");
+  });
+  const generateProductionBoard = (id) => perform("生成关键姿势候选", async () => {
+    const current = documentRef.current, request = productionReferenceRequest(current, id), value = await client.start(request);
+    if (alive.current && documentRef.current === current) { commitProductionMetadata(recordProductionRequest(current, id, value)); mergeJob(value, true); }
+  });
+  const applyProductionBoard = (value) => perform("选择关键姿势候选", async () => {
+    const current = documentRef.current, candidate = await prepareProductionReference(current, value, client.image, readRigImage);
+    if (alive.current && documentRef.current === current) { setCalibrationError(""); setCalibration(createRigReferenceCalibration(candidate)); }
+  });
+  const adjustProductionBoard = (id) => perform("打开关键图校准", async () => {
+    const current = documentRef.current, candidate = await prepareStoredProductionReference(current, id, readRigImage);
+    if (alive.current && documentRef.current === current) { setCalibrationError(""); setCalibration(createRigReferenceCalibration(candidate)); }
+  });
+  const exportProduction = (kind) => perform("导出验收包", async () => {
+    const current = documentRef.current; await operations.validateForSave(current, { requireDelivery: false });
+    const result = await operations.preview(current);
+    if (!alive.current || documentRef.current !== current) return;
+    await editing.exportProject({ bundle: productionExportBundle(current, result.bundle), edits: {}, mode: kind, name: current.name });
+    if (alive.current) setNotice("验收包已下载。请回导实际文件；下载不代表回导通过。");
+  });
+  const verifyProduction = (kind, file) => perform("回导并核对验收包", async () => {
+    const current = documentRef.current, bytes = new Uint8Array(await file.arrayBuffer()), result = await operations.preview(current);
+    const next = verifyProductionPackage(current, result.bundle, bytes, kind, file.name);
+    if (alive.current && documentRef.current === current) { commitProductionMetadata(next); setNotice("实际验收包回导通过：骨架、贴图、制作计划及作者数据与当前草稿一致。"); }
   });
   const useAppearance = (next) => {
     commit(next); setJointId(""); setPartId(""); setSelectedParts([]); setMotionId(""); setPoseIndex(0); clock.seek(0);
-    setStep("structure"); setCanvasMode("overlay"); setPreview(null); setPreviewDocument(null); setConfirmReset(null);
-    setNotice("已应用 AI Q 版形象，原始参考和生成来源已保留。下一步点击「AI 结构分析」创建新的骨架与部件。");
+    setStep(next.production ? "targets" : "structure"); setCanvasMode("overlay"); setPreview(null); setPreviewDocument(null); setConfirmReset(null);
+    setNotice(next.production ? "已应用设定候选。请先确认造型及关键姿势图，再分析结构。" : "已应用 AI Q 版形象，原始参考和生成来源已保留。下一步点击「AI 结构分析」创建新的骨架与部件。");
   };
   const retryParts = () => perform("继续未完成部件", async () => {
     if (running) throw new Error("已有 AI 任务正在进行，请完成或取消后再继续。");
@@ -387,6 +450,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
   });
   const applyJob = () => perform("应用 AI 候选", async () => {
     if (!job) return;
+    if (job.referenceTarget) throw new Error("这是关键姿势候选，请在「造型与分镜」选择对应画面，不会替换角色设定图。");
     const current = documentRef.current, candidate = await operations.prepareCandidate(current, job, client.image);
     if (!alive.current || documentRef.current !== current) return;
     if (candidate.kind === "registration") {
@@ -401,7 +465,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
       const value = candidate.document;
       if (candidate.needsConfirmation) { setConfirmReset({ kind: "structure", document: value }); return; }
       commit(value); setJointId(value.joints[0]?.id || ""); setPartId(value.parts[0]?.id || ""); setSelectedParts(value.parts.map((item) => item.id)); setStep("structure"); setCanvasMode("overlay");
-      setNotice("已应用 AI 结构。部件仍待补绘；idle / attack / hit 是待制作动作槽，请逐个生成或编辑。");
+      setNotice(value.production ? "已应用结构，并按制作计划建立动作槽。请先确认结构覆盖目标动作，再开始补绘。" : "已应用 AI 结构。部件仍待补绘；idle / attack / hit 是待制作动作槽，请逐个生成或编辑。");
     } else if (candidate.kind === "motion") {
       commit(candidate.document); setMotionId(candidate.motionId); setStep("motion"); setPoseIndex(0); setNotice("已替换此动作，部件、绑定、网格与权重保持。");
     } else {
@@ -426,11 +490,14 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
       if (running) throw new Error("AI 任务正在进行，请先完成任务后再应用校准。");
       const current = documentRef.current;
       if (current !== calibration.document) throw new Error("骨架草稿已改变，请取消后重新打开此部件校准。");
-      const next = await bakeRigPartCalibration(current, calibration.partId, edit);
+      const isReference = calibration.kind === "production-reference";
+      const baked = isReference ? await bakeRigReferenceCalibration(calibration, edit) : null;
+      const next = isReference ? withProductionReference(current, calibration, baked.image, baked.nativeImage, baked.transform) : await bakeRigPartCalibration(current, calibration.partId, edit);
       if (!alive.current) return;
       if (documentRef.current !== current) throw new Error("骨架草稿已改变，校准尚未应用。请重新打开此部件。");
-      commit(next); setCalibration(null); setCanvasMode("overlay"); setPreview(null); setPreviewDocument(null);
-      setNotice("部件图片校准已烘焙，关节、矩形、网格权重和动作保持。请更新动画预览检查接缝。");
+      if (isReference) commitProductionMetadata(next); else { commit(next); setCanvasMode("overlay"); setPreview(null); setPreviewDocument(null); }
+      setCalibration(null);
+      setNotice(isReference ? "关键图已校准到设定画布，原生 PNG 和变换已保留。请继续审阅头部、法杖尺寸与实际姿势。" : "部件图片校准已烘焙，关节、矩形、网格权重和动作保持。请更新动画预览检查接缝。");
     } catch (failure) { if (alive.current) setCalibrationError(`校准尚未应用：${failure.message}`); }
     finally { busyRef.current = false; if (alive.current) setBusy(""); }
   };
@@ -463,11 +530,37 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
     const duration = preset?.duration || 1;
     const value = { id, name: preset ? `${preset.name}${suffix > 1 ? ` ${suffix}` : ""}` : `自定义动作 ${current.motions.length + 1}`, duration, loop: Boolean(preset?.loop), description: preset?.description || "", origin: preset ? "manual-placeholder" : "manual",
       poses: [{ time: 0, angles: {}, root: { x: 0, y: 0 }, ease: "smooth" }, { time: duration, angles: {}, root: { x: 0, y: 0 }, ease: "smooth" }] };
-    commit({ ...current, motions: [...current.motions, value] }); setMotionId(id); setStep("motion"); setPoseIndex(0);
+    commit(includeMotionInProduction({ ...current, motions: [...current.motions, value] }, value, makeId("board"))); setMotionId(id); setStep("motion"); setPoseIndex(0);
     if (preset) setNotice(`已添加「${value.name}」待制作动作槽。请生成或编辑关键帧后再验证保存。`);
   };
   const selectPose = (index) => { setPoseIndex(index); if (motion) seekAnimation(motion.poses[index].time, true); };
+  const removeMotion = () => {
+    if (!motion || locked) return;
+    const name = motion.name;
+    commands.removeMotion(motion.id);
+    setMotionId(documentRef.current.motions[0]?.id || ""); setPoseIndex(0);
+    clock.set({ playing: false }); clock.seek(0); setPlaying(false); setPosition(0);
+    setTestReport(null); setNotice(`已删除「${name}」动作，可撤销恢复。`);
+  };
   const inspectMotion = () => perform("检查动作", async () => { if (!motion) throw new Error("请先选择动作。"); const current = documentRef.current, result = await operations.inspectMotion(current, motion.id); await buildPreview(current); if (alive.current) { setTestReport(result); setStep("preview"); setCanvasMode("preview"); } });
+  const applyMagicEffects = (values) => perform("制作魔法特效", async () => {
+    const snapshot = documentRef.current, id = motion?.id;
+    const next = await prepareRigMagicEffects(snapshot, id, values, images.createRigMagicEffectFrames);
+    if (!alive.current || documentRef.current !== snapshot) throw new Error("草稿已改变，特效尚未应用，请重新制作。");
+    commit(next); await buildPreview(documentRef.current);
+    if (alive.current) { setCanvasMode("preview"); seekAnimation(values.releaseTime, true); setNotice("蓄力与释放特效已加入当前动作。身体关键帧保留，请检查脸部遮挡与消散节奏。"); }
+  });
+  const removeMagicEffects = () => perform("移除本动作特效", async () => {
+    commit(removeRigMagicEffects(documentRef.current, motion.id)); await buildPreview(documentRef.current);
+    if (alive.current) { setCanvasMode("preview"); setNotice("已移除本动作的魔法特效，身体动画保持原样，可撤销恢复。"); }
+  });
+  const applyContinuousLimb = (values) => perform("连接肢体网格", async () => {
+    const snapshot = documentRef.current, id = motion?.id;
+    const next = await images.createRigContinuousLimb(snapshot, { ...values, motionId: id });
+    if (!alive.current || documentRef.current !== snapshot) throw new Error("草稿已改变，连续接头尚未应用，请重新制作。");
+    commit(next); await buildPreview(documentRef.current);
+    if (alive.current) { setCanvasMode("preview"); seekAnimation(motion.poses[poseIndex]?.time || 0, true); setNotice("连续接头已加入当前动作。原分件与骨骼动作保留，请检查膝盖、遮挡和靴口。"); }
+  });
   const prepareStudy = async (id) => {
     const snapshot = documentRef.current, result = await operations.prepareStudy(snapshot, id);
     if (!alive.current || documentRef.current !== snapshot) throw new Error("草稿已改变，逐帧检查结果未覆盖当前编辑。");
@@ -492,7 +585,7 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
     const result = await buildPreview(current);
     if (alive.current && documentRef.current === current) await callbacks.current.onSave?.(result.document, result.bundle, { thumbnail: previewPort.current?.captureThumbnail() });
   });
-  const changeStep = (id) => { setStep(id); if (id !== "binding") setManualAdjustment(false); if (id !== "binding") setRegistrationOpen(false); if (id !== "preview") setCanvasMode("overlay"); if (id === "preview" && document.joints.length) void showPreview(); };
+  const changeStep = (id) => { setStep(id); if (["plan", "targets"].includes(id)) { clock.set({ playing: false }); setPlaying(false); } if (id !== "binding") setManualAdjustment(false); if (id !== "binding") setRegistrationOpen(false); if (id !== "preview") setCanvasMode("overlay"); if (id === "preview" && document.joints.length) void showPreview(); };
   const vertex = mesh?.weights[Math.min(vertexIndex, mesh.weights.length - 1)] || [];
   const parentCandidates = rigParentCandidates(document, joint);
   const updateWeights = (id, value) => { try { commands.setVertexWeight(part.id, vertexIndex, id, value); } catch (failure) { setError(failure.message); } };
@@ -502,24 +595,31 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
     if (added) { setPoseIndex(added.index); seekAnimation(added.time, true); }
   } catch (failure) { setError(failure.message); } };
 
-  return <main className="rig-workbench" aria-label="新骨架与动作工作台">
+  return <main className="rig-workbench" data-production-view={step === "plan" || step === "targets"} aria-label="新骨架与动作工作台">
     <input ref={sourceInput} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={(event) => { const file = event.target.files?.[0]; event.target.value = ""; if (file) void changeSource(file); }} />
     <input ref={partInput} type="file" accept="image/png,image/webp" hidden onChange={(event) => { const file = event.target.files?.[0]; event.target.value = ""; if (file) void uploadPart(file); }} />
     <header className="rig-topbar"><button className="button subtle" disabled={Boolean(busy || calibration)} onClick={() => { if (!busyRef.current && !calibration) callbacks.current.onClose?.(); }}><ArrowLeft size={16} />返回资源</button>
       <label className="rig-name"><span>新骨架与动作</span><input aria-label="骨架资源名称" value={document.name} disabled={locked} onChange={(event) => commit({ ...documentRef.current, name: event.target.value }, false)} /></label>
       <span className="rig-draft-status" data-save-status={draftSaveStatus?.status} role={draftSaveStatus?.status === "failed" ? "alert" : "status"}>独立骨架草稿 · {typeof draftSaveStatus?.message === "string" && draftSaveStatus.message || ({ idle: "自动保存", pending: "待保存", saving: "保存中", saved: "已保存", failed: "保存失败" }[draftSaveStatus?.status] || "自动保存")}</span>
       <div className="rig-history-controls"><button className="icon-button" aria-label="撤销骨架修改" disabled={locked || !sessionState.canUndo} onClick={() => { if (session.undo()) setTestReport(null); }}><Undo2 size={17} /></button><button className="icon-button" aria-label="重做骨架修改" disabled={locked || !sessionState.canRedo} onClick={() => { if (session.redo()) setTestReport(null); }}><Redo2 size={17} /></button></div>
-      <button className="button primary" disabled={locked || !readiness.ready || !document.motions.length} onClick={() => void saveResource()}><Save size={16} />{saveHint ? "另存为新资源" : "保存为角色资源"}</button>
+      {!document.production && <button className="button" disabled={locked} onClick={() => changeStep("plan")}>制作计划</button>}
+      <button className="button primary" disabled={locked || !readiness.ready || !document.motions.length || productionStageIssues(document, "save").length > 0} onClick={() => void saveResource()}><Save size={16} />{saveHint ? "另存为新资源" : "保存为角色资源"}</button>
     </header>
-    <nav className="rig-steps" aria-label="骨架制作步骤">{steps.map(({ id, label, icon: Icon }, index) => <button key={id} aria-current={step === id ? "step" : undefined} disabled={Boolean(busy || calibration)} onClick={() => changeStep(id)}><span>{index + 1}</span><Icon size={16} />{label}</button>)}</nav>
+    <nav className="rig-steps" aria-label="骨架制作步骤">{visibleSteps.map(({ id, label, icon: Icon }, index) => <button key={id} aria-current={step === id ? "step" : undefined} disabled={Boolean(busy || calibration)} onClick={() => changeStep(id)}><span>{index + 1}</span><Icon size={16} />{label}</button>)}</nav>
     {saveHint && <div className="rig-save-hint" role="note">{saveHint}</div>}
     {(running || job) && <div className="rig-task-banner" role="status">{running && <LoaderCircle size={14} className="spin" />}<span>{kindLabels[(running || job).kind]} · {statusLabels[(running || job).status] || (running || job).status}</span>{running && <><progress max={Math.max(1, running.total || 1)} value={running.completed || 0} /><small>{running.completed || 0}/{running.total || 1}</small></>}<button className="button subtle" onClick={() => jobSection.current?.scrollIntoView({ behavior: "smooth", block: "start" })}>{running ? "查看任务" : "查看候选与结果"}</button></div>}
     {error && <div className="rig-message rig-error" role="alert">{error}<button className="button subtle" onClick={() => setError("")}>关闭</button></div>}
     {sampledPose.error && <div className="rig-message rig-error" role="alert">当前关键帧需要调整：{sampledPose.error}</div>}
     {notice && <div className="rig-message" role="status">{notice}</div>}
-    {pendingSource && <div className="rig-confirm"><strong>用新立绘重新开始？</strong><p>当前结构、部件和动作仍保存在原草稿；新立绘将建立另一份骨架草稿。</p><div className="button-row"><button className="button" onClick={() => setPendingSource(null)}>保留当前草稿</button><button className="button primary" onClick={() => { commit(pendingSource); setPendingSource(null); setPreview(null); setJobs([]); setJob(null); setStep("structure"); setCanvasMode("overlay"); }}>使用新立绘</button></div></div>}
+    {pendingSource && <div className="rig-confirm"><strong>用新立绘重新开始？</strong><p>当前结构、部件和动作仍保存在原草稿；新立绘将建立另一份骨架草稿。</p><div className="button-row"><button className="button" onClick={() => setPendingSource(null)}>保留当前草稿</button><button className="button primary" onClick={() => { commit(pendingSource); setStep(pendingSource.production ? "targets" : "structure"); setPendingSource(null); setPreview(null); setJobs([]); setJob(null); setCanvasMode("overlay"); }}>使用新立绘</button></div></div>}
     {confirmReset && <div className="rig-confirm"><strong>{confirmReset.kind === "appearance" ? "应用 Q 版形象并重建骨架？" : confirmReset.kind === "structure" ? "应用新的 AI 结构？" : "替换为程序初稿？"}</strong><p>{confirmReset.kind === "appearance" ? "新的角色比例需要重新分析。确认后会清空当前关节、部件绑定和动作；原始参考与生成来源会保留，可用撤销恢复。" : "这会替换当前关节、部件绑定和动作。当前版本可用撤销恢复，草稿会更新。"}</p><div className="button-row"><button className="button" onClick={() => setConfirmReset(null)}>取消</button><button className="button primary" onClick={() => { if (confirmReset.kind === "appearance") { if (documentRef.current !== confirmReset.source) { setError("草稿已修改，请重新确认应用形象候选。"); setConfirmReset(null); return; } useAppearance(confirmReset.document); } else if (confirmReset.kind === "structure") { const next = confirmReset.document; commit(next); setSelectedParts(next.parts.map((item) => item.id)); setJointId(next.joints[0]?.id || ""); setPartId(next.parts[0]?.id || ""); setStep("structure"); setCanvasMode("overlay"); setPreview(null); setConfirmReset(null); } else programDraft(); }}>{confirmReset.kind === "appearance" ? "应用形象并重建" : "确认替换结构"}</button></div></div>}
 
+    {(step === "plan" || step === "targets") && <RigProductionPanel document={document} view={step} disabled={locked} jobs={jobs} job={job} client={client} running={running}
+      onCancel={() => void perform("取消任务", async () => { const value = await client.cancel(running.id); if (alive.current) mergeJob(value, true); })}
+      onEnable={() => commit({ ...documentRef.current, production: createProductionPlan(documentRef.current) })} onUpdate={updateProduction}
+      onUploadSource={() => sourceInput.current.click()} onGenerateAppearance={() => void startJob("appearance")} onApplyAppearance={applyJob}
+      onUploadBoard={uploadProductionBoard} onGenerateBoard={generateProductionBoard} onApplyBoard={applyProductionBoard} onAdjustBoard={adjustProductionBoard}
+      onConfirm={confirmProductionStage} onRevoke={revokeProductionStage} onStep={changeStep} createId={editing.createId} />}
     <div className="rig-workspace">
       <aside className="rig-library">
         <section className="rig-source-section"><h2>角色立绘</h2><button className="rig-source-upload" disabled={locked} onClick={() => sourceInput.current.click()}>{document.sourceImage ? <img src={document.sourceImage} alt="角色立绘" /> : <ImagePlus size={30} />}<span>{document.sourceImage ? "替换立绘" : "导入 PNG / JPEG / WebP"}</span></button><small>{document.width} × {document.height} · 坐标向右、向下</small></section>
@@ -559,10 +659,13 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
           {(step === "parts" || step === "binding") && !part && <p className="rig-hint">先在结构步骤识别或创建骨架部件。</p>}
           {["parts", "binding", "motion"].includes(step) && document.parts.length > 0 && <details className="part-appearance-details"><summary>部件出现时间与网格位置</summary><PartAppearancePanel document={document} partId={part?.id} onSelectPart={setPartId} disabled={locked} onSeek={locatePartAppearance} /></details>}
 
-          {step === "motion" && motion && <RigMotionPanel locked={locked} motion={motion} document={document} setMotionStudyOpen={setMotionStudyOpen} activeMotionStudy={activeMotionStudy} patchMotion={patchMotion} plannerStatus={plannerStatus} startJob={startJob} poseIndex={poseIndex} selectPose={selectPose} addPose={addPose} setPoseIndex={setPoseIndex} seekAnimation={seekAnimation} pose={pose} setError={setError} patchPose={patchPose} joint={joint} setJointId={setJointId} attachmentGroups={attachmentGroups} attachmentGroupLabels={attachmentGroupLabels} changePoseAttachment={changePoseAttachment} />}
+          {step === "motion" && motion && <RigMotionPanel locked={locked} motion={motion} removeMotion={removeMotion} document={document} setMotionStudyOpen={setMotionStudyOpen} activeMotionStudy={activeMotionStudy} patchMotion={patchMotion} plannerStatus={plannerStatus} startJob={startJob} poseIndex={poseIndex} selectPose={selectPose} addPose={addPose} setPoseIndex={setPoseIndex} seekAnimation={seekAnimation} pose={pose} setError={setError} patchPose={patchPose} joint={joint} setJointId={setJointId} attachmentGroups={attachmentGroups.filter((group) => !group.parts.every((part) => part.role === "effect"))} attachmentGroupLabels={attachmentGroupLabels} changePoseAttachment={changePoseAttachment} applyMagicEffects={applyMagicEffects} removeMagicEffects={removeMagicEffects} applyContinuousLimb={applyContinuousLimb} />}
           {step === "motion" && !motion && <RigMotionStart document={document} commit={commit} basicMotionSlots={basicMotionSlots} setMotionId={setMotionId} />}
 
           {(step === "motion" || step === "preview") && <RigValidationPanel activeMotionStudy={activeMotionStudy} motion={motion} inspectMotion={inspectMotion} testReport={testReport} document={document} />}
+          {document.production && ["motion", "preview"].includes(step) && motion && <ProductionMotionTargets document={document} motion={motion} disabled={locked} onSeek={(time) => seekAnimation(time, true)} onOpenTargets={() => changeStep("targets")} />}
+          {document.production && ["structure", "parts", "binding", "preview"].includes(step) && <section className="rig-control-group"><h3>{({ structure: "结构覆盖审阅", parts: "真实组装审阅", binding: "极限姿势与绑定审阅", preview: "当前动画视觉审阅" })[step]}</h3><ProductionReview document={document} stage={({ structure: "structure", parts: "assembly", binding: "binding", preview: "motion" })[step]} id={step === "preview" ? motion?.id : undefined} disabled={locked} onConfirm={confirmProductionStage} onRevoke={revokeProductionStage} /></section>}
+          {document.production && step === "preview" && <ProductionDelivery document={document} disabled={locked} onExport={exportProduction} onVerify={verifyProduction} />}
           {step === "preview" && <RigSavePanel saveHint={saveHint} readiness={readiness} document={document} saveResource={saveResource} />}
         </fieldset>
 
@@ -588,6 +691,8 @@ export function RigWorkbench({ CalibrationEditor, calibration: calibrationTools,
     {busy && <div className="rig-local-progress" role="status"><LoaderCircle size={15} className="spin" />{busy}…</div>}
     {calibration && <div className={`rig-part-calibration${busy ? " is-busy" : ""}`} ref={calibrationContainer} onDrop={(event) => { event.preventDefault(); event.stopPropagation(); }}>
       <fieldset className="rig-calibration-shell" disabled={Boolean(busy)} aria-busy={Boolean(busy)}><CalibrationEditor calibration={calibrationTools} bundle={calibration.bundle} part={calibration.part} edit={calibration.edit} externalError={calibrationError ? `${calibrationError} 可以继续调整后重试，或取消保留原图。` : ""}
+        referenceLabel={calibration.kind === "production-reference" ? "设定图参考" : "原图裁片参考"} displayName={calibration.kind === "production-reference" ? `关键图校准 · ${calibration.part.name}` : undefined}
+        instruction={calibration.kind === "production-reference" ? "按设定图的头宽、杖长和关节地标等比校准；不要按倒地可见身高缩放。完整保留人物与法杖，应用后仍需逐图审阅。" : ""}
         onClose={() => { if (!busyRef.current) { setCalibration(null); setCalibrationError(""); } }} onApply={applyCalibration} /></fieldset>
     </div>}
   </main>;

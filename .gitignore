@@ -1,7 +1,19 @@
+# Dependencies and reproducible builds
 node_modules/
 dist/
+/package-lock.json
+
+# Local workspaces, configuration and caches
 work/
-.DS_Store
-*.log
 *.local
-outputs/desktop/*.app/
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]
+coverage/
+playwright-report/
+test-results/
+
+# Local deliveries and evidence; existing tracked fixtures stay tracked
+/outputs/*
+!/outputs/README.md

@@ -6,6 +6,7 @@ import { resolveRigAttachments } from "./attachments.js";
 import { rigPartSlotName } from "./attachments.js";
 import { sampleRigPose } from "./sample.js";
 import { validateRigDocument } from "../../shared/rig-schema.mjs";
+import { effectTrackSelection, extendEffectDrawOrder } from "../../shared/domain/rig-effects.mjs";
 
 // Positions describe geometry in the source canvas's world pixel axes. They are
 // not alpha bounds, camera/screen coordinates, or a promise of visual correctness.
@@ -33,13 +34,14 @@ function beforeEvent(time, stepped) {
   return before(value[0]);
 }
 
-function baseState(motion, part, defaults, setupSlots, time) {
+function baseState(document, motion, part, defaults, setupSlots, time) {
   const selection = { ...defaults }; let order = setupSlots;
   for (const pose of motion.poses) {
     if (pose.time > time) break;
     Object.assign(selection, pose.attachments || {}); if (pose.drawOrder) order = pose.drawOrder;
   }
-  return { visible: !part.attachmentGroup || selection[part.attachmentGroup] === part.id, representation: "base-part", originalPartVisible: true,
+  Object.assign(selection, effectTrackSelection(motion, time)); order = extendEffectDrawOrder(document, order);
+  return { visible: !part.attachmentGroup || selection[part.attachmentGroup] === part.id, representation: part.role === "effect" ? "effect-frame" : "base-part", originalPartVisible: true,
     layer: { slotId: rigPartSlotName(part), index: order.indexOf(rigPartSlotName(part)), total: order.length, scope: "rig-slots", z: part.z } };
 }
 
@@ -61,8 +63,8 @@ function annotateMotion(document, motion, part, defaults, setupSlots, samples) {
     result.issues = [...inspection.issues]; result.constraintsEvaluated = inspection.kind !== "motion-study";
     result.sampler = inspection.solver.sampler;
     const poses = new Map(), poseAt = (time) => { if (!poses.has(time)) poses.set(time, sampleRigPose(document, motion.id, time)); return poses.get(time); };
-    const stateAt = stepped ? (time) => studyState(document, motion, part, study, poseAt, time) : (time) => baseState(motion, part, defaults, setupSlots, time);
-    const events = [...new Set([0, duration, ...(stepped ? study.frames.map((frame) => motionStudyKeyTime(frame.time)) : motion.poses.map((pose) => pose.time))])].sort((a, b) => a - b);
+    const stateAt = stepped ? (time) => studyState(document, motion, part, study, poseAt, time) : (time) => baseState(document, motion, part, defaults, setupSlots, time);
+    const events = [...new Set([0, duration, ...(stepped ? study.frames.map((frame) => motionStudyKeyTime(frame.time)) : [...motion.poses.map((pose) => pose.time), ...(motion.effectTracks || []).flatMap((track) => track.keys.map((key) => key.time))])])].sort((a, b) => a - b);
     const spans = [];
     for (let index = 0; index < events.length - 1; index++) {
       const start = events[index], end = events[index + 1], state = stateAt(start);

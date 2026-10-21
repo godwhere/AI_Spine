@@ -5,6 +5,8 @@ import { PreviewTransport } from "../../components/PreviewTransport.jsx";
 import { ResourceThumbnail } from "../../components/ResourceThumbnail.jsx";
 import { rigAuthoringSummary } from "../../../shared/domain/rig-summary.mjs";
 
+const partCounts = (summary) => `${Number.isFinite(summary.logicalParts) ? `${summary.logicalParts} 个逻辑部件 · ${summary.additionalAttachments} 个附件变体` : `${summary.baseParts} 个常规纹理区域`}${summary.effectLayers ? ` · ${summary.effectLayers} 个特效层（${summary.effectRegions} 纹理）` : ""}${summary.poseRegions ? ` · ${summary.poseRegions} 个动作区域` : ""}`;
+
 export function ResourceLibrary({ actions, projects, trash = [], onOpen, onImport, onTrash, onRestore, onDeleteForever, onEmptyTrash, onBrowseTemplates, onAddTemplate, onCreateRig, onEditRig, onManualAdjust, customTemplateProjectIds = [], showTrash = false, busy = false }) {
   const [search, setSearch] = useState(""), [sort, setSort] = useState("updated");
   const [selected, setSelected] = useState(null), [preview, setPreview] = useState(null);
@@ -21,7 +23,7 @@ export function ResourceLibrary({ actions, projects, trash = [], onOpen, onImpor
   const selectedRecord = records.find((p) => p.id === selected) || records[0];
   const record = loadedRecord?.id === selectedRecord?.id && loadedRecord?.updatedAt === selectedRecord?.updatedAt ? loadedRecord : selectedRecord;
   const authored = Boolean(record?.hasRigAuthoring || record?.files?.[".ispine/rig/document.json"]);
-  const rigSummary = record?.rigSummary || rigAuthoringSummary(record?.files);
+  const rigSummary = rigAuthoringSummary(record?.files) || record?.rigSummary;
   useEffect(() => { setSearch(""); setSelected(null); setMobilePreview(false); }, [showTrash]);
   useEffect(() => {
     let cancelled = false;
@@ -64,7 +66,7 @@ export function ResourceLibrary({ actions, projects, trash = [], onOpen, onImpor
             disabled={busy} aria-label={`预览 ${item.name}`} aria-pressed={item.id === record?.id}
             onClick={() => { setSelected(item.id); setMobilePreview(true); }} onDoubleClick={() => { if (!showTrash && !busy) onOpen(item); }}>
             <span className="explorer-thumbnail">{item.thumbnail ? <ResourceThumbnail src={item.thumbnail} /> : <Layers size={28} />}</span>
-            <span className="explorer-row-name"><strong>{item.name}</strong><small>{(item.hasRigAuthoring || item.files?.[".ispine/rig/document.json"]) ? (() => { const summary = item.rigSummary || rigAuthoringSummary(item.files); return summary ? `${summary.baseParts} 个基础部件${summary.poseRegions ? ` · ${summary.poseRegions} 个动作区域` : ""}` : `自建骨架 · ${item.partCount ?? 0} 个纹理区域`; })() : `${item.replacementCount ?? Object.keys(item.edits || {}).length} 个部件已替换`}</small></span>
+            <span className="explorer-row-name"><strong>{item.name}</strong><small>{(item.hasRigAuthoring || item.files?.[".ispine/rig/document.json"]) ? (() => { const summary = item.id === record?.id ? rigSummary : rigAuthoringSummary(item.files) || item.rigSummary; return summary ? partCounts(summary) : `自建骨架 · ${item.partCount ?? 0} 个纹理区域`; })() : `${item.replacementCount ?? Object.keys(item.edits || {}).length} 个部件已替换`}</small></span>
             <span className="explorer-cell">{item.animationCount ?? 0}</span><span className="explorer-cell">{item.partCount ?? 0}</span>
           </button>)}
           {!records.length && <div className="empty-state"><Layers size={32} /><h3>{search ? "没有匹配的资源" : showTrash ? "回收站为空" : "还没有创作资源"}</h3><p>{search ? "试试其他名称。" : showTrash ? "删除的资源会保存在这里，可以恢复。" : "导入工程，或从模板库创建角色。"}</p>
@@ -83,7 +85,7 @@ export function ResourceLibrary({ actions, projects, trash = [], onOpen, onImpor
       </section>
       <aside className="explorer-inspector" aria-label="资源详情">
         <div className="explorer-inspector-heading"><h2>{record?.name || "选择一个资源"}</h2><p>{showTrash ? "回收站 · 可恢复资源" : authored ? "角色 · 自建骨架" : "角色 · 本机资源"}</p></div>
-        {record && <><dl className="explorer-facts"><div><dt>动作</dt><dd>{actionCount}</dd></div><div><dt>纹理区域</dt><dd>{record.partCount ?? 0}</dd></div>{rigSummary && <div><dt>基础部件</dt><dd>{rigSummary.baseParts}</dd></div>}{rigSummary?.poseRegions > 0 && <div><dt>动作区域</dt><dd>{rigSummary.poseRegions}</dd></div>}<div><dt>{authored ? "骨骼" : "已替换部件"}</dt><dd>{authored ? record.boneCount ?? 0 : (record.replacementCount ?? Object.keys(record.edits || {}).length)}</dd></div></dl>
+        {record && <><dl className="explorer-facts"><div><dt>动作</dt><dd>{actionCount}</dd></div><div><dt>纹理区域</dt><dd>{record.partCount ?? 0}</dd></div>{rigSummary && <><div><dt>{Number.isFinite(rigSummary.logicalParts) ? "逻辑部件" : "常规纹理区域"}</dt><dd>{rigSummary.logicalParts ?? rigSummary.baseParts}</dd></div>{Number.isFinite(rigSummary.additionalAttachments) && <div><dt>附件变体</dt><dd>{rigSummary.additionalAttachments}</dd></div>}</>}{rigSummary?.poseRegions > 0 && <div><dt>动作区域</dt><dd>{rigSummary.poseRegions}</dd></div>}<div><dt>{authored ? "骨骼" : "已替换部件"}</dt><dd>{authored ? record.boneCount ?? 0 : (record.replacementCount ?? Object.keys(record.edits || {}).length)}</dd></div></dl>
           <div className="explorer-animation-list"><h3>动作</h3>{preview ? preview.animations.map((name) => <button key={name} className={animation === name ? "selected" : ""} aria-pressed={animation === name} disabled={busy} onClick={() => changeAnimation(name)}>{name}</button>)
             : <p className="muted small">{error ? "预览未能加载。" : "正在读取动作…"}</p>}</div>
           <div className="explorer-inspector-actions">{showTrash ? <>

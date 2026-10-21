@@ -1,3 +1,6 @@
+import { validateProduction } from "./domain/production.mjs";
+import { retimeMotionEffects } from "./domain/rig-effects.mjs";
+
 // RigDocument v1 is independent of templates, IndexedDB, Canvas, and Spine runtime.
 const clone = (value) => structuredClone(value);
 const fail = (message) => { throw new Error(message); };
@@ -22,6 +25,7 @@ function point(value, label) {
 // Shared by complete rig documents and pre-analysis drafts with no joints yet.
 // The original appearance reference is independent of the final sourceImage.
 export function validateRigAppearanceFields(document) {
+  validateProduction(document);
   const reference = document.appearanceReference;
   if (reference !== undefined) {
     if (!plain(reference) || typeof reference.image !== "string") fail("原始外观参考缺少本地图片。");
@@ -123,6 +127,13 @@ export function validateRigMotionStudies(document) {
       for (const key of ["label", "prompt", "origin"]) if (frame[key] !== undefined && (typeof frame[key] !== "string" || frame[key].length > 4000)) fail("动作图说明过长或无效。");
       for (const key of ["review", "mappingReview"]) if (frame[key] !== undefined && typeof frame[key] !== "boolean" && (!plain(frame[key]) || typeof frame[key].approved !== "boolean")) fail("动作图审阅状态无效。");
       if (frame.mapping !== undefined) frame.mapping = validateMotionStudyMapping(frame.mapping, document, frame);
+      if (frame.playbackTransform !== undefined) {
+        const transform = frame.playbackTransform;
+        if (!plain(transform) || !plain(transform.anchor)) fail("动作画面播放缩放无效。");
+        number(transform.scale, "动作画面播放缩放", .1, 2);
+        number(transform.anchor.x, "动作画面缩放基准 X", 0, document.width);
+        number(transform.anchor.y, "动作画面缩放基准 Y", 0, document.height);
+      }
       if (frame.segments !== undefined) {
         if (!Array.isArray(frame.segments) || frame.segments.length > document.parts.length) fail("动作图独立部件列表无效。");
         const used = new Set();
@@ -190,6 +201,7 @@ export function validateRigMotion(input, joints, parts) {
   result.loop = Boolean(result.loop);
   const rootId = joints.find((joint) => joint.parent === null)?.id;
   const slots = parts === undefined ? null : new Set(parts.map((part) => part.attachmentGroup ? `group_${part.attachmentGroup}` : `slot_${part.id}`));
+  const requiredSlots = parts === undefined ? null : new Set(parts.filter((part) => part.role !== "effect").map((part) => part.attachmentGroup ? `group_${part.attachmentGroup}` : `slot_${part.id}`));
   if (!Array.isArray(result.poses) || !result.poses.length || result.poses.length > 1200) fail("动作需要 1 至 1200 个姿势。");
   let previous = -1;
   result.poses = result.poses.map((pose) => {
@@ -221,7 +233,7 @@ export function validateRigMotion(input, joints, parts) {
       }
     }
     if (pose.drawOrder !== undefined) {
-      if (!slots || !Array.isArray(pose.drawOrder) || pose.drawOrder.length !== slots.size || new Set(pose.drawOrder).size !== slots.size || pose.drawOrder.some((id) => !slots.has(id)))
+      if (!slots || !Array.isArray(pose.drawOrder) || new Set(pose.drawOrder).size !== pose.drawOrder.length || pose.drawOrder.some((id) => !slots.has(id)) || [...requiredSlots].some((id) => !pose.drawOrder.includes(id)))
         fail("绘制顺序必须完整且唯一地列出当前 slot_/group_ 插槽，不能使用纹理变体或未知部件。");
       output.drawOrder = [...pose.drawOrder];
     }
@@ -232,6 +244,33 @@ export function validateRigMotion(input, joints, parts) {
     if (pose.attachments !== undefined) output.attachments = attachmentMap(pose.attachments, groups, "动作附件");
     return output;
   });
+  if (result.effectTracks !== undefined) {
+    if (!parts || !Array.isArray(result.effectTracks) || result.effectTracks.length > 16) fail("特效时间轴无效。");
+    const used = new Set();
+    result.effectTracks = result.effectTracks.map((track) => {
+      if (!plain(track) || !groups.has(track.groupId) || used.has(track.groupId)) fail("特效时间轴引用了未知或重复的显示组。");
+      used.add(track.groupId);
+      const members = parts.filter((part) => part.attachmentGroup === track.groupId);
+      if (!members.length || members.some((part) => part.role !== "effect" || part.effect?.motionId !== result.id)) fail("特效时间轴只能引用当前动作的独立特效纹理。");
+      if (!Array.isArray(track.keys) || !track.keys.length || track.keys.length > 1201) fail("特效时间轴缺少有效帧。");
+      let previous = -1;
+      const keys = track.keys.map((key) => {
+        if (!plain(key)) fail("特效帧无效。");
+        number(key.time, "特效帧时间", 0, result.duration);
+        if (key.time <= previous || key.name !== null && !members.some((part) => part.id === key.name)) fail("特效帧时间必须递增，且纹理必须属于同一显示组。");
+        previous = key.time; return { ...key };
+      });
+      if (keys[0].time !== 0 || keys.at(-1).name !== null) fail("特效必须记录起始状态，并在结束时隐藏。");
+      return { ...track, keys };
+    });
+  }
+  if (result.magicEffects !== undefined) {
+    const value = result.magicEffects, options = value?.options;
+    if (!plain(value) || typeof value.generator !== "string" || !plain(options) || !ids.has(options.chargeBone) || !ids.has(options.releaseBone)) fail("特效制作参数无效。");
+    for (const key of ["chargeStart", "releaseTime", "endTime"]) number(options[key], "特效制作时间", 0, result.duration);
+    if (options.releaseTime <= options.chargeStart || options.endTime <= options.releaseTime || ![24, 30].includes(options.fps)) fail("特效制作阶段或帧率无效。");
+    for (const key of ["chargeX", "chargeY", "releaseX", "releaseY", "intensity"]) number(options[key], "特效制作参数");
+  }
   const byId = new Map(joints.map((joint) => [joint.id, joint]));
   for (const side of ["left", "right"]) {
     if (!result.poses.some((pose) => pose.feet?.[side])) continue;
@@ -309,7 +348,16 @@ export function validateRigDocument(input) {
     const output = { ...part, label: part.label || part.id, z: number(part.z ?? index, "部件层级"), influences,
       completion: part.completion || (part.image ? "ready" : "needs-inpaint"), critical: part.critical ?? true };
     if (!["ready", "needs-inpaint"].includes(output.completion) || typeof output.critical !== "boolean") fail("部件完成状态无效。");
-    if (part.imageSource !== undefined && !["uploaded", "ai", "calibrated", "source-crop", "placeholder"].includes(part.imageSource)) fail("部件图像来源无效。");
+    if (part.imageSource !== undefined && !["uploaded", "ai", "calibrated", "source-crop", "placeholder", "procedural"].includes(part.imageSource)) fail("部件图像来源无效。");
+    if (part.blendMode !== undefined && !["normal", "additive", "multiply", "screen"].includes(part.blendMode)) fail("部件叠加方式无效。");
+    if (part.role === "effect") {
+      const effect = part.effect;
+      if (!part.attachmentGroup || !plain(effect) || !["charge", "release"].includes(effect.kind) || typeof effect.generator !== "string" || effect.generator.length > 80 || part.binding !== "rigid") fail("特效必须是带来源记录的独立刚性显示组。");
+      identifier(effect.motionId, "特效所属动作");
+      if (!Number.isInteger(effect.frame) || effect.frame < 0 || ![24, 30].includes(effect.fps)) fail("特效帧记录无效。");
+      number(effect.time, "特效来源时间", 0, 30);
+    }
+    if (part.imageSource === "procedural" && part.role !== "effect") fail("程序生成来源只用于独立特效，不能将角色裁片标记为补绘。");
     if (part.mesh !== undefined) {
       if (!plain(part.mesh) || part.mesh.vertices !== undefined) fail("第一版网格支持规则密度和逐顶点权重，不支持自由顶点。");
       const cols = part.mesh.cols ?? 3, rows = part.mesh.rows ?? 3;
@@ -346,6 +394,10 @@ export function validateRigDocument(input) {
     return output;
   });
   const groups = attachmentGroups(doc.parts);
+  for (const group of groups.keys()) {
+    const members = doc.parts.filter((part) => part.attachmentGroup === group);
+    if (new Set(members.map((part) => part.blendMode || "normal")).size > 1) fail("同一显示组的纹理需要相同叠加方式。");
+  }
   if (doc.defaultAttachments !== undefined) doc.defaultAttachments = attachmentMap(doc.defaultAttachments, groups, "默认附件");
   if (!Array.isArray(doc.motions) || doc.motions.length > 64) fail("动作列表无效或超过 64 个。");
   const motionIds = new Set();
@@ -360,7 +412,8 @@ export function validateRigDocument(input) {
 }
 
 export function replaceRigMotion(document, motion) {
-  const doc = validateRigDocument(document), replacement = validateRigMotion(motion, doc.joints, doc.parts);
+  const doc = validateRigDocument(document), previous = doc.motions.find((item) => item.id === motion.id);
+  const replacement = validateRigMotion({ ...(previous && motion.effectTracks === undefined ? retimeMotionEffects(previous, motion.duration) : {}), ...motion }, doc.joints, doc.parts);
   const index = doc.motions.findIndex((item) => item.id === replacement.id);
   if (index < 0) doc.motions.push(replacement); else doc.motions[index] = replacement;
   return validateRigDocument(doc);

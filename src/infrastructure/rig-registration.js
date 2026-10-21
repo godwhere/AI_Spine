@@ -1,4 +1,5 @@
 import { browserPixels } from "./browser-pixels.js";
+export { restoreCompleteOverlapReview } from "../../engine/images/registration.js";
 import { inspectRigSourceCoverage as inspectRigSourceCoverageEngine } from "../../engine/images/registration.js";
 import { expandRigRegistrationBounds as expandRigRegistrationBoundsEngine } from "../../engine/images/registration.js";
 import { prepareCompleteOverlapReview as prepareCompleteOverlapReviewEngine } from "../../engine/images/registration.js";

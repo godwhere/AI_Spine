@@ -328,13 +328,14 @@ test("reference file hydration rejects missing and external references while old
 });
 
 
-test("library counts distinguish base parts and active pose textures without hydrating artwork", () => {
-  const document = { parts: [{ id: "body" }, { id: "eye", attachmentGroup: "eyes", imageFile: { path: "not-loaded.png" } }], joints: [{ id: "root" }], motionStudies: {
+test("library counts distinguish logical parts, attachment variants and active pose textures without hydrating artwork", () => {
+  const document = { parts: [{ id: "body" }, { id: "eye", attachmentGroup: "eyes", imageFile: { path: "not-loaded.png" } },
+    { id: "blink", attachmentGroup: "eyes" }, { id: "eyes" }], joints: [{ id: "root" }], motionStudies: {
     attack: { applied: { kind: "stepped-parts" }, frames: [{ segments: [{}, {}, {}] }] },
     skill: { playback: "reference", applied: { kind: "stepped-parts" }, frames: [{ segments: [{}, {}] }] },
   } };
   const files = { [RIG_DOCUMENT_PATH]: new TextEncoder().encode(JSON.stringify(document)) };
-  assert.deepEqual(rigAuthoringSummary(files), { baseParts: 2, bones: 1, expressionVariants: 1, poseRegions: 3 });
+  assert.deepEqual(rigAuthoringSummary(files), { baseParts: 4, bones: 1, logicalParts: 3, additionalAttachments: 1, expressionVariants: 2, poseRegions: 3 });
   assert.equal(rigAuthoringSummary({}), null);
   assert.equal(rigAuthoringSummary({ [RIG_DOCUMENT_PATH]: new TextEncoder().encode("bad JSON") }), null);
 });

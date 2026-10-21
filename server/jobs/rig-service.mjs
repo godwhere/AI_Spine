@@ -4,6 +4,10 @@ import { join, resolve } from "node:path";
 import { rigGeometry, rigDefaultVisiblePartIds as defaultVisiblePartIds } from "../../shared/domain/rig.mjs";
 export { rigGeometry } from "../../shared/domain/rig.mjs";
 import { validateRigDocument } from "../../shared/rig-schema.mjs";
+import { validateRigDraftDocument } from "../../shared/domain/draft.mjs";
+import { assertProductionGate, productionFingerprint, productionPrompt, productionRequestFingerprint } from "../../shared/domain/production.mjs";
+import { saveProductionReferences } from "./handlers/production-references.mjs";
+import { imageDataBytes } from "../../shared/codec/image-data.mjs";
 import { generateStructured } from "../providers/codex-planning.mjs";
 import { MOTION_STUDY_KINDS, prepareMotionStudyRequest, saveMappingFrames } from "./handlers/motion-study.mjs";
 import { ACTIVE, ID, KINDS, PNG, string, base64, fingerprint, sourceImage, saveMotionPlanningReferences, publicJob, restoreSourceIdentity } from "./rig-request.mjs";
@@ -60,12 +64,24 @@ export class RigJobs {
       if (!["standard", "detailed"].includes(request.detail)) throw new Error("请选择标准或精细结构拆分。");
     }
     if (["registration", "motion", "parts"].includes(input.kind) || MOTION_STUDY_KINDS.has(input.kind)) request.rig = validateRigDocument(input.rig);
+    if (input.rig?.production) {
+      request.rig ||= validateRigDraftDocument(input.rig);
+      if (request.rig.id !== input.projectId) throw new Error("制作计划与当前角色标识不一致。");
+      assertProductionGate(request.rig, input.referenceTarget ? "reference" : input.kind);
+    }
+    if (input.referenceTarget !== undefined) {
+      if (input.kind !== "appearance" || !request.rig?.production || !ID.test(input.referenceTarget) ||
+        input.referenceFingerprint !== productionFingerprint(request.rig, "board-request", input.referenceTarget) ||
+        request.prompt !== productionPrompt(request.rig, "reference", input.referenceTarget)) throw new Error("关键图目标或制作约束已经改变。");
+      request.referenceTarget = input.referenceTarget; request.referenceFingerprint = input.referenceFingerprint;
+    }
     // New studies freeze the caller's exact authored JSON after validation. Normalizing
     // optional defaults must not silently change the protected idle fingerprint.
     if (MOTION_STUDY_KINDS.has(input.kind)) request.rig = structuredClone(input.rig);
     if (input.kind === "registration" && input.projectId !== request.rig.id) throw new Error("原图坐标规划与当前工程标识不一致。");
     const source = await sourceImage(input.kind === "registration" ? { ...input, image: undefined } : input, request.rig);
     if (input.kind !== "motion" && !source) throw new Error("请先导入角色立绘。");
+    if (request.rig?.production && source?.sourceFingerprint !== createHash("sha256").update(imageDataBytes(request.rig.sourceImage).bytes).digest("hex")) throw new Error("制作任务只能使用当前计划已审阅的源图，不能替换参考图片。");
     if (source) { request.width = source.width; request.height = source.height; request.sourceFingerprint = snapshot?.sourceFingerprint || source.sourceFingerprint; }
     if (MOTION_STUDY_KINDS.has(input.kind)) {
       if (!input.image || !source.bytes.subarray(0, 8).equals(PNG) || !base64(input.image.base64).equals(source.bytes))
@@ -97,19 +113,29 @@ export class RigJobs {
       request.concurrency = input.concurrency ?? 3;
       if (!Number.isInteger(request.concurrency) || request.concurrency < 1 || request.concurrency > 4) throw new Error("同时补绘数量必须为 1–4。");
     }
-    if (["appearance", "parts", "motion-frames"].includes(input.kind)) request.provider = await this.connections.snapshot(snapshot?.provider);
-    else {
-      request.provider = this.planner.snapshot(input.planner);
-      if (input.kind === "motion") {
+    if (input.kind === "motion") {
         const motion = input.motion;
         if (!motion || !ID.test(motion.id || "") || typeof motion.loop !== "boolean" || !Number.isFinite(motion.duration) || motion.duration <= 0 || motion.duration > 30) throw new Error("动作标识、时长或循环设置无效。");
         request.motion = { id: motion.id, name: string(motion.name, 160, "动作名称", true), description: string(motion.description, 4000, "动作描述", true), duration: motion.duration, loop: motion.loop };
-      }
     }
+    if (request.rig?.production) {
+      if (input.kind === "structure" && request.detail !== (request.rig.structureDetail === "standard" ? "standard" : "detailed")) throw new Error("结构任务精细度与当前草稿不一致。");
+      const instruction = productionPrompt(request.rig, input.referenceTarget ? "reference" : input.kind, input.referenceTarget || request.motion?.id);
+      const submitted = request.kind === "motion" ? request.motion.description : request.prompt;
+      if (!["motion-frames", "pose-mapping"].includes(input.kind) && !submitted.includes(instruction)) throw new Error("任务缺少当前制作计划的完整约束，未提交生成。");
+      if (request.motion && input.kind === "motion") {
+        const planned = request.rig.production.motions.find((m) => m.id === request.motion.id);
+        if (!planned || planned.duration !== request.motion.duration || planned.loop !== request.motion.loop) throw new Error("本次动作与已确认的制作计划不一致。");
+      }
+      request.productionFingerprint = productionRequestFingerprint(request.rig, input.kind, request.motion?.id);
+    }
+    if (["appearance", "parts", "motion-frames"].includes(input.kind)) request.provider = await this.connections.snapshot(snapshot?.provider);
+    else request.provider = this.planner.snapshot(input.planner);
     if (this.closed) throw new Error("分析服务已关闭。");
     const id = randomUUID(), folder = join(this.root, id); await mkdir(folder, { recursive: true });
     if (source) { await writeFile(join(folder, "source.png"), source.bytes, { mode: 0o600 }); request.image = { file: "source.png", width: source.width, height: source.height }; }
-    if (input.kind === "motion") await saveMotionPlanningReferences(request, folder);
+    if (request.rig?.production && ["structure", "motion"].includes(input.kind)) await saveProductionReferences(request, folder);
+    else if (input.kind === "motion") await saveMotionPlanningReferences(request, folder);
     if (input.kind === "pose-mapping") await saveMappingFrames(input, request, folder);
     const geometry = request.rig && rigGeometry(request.rig);
     const job = { id, request, status: "queued", stage: "queued", images: [], createdAt: new Date().toISOString(),

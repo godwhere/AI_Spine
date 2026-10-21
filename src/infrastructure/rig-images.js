@@ -1,4 +1,11 @@
 import { browserPixels } from "./browser-pixels.js";
+import { createRigContinuousLimb as composeContinuousLimb } from "../../engine/images/rig-limb.js";
+export const createRigContinuousLimb = (document, options) => composeContinuousLimb(document, options, browserPixels);
+import { createRigMagicEffectFrames as renderMagicEffects } from "../../engine/images/rig-effects.js";
+export const createRigMagicEffectFrames = (options) => renderMagicEffects(options, browserPixels);
+import { createRigReferenceCalibration as createReference, bakeRigReferenceCalibration as bakeReference } from "../../engine/images/rig-reference.js";
+export const createRigReferenceCalibration = createReference;
+export const bakeRigReferenceCalibration = (session, edit) => bakeReference(session, edit, browserPixels);
 import { createRigPartCalibration as createRigPartCalibrationEngine } from "../../engine/images/rig-images.js";
 import { bakeRigPartCalibration as bakeRigPartCalibrationEngine } from "../../engine/images/rig-images.js";
 import { composeRigSourceView as composeRigSourceViewEngine } from "../../engine/images/rig-images.js";

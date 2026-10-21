@@ -307,6 +307,7 @@ function checkedCompleteOverlapReview(prepared, review) {
   if (!prepared.ready) reject("请先准备所有独立完整部件，再审阅重叠配准。", { issues: prepared.issues });
   if (!review || review.sourceFingerprint !== prepared.sourceFingerprint || review.geometryFingerprint !== prepared.geometryFingerprint)
     reject("立绘、骨架、轮廓、矩形或绑定已改变，请重新审阅完整底图。", { sourceFingerprint: prepared.sourceFingerprint, geometryFingerprint: prepared.geometryFingerprint });
+  if (review.boundaryPolicy !== undefined && !["full-underlay", "source-occlusion"].includes(review.boundaryPolicy)) reject("完整底图边界策略无效。");
   if (!Array.isArray(review.parts) || review.parts.length !== prepared.parts.length || new Set(review.parts.map((part) => part?.partId)).size !== prepared.parts.length)
     reject("完整重叠配准需要逐件审阅全部基础部件与表情附件。", { requiredPartIds: prepared.parts.map((part) => part.partId) });
   const parts = prepared.parts.map((part) => {
@@ -320,7 +321,13 @@ function checkedCompleteOverlapReview(prepared, review) {
     return { partId: part.partId, imageSHA256: part.imageSHA256, rect: part.rect, approved: true, hiddenReviewed: true,
       isolationReviewed: true, sourceMaskReviewed: true, sourceLock, ...(part.requiresBlankFace ? { blankFace: true } : {}) };
   });
-  return { sourceFingerprint: prepared.sourceFingerprint, geometryFingerprint: prepared.geometryFingerprint, parts };
+  return { sourceFingerprint: prepared.sourceFingerprint, geometryFingerprint: prepared.geometryFingerprint,
+    ...(review.boundaryPolicy ? { boundaryPolicy: review.boundaryPolicy } : {}), parts };
+}
+
+function restoreCompleteOverlapReview(prepared, stored) {
+  try { return Object.fromEntries(checkedCompleteOverlapReview(prepared, stored).parts.map((part) => [part.partId, part])); }
+  catch { return {}; }
 }
 
 async function composite(doc, source, images, env) {
@@ -376,6 +383,8 @@ async function registerRigSourcePixels(document, { polygons = {}, jobId, gridSiz
   if (sourceFingerprint && sourceFingerprint !== fingerprint) throw new Error("原图已改变，坐标轮廓不属于当前立绘。");
   const images = await partImages(doc, env), bases = await registrationBases(doc, images, env), baseImages = bases.imagesById;
   const completeReview = complete ? checkedCompleteOverlapReview(await completeOverlapPreparation(doc, source, bases), review) : null;
+  const sourceOcclusion = completeReview?.boundaryPolicy === "source-occlusion";
+  const occlusionSourceParts = new Set(sourceOcclusion ? completeReview.parts.filter((entry) => entry.sourceLock !== "underlay-only" && !entry.blankFace && !facialGroup(doc.parts.find((part) => part.id === entry.partId))).map((entry) => entry.partId) : []);
   if (!complete) for (const part of doc.parts) if (part.registration?.mode === "complete-overlap")
     for (const key of ["mode", "preservedPixels", "visiblePreservedPixels", "retainedOutsideSourcePixels", "protectedFacePixels", "fallbackOwnedPixels", "sourceLockPolicy", "sourceLock", "policySuppressedPixels"]) delete part.registration[key];
   const emptyArtwork = doc.parts.filter((part) => {
@@ -464,21 +473,27 @@ async function registerRigSourcePixels(document, { polygons = {}, jobId, gridSiz
     const blankFace = complete && reviewedPart.blankFace === true;
     const facialAttachment = complete && Boolean(facialGroup(part)), preserveFacialUnderlay = blankFace || facialAttachment;
     const sourceLock = complete ? reviewedPart.sourceLock : "known-source", underlayOnly = sourceLock === "underlay-only";
-    const sourceLockPolicy = preserveFacialUnderlay ? "disabled-preserve-independent-facial-underlay" : underlayOnly ? "disabled-preserve-independent-underlay" : "reviewed-source-pixels";
+    const sourceLockPolicy = preserveFacialUnderlay ? "disabled-preserve-independent-facial-underlay" : underlayOnly ? "disabled-preserve-independent-underlay" : sourceOcclusion ? "source-occlusion-with-reported-fallback" : "reviewed-source-pixels";
     let next = !underlayOnly && locked ? union(pixelRect(part), locked) : pixelRect(part);
     if (complete) next = union(next, pixelRect(base));
     const canvas = env.createCanvas(next.width, next.height), context = canvas.getContext("2d");
     if (image) context.drawImage(image.canvas, base.x - next.x, base.y - next.y, base.width, base.height);
     const result = context.getImageData(0, 0, next.width, next.height);
-    let partHidden = 0, partLocked = 0, visibleLockedPixels = 0, visibleHiddenPixels = 0, preservedPixels = 0, visiblePreservedPixels = 0, retainedOutsideSourcePixels = 0, fallbackOwnedPixels = 0;
+    let partHidden = 0, partLocked = 0, visibleLockedPixels = 0, visibleHiddenPixels = 0, preservedPixels = 0, visiblePreservedPixels = 0, retainedOutsideSourcePixels = 0, fallbackOwnedPixels = 0, fallbackLockedPixels = 0, boundarySuppressedPixels = 0;
     const protectedFacePixels = preserveFacialUnderlay ? knownOwnedCounts.get(part.id) || 0 : 0;
     const policySuppressedPixels = underlayOnly ? knownOwnedCounts.get(part.id) || 0 : 0;
     for (let y = 0; y < next.height; y++) for (let x = 0; x < next.width; x++) {
       const global = (y + next.y) * doc.width + x + next.x, offset = (y * next.width + x) * 4, owner = owners[global];
-      if (owner === indices.get(part.id) && (!complete || knownOwners[global]) && !underlayOnly) {
+      if (owner === indices.get(part.id) && (!complete || knownOwners[global] || sourceOcclusion && !preserveFacialUnderlay) && !underlayOnly) {
         result.data.set(source.data.subarray(global * 4, global * 4 + 4), offset); partLocked++; visibleLockedPixels += source.data[global * 4 + 3] > WEAK_ALPHA_MAX;
+        if (complete && !knownOwners[global]) { fallbackOwnedPixels++; fallbackLockedPixels++; }
       }
       else if (complete) {
+        if (sourceOcclusion && active.has(part.id) && !underlayOnly && !preserveFacialUnderlay &&
+            (owner < 0 || owner !== indices.get(part.id) && ranks.get(partIds[owner]) <= ranks.get(part.id))) {
+          if (result.data[offset + 3]) boundarySuppressedPixels++;
+          result.data.fill(0, offset, offset + 4); continue;
+        }
         // Full independent artwork is a support surface, not an exclusive
         // segmentation matte. Never erase its real joints or hidden shape.
         if (result.data[offset + 3]) {
@@ -502,11 +517,11 @@ async function registerRigSourcePixels(document, { polygons = {}, jobId, gridSiz
     part.registration = { ...part.registration, lockedPixels: partLocked, visibleLockedPixels, hiddenPixels: partHidden, visibleHiddenPixels, sourceFingerprint: fingerprint,
       outputImageSHA256: await sha256(outputBytes), outputPixelSHA256: await sha256(context.getImageData(0, 0, next.width, next.height).data),
       outputImageWidth: next.width, outputImageHeight: next.height,
-      ...(complete ? { mode, preservedPixels, visiblePreservedPixels, retainedOutsideSourcePixels, protectedFacePixels, fallbackOwnedPixels, sourceLockPolicy, sourceLock, policySuppressedPixels } : {}) };
+      ...(complete ? { mode, preservedPixels, visiblePreservedPixels, retainedOutsideSourcePixels, protectedFacePixels, fallbackOwnedPixels, fallbackLockedPixels, sourceLockPolicy, sourceLock, policySuppressedPixels, boundarySuppressedPixels } : {}) };
     if (!visibleLockedPixels && !(complete ? visiblePreservedPixels : visibleHiddenPixels)) emptyParts.push({ partId: part.id, ...part.registration });
     if (complete) completeParts.push({ partId: part.id, defaultVisible: active.has(part.id), lockedPixels: partLocked, visibleLockedPixels,
       preservedPixels, visiblePreservedPixels, hiddenPixels: partHidden, retainedOutsideSourcePixels, protectedFacePixels, fallbackOwnedPixels,
-      blankFace, facialAttachment, sourceLockPolicy, sourceLock, policySuppressedPixels, underlayImageSHA256: reviewedPart.imageSHA256 });
+      blankFace, facialAttachment, sourceLockPolicy, sourceLock, policySuppressedPixels, boundarySuppressedPixels, fallbackLockedPixels, underlayImageSHA256: reviewedPart.imageSHA256 });
     hiddenPixels += partHidden;
   }
   if (emptyParts.length) {
@@ -537,7 +552,7 @@ async function registerRigSourcePixels(document, { polygons = {}, jobId, gridSiz
   }
   const assembly = await composite(doc, source, await partImages(doc, env), env), after = compare(source, assembly);
   const ownerPixels = new Uint8ClampedArray(owners.length * 4);
-  for (let i = 0; i < owners.length; i++) if (owners[i] >= 0 && (!complete || knownOwners[i]))
+  for (let i = 0; i < owners.length; i++) if (owners[i] >= 0 && (!complete || knownOwners[i] || occlusionSourceParts.has(partIds[owners[i]])))
     ownerPixels.set([((owners[i] + 1) * 67) % 251 + 4, ((owners[i] + 1) * 109) % 251 + 4, ((owners[i] + 1) * 149) % 251 + 4, 255], i * 4);
   const metrics = { ...after, before, after, ...ownership, hiddenPixels, semiOpaqueThreshold: SEMI_OPAQUE, hiddenEdgeInsetPixels: 1,
     ownedPixels: ownership.polygonPixels + ownership.fallbackPixels, defaultVisiblePartIds: selection.visiblePartIds,
@@ -555,19 +570,20 @@ async function registerRigSourcePixels(document, { polygons = {}, jobId, gridSiz
       preservedPixels: total("preservedPixels"), retainedOutsideSourcePixels: total("retainedOutsideSourcePixels"),
       protectedFacePixels: total("protectedFacePixels"), parts: completeParts,
       policySuppressedPixels: total("policySuppressedPixels"),
+      boundaryPolicy: sourceOcclusion ? "source-occlusion" : "full-underlay", boundarySuppressedPixels: total("boundarySuppressedPixels"), fallbackLockedPixels: total("fallbackLockedPixels"),
       underlayOnlyPartIds: completeParts.filter((part) => part.sourceLock === "underlay-only").map((part) => part.partId),
       knownSourcePartIds: completeParts.filter((part) => part.sourceLock === "known-source").map((part) => part.partId),
       preservedVariantIds: doc.parts.filter((part) => part.attachmentGroup && !active.has(part.id)).map((part) => part.id),
       hiddenSurfaceVerification: "human-reviewed", runtimeMotionVerification: "not-evaluated", requiresVisualReview: true,
       sourceLockPolicy: "per-part-reviewed-source-or-underlay-only", faceSourceLockPolicy: "disabled-preserve-complete-blank-face-and-independent-facial-attachments",
-      fallbackPolicy: "reported-not-copied", hiddenSurfacePolicy: "preserve-independent-underlay" };
+      fallbackPolicy: sourceOcclusion ? "explicit-occlusion-assignment" : "reported-not-copied", hiddenSurfacePolicy: sourceOcclusion ? "preserve-under-foreground-occlusion" : "preserve-independent-underlay" };
   }
   if (!complete && doc.registration) { delete doc.registration.mode; delete doc.registration.completeOverlapReview; }
   doc.registration = { ...doc.registration, sourceFingerprint: fingerprint, ...(jobId ? { jobId } : {}), gridSize, metrics, rectAdjustments,
     ownerMapSHA256: await sha256(new Uint8Array(owners.buffer)), ...(complete ? { mode, completeOverlapReview: completeReview } : {}) };
   return { document: validateRigDocument(doc), metrics, ownerMap: { width: doc.width, height: doc.height, partIds, owners,
-    ...(complete ? { knownOwners, policy: "reviewed-source-only" } : {}),
+    ...(complete ? { knownOwners, policy: sourceOcclusion ? "source-occlusion-reported-fallback" : "reviewed-source-only" } : {}),
     png: await env.encode(canvasFromData(ownerPixels, doc.width, doc.height, env)) }, preview: { width: doc.width, height: doc.height, png: assembly.png } };
 }
 
-export { expandRigRegistrationBounds, inspectRegistrationBounds, inspectRigSourceCoverage, measureRigSourceRegistration, prepareCompleteOverlapReview, registerRigSourcePixels };
+export { expandRigRegistrationBounds, inspectRegistrationBounds, inspectRigSourceCoverage, measureRigSourceRegistration, prepareCompleteOverlapReview, restoreCompleteOverlapReview, registerRigSourcePixels };

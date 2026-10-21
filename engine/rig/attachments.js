@@ -2,6 +2,7 @@ import { isMotionStudyPlaybackActive } from "../../shared/domain/motion-study.mj
 import { motionTime } from "./math.js";
 import { sampleMotionStudyPose } from "./motion-study.js";
 import { validateRigDocument } from "../../shared/rig-schema.mjs";
+import { effectTrackSelection } from "../../shared/domain/rig-effects.mjs";
 
 function attachmentTimelineTime(time) {
   // Spine stores timeline times as Float32. Round discrete events downward so
@@ -22,6 +23,7 @@ function attachmentState(doc, motion, time = 0) {
     if (pose.time > time) break;
     Object.assign(attachmentSelection, pose.attachments);
   }
+  Object.assign(attachmentSelection, effectTrackSelection(motion, time));
   const visiblePartIds = doc.parts.filter((part) => !part.attachmentGroup || attachmentSelection[part.attachmentGroup] === part.id).map((part) => part.id);
   return { attachmentSelection, visiblePartIds };
 }

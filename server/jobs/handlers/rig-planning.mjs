@@ -12,7 +12,7 @@ export async function analyze(service, job) {
       request.kind === "registration" ? registrationSchema(request.rig, request.partIds) : motionSchema(request.rig, request.motion);
     const references = request.image ? [join(cwd, "source.png")] : [];
     if (request.kind === "registration") references.push(await registrationGrid(request, cwd));
-    if (request.kind === "motion") for (const reference of request.motionReferences || []) {
+    for (const reference of request.kind === "motion" ? request.motionReferences || [] : request.productionReferences || []) {
       const file = join(cwd, reference.file), bytes = await readFile(file);
       if (createHash("sha256").update(bytes).digest("hex") !== reference.sourceFingerprint) throw new Error("动作参考图的本地文件已改变，未提交规划。");
       references.push(file);

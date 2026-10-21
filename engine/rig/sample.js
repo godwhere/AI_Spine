@@ -11,6 +11,7 @@ import { rigPartSlotName } from "./attachments.js";
 import { rotate } from "./math.js";
 import { sampleMotionStudyPose } from "./motion-study.js";
 import { turn } from "./math.js";
+import { extendEffectDrawOrder } from "../../shared/domain/rig-effects.mjs";
 
 function rawPose(g, motion, time) {
   const t = motionTime(motion, time);
@@ -85,7 +86,7 @@ function transformedPoint(g, joints, bone, x, y) {
 function motionDrawOrder(g, motion, time) {
   let order = [...new Set([...g.doc.parts].sort((a, b) => a.z - b.z).map(rigPartSlotName))];
   for (const pose of motion.poses) { if (pose.time > time) break; if (pose.drawOrder) order = pose.drawOrder; }
-  return [...order];
+  return extendEffectDrawOrder(g.doc, order);
 }
 
 function sampled(g, motion, time, includeParts = true) {
