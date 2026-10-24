@@ -4,6 +4,18 @@ iSpine 是在浏览器中使用的本地 Spine 角色动画创作工作台。它
 
 浏览器负责交互、预览与素材处理，本机 Node.js 服务统一管理资源和生成任务，SQLite 保存工程数据。同一台电脑的不同浏览器共用资源库；AI 请求使用用户明确选择的服务。
 
+[公开源码](https://github.com/godwhere/AI_Spine)。这是运行在本机的网页工作台，当前不提供桌面 App。工程、草稿、回收站与自建模板保存在 SQLite；生成任务、输入和候选图片另存于本机文件目录。生成结果需要逐动作视觉审阅；导出 Spine 运行时资源与可编辑备份，不直接生成 `.spine` 工程。
+
+## 项目展示
+
+以下为本地浏览器运行截图，已裁去浏览器栏；展示模板资源与部件编辑，不代表自动生成角色的最终验收结果。
+
+![iSpine 资源库与动画预览](docs/images/project-showcase/isp-library.png)
+
+![iSpine 部件编辑与对照预览](docs/images/project-showcase/isp-editor.png)
+
+源码公开不改变第三方运行库和示例素材的许可，使用前请阅读 [第三方声明](THIRD_PARTY_NOTICES.md)。
+
 ## 目录
 
 - [主要功能](#主要功能)
